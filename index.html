@@ -92,6 +92,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ch-head{font-size:12px;font-weight:600;color:var(--dark);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
 .ch-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:0.5px solid var(--border);font-size:12px}
 .ch-row:last-child{border-bottom:none;padding-bottom:0}
+.ch-row.stack{flex-direction:column;align-items:flex-start;gap:3px}
+.ch-row.stack .ch-v{text-align:left}
 .ch-k{color:var(--grey)}
 .ch-v{font-weight:600;color:var(--dark)}
 .ch-v.red{color:var(--red)}.ch-v.green{color:var(--teal)}.ch-v.amber{color:var(--gold)}
@@ -105,6 +107,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .prob-stats{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
 .prob-sv{font-size:20px;font-weight:500;color:var(--teal);line-height:1}
 .prob-sl{font-size:9px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.flow-diagram{display:flex;align-items:center;gap:6px;margin-top:16px}
+.flow-node{flex:1;min-width:0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:9px 8px;font-size:10px;font-weight:600;color:rgba(255,255,255,.82);text-align:center;line-height:1.35}
+.flow-node.bad{background:rgba(226,80,58,.16);border-color:rgba(226,80,58,.4);color:#FFD9D2}
+.flow-arrow{flex-shrink:0;font-size:13px;color:rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;width:16px}
+.flow-arrow.cut{color:var(--red);font-size:15px;font-weight:700}
+.flow-arrow .ar-v{display:none}
+@media(max-width:680px){
+  .flow-diagram{flex-direction:column;align-items:stretch;gap:4px}
+  .flow-node{width:100%}
+  .flow-arrow{width:100%;height:16px}
+  .flow-arrow .ar-h{display:none}
+  .flow-arrow .ar-v{display:inline}
+}
 
 /* BOTTLENECKS */
 .bn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:9px;margin-bottom:20px}
@@ -238,6 +253,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rm-uc-title{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
 .rm-uc-chips{display:flex;flex-wrap:wrap;gap:3px}
 
+/* RESOURCES */
+.res-item{display:flex;align-items:center;gap:10px;background:var(--surf);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;margin-bottom:6px;text-decoration:none;transition:box-shadow .15s}
+.res-item:hover{box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.res-item.locked{opacity:.55;pointer-events:none}
+.res-ico{font-size:16px;flex-shrink:0}
+.res-body{flex:1;min-width:0}
+.res-title{font-size:12.5px;font-weight:500;color:var(--ink)}
+.res-desc{font-size:11px;color:var(--grey);margin-top:1px}
+
 /* WA FAB */
 .wa-fab{position:fixed;bottom:22px;right:18px;z-index:400;display:flex;align-items:center;gap:8px;background:var(--wa);color:#fff;border-radius:50px;padding:11px 18px 11px 14px;font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(37,211,102,.3);text-decoration:none;transition:transform .2s,box-shadow .2s}
 .wa-fab:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(37,211,102,.4)}
@@ -294,7 +318,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <svg width="13" height="13" viewBox="0 0 120 126" fill="currentColor"><path d="M20.636 21.647c3.406 2.742 4.69 2.547 11.104 2.118l60.415-3.601c1.284 0 .214-.856-.215-1.07l-10.033-7.268c-1.925-1.497-4.49-3.208-9.393-2.78L14.647 13.52c-2.136.214-2.566 1.283-1.711 2.14l7.7 6.013v-.026zm3.192 12.226v63.451c0 3.41.856 4.922 3.852 4.708l66.394-3.831c2.997-.214 3.425-2.14 3.425-4.494V30.47c0-2.353-.856-3.638-2.78-3.425l-67.462 3.852c-2.138.214-3.429 1.498-3.429 2.975zm65.297 3.424c.428.855 0 1.712-1.071 1.926l-1.712.214v25.214c-1.497.856-2.995.856-4.278.214L60.12 43.553v30.779l4.921 1.07s0 1.713-2.355 1.927l-6.633.428c-.428-.214-1.498-.856-1.712-1.712l.428-1.284V42.482L51.798 42.268c-.428-.856 0-2.138 1.284-2.353l7.054-.428L82.48 62.636V38.279l-4.06-.642c-.428-1.071.214-2.14 1.498-2.354l6.418-.214 2.79 1.428z"/></svg>
         <span class="ext-lbl">Notion</span>
       </div>
-      <div class="ext-btn locked" title="Matriz — se crea en Fase 1">
+      <div class="ext-btn locked" title="Matriz de costos — se activa cuando haya inversión en publicidad">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
         <span class="ext-lbl">Matriz</span>
       </div>
@@ -319,7 +343,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ PANEL ════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — pre-kickoff · Descubrimiento completado 13/07</div>
+  <div class="slbl">Progreso — Programa cerrado · Fase 1: Fundaciones en curso · Horario sesión 1 por definir</div>
   <div class="chips-row">
     <div class="sch done">D</div>
     <div class="sch now">1</div>
@@ -345,8 +369,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="ov-card">
       <div class="ov-lbl">Ciclo de venta</div>
-      <div class="ov-num amber">6m–2a</div>
-      <div class="ov-sub">Activo de alto valor, decisión industrial</div>
+      <div class="ov-num amber">1–2a</div>
+      <div class="ov-sub">Meta del programa: bajarlo con calificación y nutrición</div>
     </div>
   </div>
   <div class="ov-row2">
@@ -362,13 +386,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="ov-card">
       <div class="ov-lbl">Mercados activos</div>
-      <div class="ov-num teal">3</div>
-      <div class="bdg-row"><span class="bdg green">Perú · Bolivia · México</span></div>
+      <div class="ov-num teal">2</div>
+      <div class="bdg-row"><span class="bdg green">Colombia · Bolivia</span><span class="bdg grey">Perú / México sin datos</span></div>
     </div>
     <div class="ov-card">
-      <div class="ov-lbl">Inversión propuesta</div>
-      <div class="ov-num violet">$1.05M</div>
-      <div class="bdg-row"><span class="bdg violet">CLP · 30% off en llamada</span></div>
+      <div class="ov-lbl">Clientes documentados</div>
+      <div class="ov-num red">0</div>
+      <div class="bdg-row"><span class="bdg red">Por construir en CRM</span></div>
     </div>
   </div>
 
@@ -376,7 +400,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="ch-split">
     <div class="ch-card canal-a">
       <div class="ch-head">⚠️ Modo actual: vender O gestionar <span class="bdg red">⚠ Cuello de botella</span></div>
-      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v red">6m–2a</span></div>
+      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v red">1–2a</span></div>
       <div class="ch-row"><span class="ch-k">Vendedoras</span><span class="ch-v red">1 (Laura)</span></div>
       <div class="ch-row"><span class="ch-k">Al cerrar un trato</span><span class="ch-v">Lead-gen se detiene</span></div>
       <div class="ch-row"><span class="ch-k">Consecuencia</span><span class="ch-v red">Pipeline vacío → hueco 2027</span></div>
@@ -384,11 +408,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="ch-card canal-b">
       <div class="ch-head">🌐 Canales de captación <span class="bdg teal">Activos sin sistema</span></div>
-      <div class="ch-row"><span class="ch-k">LinkedIn outbound</span><span class="ch-v green">Activo</span></div>
-      <div class="ch-row"><span class="ch-k">Secuencias de email</span><span class="ch-v green">Activo</span></div>
+      <div class="ch-row"><span class="ch-k">LinkedIn outbound</span><span class="ch-v green">Activo · Manual</span></div>
+      <div class="ch-row"><span class="ch-k">Secuencias de email</span><span class="ch-v green">Activo · Manual (Jairo)</span></div>
       <div class="ch-row"><span class="ch-k">Web / IG</span><span class="ch-v amber">Pasivo</span></div>
       <div class="ch-row"><span class="ch-k">Criterios de calificación</span><span class="ch-v red">No documentados</span></div>
-      <div class="ch-row"><span class="ch-k">Brecha</span><span class="ch-v red">Sin ICP quirúrgico ni filtro de nicho</span></div>
+      <div class="ch-row stack"><span class="ch-k">Brecha</span><span class="ch-v red">Cliente sin avatar bajado (dolores, promesa) — framework ICP de Private Build ya listo</span></div>
     </div>
   </div>
 
@@ -397,11 +421,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="prob-icon">⚡</div>
     <div>
       <div class="prob-title">Laura vende o gestiona — nunca ambas a la vez</div>
-      <div class="prob-text">Laura cierra un trato, pasa a gestionarlo (adquisición, instalación, arranque, soporte) y mientras tanto la generación de leads se detiene por completo. En un ciclo de 6 meses a 2 años esto <strong>no duele hoy</strong>: <strong>los leads que no se siembran hoy son las ventas que no existen en 2027–2028.</strong> Cada mes con el pipeline congelado se nota como un hueco de comisiones 12 a 24 meses después.</div>
-      <div class="prob-stats">
-        <div><div class="prob-sv">6m–2a</div><div class="prob-sl">ciclo de venta</div></div>
-        <div><div class="prob-sv">2–3</div><div class="prob-sl">máquinas/año hoy</div></div>
-        <div><div class="prob-sv">~$17k</div><div class="prob-sl">comisión bruta por máquina de 340k USD</div></div>
+      <div class="prob-text">Laura cierra un trato y pasa a gestionarlo (adquisición, instalación, arranque, soporte). Ahí se corta el proceso: mientras gestiona, la generación de leads se detiene por completo. En un ciclo de 1 a 2 años esto <strong>no duele hoy</strong>: <strong>los leads que no se siembran hoy son las ventas que no existen en 2027–2028.</strong></div>
+      <div class="flow-diagram">
+        <div class="flow-node">Laura vende</div>
+        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
+        <div class="flow-node">Cierra el trato</div>
+        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
+        <div class="flow-node">Gestiona el proyecto</div>
+        <div class="flow-arrow cut"><span class="ar-h">⛔</span><span class="ar-v">⛔</span></div>
+        <div class="flow-node bad">Lead-gen se detiene</div>
+        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
+        <div class="flow-node bad">Pipeline vacío</div>
+        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
+        <div class="flow-node bad">Hueco 2027–28</div>
       </div>
     </div>
   </div>
@@ -409,9 +441,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">Cuellos de botella detectados</div>
   <div class="bn-grid">
     <div class="bn-card c">
-      <div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">Vendedora única</div></div>
-      <div class="bn-text">Laura es el único punto de venta. Sin ella no hay pipeline nuevo — todo el negocio depende de su tiempo y memoria.</div>
-      <div class="bn-imp c">→ Separar prospección de cierre</div>
+      <div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">No existe un sistema comercial</div></div>
+      <div class="bn-text">Más que "vendedora única", el problema es que nada está documentado. Por eso Laura tiene que ser vendedora, gestora y marketer a la vez — mientras no exista el sistema, todo pasa por ella.</div>
+      <div class="bn-imp c">→ Documentar y estructurar antes de separar roles</div>
     </div>
     <div class="bn-card c">
       <div class="bn-head"><div class="bn-n c">2</div><div class="bn-title">Sin criterio de calificación documentado</div></div>
@@ -419,30 +451,39 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="bn-imp c">→ Codificar el criterio de Laura en un filtro escrito</div>
     </div>
     <div class="bn-card w">
-      <div class="bn-head"><div class="bn-n w">3</div><div class="bn-title">Presupuesto acotado</div></div>
-      <div class="bn-text">La agencia evaluada ($1.500–2.000 USD/mes) quedó fuera de presupuesto tras la quiebra de 2024. No hay margen para retainers externos.</div>
-      <div class="bn-imp w">→ Sistema que se construye una vez, sin dependencia externa</div>
+      <div class="bn-head"><div class="bn-n w">3</div><div class="bn-title">Presupuesto: foundations primero, no automatización</div></div>
+      <div class="bn-text">La agencia evaluada ($1.500–2.000 USD/mes) quedó fuera de presupuesto tras la quiebra de 2024. Lo poco disponible tiene que ir a herramientas que sostengan Foundations — no a automatizar calificación, eso llega recién después del programa de 3 meses.</div>
+      <div class="bn-imp w">→ Invertir en estructura primero, automatizar después</div>
     </div>
     <div class="bn-card w">
-      <div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">LARIA no llega a tiempo</div></div>
-      <div class="bn-text">El proyecto propio de IA para calificar leads está a 6–12 meses de estar operativo, dedicándole 1–2h/semana. El pipeline de 2027 se decide ahora, no cuando LARIA esté lista.</div>
-      <div class="bn-imp w">→ Roadmap manual primero, automatización después</div>
+      <div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">LARIA no puede construirse todavía</div></div>
+      <div class="bn-text">No es solo tiempo (6–12 meses a 1–2h/semana): sin el proceso comercial documentado, no hay conocimiento que cargarle a la IA. Como a muchos founders, la tentación es construir la IA antes que la infraestructura que la sostiene — y eso nunca funciona.</div>
+      <div class="bn-imp w">→ Documentar el sistema primero. LARIA se alimenta de eso, no al revés</div>
     </div>
     <div class="bn-card i">
       <div class="bn-head"><div class="bn-n i">5</div><div class="bn-title">Expansión sin estructura que la sostenga</div></div>
-      <div class="bn-text">Perú, Bolivia y México activos; Colombia abriendo y nuevas marcas en camino. Más mercados con la misma estructura de una sola persona multiplica el caos, no las ventas.</div>
+      <div class="bn-text">Colombia y Bolivia son los mercados activos hoy — Perú y México, sin información documentada todavía. Cada mercado nuevo con la misma estructura de una sola persona multiplica el caos, no las ventas.</div>
       <div class="bn-imp i">→ La estructura tiene que preceder a la expansión</div>
     </div>
   </div>
 
   <div class="slbl">Stack actual</div>
   <div class="stack-wrap">
-    <div class="sp"><div class="sd on"></div>LinkedIn outbound<span class="bdg grey" style="margin-left:3px">captación</span></div>
-    <div class="sp"><div class="sd on"></div>Secuencias de email<span class="bdg grey" style="margin-left:3px">captación</span></div>
-    <div class="sp"><div class="sd warn"></div>LARIA (IA propia)<span class="bdg amber" style="margin-left:3px">6–12 meses</span></div>
+    <div class="sp"><div class="sd on"></div>LinkedIn outbound<span class="bdg grey" style="margin-left:3px">manual</span></div>
+    <div class="sp"><div class="sd on"></div>Secuencias de email (Jairo)<span class="bdg grey" style="margin-left:3px">manual</span></div>
+    <div class="sp"><div class="sd off"></div>LARIA (IA propia)<span class="bdg grey" style="margin-left:3px">en pausa — falta base documentada</span></div>
     <div class="sp"><div class="sd off"></div>Notion — CRM y pipeline<span class="bdg grey" style="margin-left:3px">por construir</span></div>
     <div class="sp"><div class="sd off"></div>Criterios de calificación<span class="bdg grey" style="margin-left:3px">por construir</span></div>
+    <div class="sp"><div class="sd off"></div>Clay — enriquecimiento de leads<span class="bdg grey" style="margin-left:3px">por construir, Mes 2</span></div>
     <div class="sp"><div class="sd off"></div>Dashboard de pipeline<span class="bdg grey" style="margin-left:3px">por construir</span></div>
+  </div>
+
+  <div class="alert-box info">
+    <span class="alert-icon">🛠️</span>
+    <div>
+      <div class="alert-title">Lo que STM no necesita: más equipo</div>
+      <div class="alert-text">Cerrando 1–2 máquinas al año, Laura no necesita contratar gente para vender más. Necesita infraestructura y sistema — lo mismo que falló al comprar manos (freelancers, agencia) en vez de construir criterio propio.</div>
+    </div>
   </div>
 </div>
 
@@ -469,35 +510,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Estructura · 3 meses · 12 sesiones</div>
+  <div class="slbl">Estructura · 3 meses · 12 sesiones · Sistema de Growth con IA</div>
   <div class="phase-grid">
     <div class="phase-card m1">
-      <div class="phase-hd"><span class="phase-tag">Mes 1 · Sem 1–4</span><span class="bdg grey">Pendiente kickoff</span></div>
+      <div class="phase-hd"><span class="phase-tag">Mes 1 · Sem 1–4</span><span class="bdg amber">En curso</span></div>
       <div class="phase-title">Fundaciones</div>
-      <div class="phase-text">ICP quirúrgico y criterios de calificación documentados — el filtro del nicho que hasta ahora solo existe en la cabeza de Laura. Micro-win: sistema de calificación operativo.</div>
-      <div class="phase-tags"><span class="bdg grey">ICP</span><span class="bdg grey">Criterios de calificación</span><span class="bdg grey">Filtro de nicho</span></div>
+      <div class="phase-text">ICP quirúrgico, avatar con dolores y objeciones, oferta y promesa documentadas, clientes antiguos registrados, y criterios de calificación — todo lo que hoy solo existe en la cabeza de Laura. Micro-win: sistema de calificación operativo.</div>
+      <div class="phase-tags"><span class="bdg grey">ICP / avatar</span><span class="bdg grey">Oferta y promesa</span><span class="bdg grey">Criterios de calificación</span></div>
     </div>
     <div class="phase-card m2">
       <div class="phase-hd"><span class="phase-tag">Mes 2 · Sem 5–8</span><span class="bdg grey">Próximo</span></div>
-      <div class="phase-title">La máquina</div>
-      <div class="phase-text">Secuencias de LinkedIn + email y journey estructurado (info, catálogos, videos en el orden correcto). Micro-win: reuniones agendadas por el proceso, no por Laura a pulso.</div>
-      <div class="phase-tags"><span class="bdg grey">LinkedIn</span><span class="bdg grey">Email sequences</span><span class="bdg grey">Nutrición</span></div>
+      <div class="phase-title">El motor</div>
+      <div class="phase-text">LinkedIn outbound como motor principal, con métricas por primera vez (qué funciona, qué no). CRM documentado y conectado a Clay. Contenido de nutrición construido sobre lo definido en Foundations. Micro-win: reuniones agendadas por el proceso, no por Laura a pulso.</div>
+      <div class="phase-tags"><span class="bdg grey">LinkedIn</span><span class="bdg grey">CRM + Clay</span><span class="bdg grey">Nutrición</span></div>
     </div>
     <div class="phase-card m3">
       <div class="phase-hd"><span class="phase-tag">Mes 3 · Sem 9–12</span><span class="bdg grey">Futuro</span></div>
-      <div class="phase-title">Escala y transferencia</div>
-      <div class="phase-text">Nutrición de ciclo largo, dashboard de pipeline y el padre de Laura operando parte del sistema. Micro-win: pipeline vivo mientras Laura gestiona proyectos cerrados.</div>
-      <div class="phase-tags"><span class="bdg grey">Dashboard</span><span class="bdg grey">Transferencia</span><span class="bdg grey">Padre opera</span></div>
+      <div class="phase-title">Escala y activación del sistema</div>
+      <div class="phase-text">No hay transferencia — Laura ya lo opera. Es escalar y activar lo construido: nutrición de ciclo largo, dashboard de pipeline, y su padre sumado a partes del sistema. Micro-win: pipeline vivo mientras Laura gestiona proyectos cerrados.</div>
+      <div class="phase-tags"><span class="bdg grey">Dashboard</span><span class="bdg grey">Activación</span><span class="bdg grey">Padre opera</span></div>
     </div>
   </div>
 
   <div class="rm-track-wrap">
     <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
       Recorrido por el sistema comercial STM
-      <span class="bdg amber">📅 Próximo: Kickoff Fase 1 — fecha por definir</span>
+      <span class="bdg amber">📅 Sesión 1 — Fundaciones · horario por definir</span>
     </div>
     <div class="rm-track">
-      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Captación</div><div class="rm-sub">ya existe</div></div>
+      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Captación</div><div class="rm-sub">manual</div></div>
       <div class="rm-node"><div class="rm-dot future">2</div><div class="rm-lbl mt">Calificación</div><div class="rm-sub">se construye</div></div>
       <div class="rm-node"><div class="rm-dot future">3</div><div class="rm-lbl mt">Nutrición</div><div class="rm-sub">se construye</div></div>
       <div class="rm-node"><div class="rm-dot future">4</div><div class="rm-lbl mt">Conversión</div><div class="rm-sub">se construye</div></div>
@@ -530,39 +571,44 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="week-card now open" onclick="toggleCard(this)">
     <div class="week-hd">
       <div class="week-info">
-        <div class="week-title">Kickoff — Fase 1: Fundaciones</div>
-        <div class="week-date">📅 Pendiente — a definir con Laura + su padre</div>
+        <div class="week-title">Sesión 1 — Fundaciones: ICP, avatar y oferta</div>
+        <div class="week-date">📅 Horario de la primera semana por definir</div>
       </div>
-      <span class="bdg amber">Pendiente decisión</span>
+      <span class="bdg amber">Por agendar</span>
     </div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg amber">Decisión de inversión</span><span class="bdg amber">Fecha de inicio</span></div>
-      <div class="week-sec">🔍 Revisión (0–10 min)</div>
+      <div class="week-chips"><span class="bdg amber">ICP</span><span class="bdg amber">Avatar</span><span class="bdg amber">Oferta y promesa</span></div>
+      <div class="week-sec">📋 Antes de la sesión</div>
       <div class="week-text"><ul>
-        <li>Revisar la propuesta enviada (Sistema de Lead-Gen STM) en conjunto con su padre</li>
-        <li>Confirmar inversión: $1.050.000 CLP con 30% off por decisión en llamada, o $1.500.000 CLP valor referencial</li>
-        <li>Resolver dudas sobre alcance de las 3 fases</li>
+        <li>Laura trae toda la información del negocio centralizada — no puede seguir solo en su cabeza</li>
+        <li>Clientes antiguos y leads prospectados hasta ahora (para migrar a Notion)</li>
+        <li>Definir horario fijo de la sesión semanal</li>
       </ul></div>
-      <div class="week-sec">🎯 Núcleo (10–35 min)</div>
+      <div class="week-sec">🎯 Núcleo (sesión)</div>
       <div class="week-text"><ul>
-        <li>Definir fecha de inicio de Fase 1</li>
-        <li>Arrancar ICP quirúrgico: perfil exacto de comprador por mercado</li>
-        <li>Levantar los criterios de calificación que hoy solo existen en la cabeza de Laura</li>
+        <li>ICP quirúrgico: perfil exacto de comprador por mercado (Colombia, Bolivia)</li>
+        <li>Avatar del cliente: dolores, objeciones y promesa — con el framework de Private Build</li>
+        <li>Criterios de calificación que hoy solo existen en la cabeza de Laura</li>
       </ul></div>
       <div class="week-sec">📝 Entregable</div>
-      <div class="week-text">Decisión conjunta (Laura + padre) y fecha de inicio confirmada para Fase 1.</div>
+      <div class="week-text">ICP, avatar y criterios de calificación documentados en Notion — base para arrancar el motor en Mes 2.</div>
     </div>
   </div>
 
   <div class="slbl">Próximas sesiones</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc"><div class="rm-uc-num">Sem 2–4 · Mes 1</div><div class="rm-uc-title">Criterios de calificación documentados</div><div class="rm-uc-chips"><span class="bdg grey">Filtro de nicho</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 5–6 · Mes 2</div><div class="rm-uc-title">Secuencias LinkedIn + email en marcha</div><div class="rm-uc-chips"><span class="bdg grey">Outbound</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 7–8 · Mes 2</div><div class="rm-uc-title">Journey de nutrición (info, catálogos, videos)</div><div class="rm-uc-chips"><span class="bdg grey">Conversión</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 9–11 · Mes 3</div><div class="rm-uc-title">Dashboard de pipeline + padre operando</div><div class="rm-uc-chips"><span class="bdg grey">Transferencia</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 2–4 · Mes 1</div><div class="rm-uc-title">ICP, avatar y criterios de calificación documentados</div><div class="rm-uc-chips"><span class="bdg grey">Foundations</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 5–6 · Mes 2</div><div class="rm-uc-title">CRM documentado + LinkedIn como motor con métricas</div><div class="rm-uc-chips"><span class="bdg grey">El motor</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 7–8 · Mes 2</div><div class="rm-uc-title">Journey de nutrición (info, catálogos, videos)</div><div class="rm-uc-chips"><span class="bdg grey">Nutrición</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 9–11 · Mes 3</div><div class="rm-uc-title">Dashboard de pipeline + padre activando el sistema</div><div class="rm-uc-chips"><span class="bdg grey">Activación</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 12 · Mes 3</div><div class="rm-uc-title">Cierre 90 días</div><div class="rm-uc-chips"><span class="bdg grey">Baseline vs actual</span><span class="bdg grey">¿DFY?</span></div></div>
   </div>
+
+  <div class="slbl">Material de apoyo</div>
+  <a class="res-item locked" href="#"><span class="res-ico">📘</span><div class="res-body"><div class="res-title">Guía: cómo usar Notion</div><div class="res-desc">Se agrega cuando el Notion de STM esté creado</div></div></a>
+  <a class="res-item locked" href="#"><span class="res-ico">🎯</span><div class="res-body"><div class="res-title">Framework ICP / Avatar — Private Build</div><div class="res-desc">Plantilla ya documentada, se aplica en la Sesión 1</div></div></a>
+  <a class="res-item locked" href="#"><span class="res-ico">🗂️</span><div class="res-body"><div class="res-title">Plantilla CRM STM</div><div class="res-desc">Se activa junto con el Notion en Fase 1</div></div></a>
 </div>
 
 
@@ -582,9 +628,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
-      <div class="task-title">Revisar la propuesta con su padre (co-fundador)</div>
-      <div class="task-desc">Decisión conjunta sobre la inversión: $1.050.000 CLP con 30% off por decidir en la llamada, o $1.500.000 CLP valor referencial. Incluye las 3 fases completas del roadmap.</div>
-      <div class="task-note">Links de pago vía Mercado Pago, en 1 pago o en cuotas a criterio del cliente.</div>
+      <div class="task-title">Traer toda la información del negocio centralizada</div>
+      <div class="task-desc">Oferta, promesa, clientes antiguos, catálogos, mensajes — todo lo que hoy vive solo en su cabeza, para revisarlo y dejarlo en un solo lugar antes de la Sesión 1.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -592,19 +637,30 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
-      <div class="task-title">Confirmar fecha de kickoff Fase 1</div>
-      <div class="task-desc">Una vez decidido, agendar la sesión 1: ICP quirúrgico + criterios de calificación.</div>
+      <div class="task-title">Entregar el CRM actual o los leads prospectados</div>
+      <div class="task-desc">Todo lo que tenga levantado hasta ahora (aunque esté en Excel o solo en la cabeza) para migrarlo a Notion.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
 
-  <div class="tg-hd">Pendientes de Pato <span class="bdg amber" style="margin-left:4px">2</span></div>
+  <div class="tg-hd">Equipo STM — Jairo (secuencias de email)</div>
 
   <div class="task">
     <div class="task-ring"></div>
     <div class="task-body">
-      <div class="task-title">Seguimiento post-descubrimiento</div>
-      <div class="task-desc">Confirmar que la propuesta llegó bien y resolver dudas de Laura o su padre antes de la decisión.</div>
+      <div class="task-title">Documentar el proceso de email en su propio repositorio</div>
+      <div class="task-desc">Las secuencias que maneja manualmente tienen que quedar registradas y alimentadas en su propia guía — no solo en su cabeza, igual que Laura.</div>
+    </div>
+    <span class="bdg grey">Jairo</span>
+  </div>
+
+  <div class="tg-hd">Pendientes de Pato <span class="bdg amber" style="margin-left:4px">5</span></div>
+
+  <div class="task">
+    <div class="task-ring"></div>
+    <div class="task-body">
+      <div class="task-title">Dar acceso al Notion de STM</div>
+      <div class="task-desc">Crear el workspace y compartir acceso con Laura.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -612,8 +668,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="task">
     <div class="task-ring"></div>
     <div class="task-body">
-      <div class="task-title">Dejar lista la estructura de Fase 1</div>
-      <div class="task-desc">Marco de ICP quirúrgico y criterios de calificación preparado para arrancar rápido apenas Laura confirme.</div>
+      <div class="task-title">Terminar el repo de IA de soporte</div>
+      <div class="task-desc">Cerrar la configuración pendiente antes de que el sistema lo necesite.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
+
+  <div class="task">
+    <div class="task-ring"></div>
+    <div class="task-body">
+      <div class="task-title">Crear el Excel vinculado al CRM</div>
+      <div class="task-desc">Todo tiene que convivir en un solo lugar al inicio para poder auditarlo — más adelante se migra 100% a Notion.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
+
+  <div class="task">
+    <div class="task-ring"></div>
+    <div class="task-body">
+      <div class="task-title">Preparar guía de uso de Notion para Laura</div>
+      <div class="task-desc">Documento simple de cómo moverse en su propio Notion, sin depender de preguntar cada vez.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
+
+  <div class="task">
+    <div class="task-ring"></div>
+    <div class="task-body">
+      <div class="task-title">Definir horario fijo de la primera semana de consultoría</div>
+      <div class="task-desc">Coordinar con Laura día y hora de la Sesión 1 — Fundaciones.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -631,15 +714,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <tr>
         <td><div class="sdot" style="background:#7B61FF">1</div></td>
         <td class="sname">Foundations</td>
-        <td><span class="bdg amber">🔄 Próxima</span></td>
-        <td class="sgap">ICP quirúrgico y criterios de calificación de Laura documentados por escrito. Arranca en Fase 1, sesión 1.</td>
-        <td class="sgap">Mes 1 · pendiente kickoff</td>
+        <td><span class="bdg amber">🔄 En curso</span></td>
+        <td class="sgap">ICP quirúrgico, avatar (dolores, promesa, objeciones), oferta y clientes antiguos documentados — todo por escrito, no en la cabeza de Laura.</td>
+        <td class="sgap">Mes 1 · en curso</td>
       </tr>
       <tr>
         <td><div class="sdot" style="background:#3B9EE8">2</div></td>
         <td class="sname">Atracción</td>
-        <td><span class="bdg amber">🔄 Activa sin sistema</span></td>
-        <td class="sgap">LinkedIn outbound y secuencias de email ya generan leads, pero sin ICP formal ni foco — volumen bajo para el potencial del canal.</td>
+        <td><span class="bdg amber">🔄 Activa, 100% manual</span></td>
+        <td class="sgap">LinkedIn outbound (Laura) y secuencias de email (Jairo) ya generan leads, pero sin ICP formal, sin métricas y sin CRM — todo manual y sin registro.</td>
         <td class="sgap">Mes 1–2</td>
       </tr>
       <tr class="broken">
@@ -653,7 +736,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <td><div class="sdot" style="background:#E8A237">4</div></td>
         <td class="sname">Nutrición</td>
         <td><span class="bdg red">✗ Por construir</span></td>
-        <td class="sgap">Sin secuencia de información, catálogos y videos. Un ciclo de 6 meses a 2 años necesita nutrición estructurada, no solo contacto inicial.</td>
+        <td class="sgap">Sin secuencia de información, catálogos y videos. Un ciclo de 1 a 2 años necesita nutrición estructurada, no solo contacto inicial.</td>
         <td class="sgap"><span class="bdg grey">Mes 2</span></td>
       </tr>
       <tr class="broken">
@@ -680,8 +763,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <tr style="opacity:.5">
         <td><div class="sdot" style="background:#aaa">8</div></td>
         <td class="sname">Systems</td>
-        <td><span class="bdg grey">Post 90d · DFY</span></td>
-        <td class="sgap">Notion como cerebro: CRM, pipeline y métricas en una sola fuente de verdad. Se activa cuando 1–7 estén validadas.</td>
+        <td><span class="bdg grey">Post 90d · sin automatizar aún</span></td>
+        <td class="sgap">Notion como cerebro: CRM, pipeline y métricas en una sola fuente de verdad. No se automatiza nada — incluyendo LARIA — hasta validar 1–7 con el negocio estructurado.</td>
         <td class="sgap">—</td>
       </tr>
     </tbody>
@@ -690,7 +773,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">Las preguntas que cada etapa tiene que responder</div>
 
   <div class="qa-card" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#7B61FF">1</div><div class="qa-title">Foundations</div><span class="bdg amber" style="margin-left:auto">🔄 Próxima</span><span class="qa-icon">▼</span></div>
+    <div class="qa-hd"><div class="qa-n" style="background:#7B61FF">1</div><div class="qa-title">Foundations</div><span class="bdg amber" style="margin-left:auto">🔄 En curso</span><span class="qa-icon">▼</span></div>
     <div class="qa-body"><ul>
       <li>¿Cuál es el perfil exacto de comprador por mercado (Perú, Bolivia, México, Colombia)?</li>
       <li>¿Qué señales usa Laura hoy, sin darse cuenta, para descartar un lead?</li>
