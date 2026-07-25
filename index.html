@@ -366,11 +366,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ PANEL ════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — Programa cerrado · Fase 1: Fundaciones en curso · Horario sesión 1 por definir</div>
+  <div class="slbl">Progreso — Sesión 1/12 completada 25/07 · Cadencia: sábados</div>
   <div class="chips-row">
     <div class="sch done">D</div>
-    <div class="sch now">1</div>
-    <div class="sch todo">2</div><div class="sch todo">3</div>
+    <div class="sch done">1</div>
+    <div class="sch now">2</div><div class="sch todo">3</div>
     <div class="sch todo">4</div><div class="sch todo">5</div>
     <div class="sch todo">6</div><div class="sch todo">7</div>
     <div class="sch todo">8</div><div class="sch todo">9</div>
@@ -443,7 +443,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="ch-card canal-b">
       <div class="ch-head">🌐 Canales de captación <span class="bdg teal">Activos sin sistema</span></div>
       <div class="ch-row"><span class="ch-k">LinkedIn outbound</span><span class="ch-v green">Activo · Manual</span></div>
-      <div class="ch-row"><span class="ch-k">Secuencias de email</span><span class="ch-v green">Activo · Manual (Jairo)</span></div>
+      <div class="ch-row"><span class="ch-k">Secuencias de email</span><span class="ch-v green">Activo · Manual (Jairo, padre)</span></div>
       <div class="ch-row"><span class="ch-k">Web / IG</span><span class="ch-v amber">Pasivo</span></div>
       <div class="ch-row"><span class="ch-k">Criterios de calificación</span><span class="ch-v red">No documentados</span></div>
       <div class="ch-row stack"><span class="ch-k">Brecha</span><span class="ch-v red">Cliente sin avatar bajado (dolores, promesa) — framework ICP de Private Build ya listo</span></div>
@@ -508,7 +508,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="stack-group-lbl">Captación</div>
     <div class="stack-wrap">
       <div class="sp"><div class="sd on"></div>LinkedIn outbound<span class="bdg grey" style="margin-left:3px">manual</span></div>
-      <div class="sp"><div class="sd on"></div>Secuencias de email (Jairo)<span class="bdg grey" style="margin-left:3px">manual</span></div>
+      <div class="sp"><div class="sd on"></div>Secuencias de email (Jairo, padre)<span class="bdg grey" style="margin-left:3px">manual</span></div>
     </div>
   </div>
 
@@ -525,7 +525,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="stack-group">
     <div class="stack-group-lbl">IA</div>
     <div class="stack-wrap">
-      <div class="sp"><div class="sd warn"></div>IA de apoyo (documentar, no vender)<span class="bdg amber" style="margin-left:3px">Fase 1</span></div>
+      <div class="sp"><div class="sd on"></div>WhatsApp Business con IA (Laura)<span class="bdg grey" style="margin-left:3px">activo, ES/EN</span></div>
+      <div class="sp"><div class="sd warn"></div>Claude + Notion (documentar)<span class="bdg amber" style="margin-left:3px">Fase 1</span></div>
       <div class="sp"><div class="sd off"></div>LARIA (IA propia)<span class="bdg grey" style="margin-left:3px">en pausa — falta base documentada</span></div>
     </div>
   </div>
@@ -567,8 +568,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="phase-card m1">
       <div class="phase-hd"><span class="phase-tag">Mes 1 · Sem 1–4</span><span class="bdg amber">En curso</span></div>
       <div class="phase-title">Fundaciones</div>
-      <div class="phase-text">Backend del negocio: ICP, avatar y oferta documentados por máquina. IA de apoyo para ganar tiempo, sin reemplazar el proceso.</div>
-      <div class="phase-tags"><span class="bdg grey">ICP / avatar</span><span class="bdg grey">Por máquina</span><span class="bdg grey">IA de apoyo</span><span class="bdg grey">Micro-win: calificación operativa</span></div>
+      <div class="phase-text">Clientes segmentados A/B/C. Foco quirúrgico en B (~50% de los cierres históricos) — sniper, no escopeta. Backend documentado por máquina.</div>
+      <div class="phase-tags"><span class="bdg grey">ICP A/B/C</span><span class="bdg grey">Foco en B</span><span class="bdg grey">Por máquina</span><span class="bdg grey">Micro-win: calificación operativa</span></div>
     </div>
     <div class="phase-card m2">
       <div class="phase-hd"><span class="phase-tag">Mes 2 · Sem 5–8</span><span class="bdg grey">Próximo</span></div>
@@ -587,7 +588,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="rm-track-wrap">
     <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
       Recorrido por el sistema comercial STM
-      <span class="bdg amber">📅 Sesión 1 — Fundaciones · horario por definir</span>
+      <span class="bdg amber">📅 Sesión 2 — sábados, horario por cuadrar</span>
     </div>
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Captación</div><div class="rm-sub">manual</div></div>
@@ -618,42 +619,55 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
+  <div class="week-card done" onclick="toggleCard(this)">
+    <div class="week-hd">
+      <div class="week-info">
+        <div class="week-title">Sesión 1 — Foundations: ICP A/B/C</div>
+        <div class="week-date">25 jul 2026 · 84 min · Completada</div>
+      </div>
+      <span class="bdg teal">✓</span>
+    </div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg teal">Segmentación A/B/C</span><span class="bdg teal">Foco en B</span></div>
+      <div class="week-sec">Lo que se resolvió</div>
+      <div class="week-text">Kickoff con Laura y su padre Jairo (co-decisor). Se encuadró la mecánica de la consultoría (cadencia sábados, panel + roadmap, ejecución entre sesiones) y se clasificaron los clientes de STM en tres tiers: <strong>A</strong> — multinacionales 1000+ empleados, ciclo 2–3 años, buscan reconocimiento; <strong>B (foco)</strong> — PYME 100–200 empleados ya exportando, ~50% de los cierres históricos; <strong>C</strong> — &lt;100 empleados, deciden por volumen/precio. Se inventarió toda la documentación dispersa del negocio (Excel de leads, carpeta por cliente, PowerPoint de ventas, pipeline ex-PipeDrive) para centralizarla en un Excel único + Notion. Ahá moment: estructura antes que contenido — dominar el cliente B primero hace que cerrar un A se vuelva más fácil y el C entre por default.</div>
+    </div>
+  </div>
+
   <div class="slbl">Sesión activa</div>
 
   <div class="week-card now open" onclick="toggleCard(this)">
     <div class="week-hd">
       <div class="week-info">
-        <div class="week-title">Sesión 1 — Fundaciones: ICP, avatar y oferta</div>
-        <div class="week-date">📅 Horario de la primera semana por definir</div>
+        <div class="week-title">Sesión 2 — Perfil quirúrgico del cliente B</div>
+        <div class="week-date">📅 Sábados · horario por cuadrar</div>
       </div>
-      <span class="bdg amber">Por agendar</span>
+      <span class="bdg amber">Próxima</span>
     </div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg amber">ICP</span><span class="bdg amber">Avatar</span><span class="bdg amber">Oferta y promesa</span></div>
-      <div class="week-sec">📋 Antes de la sesión</div>
+      <div class="week-chips"><span class="bdg amber">Variables del cliente B</span><span class="bdg amber">Por mercado</span></div>
+      <div class="week-sec">📋 Antes de la sesión (cliente)</div>
       <div class="week-text"><ul>
-        <li>Laura trae toda la información del negocio centralizada — no puede seguir solo en su cabeza</li>
-        <li>Clientes antiguos y leads prospectados hasta ahora (para migrar a Notion)</li>
-        <li>Definir horario fijo de la sesión semanal</li>
+        <li>Loguearse en Claude y entrar a Notion</li>
+        <li>Centralizar todo el negocio en un solo Excel</li>
+        <li>Desglosar las variables de A/B/C — una primera pasada</li>
+        <li>Enviar el Word/PDF "paso a paso" del flujo comercial por WhatsApp</li>
       </ul></div>
       <div class="week-sec">🎯 Núcleo (sesión)</div>
       <div class="week-text"><ul>
-        <li><strong>Prioridad #1:</strong> que Laura tenga 100% claro a quién le vende — avatar y oferta, antes que cualquier otra cosa</li>
-        <li>ICP quirúrgico: perfil exacto de comprador por mercado (Colombia, Bolivia)</li>
-        <li>Avatar del cliente: dolores, objeciones y promesa — con el framework de Private Build</li>
-        <li>Criterios de calificación que hoy solo existen en la cabeza de Laura</li>
-        <li>Estructura del backend: cada máquina como unidad central, no leads sueltos</li>
-        <li>Qué herramientas de IA usar para documentar más rápido, sin reemplazar el proceso</li>
+        <li>Perfil quirúrgico del cliente B: desglosar las variables exactas por mercado</li>
+        <li>Dejar el criterio de clasificación A/B/C aplicable sin depender de la memoria de Laura</li>
       </ul></div>
       <div class="week-sec">📝 Entregable</div>
-      <div class="week-text">ICP, avatar, criterios de calificación y backend por máquina documentados en Notion — repetible aunque Laura no esté, y con IA como apoyo para sostenerlo mientras se activa el motor en Mes 2.</div>
+      <div class="week-text">Variables del cliente B documentadas y consistentes — listo para calificar cualquier lead entrante sin ambigüedad.</div>
     </div>
   </div>
 
   <div class="slbl">Próximas sesiones</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc"><div class="rm-uc-num">Sem 2–4 · Mes 1</div><div class="rm-uc-title">ICP, avatar y criterios de calificación documentados</div><div class="rm-uc-chips"><span class="bdg grey">Foundations</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 3–4 · Mes 1</div><div class="rm-uc-title">Avatar, oferta y criterios de calificación documentados</div><div class="rm-uc-chips"><span class="bdg grey">Foundations</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 5–6 · Mes 2</div><div class="rm-uc-title">CRM documentado + LinkedIn como motor con métricas</div><div class="rm-uc-chips"><span class="bdg grey">El motor</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 7–8 · Mes 2</div><div class="rm-uc-title">Journey de nutrición (info, catálogos, videos)</div><div class="rm-uc-chips"><span class="bdg grey">Nutrición</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 9–11 · Mes 3</div><div class="rm-uc-title">Dashboard de pipeline + padre activando el sistema</div><div class="rm-uc-chips"><span class="bdg grey">Activación</span></div></div>
@@ -678,80 +692,102 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="tg-hd">Laura Sandoval — acción esta semana <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
+  <div class="tg-hd">Laura y Jairo (padre) — acción esta semana <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-body">
-      <div class="task-title">Traer toda la información del negocio centralizada</div>
-      <div class="task-desc">Oferta, promesa, clientes antiguos, catálogos, mensajes — todo lo que hoy vive solo en su cabeza, para revisarlo y dejarlo en un solo lugar antes de la Sesión 1.</div>
+      <div class="task-title">Centralizar todo el negocio en un solo Excel</div>
+      <div class="task-desc">Leads, clientes antiguos, cotizaciones y pipeline — hoy repartidos entre el Excel de Laura, la carpeta de Jairo, el PowerPoint y WhatsApp.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-body">
-      <div class="task-title">Entregar el CRM actual o los leads prospectados</div>
-      <div class="task-desc">Todo lo que tenga levantado hasta ahora (aunque esté en Excel o solo en la cabeza) para migrarlo a Notion.</div>
+      <div class="task-title">Desglosar las variables de A/B/C — primera pasada</div>
+      <div class="task-desc">Qué hace que un cliente sea A, B o C: tamaño, empleados, quién decide. Base para calificar sin ambigüedad en la Sesión 2.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
 
-  <div class="tg-hd">Equipo STM — Jairo (secuencias de email)</div>
-
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Documentar el proceso de email en su propio repositorio</div>
-      <div class="task-desc">Las secuencias que maneja manualmente tienen que quedar registradas y alimentadas en su propia guía — no solo en su cabeza, igual que Laura.</div>
+      <div class="task-title">Loguearse en Claude y entrar a Notion</div>
+      <div class="task-desc">Activar los accesos para que el repositorio consultable empiece a funcionar.</div>
     </div>
-    <span class="bdg grey">Jairo</span>
-  </div>
-
-  <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">6</span></div>
-
-  <div class="task">
-    <div class="task-body">
-      <div class="task-title">Dar acceso al Notion de STM</div>
-      <div class="task-desc">Crear el workspace y compartir acceso con Laura.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
+    <span class="bdg grey">Cliente</span>
   </div>
 
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Vincular las fuentes aportadas por STM</div>
-      <div class="task-desc">Conectar la información que Laura entregue (negocio, clientes antiguos, leads) al repo central.</div>
+      <div class="task-title">Enviar el Word/PDF del flujo comercial por WhatsApp</div>
+      <div class="task-desc">El paso a paso que Jairo ya tiene documentado — para no reconstruirlo de cero.</div>
     </div>
-    <span class="bdg amber">Pato</span>
+    <span class="bdg grey">Cliente</span>
   </div>
 
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Entrega de este roadmap live</div>
-      <div class="task-desc">Compartir el link del panel con Laura para que lo tenga siempre a mano.</div>
+      <div class="task-title">Cuadrar horario fijo de los sábados</div>
+      <div class="task-desc">El día ya quedó definido en el cierre — falta fijar la hora exacta.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
+  </div>
+
+  <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">7</span></div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Documentar los procesos de esta sesión</div>
+      <div class="task-desc">Foundations y la segmentación A/B/C — este fin de semana, mientras está fresco.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
 
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Auditar el Excel live en la próxima llamada</div>
-      <div class="task-desc">El Excel es de STM, no lo crea Private Build — la tarea es revisarlo y ordenarlo junto a Laura en la siguiente sesión.</div>
+      <div class="task-title">Enviar videos de onboarding (Notion + Claude)</div>
+      <div class="task-desc">Para que Laura y Jairo entiendan cómo moverse en su propio repositorio sin depender de preguntar cada vez.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
 
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Grabar video intro a Notion como repo central</div>
-      <div class="task-desc">Para que Laura entienda cómo moverse en su propio Notion sin depender de preguntar cada vez.</div>
+      <div class="task-title">Enviar la plantilla/skill de desglose del ICP A/B/C</div>
+      <div class="task-desc">Para que puedan hacer la primera pasada de variables antes de la Sesión 2.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
 
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Terminar el repo de IA de soporte</div>
-      <div class="task-desc">Cerrar la configuración pendiente antes de que el sistema lo necesite.</div>
+      <div class="task-title">Bajar y categorizar la info A/B/C en el panel</div>
+      <div class="task-desc">Una vez que Laura y Jairo entreguen la primera pasada de variables.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Actualizar el roadmap de consultoría en 24h</div>
+      <div class="task-desc">Reflejar lo definido en Sesión 1 y avisar a Laura y Jairo.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Auditar el Excel centralizado en la próxima sesión</div>
+      <div class="task-desc">El Excel es de STM, no lo crea Private Build — la tarea es revisarlo y ordenarlo junto a ellos.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Emitir factura a BrainTech LLC si la piden</div>
+      <div class="task-desc">La empresa con la que pagaron la consultoría.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -783,14 +819,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <td><div class="sdot" style="background:#7B61FF">1</div></td>
         <td class="sname">Foundations</td>
         <td><span class="bdg amber">🔄 En curso</span></td>
-        <td class="sgap">Backend del negocio: ICP, avatar, oferta y clientes antiguos documentados por escrito, estructurados por máquina. IA como apoyo para documentar más rápido, no para reemplazar el proceso.</td>
+        <td class="sgap">Clientes segmentados A/B/C (Sesión 1) con foco en B. Falta desglosar variables por mercado y documentar avatar, oferta y clientes antiguos por escrito.</td>
         <td class="sgap">Mes 1 · en curso</td>
       </tr>
       <tr>
         <td><div class="sdot" style="background:#3B9EE8">2</div></td>
         <td class="sname">Atracción</td>
         <td><span class="bdg amber">🔄 Activa, 100% manual</span></td>
-        <td class="sgap">LinkedIn outbound (Laura) y secuencias de email (Jairo) ya generan leads, pero sin ICP formal, sin métricas y sin CRM — todo manual y sin registro.</td>
+        <td class="sgap">LinkedIn outbound (Laura) y secuencias de email (Jairo, padre) ya generan leads, pero sin ICP formal, sin métricas y sin CRM — todo manual y sin registro.</td>
         <td class="sgap">Mes 1–2</td>
       </tr>
       <tr class="broken">
@@ -843,9 +879,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="qa-card" onclick="toggleCard(this)">
     <div class="qa-hd"><div class="qa-n" style="background:#7B61FF">1</div><div class="qa-title">Foundations</div><span class="bdg amber" style="margin-left:auto">🔄 En curso</span><span class="qa-icon">▼</span></div>
     <div class="qa-body"><ul>
-      <li>¿Cuál es el perfil exacto de comprador por mercado (Perú, Bolivia, México, Colombia)?</li>
-      <li>¿Qué señales usa Laura hoy, sin darse cuenta, para descartar un lead?</li>
-      <li>¿Cómo se escribe ese criterio para que otra persona lo pueda aplicar?</li>
+      <li>✓ ¿En qué tiers se divide el cliente de STM? — A/B/C, con foco en B (Sesión 1)</li>
+      <li>¿Cuáles son las variables exactas que definen a un cliente B por mercado?</li>
+      <li>¿Cómo se escribe ese criterio para que otra persona lo pueda aplicar sin depender de la memoria de Laura?</li>
     </ul></div>
   </div>
 
