@@ -151,6 +151,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rm-track{display:flex;align-items:flex-start;min-width:660px;position:relative}
 .rm-track::before{content:'';position:absolute;top:16px;left:17px;right:17px;height:2px;background:var(--border);z-index:0}
 .rm-node{display:flex;flex-direction:column;align-items:center;flex:1;min-width:52px;position:relative;z-index:1}
+.rm-info{display:flex;flex-direction:column;align-items:center}
 .rm-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;margin-bottom:7px;border:2px solid transparent;flex-shrink:0}
 .rm-dot.done{background:var(--teal);border-color:var(--teal);color:#fff}
 .rm-dot.now{background:var(--gold);border-color:var(--gold);color:#fff;box-shadow:0 0 0 5px rgba(232,162,55,.18)}
@@ -189,35 +190,22 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .hist-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}
 .hist-title{font-size:14px;font-weight:600;color:var(--dark)}
 .hist-text{font-size:12.5px;color:var(--grey);line-height:1.6;margin-bottom:8px}
-.hist-flow{font-size:11px;color:var(--grey);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.hist-money{font-size:11.5px;color:var(--teal-dk);font-weight:500;line-height:1.5;padding-top:8px;border-top:0.5px dashed var(--border)}
 
-/* ENGINE QA */
-.qa-card{background:var(--surf);border:0.5px solid var(--border);border-radius:11px;padding:14px 16px;margin-bottom:8px;cursor:pointer;user-select:none;transition:box-shadow .15s}
-.qa-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.qa-card.broken-q{border-left:3px solid var(--red)}
-.qa-hd{display:flex;align-items:center;gap:10px}
-.qa-n{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:12px;font-weight:600;color:#fff;flex-shrink:0}
-.qa-title{font-size:15.5px;font-weight:600;color:var(--dark)}
-.qa-icon{font-size:12px;color:var(--grey);transition:transform .2s;flex-shrink:0;margin-left:8px}
-.qa-card.open .qa-icon{transform:rotate(180deg)}
-.qa-body{display:none;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border)}
-.qa-card.open .qa-body{display:block}
-.qa-body ul{padding-left:18px;margin:0}
-.qa-body li{font-size:14px;color:var(--grey);line-height:1.6;margin-bottom:6px}
-.qa-body li:last-child{margin-bottom:0}
-
-/* ENGINE TABLE */
-.eng-table{width:100%;border-collapse:collapse;background:var(--surf);border-radius:12px;overflow:hidden;border:0.5px solid var(--border);margin-bottom:20px}
-.eng-table thead{background:var(--dark)}
-.eng-table thead th{padding:10px 13px;text-align:left;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:500}
-.eng-table tbody tr{border-bottom:0.5px solid var(--border);transition:background .12s}
-.eng-table tbody tr:last-child{border-bottom:none}
-.eng-table tbody tr:hover{background:var(--bg)}
-.eng-table tbody tr.broken{background:rgba(226,80,58,.025)}
-.eng-table td{padding:11px 13px;font-size:12.5px;vertical-align:top}
-.sdot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:9px;font-weight:500;color:#fff;flex-shrink:0}
-.sname{font-size:14px;font-weight:600;color:var(--dark)}
-.sgap{font-size:12px;color:var(--grey);line-height:1.5}
+/* FLYWHEEL CARDS */
+.sdot{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:600;color:#fff;flex-shrink:0}
+.flow-card{background:var(--surf);border:0.5px solid var(--border);border-radius:11px;padding:15px 17px;margin-bottom:9px}
+.flow-card.broken{border-left:3px solid var(--red)}
+.flow-hd{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.flow-title{font-size:15px;font-weight:600;color:var(--dark)}
+.flow-when{margin-left:auto;font-size:11px;color:var(--grey);font-family:'DM Mono',monospace}
+.flow-summary{font-size:12.5px;color:var(--grey);line-height:1.55;margin:10px 0 12px;padding-bottom:11px;border-bottom:0.5px solid var(--border)}
+.flow-qa{margin-bottom:9px}
+.flow-qa:last-child{margin-bottom:0}
+.flow-q{font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.flow-a{font-size:12.5px;color:var(--grey);line-height:1.5}
+.flow-a.ok{color:var(--teal-dk)}
+.flow-a.pend{color:var(--orange-dk)}
 
 /* TASKS */
 .tg-hd{font-size:13px;font-weight:600;color:var(--ink);margin:18px 0 9px;display:flex;align-items:center;gap:8px}
@@ -227,6 +215,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .task-body{flex:1;min-width:0}
 .task-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:2px;line-height:1.35}
 .task-desc{font-size:12px;color:var(--grey);line-height:1.5}
+.task-goal{font-size:11px;color:var(--teal-dk);font-weight:600;margin-top:5px;line-height:1.5}
 .task-note{margin-top:6px;padding:6px 9px;background:var(--beige);border-radius:5px;font-size:11.5px;color:var(--brown);line-height:1.5}
 
 /* DISCLAIMERS */
@@ -282,21 +271,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .bn-grid{grid-template-columns:1fr;gap:9px}
   .phase-grid{grid-template-columns:1fr;gap:9px}
   .rm-track-wrap{overflow-x:visible}
-  .rm-track{min-width:0;flex-wrap:wrap;row-gap:18px}
-  .rm-track::before{display:none}
-  .rm-node{flex:0 0 33.333%;min-width:0}
-  .rm-lbl{max-width:100%}
-  .eng-table{border:none;background:transparent;border-radius:0;overflow:visible}
-  .eng-table thead{display:none}
-  .eng-table tbody,.eng-table tr,.eng-table td{display:block;width:100%}
-  .eng-table tr{background:var(--surf);border:0.5px solid var(--border);border-radius:11px;margin-bottom:9px;padding:14px 16px;position:relative}
-  .eng-table tr.broken{background:rgba(226,80,58,.025)}
-  .eng-table td{padding:0;border:none;font-size:14.5px}
-  .eng-table td:nth-child(1){position:absolute;top:14px;right:14px;width:auto}
-  .eng-table td:nth-child(2){font-size:16.5px;font-weight:600;color:var(--dark);margin-bottom:7px;padding-right:30px}
-  .eng-table td:nth-child(3){margin-bottom:8px}
-  .eng-table td:nth-child(4)::before{content:"Situación: ";font-weight:600;color:var(--ink)}
-  .eng-table td:nth-child(5)::before{content:"Cuándo: ";font-weight:600;color:var(--ink)}
+  .rm-track{min-width:0;flex-direction:column;align-items:stretch;gap:0;position:relative}
+  .rm-track::before{top:16px;bottom:16px;left:15px;right:auto;width:2px;height:auto}
+  .rm-node{flex-direction:row;align-items:center;justify-content:flex-start;gap:12px;padding:9px 0;flex:none;min-width:0}
+  .rm-dot{margin-bottom:0}
+  .rm-info{align-items:flex-start}
+  .rm-lbl{max-width:none;text-align:left;margin-bottom:1px}
+  .rm-sub{text-align:left}
+  .flow-when{margin-left:0;flex-basis:100%;order:3}
   .footer-nav{padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px}
   .fn-btn{height:50px;padding:0 12px;font-size:14px}
 }
@@ -354,6 +336,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sch todo">8</div><div class="sch todo">9</div>
     <div class="sch todo">10</div><div class="sch todo">11</div>
     <div class="sch todo">12</div>
+  </div>
+
+  <div class="slbl">Resumen semanal · Semana del 25 jul</div>
+  <div class="alert-box info">
+    <span class="alert-icon">📈</span>
+    <div>
+      <div class="alert-title">Avance esta semana: Foundations arrancó</div>
+      <div class="alert-text">Sesión 1 completada — clientes segmentados A/B/C, foco quirúrgico en B. Próximo hito: variables del cliente B por mercado (Sesión 2, sábados). El negocio sigue en 1 máquina vendida en 2026 — el impacto en ventas llega cuando el motor esté armado en Mes 2, no antes.</div>
+    </div>
   </div>
 
   <div class="slbl">Métricas clave · Diagnóstico julio 2026</div>
@@ -563,23 +554,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="rm-track-wrap">
-    <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
-      Recorrido por el sistema comercial STM
-      <span class="bdg amber">📅 Sesión 2 — sábados, horario por cuadrar</span>
-    </div>
-    <div class="rm-track">
-      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Captación</div><div class="rm-sub">manual</div></div>
-      <div class="rm-node"><div class="rm-dot future">2</div><div class="rm-lbl mt">Calificación</div><div class="rm-sub">se construye</div></div>
-      <div class="rm-node"><div class="rm-dot future">3</div><div class="rm-lbl mt">Nutrición</div><div class="rm-sub">se construye</div></div>
-      <div class="rm-node"><div class="rm-dot future">4</div><div class="rm-lbl mt">Conversión</div><div class="rm-sub">se construye</div></div>
-      <div class="rm-node"><div class="rm-dot done">5</div><div class="rm-lbl">Cierre</div><div class="rm-sub">ya existe</div></div>
-      <div class="rm-node"><div class="rm-dot done">6</div><div class="rm-lbl">Gestión</div><div class="rm-sub">ya existe</div></div>
-      <div class="rm-node"><div class="rm-dot future">7</div><div class="rm-lbl mt">Post-venta / Referidos</div><div class="rm-sub">se construye</div></div>
-    </div>
-  </div>
-
-  <div class="slbl">Histórico — qué se construyó y qué etapa del Flywheel avanza</div>
+  <div class="slbl">Histórico — qué se construyó, qué se cierra y hacia dónde acerca</div>
 
   <div class="hist-card done">
     <div class="hist-hd">
@@ -587,7 +562,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <span class="bdg teal">✓ 13 jul</span>
     </div>
     <div class="hist-text">Se mapeó el modelo de negocio de STM (comisión 5% sobre maquinaria de $200k–500k USD), el cuello de botella central (equipo comercial de una sola persona) y el estado financiero post-quiebra 2024. Laura confirmó compromiso 8/10.</div>
-    <div class="hist-flow">→ Avanza en el Flywheel: <span class="bdg violet">Foundations</span></div>
+    <div class="hist-money">💰 Hacia dónde acerca: sin este diagnóstico no hay roadmap — es la condición para que arranque el programa.</div>
   </div>
 
   <div class="hist-card done">
@@ -596,7 +571,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <span class="bdg teal">✓ 25 jul</span>
     </div>
     <div class="hist-text">Kickoff con Laura y Jairo (padre). Se clasificaron los clientes en tres tiers — A (multinacionales), B (foco, ~50% de los cierres históricos), C (volumen/precio) — y se inventarió toda la documentación dispersa del negocio para centralizarla en un Excel + Notion.</div>
-    <div class="hist-flow">→ Avanza en el Flywheel: <span class="bdg violet">Foundations</span></div>
+    <div class="hist-money">💰 Hacia dónde acerca: dejar de perseguir leads A/C que tardan años o no cierran — cada hora de Laura va al cliente que paga en el ciclo más corto.</div>
   </div>
 
   <div class="hist-card now">
@@ -605,7 +580,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <span class="bdg amber">→ Sábados, horario por cuadrar</span>
     </div>
     <div class="hist-text">Desglosar las variables exactas que definen a un cliente B por mercado, dejando el criterio de clasificación A/B/C aplicable sin depender de la memoria de Laura. Detalle de la sesión en Pendientes.</div>
-    <div class="hist-flow">→ Avanza en el Flywheel: <span class="bdg violet">Foundations</span> <span class="bdg blue">Calificación</span></div>
+    <div class="hist-money">💰 Hacia dónde acerca: calificar un lead entrante en minutos, no en la cabeza de Laura — más reuniones con el cliente correcto, menos tiempo perdido en cotizaciones que no cierran.</div>
   </div>
 
   <div class="slbl">Material de apoyo</div>
@@ -632,6 +607,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Centralizar todo el negocio en un solo Excel</div>
       <div class="task-desc">Leads, clientes antiguos, cotizaciones y pipeline — hoy repartidos entre el Excel de Laura, la carpeta de Jairo, el PowerPoint y WhatsApp.</div>
+      <div class="task-goal">→ Para: tener una sola fuente de verdad — sin esto la Sesión 2 no puede avanzar.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -640,6 +616,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Desglosar las variables de A/B/C — primera pasada</div>
       <div class="task-desc">Qué hace que un cliente sea A, B o C: tamaño, empleados, quién decide. Base para calificar sin ambigüedad en la Sesión 2.</div>
+      <div class="task-goal">→ Para: calificar cualquier lead en minutos y dejar de perseguir clientes que no cierran.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -648,6 +625,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Loguearse en Claude y entrar a Notion</div>
       <div class="task-desc">Activar los accesos para que el repositorio consultable empiece a funcionar.</div>
+      <div class="task-goal">→ Para: dejar de depender de preguntarle a Pato cada vez.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -656,6 +634,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Enviar el Word/PDF del flujo comercial por WhatsApp</div>
       <div class="task-desc">El paso a paso que Jairo ya tiene documentado — para no reconstruirlo de cero.</div>
+      <div class="task-goal">→ Para: que Pato parta del criterio real de STM, no de uno inventado.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -664,6 +643,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Cuadrar horario fijo de los sábados</div>
       <div class="task-desc">El día ya quedó definido en el cierre — falta fijar la hora exacta.</div>
+      <div class="task-goal">→ Para: que la cadencia semanal no dependa de coordinar cada vez.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -674,6 +654,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Documentar los procesos de esta sesión</div>
       <div class="task-desc">Foundations y la segmentación A/B/C — este fin de semana, mientras está fresco.</div>
+      <div class="task-goal">→ Para: no perder el criterio A/B/C antes de que arranque la Sesión 2.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -682,6 +663,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Enviar videos de onboarding (Notion, Claude y Fathom)</div>
       <div class="task-desc">Cómo hacer X en cada herramienta y la lógica de uso — para que Laura y Jairo operen solos, sin depender de preguntar cada vez.</div>
+      <div class="task-goal">→ Para: que operen ellos solos entre sesiones, sin esperar a Pato.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -690,6 +672,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Enviar la plantilla/skill de desglose del ICP A/B/C</div>
       <div class="task-desc">Para que puedan hacer la primera pasada de variables antes de la Sesión 2.</div>
+      <div class="task-goal">→ Para: llegar a la Sesión 2 con trabajo hecho, no a improvisar en vivo.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -698,6 +681,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">Actualizar el roadmap de consultoría en 24h</div>
       <div class="task-desc">Reflejar lo definido en Sesión 1 y avisar a Laura y Jairo.</div>
+      <div class="task-goal">→ Para: que el panel refleje la realidad y sepan exactamente qué sigue.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -720,139 +704,186 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ FLYWHEEL ════════ -->
 <div class="page" id="pg-engine">
 
-  <div class="slbl" style="margin-top:0">Estado actual del sistema comercial STM — 8 etapas</div>
-
-  <table class="eng-table">
-    <thead><tr><th>#</th><th>Etapa</th><th>Estado</th><th>Situación actual</th><th>Cuándo</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><div class="sdot" style="background:#7B61FF">1</div></td>
-        <td class="sname">Foundations</td>
-        <td><span class="bdg amber">🔄 En curso</span></td>
-        <td class="sgap">Clientes segmentados A/B/C (Sesión 1) con foco en B. Falta desglosar variables por mercado y documentar avatar, oferta y clientes antiguos por escrito.</td>
-        <td class="sgap">Mes 1 · en curso</td>
-      </tr>
-      <tr>
-        <td><div class="sdot" style="background:#3B9EE8">2</div></td>
-        <td class="sname">Atracción</td>
-        <td><span class="bdg amber">🔄 Activa, 100% manual</span></td>
-        <td class="sgap">LinkedIn outbound (Laura) y secuencias de email (Jairo, padre) ya generan leads, pero sin ICP formal, sin métricas y sin CRM — todo manual y sin registro.</td>
-        <td class="sgap">Mes 1–2</td>
-      </tr>
-      <tr class="broken">
-        <td><div class="sdot" style="background:#E2503A">3</div></td>
-        <td class="sname">Calificación</td>
-        <td><span class="bdg red">✗ Roto</span></td>
-        <td class="sgap">Sin filtro documentado. Los freelancers contratados antes trajeron leads irrelevantes (llenadoras, etiquetadoras) por no entender el nicho.</td>
-        <td class="sgap"><span class="bdg grey">Mes 1</span></td>
-      </tr>
-      <tr class="broken">
-        <td><div class="sdot" style="background:#E8A237">4</div></td>
-        <td class="sname">Nutrición</td>
-        <td><span class="bdg red">✗ Por construir</span></td>
-        <td class="sgap">Sin secuencia de información, catálogos y videos. Un ciclo de 1 a 2 años necesita nutrición estructurada, no solo contacto inicial.</td>
-        <td class="sgap"><span class="bdg grey">Mes 2</span></td>
-      </tr>
-      <tr class="broken">
-        <td><div class="sdot" style="background:#E05599">5</div></td>
-        <td class="sname">Conversión</td>
-        <td><span class="bdg red">✗ Por construir</span></td>
-        <td class="sgap">Sin proceso definido para que el lead pida reunión virtual o visita industrial de forma consistente.</td>
-        <td class="sgap"><span class="bdg grey">Mes 2</span></td>
-      </tr>
-      <tr>
-        <td><div class="sdot" style="background:#3EB489">6</div></td>
-        <td class="sname">Cierre + Gestión</td>
-        <td><span class="bdg teal">✓ Ya existe</span></td>
-        <td class="sgap">Laura cierra con su propio criterio; su padre y los líderes técnicos gestionan el proyecto (instalación, arranque, soporte). Esta capa funciona.</td>
-        <td class="sgap">Operativo ✓</td>
-      </tr>
-      <tr class="broken">
-        <td><div class="sdot" style="background:#AA6E28">7</div></td>
-        <td class="sname">Post-venta / Referidos</td>
-        <td><span class="bdg red">✗ Por construir</span></td>
-        <td class="sgap">Los clientes gestionados no retroalimentan el pipeline todavía — oportunidad de referidos sin explotar.</td>
-        <td class="sgap"><span class="bdg grey">Mes 3</span></td>
-      </tr>
-      <tr style="opacity:.5">
-        <td><div class="sdot" style="background:#aaa">8</div></td>
-        <td class="sname">Systems</td>
-        <td><span class="bdg grey">Post 90d · sin automatizar aún</span></td>
-        <td class="sgap">Notion como cerebro: CRM, pipeline y métricas en una sola fuente de verdad. No se automatiza nada — incluyendo LARIA — hasta validar 1–7 con el negocio estructurado.</td>
-        <td class="sgap">—</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="slbl">Las preguntas que cada etapa tiene que responder</div>
-
-  <div class="qa-card" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#7B61FF">1</div><div class="qa-title">Foundations</div><span class="bdg amber" style="margin-left:auto">🔄 En curso</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>✓ ¿En qué tiers se divide el cliente de STM? — A/B/C, con foco en B (Sesión 1)</li>
-      <li>¿Cuáles son las variables exactas que definen a un cliente B por mercado?</li>
-      <li>¿Cómo se escribe ese criterio para que otra persona lo pueda aplicar sin depender de la memoria de Laura?</li>
-    </ul></div>
+  <div class="slbl" style="margin-top:0">Recorrido por el sistema comercial STM — y cómo se retroalimenta</div>
+  <div class="rm-track-wrap">
+    <div class="rm-track">
+      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-info"><div class="rm-lbl">Captación</div><div class="rm-sub">manual</div></div></div>
+      <div class="rm-node"><div class="rm-dot future">2</div><div class="rm-info"><div class="rm-lbl mt">Calificación</div><div class="rm-sub">se construye</div></div></div>
+      <div class="rm-node"><div class="rm-dot future">3</div><div class="rm-info"><div class="rm-lbl mt">Nutrición</div><div class="rm-sub">se construye</div></div></div>
+      <div class="rm-node"><div class="rm-dot future">4</div><div class="rm-info"><div class="rm-lbl mt">Conversión</div><div class="rm-sub">se construye</div></div></div>
+      <div class="rm-node"><div class="rm-dot done">5</div><div class="rm-info"><div class="rm-lbl">Cierre</div><div class="rm-sub">ya existe</div></div></div>
+      <div class="rm-node"><div class="rm-dot done">6</div><div class="rm-info"><div class="rm-lbl">Gestión</div><div class="rm-sub">ya existe</div></div></div>
+      <div class="rm-node"><div class="rm-dot future">7</div><div class="rm-info"><div class="rm-lbl mt">Post-venta / Referidos</div><div class="rm-sub">se construye</div></div></div>
+    </div>
+  </div>
+  <div class="alert-box info">
+    <span class="alert-icon">🔁</span>
+    <div>
+      <div class="alert-title">El loop: Post-venta/Referidos vuelve a alimentar Captación</div>
+      <div class="alert-text">Un cliente gestionado (etapa 6) que refiere (etapa 7) es un lead nuevo en Captación (etapa 1) — sin pasar por LinkedIn ni email. Por eso etapa 7 no es el final, es lo que hace que el sistema gire solo.</div>
+    </div>
   </div>
 
-  <div class="qa-card" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#3B9EE8">2</div><div class="qa-title">Atracción</div><span class="bdg amber" style="margin-left:auto">🔄 Activa sin sistema</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>¿Cuántos leads entran por LinkedIn vs. email hoy?</li>
-      <li>¿Qué mensaje de outbound está funcionando y cuál no?</li>
-      <li>¿Cómo se prioriza mercado y marca en la prospección?</li>
-    </ul></div>
+  <div class="slbl">Estado, preguntas y respuestas por etapa</div>
+
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#7B61FF">1</div>
+      <div class="flow-title">Foundations</div>
+      <span class="bdg amber">🔄 En curso</span>
+      <span class="flow-when">Mes 1 · en curso</span>
+    </div>
+    <div class="flow-summary">Clientes segmentados A/B/C (Sesión 1) con foco en B. Falta desglosar variables por mercado y documentar avatar, oferta y clientes antiguos por escrito.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿En qué tiers se divide el cliente de STM?</div>
+      <div class="flow-a ok">✓ A/B/C, con foco en B (Sesión 1)</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cuáles son las variables exactas que definen a un cliente B por mercado?</div>
+      <div class="flow-a pend">Pendiente — foco de la Sesión 2</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cómo se escribe ese criterio para que otra persona lo pueda aplicar sin depender de la memoria de Laura?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
   </div>
 
-  <div class="qa-card broken-q" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#E2503A">3</div><div class="qa-title">Calificación</div><span class="bdg red" style="margin-left:auto">✗ Roto</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>¿Qué hace que un lead sea "de STM" y no de otro proveedor de maquinaria?</li>
-      <li>¿Cómo se descarta rápido a un lead fuera de nicho sin perder tiempo de Laura?</li>
-      <li>¿Quién puede aplicar el filtro además de Laura?</li>
-    </ul></div>
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#3B9EE8">2</div>
+      <div class="flow-title">Atracción</div>
+      <span class="bdg amber">🔄 Activa, 100% manual</span>
+      <span class="flow-when">Mes 1–2</span>
+    </div>
+    <div class="flow-summary">LinkedIn outbound (Laura) y secuencias de email (Jairo, padre) ya generan leads, pero sin ICP formal, sin métricas y sin CRM — todo manual y sin registro.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cuántos leads entran por LinkedIn vs. email hoy?</div>
+      <div class="flow-a pend">Sin medir — no hay CRM ni métricas todavía</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué mensaje de outbound está funcionando y cuál no?</div>
+      <div class="flow-a pend">Sin datos — todo manual y sin registro</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cómo se prioriza mercado y marca en la prospección?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
   </div>
 
-  <div class="qa-card broken-q" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#E8A237">4</div><div class="qa-title">Nutrición</div><span class="bdg red" style="margin-left:auto">✗ Por construir</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>¿Qué información necesita ver un lead antes de pedir reunión, dado el ciclo largo?</li>
-      <li>¿En qué orden entregar catálogos, videos y casos de referencia?</li>
-      <li>¿Cómo se mantiene tibio un lead durante meses sin que Laura lo persiga manualmente?</li>
-    </ul></div>
+  <div class="flow-card broken">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#E2503A">3</div>
+      <div class="flow-title">Calificación</div>
+      <span class="bdg red">✗ Roto</span>
+      <span class="flow-when">Mes 1</span>
+    </div>
+    <div class="flow-summary">Sin filtro documentado. Los freelancers contratados antes trajeron leads irrelevantes (llenadoras, etiquetadoras) por no entender el nicho.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué hace que un lead sea "de STM" y no de otro proveedor de maquinaria?</div>
+      <div class="flow-a ok">Empieza a definirse con la segmentación A/B/C (Sesión 1) — falta el desglose fino del cliente B (Sesión 2)</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cómo se descarta rápido a un lead fuera de nicho sin perder tiempo de Laura?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Quién puede aplicar el filtro además de Laura?</div>
+      <div class="flow-a pend">Nadie hoy — pendiente</div>
+    </div>
   </div>
 
-  <div class="qa-card broken-q" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#E05599">5</div><div class="qa-title">Conversión</div><span class="bdg red" style="margin-left:auto">✗ Por construir</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>¿Qué dispara el paso de "lead nutrido" a "reunión agendada"?</li>
-      <li>¿Reunión virtual o visita industrial — según qué criterio?</li>
-    </ul></div>
+  <div class="flow-card broken">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#E8A237">4</div>
+      <div class="flow-title">Nutrición</div>
+      <span class="bdg red">✗ Por construir</span>
+      <span class="flow-when">Mes 2</span>
+    </div>
+    <div class="flow-summary">Sin secuencia de información, catálogos y videos. Un ciclo de 1 a 2 años necesita nutrición estructurada, no solo contacto inicial.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué información necesita ver un lead antes de pedir reunión, dado el ciclo largo?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿En qué orden entregar catálogos, videos y casos de referencia?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cómo se mantiene tibio un lead durante meses sin que Laura lo persiga manualmente?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
   </div>
 
-  <div class="qa-card" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#3EB489">6</div><div class="qa-title">Cierre + Gestión</div><span class="bdg teal" style="margin-left:auto">✓ Ya existe</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>¿Cómo se documenta lo que Laura ya hace bien en el cierre, para no romperlo al escalar?</li>
-      <li>¿Qué necesita el equipo técnico (padre + freelance) para no depender de Laura durante la gestión?</li>
-    </ul></div>
+  <div class="flow-card broken">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#E05599">5</div>
+      <div class="flow-title">Conversión</div>
+      <span class="bdg red">✗ Por construir</span>
+      <span class="flow-when">Mes 2</span>
+    </div>
+    <div class="flow-summary">Sin proceso definido para que el lead pida reunión virtual o visita industrial de forma consistente.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué dispara el paso de "lead nutrido" a "reunión agendada"?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Reunión virtual o visita industrial — según qué criterio?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
   </div>
 
-  <div class="qa-card broken-q" onclick="toggleCard(this)">
-    <div class="qa-hd"><div class="qa-n" style="background:#AA6E28">7</div><div class="qa-title">Post-venta / Referidos</div><span class="bdg red" style="margin-left:auto">✗ Por construir</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>¿Qué clientes gestionados podrían referir hoy si se les pidiera?</li>
-      <li>¿Cómo se cierra el loop de referidos → nuevo pipeline sin trabajo extra de Laura?</li>
-    </ul></div>
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#3EB489">6</div>
+      <div class="flow-title">Cierre + Gestión</div>
+      <span class="bdg teal">✓ Ya existe</span>
+      <span class="flow-when">Operativo ✓</span>
+    </div>
+    <div class="flow-summary">Laura cierra con su propio criterio; su padre y los líderes técnicos gestionan el proyecto (instalación, arranque, soporte). Esta capa funciona.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cómo se documenta lo que Laura ya hace bien en el cierre, para no romperlo al escalar?</div>
+      <div class="flow-a pend">Pendiente de documentar — aunque el proceso ya funciona</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué necesita el equipo técnico (padre + freelance) para no depender de Laura durante la gestión?</div>
+      <div class="flow-a ok">✓ Ya opera así — su padre y líderes técnicos gestionan instalación, arranque y soporte</div>
+    </div>
   </div>
 
-  <div class="qa-card" onclick="toggleCard(this)" style="opacity:.7">
-    <div class="qa-hd"><div class="qa-n" style="background:#aaa">8</div><div class="qa-title">Systems</div><span class="bdg grey" style="margin-left:auto">Post 90d · DFY</span><span class="qa-icon">▼</span></div>
-    <div class="qa-body"><ul>
-      <li>¿Lo que funciona está documentado para que no dependa solo de Laura?</li>
-      <li>¿Qué se puede automatizar ahora que ya está validado — incluyendo LARIA cuando esté lista?</li>
-      <li>No se automatiza lo que no está validado — por eso Systems va al final.</li>
-    </ul></div>
+  <div class="flow-card broken">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#AA6E28">7</div>
+      <div class="flow-title">Post-venta / Referidos</div>
+      <span class="bdg red">✗ Por construir</span>
+      <span class="flow-when">Mes 3</span>
+    </div>
+    <div class="flow-summary">Los clientes gestionados no retroalimentan el pipeline todavía — oportunidad de referidos sin explotar.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué clientes gestionados podrían referir hoy si se les pidiera?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Cómo se cierra el loop de referidos → nuevo pipeline sin trabajo extra de Laura?</div>
+      <div class="flow-a pend">Pendiente</div>
+    </div>
+  </div>
+
+  <div class="flow-card" style="opacity:.7">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#aaa">8</div>
+      <div class="flow-title">Systems</div>
+      <span class="bdg grey">Post 90d · sin automatizar aún</span>
+      <span class="flow-when">—</span>
+    </div>
+    <div class="flow-summary">Notion como cerebro: CRM, pipeline y métricas en una sola fuente de verdad. No se automatiza nada — incluyendo LARIA — hasta validar 1–7 con el negocio estructurado.</div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Lo que funciona está documentado para que no dependa solo de Laura?</div>
+      <div class="flow-a pend">No — recién arranca en Fase 1</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué se puede automatizar ahora que ya está validado — incluyendo LARIA cuando esté lista?</div>
+      <div class="flow-a pend">Nada todavía — no se automatiza lo que no está validado</div>
+    </div>
   </div>
 
   <div class="alert-box info" style="margin-top:18px">
@@ -905,7 +936,6 @@ function setMenu(open){mobDrop.classList.toggle('open',open);mobBtn.innerHTML=op
 function toggleMob(){setMenu(!mobDrop.classList.contains('open'));}
 function closeMob(){setMenu(false);}
 mobBtn.addEventListener('click',e=>{e.stopPropagation();toggleMob();});
-function toggleCard(card){card.classList.toggle('open');}
 document.addEventListener('click',e=>{
   if(!mobDrop.classList.contains('open'))return;
   if(mobDrop.contains(e.target)||mobBtn.contains(e.target))return;
