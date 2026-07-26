@@ -23,7 +23,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip;max-width:100%}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font-size:15.5px;line-height:1.6;min-height:100vh;padding-bottom:80px;overflow-x:clip;max-width:100%;position:relative}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font-size:15.5px;line-height:1.6;min-height:100vh;padding-bottom:calc(88px + env(safe-area-inset-bottom));overflow-x:clip;max-width:100%;position:relative}
 
 /* TOPBAR */
 .topbar{position:sticky;top:0;z-index:300;background:var(--dark);display:flex;align-items:center;padding:0 16px;height:52px;box-shadow:0 2px 12px rgba(0,0,0,.2);border-bottom:1px solid rgba(255,255,255,.07)}
@@ -278,18 +278,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .res-desc{font-size:12px;color:var(--grey);margin-top:1px}
 
 /* FOOTER NAV */
-.footer-nav{position:fixed;bottom:0;left:0;right:0;z-index:400;background:var(--dark);border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -4px 20px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;width:100%;max-width:900px;margin:0 auto;box-sizing:border-box}
-.fn-btn{display:flex;align-items:center;justify-content:center;gap:6px;height:42px;padding:0 14px;border-radius:10px;font-size:14px;font-weight:600;color:rgba(255,255,255,.72);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);cursor:pointer;text-decoration:none;transition:background .15s,color .15s;flex-shrink:0;white-space:nowrap}
-.fn-btn:hover{background:rgba(255,255,255,.14);color:#fff}
-.fn-btn.fn-hidden{visibility:hidden;pointer-events:none}
-.fn-wa{background:var(--wa);color:#fff;border-color:transparent;flex:1;max-width:280px}
-.fn-wa:hover{background:#20bd5a;color:#fff}
-.fn-wa svg{width:16px;height:16px;flex-shrink:0}
+.footer-nav{position:fixed;bottom:0;left:0;right:0;z-index:400;background:var(--dark);border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -4px 20px rgba(0,0,0,.18);display:flex;align-items:stretch;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));width:100%;max-width:900px;margin:0 auto;box-sizing:border-box}
+.fn-btn{display:flex;flex:1;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 16px;border-radius:12px;font-size:15px;font-weight:700;color:rgba(255,255,255,.8);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);cursor:pointer;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap}
+.fn-btn:hover{background:rgba(255,255,255,.16);color:#fff}
+.fn-btn.fn-next{background:var(--teal);color:#fff;border-color:transparent}
+.fn-btn.fn-next:hover{background:var(--teal-dk)}
+.fn-btn.fn-hidden{display:none}
 
 /* RESPONSIVE */
 @media(min-width:681px){.tabs-desktop{display:flex}.mob-btn{display:none}.mob-drop{display:none!important}}
 @media(max-width:680px){
-  body{font-size:16.5px;padding-bottom:88px}
+  body{font-size:16.5px;padding-bottom:calc(104px + env(safe-area-inset-bottom))}
   .tabs-desktop{display:none}.mob-btn{display:flex}
   .topbar{padding:0 12px}
   .ext-bar{display:flex;margin-left:0;border-left:none;gap:2px}
@@ -303,7 +302,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .ch-split{grid-template-columns:1fr;gap:9px}
   .bn-grid{grid-template-columns:1fr;gap:9px}
   .phase-grid{grid-template-columns:1fr;gap:9px}
-  .rm-track{min-width:620px}
+  .rm-track-wrap{overflow-x:visible}
+  .rm-track{min-width:0;flex-wrap:wrap;row-gap:18px}
+  .rm-track::before{display:none}
+  .rm-node{flex:0 0 33.333%;min-width:0}
+  .rm-lbl{max-width:100%}
   .rm-uc-grid{grid-template-columns:1fr}
   .eng-table{border:none;background:transparent;border-radius:0;overflow:visible}
   .eng-table thead{display:none}
@@ -316,11 +319,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .eng-table td:nth-child(3){margin-bottom:8px}
   .eng-table td:nth-child(4)::before{content:"Situación: ";font-weight:600;color:var(--ink)}
   .eng-table td:nth-child(5)::before{content:"Cuándo: ";font-weight:600;color:var(--ink)}
-  .footer-nav{padding:8px 10px;gap:6px}
-  .fn-btn{height:46px;padding:0 10px;font-size:13px}
-  .fn-btn span{display:none}
-  .fn-wa{max-width:none}
-  .fn-wa span{display:inline}
+  .footer-nav{padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px}
+  .fn-btn{height:50px;padding:0 12px;font-size:14px}
 }
 </style>
 </head>
@@ -934,10 +934,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- FOOTER NAV -->
 <footer class="footer-nav">
   <button class="fn-btn fn-prev fn-hidden" id="fn-prev" onclick="prevPage()" aria-label="Página anterior">← <span>Atrás</span></button>
-  <a class="fn-btn fn-wa" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank" aria-label="WhatsApp Patricio">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>
-    <span>Consultar a Patricio</span>
-  </a>
   <button class="fn-btn fn-next" id="fn-next" onclick="nextPage()" aria-label="Página siguiente"><span>Siguiente</span> →</button>
 </footer>
 
