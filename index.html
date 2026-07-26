@@ -183,13 +183,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rm-how-text{font-size:12px;color:rgba(255,255,255,.45);line-height:1.55}
 
 /* SESSION STRIP */
-.sess-strip{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;border-radius:9px;background:var(--surf);border:0.5px solid var(--border);margin-bottom:6px;font-size:12.5px;color:var(--grey);line-height:1.55}
-.sess-strip.done{border-left:2px solid var(--teal)}
-.sess-strip.now{border-left:2px solid var(--gold);background:var(--gold-lt)}
-.sess-dot{font-size:13px;flex-shrink:0;margin-top:1px;font-weight:700}
-.sess-strip.done .sess-dot{color:var(--teal-dk)}
-.sess-strip.now .sess-dot{color:var(--gold-dk)}
-.sess-body strong{color:var(--ink);font-weight:600}
+.hist-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:8px;border-left:3px solid var(--border)}
+.hist-card.done{border-left-color:var(--teal)}
+.hist-card.now{border-left-color:var(--gold);background:var(--gold-lt)}
+.hist-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.hist-title{font-size:14px;font-weight:600;color:var(--dark)}
+.hist-text{font-size:12.5px;color:var(--grey);line-height:1.6;margin-bottom:8px}
+.hist-flow{font-size:11px;color:var(--grey);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 
 /* ENGINE QA */
 .qa-card{background:var(--surf);border:0.5px solid var(--border);border-radius:11px;padding:14px 16px;margin-bottom:8px;cursor:pointer;user-select:none;transition:box-shadow .15s}
@@ -579,18 +579,33 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Estado de sesiones <span style="text-transform:none;font-weight:400">— detalle completo en Pendientes</span></div>
-  <div class="sess-strip done">
-    <span class="sess-dot">✓</span>
-    <div class="sess-body"><strong>Sesión 0 — Descubrimiento</strong> · 13 jul · Modelo de negocio y cuello de botella diagnosticados.</div>
+  <div class="slbl">Histórico — qué se construyó y qué etapa del Flywheel avanza</div>
+
+  <div class="hist-card done">
+    <div class="hist-hd">
+      <div class="hist-title">Sesión 0 — Descubrimiento</div>
+      <span class="bdg teal">✓ 13 jul</span>
+    </div>
+    <div class="hist-text">Se mapeó el modelo de negocio de STM (comisión 5% sobre maquinaria de $200k–500k USD), el cuello de botella central (equipo comercial de una sola persona) y el estado financiero post-quiebra 2024. Laura confirmó compromiso 8/10.</div>
+    <div class="hist-flow">→ Avanza en el Flywheel: <span class="bdg violet">Foundations</span></div>
   </div>
-  <div class="sess-strip done">
-    <span class="sess-dot">✓</span>
-    <div class="sess-body"><strong>Sesión 1 — Foundations: ICP A/B/C</strong> · 25 jul · Clientes segmentados A/B/C, foco quirúrgico en B.</div>
+
+  <div class="hist-card done">
+    <div class="hist-hd">
+      <div class="hist-title">Sesión 1 — Foundations: ICP A/B/C</div>
+      <span class="bdg teal">✓ 25 jul</span>
+    </div>
+    <div class="hist-text">Kickoff con Laura y Jairo (padre). Se clasificaron los clientes en tres tiers — A (multinacionales), B (foco, ~50% de los cierres históricos), C (volumen/precio) — y se inventarió toda la documentación dispersa del negocio para centralizarla en un Excel + Notion.</div>
+    <div class="hist-flow">→ Avanza en el Flywheel: <span class="bdg violet">Foundations</span></div>
   </div>
-  <div class="sess-strip now">
-    <span class="sess-dot">→</span>
-    <div class="sess-body"><strong>Sesión 2 — Perfil quirúrgico del cliente B</strong> · sábados, horario por cuadrar · variables por mercado.</div>
+
+  <div class="hist-card now">
+    <div class="hist-hd">
+      <div class="hist-title">Sesión 2 — Perfil quirúrgico del cliente B</div>
+      <span class="bdg amber">→ Sábados, horario por cuadrar</span>
+    </div>
+    <div class="hist-text">Desglosar las variables exactas que definen a un cliente B por mercado, dejando el criterio de clasificación A/B/C aplicable sin depender de la memoria de Laura. Detalle de la sesión en Pendientes.</div>
+    <div class="hist-flow">→ Avanza en el Flywheel: <span class="bdg violet">Foundations</span> <span class="bdg blue">Calificación</span></div>
   </div>
 
   <div class="slbl">Material de apoyo</div>
