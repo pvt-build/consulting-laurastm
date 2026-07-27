@@ -245,6 +245,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .res-title{font-size:14px;font-weight:500;color:var(--ink)}
 .res-desc{font-size:12px;color:var(--grey);margin-top:1px}
 
+/* MERMAID */
+.mermaid-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px;overflow-x:auto}
+.mermaid-wrap .mermaid{display:flex;justify-content:center;min-width:280px}
+
 /* FOOTER NAV */
 .footer-nav{position:fixed;bottom:0;left:0;right:0;z-index:400;background:var(--dark);border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -4px 20px rgba(0,0,0,.18);display:flex;align-items:stretch;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));width:100%;max-width:900px;margin:0 auto;box-sizing:border-box}
 .fn-btn{display:flex;flex:1;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 16px;border-radius:12px;font-size:15px;font-weight:700;color:rgba(255,255,255,.8);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);cursor:pointer;text-decoration:none;transition:background .15s,color .15s;white-space:nowrap}
@@ -294,6 +298,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="tab" onclick="sw('roadmap',this)">🗺️ Hoja de ruta</div>
     <div class="tab" onclick="sw('tasks',this)">✅ Pendientes</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
+    <div class="tab" onclick="sw('howto',this)">🧭 Cómo avanzar</div>
   </nav>
   <div class="topbar-right">
     <div class="ext-bar">
@@ -319,6 +324,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Hoja de ruta</div>
     <div class="mob-row" onclick="sw('tasks',this,true)"><span class="mob-em">✅</span> Pendientes</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
+    <div class="mob-row" onclick="sw('howto',this,true)"><span class="mob-em">🧭</span> Cómo avanzar</div>
   </div>
 </header>
 
@@ -648,16 +654,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <span class="bdg grey">Cliente</span>
   </div>
 
-  <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">4</span></div>
-
-  <div class="task">
-    <div class="task-body">
-      <div class="task-title">Documentar los procesos de esta sesión</div>
-      <div class="task-desc">Foundations y la segmentación A/B/C — este fin de semana, mientras está fresco.</div>
-      <div class="task-goal">→ Para: no perder el criterio A/B/C antes de que arranque la Sesión 2.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
-  </div>
+  <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">2</span></div>
 
   <div class="task">
     <div class="task-body">
@@ -677,19 +674,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <span class="bdg amber">Pato</span>
   </div>
 
-  <div class="task">
-    <div class="task-body">
-      <div class="task-title">Actualizar el roadmap de consultoría en 24h</div>
-      <div class="task-desc">Reflejar lo definido en Sesión 1 y avisar a Laura y Jairo.</div>
-      <div class="task-goal">→ Para: que el panel refleje la realidad y sepan exactamente qué sigue.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
-  </div>
-
   <div class="disc-box">
     <div class="disc-title">Cómo funciona este programa</div>
     <ul class="disc-list">
       <li>Cada semana el cliente tiene a mano actualizaciones de tareas, dudas o bloqueos técnicos, e información clara y procesada.</li>
+      <li><strong>Cada sesión queda documentada y el roadmap actualizado dentro de las 24 horas siguientes</strong> — no es un pendiente, es parte del programa.</li>
       <li><strong>Private Build no ejecuta el sistema, lo diseña</strong> — quien opera es el founder.</li>
       <li><strong>Entrega claridad, no implementa.</strong> La implementación es responsabilidad del founder.</li>
       <li><strong>No revisa ni audita los documentos del cliente</strong> — esa pega la hacen ellos. Private Build aporta videos de cómo hacer cada cosa y las skills para ejecutarla.</li>
@@ -896,6 +885,96 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </div>
 
 
+<!-- ════════ CÓMO AVANZAR ════════ -->
+<div class="page" id="pg-howto">
+
+  <div class="slbl" style="margin-top:0">El mismo ritmo cada semana — no una lista que crece</div>
+  <div class="alert-box info">
+    <span class="alert-icon">🧭</span>
+    <div>
+      <div class="alert-title">Cómo usar este panel sin quemarse</div>
+      <div class="alert-text">No hay que revisar todo, todos los días. Es un ciclo de 5 pasos que se repite cada semana, cerrado por una llamada de 1 hora. Si seguís el orden, nunca hay más de lo que cabe en una semana.</div>
+    </div>
+  </div>
+
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+flowchart TD
+    A["⚙️ Flywheel — visualiza el sistema"]:::flywheel --> B["📊 Panel — revisa las métricas"]:::panel
+    B --> C["🚨 Panel — cuellos de botella por prioridad"]:::bottleneck
+    C --> D["🗺️ Hoja de ruta — qué toca esta semana"]:::roadmap
+    D --> E["✅ Pendientes — ciérralos antes de la próxima llamada"]:::tasks
+    E --> F["📞 Llamada semanal · 1h — desbloquea y revisa avance"]:::session
+    F -. se repite cada semana .-> A
+
+    classDef flywheel fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef panel fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    classDef bottleneck fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef roadmap fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef tasks fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    classDef session fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
+    </pre>
+  </div>
+
+  <div class="slbl">Paso a paso</div>
+
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#7B61FF">1</div>
+      <div class="flow-title">Visualizar el sistema</div>
+      <span class="flow-when">Pestaña Flywheel</span>
+    </div>
+    <div class="flow-summary">Mirá el recorrido completo y el estado de las 8 etapas. Es el mapa — no hace falta memorizarlo, solo ubicarte.</div>
+  </div>
+
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#3EB489">2</div>
+      <div class="flow-title">Entender y revisar las métricas</div>
+      <span class="flow-when">Pestaña Panel</span>
+    </div>
+    <div class="flow-summary">Revisá los números de la semana y hacia dónde se mueven (▲▼●). Son la brújula — sin esto no hay decisión posible.</div>
+  </div>
+
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#E2503A">3</div>
+      <div class="flow-title">Reconocer los cuellos de botella por prioridad</div>
+      <span class="flow-when">Pestaña Panel</span>
+    </div>
+    <div class="flow-summary">Ya están ordenados de mayor a menor impacto. No hay que resolverlos todos — solo tener claro cuál pesa más hoy.</div>
+  </div>
+
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#E8A237">4</div>
+      <div class="flow-title">Revisar la Hoja de ruta</div>
+      <span class="flow-when">Pestaña Hoja de ruta</span>
+    </div>
+    <div class="flow-summary">Confirmá qué fase toca y cuál es el macro-objetivo del mes — hacia dónde tiene que cerrar esta semana de trabajo.</div>
+  </div>
+
+  <div class="flow-card">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#3EB489">5</div>
+      <div class="flow-title">Cerrar los Pendientes</div>
+      <span class="flow-when">Pestaña Pendientes</span>
+    </div>
+    <div class="flow-summary">Con la Hoja de ruta clara, ejecutá lo que está en tu lista antes de la próxima llamada. Cada tarea dice para qué sirve — no es trabajo suelto.</div>
+  </div>
+
+  <div class="flow-card" style="border-left-color:#1A1A1A">
+    <div class="flow-hd">
+      <div class="sdot" style="background:#1A1A1A">📞</div>
+      <div class="flow-title">Llamada semanal — 1 hora</div>
+      <span class="flow-when">Sábados</span>
+    </div>
+    <div class="flow-summary">Para desbloquear, revisar avance, consultar y resolver dudas, y evaluar el progreso de los pendientes que van construyendo el Flywheel y los sistemas del negocio a lo largo de los 3 meses. Termina la llamada, arranca el ciclo de nuevo.</div>
+  </div>
+
+</div>
+
+
 <!-- FOOTER NAV -->
 <footer class="footer-nav">
   <button class="fn-btn fn-prev fn-hidden" id="fn-prev" onclick="prevPage()" aria-label="Página anterior">← <span>Atrás</span></button>
@@ -903,7 +982,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </footer>
 
 <script>
-const PAGES=['overview','roadmap','tasks','engine'];
+const PAGES=['overview','roadmap','tasks','engine','howto'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
@@ -913,6 +992,7 @@ function sw(id,el,isMob){
   document.querySelectorAll('.mob-row')[idx]?.classList.add('on');
   document.getElementById('fn-prev').classList.toggle('fn-hidden',idx<=0);
   document.getElementById('fn-next').classList.toggle('fn-hidden',idx>=PAGES.length-1);
+  if(id==='howto')window.__renderMermaid&&window.__renderMermaid();
   if(isMob)closeMob();
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -941,6 +1021,24 @@ document.addEventListener('click',e=>{
   if(mobDrop.contains(e.target)||mobBtn.contains(e.target))return;
   closeMob();
 });
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+  startOnLoad:false,
+  theme:'base',
+  fontFamily:"'DM Sans',sans-serif",
+  flowchart:{useMaxWidth:true,htmlLabels:true},
+  themeVariables:{
+    primaryColor:'#F7F5F2',
+    primaryTextColor:'#1A1A1A',
+    primaryBorderColor:'#E4DDD4',
+    lineColor:'#8A8076',
+    fontSize:'12px'
+  }
+});
+window.__renderMermaid=()=>mermaid.run();
+if(document.getElementById('pg-howto')?.classList.contains('on'))window.__renderMermaid();
 </script>
 </body>
 </html>
