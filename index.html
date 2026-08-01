@@ -332,11 +332,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ PANEL ════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — Sesión 1/12 completada 25/07 · Cadencia: sábados</div>
+  <div class="slbl">Progreso — Sesión 2/12 completada 01/08 · Cadencia: sábados</div>
   <div class="chips-row">
     <div class="sch done">D</div>
     <div class="sch done">1</div>
-    <div class="sch now">2</div><div class="sch todo">3</div>
+    <div class="sch done">2</div><div class="sch now">3</div>
     <div class="sch todo">4</div><div class="sch todo">5</div>
     <div class="sch todo">6</div><div class="sch todo">7</div>
     <div class="sch todo">8</div><div class="sch todo">9</div>
@@ -344,12 +344,33 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sch todo">12</div>
   </div>
 
-  <div class="slbl">Resumen semanal · Semana del 25 jul</div>
+  <div class="slbl">Resumen semanal · Semana del 1 ago</div>
   <div class="alert-box info">
     <span class="alert-icon">📈</span>
     <div>
-      <div class="alert-title">Avance esta semana: Foundations arrancó</div>
-      <div class="alert-text">Sesión 1 completada — clientes segmentados A/B/C, foco quirúrgico en B. Próximo hito: variables del cliente B por mercado (Sesión 2, sábados). El negocio sigue en 1 máquina vendida en 2026 — el impacto en ventas llega cuando el motor esté armado en Mes 2, no antes.</div>
+      <div class="alert-title">Avance esta semana: se corrigió qué vende STM</div>
+      <div class="alert-text">Sesión 2 completada — el mensaje de venta estaba anclado en "confianza y calidad", y eso es una característica del servicio, no el resultado que el cliente compra. Queda reencuadrado en <strong>eficiencia</strong>. Próximo hito: bajarlo a un flujo de preguntas Q1–Q5 y a un diagrama de mensajes (Sesión 3). El negocio sigue en 1 máquina vendida en 2026 — el impacto en ventas llega cuando el motor esté armado en Mes 2, no antes.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Reencuadre de la Sesión 2 · Qué vende STM realmente</div>
+  <div class="problem-card">
+    <div class="prob-icon">🎯</div>
+    <div>
+      <div class="prob-title">Ustedes venden eficiencia, no confianza</div>
+      <div class="prob-text">El cliente no compra confianza: compra <strong>poder tomar una decisión que resuelve su problema técnico sin tener que estar encima del proveedor</strong>. Confianza, calidad, respaldo, velocidad y años de experiencia son <strong>características del sistema de venta y servicio</strong> — sostienen la venta, pero no son lo que se vende. El paralelo lo trajo Jairo desde mantenimiento: la <strong>"función del activo"</strong> es lo que el dueño quiere lograr con la máquina, no la máquina. Vender es lo mismo: se vende el resultado.</div>
+      <div class="flow-diagram">
+        <div class="flow-node">Confianza</div>
+        <div class="flow-arrow"><span class="ar-h">·</span><span class="ar-v">·</span></div>
+        <div class="flow-node">Calidad</div>
+        <div class="flow-arrow"><span class="ar-h">·</span><span class="ar-v">·</span></div>
+        <div class="flow-node">Velocidad</div>
+        <div class="flow-arrow"><span class="ar-h">·</span><span class="ar-v">·</span></div>
+        <div class="flow-node">Experiencia</div>
+        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
+        <div class="flow-node" style="background:rgba(62,180,137,.16);border-color:rgba(62,180,137,.4);color:#D2F5E7">EFICIENCIA<br>(lo que se vende)</div>
+      </div>
+      <div style="font-size:10.5px;color:rgba(255,255,255,.38);margin-top:10px;text-align:center">Las cuatro de la izquierda son características del sistema. La de la derecha es el resultado que paga el cliente.</div>
     </div>
   </div>
 
@@ -451,27 +472,37 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">Cuellos de botella detectados</div>
   <div class="bn-grid">
     <div class="bn-card c">
-      <div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">No existe un sistema comercial</div></div>
+      <div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">Sin flujo de preguntas antes de proponer</div></div>
+      <div class="bn-text">Detectado en la Sesión 2: frente a un cliente se saluda, pero no hay un set de preguntas que aísle qué resultado busca antes de presentar propuesta — se pierde la oportunidad de indagar.</div>
+      <div class="bn-imp c">→ Armar el flujo Q1–Q5 y probarlo en el próximo acercamiento comercial</div>
+    </div>
+    <div class="bn-card c">
+      <div class="bn-head"><div class="bn-n c">2</div><div class="bn-title">No existe un sistema comercial</div></div>
       <div class="bn-text">El proceso no está documentado. Si Laura no está, nadie sabe ejecutarlo — ese es el problema real.</div>
       <div class="bn-imp c">→ Documentar y estructurar antes de separar roles</div>
     </div>
     <div class="bn-card c">
-      <div class="bn-head"><div class="bn-n c">2</div><div class="bn-title">Sin criterio de calificación documentado</div></div>
+      <div class="bn-head"><div class="bn-n c">3</div><div class="bn-title">Sin criterio de calificación documentado</div></div>
       <div class="bn-text">Existe un avatar en papel, pero disperso y nunca aplicado como filtro. Freelancers pasados igual trajeron leads irrelevantes.</div>
       <div class="bn-imp c">→ Codificar el criterio de Laura en un filtro escrito</div>
     </div>
     <div class="bn-card w">
-      <div class="bn-head"><div class="bn-n w">3</div><div class="bn-title">Presupuesto: foundations primero, no automatización</div></div>
+      <div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">El feedback de clientes se tira a la basura</div></div>
+      <div class="bn-text">Quejas, reclamos y comentarios de clientes pasados se descartaban por no generar venta directa. Son la materia prima del mensaje para prospectar a otro cliente del mismo perfil.</div>
+      <div class="bn-imp w">→ Convertir ese feedback en un diagrama de mensajes por tier</div>
+    </div>
+    <div class="bn-card w">
+      <div class="bn-head"><div class="bn-n w">5</div><div class="bn-title">Presupuesto: foundations primero, no automatización</div></div>
       <div class="bn-text">La agencia evaluada quedó fuera de presupuesto. Lo disponible va a Foundations, no a automatizar todavía.</div>
       <div class="bn-imp w">→ Invertir en estructura primero, automatizar después</div>
     </div>
     <div class="bn-card w">
-      <div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">LARIA no puede construirse todavía</div></div>
+      <div class="bn-head"><div class="bn-n w">6</div><div class="bn-title">LARIA no puede construirse todavía</div></div>
       <div class="bn-text">Sin proceso documentado no hay qué cargarle a la IA. Construirla antes que la infraestructura nunca funciona.</div>
       <div class="bn-imp w">→ Documentar el sistema primero. LARIA se alimenta de eso, no al revés</div>
     </div>
     <div class="bn-card i">
-      <div class="bn-head"><div class="bn-n i">5</div><div class="bn-title">Expansión sin estructura que la sostenga</div></div>
+      <div class="bn-head"><div class="bn-n i">7</div><div class="bn-title">Expansión sin estructura que la sostenga</div></div>
       <div class="bn-text">Colombia y Bolivia activos; Perú y México sin datos. Más mercados con la misma estructura multiplica el caos.</div>
       <div class="bn-imp i">→ La estructura tiene que preceder a la expansión</div>
     </div>
@@ -543,8 +574,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="phase-card m1">
       <div class="phase-hd"><span class="phase-tag">Mes 1 · Sem 1–4</span><span class="bdg amber">En curso</span></div>
       <div class="phase-title">Fundaciones</div>
-      <div class="phase-text">Clientes segmentados A/B/C. Foco quirúrgico en B (~50% de los cierres históricos) — sniper, no escopeta. Backend documentado por máquina.</div>
-      <div class="phase-tags"><span class="bdg grey">ICP A/B/C</span><span class="bdg grey">Foco en B</span><span class="bdg grey">Por máquina</span><span class="bdg grey">Micro-win: calificación operativa</span></div>
+      <div class="phase-text">Clientes segmentados A/B/C con foco quirúrgico en B (~50% de los cierres históricos) y propuesta de valor corregida: se vende eficiencia. Baja a un flujo de preguntas y a un diagrama de mensajes. Backend documentado por máquina.</div>
+      <div class="phase-tags"><span class="bdg grey">ICP A/B/C</span><span class="bdg grey">Foco en B</span><span class="bdg grey">Vende eficiencia</span><span class="bdg grey">Q1–Q5</span><span class="bdg grey">Micro-win: calificación operativa</span></div>
     </div>
     <div class="phase-card m2">
       <div class="phase-hd"><span class="phase-tag">Mes 2 · Sem 5–8</span><span class="bdg grey">Próximo</span></div>
@@ -580,13 +611,30 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="hist-money">💰 Hacia dónde acerca: dejar de perseguir leads A/C que tardan años o no cierran — cada hora de Laura va al cliente que paga en el ciclo más corto.</div>
   </div>
 
+  <div class="hist-card done">
+    <div class="hist-hd">
+      <div class="hist-title">Sesión 2 — Eficiencia vs. confianza: qué vende STM</div>
+      <span class="bdg teal">✓ 01 ago</span>
+    </div>
+    <div class="hist-text">Con Laura y Jairo. Jairo trajo su protocolo técnico de mantenimiento — la "función del activo" es lo que el dueño quiere lograr con la máquina — y ese mismo principio se aplicó a la venta: STM vende <strong>eficiencia</strong>, no confianza. Confianza, calidad, respaldo y años de experiencia quedaron reclasificados como características del servicio. De ahí salieron los dos entregables de la semana: el flujo de preguntas Q1–Q5 para diagnosticar antes de proponer, y el diagrama de mensajes que reutiliza el feedback de clientes pasados como materia prima para prospectar perfiles similares.</div>
+    <div class="hist-money">💰 Hacia dónde acerca: si el mensaje apunta al resultado que el cliente compra, el lead correcto responde antes — es la palanca directa sobre el ciclo de 1–2 años y sobre la meta de 3 máquinas en 2026.</div>
+  </div>
+
   <div class="hist-card now">
     <div class="hist-hd">
-      <div class="hist-title">Sesión 2 — Perfil quirúrgico del cliente B</div>
-      <span class="bdg amber">→ Sábados, horario por cuadrar</span>
+      <div class="hist-title">Sesión 3 — Q1–Q5 y diagrama de mensajes sobre la mesa</div>
+      <span class="bdg amber">→ Sábado, fecha por confirmar</span>
     </div>
-    <div class="hist-text">Desglosar las variables exactas que definen a un cliente B por mercado, dejando el criterio de clasificación A/B/C aplicable sin depender de la memoria de Laura. No parten de cero: ya existe un avatar en papel y un historial de 12+ clientes — falta consolidarlo. Detalle de la sesión en Pendientes.</div>
-    <div class="hist-money">💰 Hacia dónde acerca: calificar un lead entrante en minutos, no en la cabeza de Laura — más reuniones con el cliente correcto, menos tiempo perdido en cotizaciones que no cierran.</div>
+    <div class="hist-text">Se revisan los dos entregables construidos durante la semana: el flujo de preguntas y el diagrama de mensajes. No se avanza a automatización ni a IA hasta que estos dos estén probados en un acercamiento comercial real. Detalle de la sesión en Pendientes.</div>
+    <div class="hist-money">💰 Hacia dónde acerca: dejar de improvisar la conversación de venta — mismo diagnóstico, misma calidad, lo aplique Laura o Jairo.</div>
+  </div>
+
+  <div class="alert-box warn">
+    <span class="alert-icon">🧱</span>
+    <div>
+      <div class="alert-title">Primero pavimentar, después acelerar</div>
+      <div class="alert-text">Nada de automatización, Sales Navigator ni IA todavía. La regla que quedó de la Sesión 2: <strong>no se escala lo que aún no es sólido</strong>. La capa de IA entra más adelante en el programa, sobre una base ya probada.</div>
+    </div>
   </div>
 
   <div class="slbl">Material de apoyo</div>
@@ -607,24 +655,53 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="tg-hd">Laura y Jairo (padre) — acción esta semana <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
+  <div class="tg-hd">Sale de la Sesión 2 — acción esta semana <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-body">
-      <div class="task-title">Centralizar todo el negocio en un solo Excel</div>
-      <div class="task-desc">Leads, clientes antiguos, cotizaciones y pipeline — hoy repartidos entre el Excel de Laura, la carpeta de Jairo, el PowerPoint y WhatsApp.</div>
-      <div class="task-goal">→ Para: tener una sola fuente de verdad — sin esto la Sesión 2 no puede avanzar.</div>
+      <div class="task-title">Armar el flujo de preguntas Q1–Q5</div>
+      <div class="task-desc">Cinco preguntas que aíslen qué resultado busca el cliente <em>antes</em> de presentar cualquier propuesta — el mismo principio del protocolo de mantenimiento de Jairo ("función del activo"), pero aplicado a la venta. Se prueba en el próximo acercamiento comercial real, no en teoría.</div>
+      <div class="task-goal">→ Para: no perder la oportunidad de indagar y dejar de improvisar la conversación de venta.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-body">
-      <div class="task-title">Desglosar las variables de A/B/C — primera pasada</div>
-      <div class="task-desc">Qué hace que un cliente sea A, B o C: tamaño, empleados, quién decide. Base para calificar sin ambigüedad en la Sesión 2.</div>
-      <div class="task-goal">→ Para: calificar cualquier lead en minutos y dejar de perseguir clientes que no cierran.</div>
+      <div class="task-title">Construir el diagrama de mensajes</div>
+      <div class="task-desc">Tomar el feedback de clientes pasados — incluidas las quejas y los reclamos técnicos que antes se descartaban — y convertirlo en el mensaje con el que se prospecta a otro cliente del mismo perfil (de un C a otro C, de un B a otro B).</div>
+      <div class="task-goal">→ Para: que cada venta y cada reclamo alimenten la captación del siguiente — eso es lo que hace girar el sistema.</div>
     </div>
     <span class="bdg red">Urgente</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Mostrar avances por WhatsApp durante la semana</div>
+      <div class="task-desc">Pantallazos, enlaces, borradores a medio hacer. Pato audita en el camino en vez de esperar a la sesión del sábado.</div>
+      <div class="task-goal">→ Para: ganar velocidad — son 12 semanas y no alcanza con avanzar solo una vez por semana.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
+  </div>
+
+  <div class="tg-hd">Viene de la Sesión 1 — sigue abierto</div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-body">
+      <div class="task-title">Centralizar todo el negocio en un solo Excel</div>
+      <div class="task-desc">Leads, clientes antiguos, cotizaciones y pipeline — hoy repartidos entre el Excel de Laura, la carpeta de Jairo, el PowerPoint y WhatsApp.</div>
+      <div class="task-goal">→ Para: tener una sola fuente de verdad — es también de donde sale el feedback que alimenta el diagrama de mensajes.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Desglosar las variables de A/B/C — primera pasada</div>
+      <div class="task-desc">Qué hace que un cliente sea A, B o C: tamaño, empleados, quién decide. Base para calificar sin ambigüedad y para saber a qué tier le habla cada mensaje.</div>
+      <div class="task-goal">→ Para: calificar cualquier lead en minutos y dejar de perseguir clientes que no cierran.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
   </div>
 
   <div class="task">
@@ -647,14 +724,32 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Cuadrar horario fijo de los sábados</div>
-      <div class="task-desc">El día ya quedó definido en el cierre — falta fijar la hora exacta.</div>
+      <div class="task-title">Fijar la hora exacta del sábado — con la diferencia horaria</div>
+      <div class="task-desc">El día ya está definido. En la sesión del 01/08 hubo desfase por el cambio de horario entre Chile y Colombia — conviene dejar la hora anotada en ambas zonas.</div>
       <div class="task-goal">→ Para: que la cadencia semanal no dependa de coordinar cada vez.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
 
-  <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">2</span></div>
+  <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">4</span></div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Enviar los siguientes pasos por escrito</div>
+      <div class="task-desc">El resumen de la Sesión 2 y las dos tareas de la semana, en un mensaje que Laura y Jairo puedan releer sin volver a la grabación.</div>
+      <div class="task-goal">→ Para: que nadie arranque la semana adivinando qué había que hacer.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Auditar los avances compartidos por WhatsApp</div>
+      <div class="task-desc">Revisar pantallazos y borradores en el camino — el flujo Q1–Q5 y el diagrama de mensajes se corrigen durante la semana, no recién el sábado.</div>
+      <div class="task-goal">→ Para: llegar a la Sesión 3 con material ya corregido y no gastarla en revisar.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
+  </div>
 
   <div class="task">
     <div class="task-body">
@@ -708,10 +803,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <span class="bdg amber">🔄 En curso</span>
       <span class="flow-when">Mes 1 · en curso</span>
     </div>
-    <div class="flow-summary">Clientes segmentados A/B/C (Sesión 1) con foco en B. Falta desglosar variables por mercado y documentar avatar, oferta y clientes antiguos por escrito.</div>
+    <div class="flow-summary">Clientes segmentados A/B/C (Sesión 1) con foco en B, y propuesta de valor corregida (Sesión 2): se vende eficiencia. Falta desglosar variables por mercado y documentar avatar, oferta y clientes antiguos por escrito.</div>
     <div class="flow-qa">
       <div class="flow-q">¿En qué tiers se divide el cliente de STM?</div>
       <div class="flow-a ok">✓ A/B/C, con foco en B (Sesión 1)</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué vende STM realmente — cuál es el resultado que compra el cliente?</div>
+      <div class="flow-a ok">✓ Eficiencia operativa (Sesión 2). Confianza, calidad, respaldo y experiencia son características del sistema de venta y servicio, no el resultado vendido</div>
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Cuáles son las variables exactas que definen a un cliente B por mercado?</div>
@@ -743,6 +842,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="flow-q">¿Cómo se prioriza mercado y marca en la prospección?</div>
       <div class="flow-a pend">Pendiente</div>
     </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿De dónde sale el contenido del mensaje de prospección?</div>
+      <div class="flow-a pend">En construcción — del feedback de clientes pasados (incluidas las quejas), reutilizado para hablarle a otro cliente del mismo tier. Es el diagrama de mensajes de la Sesión 2</div>
+    </div>
   </div>
 
   <div class="flow-card broken">
@@ -756,6 +859,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="flow-qa">
       <div class="flow-q">¿Qué hace que un lead sea "de STM" y no de otro proveedor de maquinaria?</div>
       <div class="flow-a ok">Empieza a definirse con la segmentación A/B/C (Sesión 1) — falta el desglose fino del cliente B (Sesión 2)</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué preguntas hay que hacer para saber qué busca el cliente antes de proponer?</div>
+      <div class="flow-a pend">En construcción — flujo Q1–Q5, entregable de la semana. Hoy no existe: frente a un cliente se saluda y se pierde la oportunidad de indagar</div>
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Cómo se descarta rápido a un lead fuera de nicho sin perder tiempo de Laura?</div>
@@ -834,6 +941,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="flow-summary">Hay seguimiento post-venta para revisar si el equipo funciona y evaluar recompra, pero no está sistematizado — no retroalimenta el pipeline como referidos.</div>
     <div class="flow-qa">
+      <div class="flow-q">¿Cuándo se recontacta a un cliente B para recompra?</div>
+      <div class="flow-a ok">✓ Ventana identificada en la Sesión 2: entre 6 y 12 meses. No se fuerza la recompra — si la máquina cumplió el objetivo, se hace recontacto. Falta dejarlo agendado y no a memoria</div>
+    </div>
+    <div class="flow-qa">
+      <div class="flow-q">¿Qué se hace con un reclamo técnico?</div>
+      <div class="flow-a ok">✓ Ya se opera bien: se indaga qué pasó antes de escalar al proveedor, para bajar la frustración y entender el caso real. Ese mismo material sirve de mensaje para otro cliente del mismo perfil</div>
+    </div>
+    <div class="flow-qa">
       <div class="flow-q">¿Qué clientes gestionados podrían referir hoy si se les pidiera?</div>
       <div class="flow-a pend">Pendiente</div>
     </div>
@@ -857,7 +972,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Qué se puede automatizar ahora que ya está validado — incluyendo LARIA cuando esté lista?</div>
-      <div class="flow-a pend">Nada todavía — no se automatiza lo que no está validado</div>
+      <div class="flow-a pend">Nada todavía — no se automatiza lo que no está validado. Regla de la Sesión 2: primero pavimentar (Q1–Q5 y mensajes probados en un cliente real), después LinkedIn automatizado, Sales Navigator o IA</div>
     </div>
   </div>
 
