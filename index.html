@@ -349,7 +349,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <span class="alert-icon">📈</span>
     <div>
       <div class="alert-title">Avance esta semana: matriz A/B/C + reframe de venta instalados</div>
-      <div class="alert-text">Sesión 2 completada con Jairo y Laura, en dos partes (76 min) — variables A/B/C desglosadas por estructura, prioridades y precio, más el reframe central: STM vende <strong>eficiencia</strong> (el resultado que busca el cliente), no confianza. Confianza, calidad y velocidad quedan reclasificadas como características del sistema, no como lo que se vende. Cierra con tres tareas: cerrar la matriz A/B/C con recurrencia y ciclo de venta, flujo de preguntas Q1-5 para diagnóstico pre-venta, y diagrama de mensajes reutilizando feedback de clientes pasados. Próxima sesión aún sin fecha confirmada.</div>
+      <div class="alert-text">Sesión 2 completada con Jairo y Laura, en dos partes (76 min) — variables A/B/C desglosadas por estructura, prioridades y precio, más el reframe central: STM vende <strong>eficiencia</strong> (el resultado que busca el cliente), no confianza. Confianza, calidad y velocidad quedan reclasificadas como características del sistema, no como lo que se vende. Entre sesiones, Jairo mandó el flujo de preguntas completo (13 preguntas + flujo técnico por línea de producto) — superó lo pedido. Sesión 3: lunes 10 ago · 18:00.</div>
     </div>
   </div>
 
@@ -581,6 +581,58 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
+  <div class="slbl">Diagrama de mensajes — de reclamo a prospección</div>
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+flowchart LR
+    A["😤 Reclamo o feedback<br/>de un cliente pasado"]:::signal --> B["🔍 Señal / dolor real<br/>detectado (no lo que dijo,<br/>lo que necesitaba)"]:::signal
+    B --> C["✍️ Se traduce a un<br/>mensaje de marketing"]:::message
+    C --> D["🎯 Prospección de un<br/>cliente con el mismo tier"]:::action
+    D --> E["🤝 Cierre"]:::close
+    E -. "el cierre deja una señal nueva — el loop nunca termina" .-> A
+
+    classDef signal fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef message fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef action fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef close fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    </pre>
+  </div>
+
+  <div class="alert-box warn">
+    <span class="alert-icon">⚡</span>
+    <div>
+      <div class="alert-title">Por qué queda declarado acá y no solo en Notion</div>
+      <div class="alert-text">Esto se arma con ejemplos reales de las Sesiones 1 y 2 para que Laura y Jairo tengan el patrón ya aplicado — no una plantilla en blanco que hay que "construir" antes de poder usarla. Cada fila nueva que agreguen sigue esta misma lógica.</div>
+    </div>
+  </div>
+
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso Briceño — objeción de edad/género (cliente C)</div>
+      <div class="task-desc">Reclamo real: "¿por qué me viene a vender una niña?" — el cliente C descalifica por falta de experiencia percibida, no por el producto.</div>
+      <div class="task-goal">→ Mensaje: para el perfil C (dueño único, conservador, decide solo) — anclar el mensaje en años de trayectoria y respaldo técnico (Jairo), no en el producto. Reencuadrar: "¿seguir siendo cliente C o pasar a ser B?"</div>
+    </div>
+    <span class="bdg violet">Tier C</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso máquina china — precio vs. dolor futuro (cliente C→B)</div>
+      <div class="task-desc">Reclamo real: cliente compró una máquina china más barata pese a la advertencia, y volvió por soporte técnico recurrente semanas después.</div>
+      <div class="task-goal">→ Mensaje: "¿ya te pasó que la opción barata terminó costando más en soporte técnico?" — apunta al dolor futuro no verbalizado, no al precio. Sirve para prospectar clientes C que están por comprar por precio.</div>
+    </div>
+    <span class="bdg violet">Tier C→B</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Próxima fila — la completan Laura/Jairo</div>
+      <div class="task-desc">Cualquier reclamo o feedback nuevo de esta semana entra acá con la misma estructura: reclamo real → señal detectada → mensaje por tier.</div>
+      <div class="task-goal">→ Para: que el diagrama crezca con cada cliente, no se quede en dos ejemplos de Patricio.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
+  </div>
+
   <div class="slbl">Histórico — qué se construyó, qué se cierra y hacia dónde acerca</div>
 
   <div class="hist-card done">
@@ -616,9 +668,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="hist-card now">
     <div class="hist-hd">
       <div class="hist-title">Sesión 3 — próxima</div>
-      <span class="bdg amber">→ Fecha por confirmar</span>
+      <span class="bdg amber">→ 10 ago · 18:00</span>
     </div>
-    <div class="hist-text">Foco: cerrar el flujo de preguntas Q1-5 y el diagrama de mensajes antes de tocar automatización — "no construyamos, no escalemos algo que todavía no es sólido". Revisión de avances compartidos por WhatsApp durante la semana.</div>
+    <div class="hist-text">Laura y Jairo llegan con el flujo de preguntas ya resuelto (13 preguntas de segmentación + flujo técnico completo por línea de producto) — se cierra en vivo la matriz A/B/C con recurrencia y Patricio transfiere el diagrama de mensajes ya montado en este panel. Foco pasa a Validación: probar el mensaje con un cliente real.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Oferta irresistible</span><span class="bdg grey">→ abre Validación</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: pasar del reframe conceptual a una herramienta escrita que Laura y Jairo puedan aplicar sin tener que reinventarla en cada conversación.</div>
   </div>
@@ -664,7 +716,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="task">
     <div class="task-body">
       <div class="task-title">Cerrar la matriz A/B/C con recurrencia y ciclo de venta</div>
-      <div class="task-desc">Sumar a la matriz ya armada cuánto se demora cada tier en volver a comprar (A ~6 meses, B ~2 años, C varios años) — quedó iniciada en la sesión, falta consolidarla.</div>
+      <div class="task-desc">Sumar a la matriz del Google Sheet (su fuente de verdad hasta migrar a Notion) cuánto se demora cada tier en volver a comprar (A ~6 meses, B ~2 años, C varios años) — quedó iniciada en la sesión, falta consolidarla.</div>
       <div class="task-goal">→ Para: saber no solo quién es cliente A/B/C, sino cuándo volver a contactarlo.</div>
     </div>
     <span class="bdg grey">Cliente</span>
@@ -708,7 +760,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="rm-track-wrap">
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-info"><div class="rm-lbl">Captación</div><div class="rm-sub">manual</div></div></div>
-      <div class="rm-node"><div class="rm-dot future">2</div><div class="rm-info"><div class="rm-lbl mt">Calificación</div><div class="rm-sub">se construye</div></div></div>
+      <div class="rm-node"><div class="rm-dot now">2</div><div class="rm-info"><div class="rm-lbl mt">Calificación</div><div class="rm-sub">por validar</div></div></div>
       <div class="rm-node"><div class="rm-dot future">3</div><div class="rm-info"><div class="rm-lbl mt">Nutrición</div><div class="rm-sub">se construye</div></div></div>
       <div class="rm-node"><div class="rm-dot future">4</div><div class="rm-info"><div class="rm-lbl mt">Conversión</div><div class="rm-sub">se construye</div></div></div>
       <div class="rm-node"><div class="rm-dot done">5</div><div class="rm-info"><div class="rm-lbl">Cierre</div><div class="rm-sub">ya existe</div></div></div>
@@ -749,7 +801,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Cómo se escribe ese criterio para que otra persona lo pueda aplicar sin depender de la memoria de Laura?</div>
-      <div class="flow-a pend">Existe la matriz A/B/C con variables — falta convertirla en flujo de preguntas Q1-5 aplicable por cualquiera del equipo</div>
+      <div class="flow-a ok">✓ Convertido en flujo de preguntas escrito (13 + flujo técnico por producto) — Jairo lo armó solo, ya no depende de la memoria de Laura</div>
     </div>
   </div>
 
@@ -776,26 +828,26 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="flow-card broken">
+  <div class="flow-card">
     <div class="flow-hd">
       <div class="sdot" style="background:#E2503A">3</div>
       <div class="flow-title">Calificación</div>
-      <span class="bdg red">✗ Roto</span>
+      <span class="bdg amber">🔄 Construido, falta validar en vivo</span>
       <span class="bdg violet">🔗 Mes 1 · Oferta irresistible (Q1-5)</span>
       <span class="flow-when">Mes 1</span>
     </div>
-    <div class="flow-summary">Sin filtro documentado. Los freelancers contratados antes trajeron leads irrelevantes (llenadoras, etiquetadoras) por no entender el nicho.</div>
+    <div class="flow-summary">Jairo entregó el filtro escrito: 13 preguntas de segmentación A/B/C con opciones mapeadas a tier, más un flujo técnico de descubrimiento completo por línea de producto (Termoformadora, Extrusora, Equipos complementarios, Servicio técnico táctico/estratégico). Superó lo pedido — falta probarlo con un lead real.</div>
     <div class="flow-qa">
       <div class="flow-q">¿Qué hace que un lead sea "de STM" y no de otro proveedor de maquinaria?</div>
-      <div class="flow-a ok">✓ Definido con la matriz A/B/C (estructura, prioridades, precio, proceso de compra) y "conciencia técnica" como filtro — falta convertirlo en flujo de preguntas aplicable sin Laura</div>
+      <div class="flow-a ok">✓ Definido con la matriz A/B/C (estructura, prioridades, precio, proceso de compra) y "conciencia técnica" como filtro — ahora escrito como flujo de preguntas (Sesión 2→3)</div>
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Cómo se descarta rápido a un lead fuera de nicho sin perder tiempo de Laura?</div>
-      <div class="flow-a pend">Pendiente</div>
+      <div class="flow-a ok">✓ Las 13 preguntas generales + el flujo por producto lo resuelven — falta correrlo con un lead real (foco de Sesión 3: Validación)</div>
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Quién puede aplicar el filtro además de Laura?</div>
-      <div class="flow-a pend">Nadie hoy — pendiente</div>
+      <div class="flow-a ok">✓ Ya está escrito y no depende de la memoria de Laura — Jairo lo armó él mismo. Falta que alguien más lo aplique en una conversación real</div>
     </div>
   </div>
 
@@ -973,7 +1025,7 @@ function sw(id,el,isMob){
   document.querySelectorAll('.mob-row')[idx]?.classList.add('on');
   document.getElementById('fn-prev').classList.toggle('fn-hidden',idx<=0);
   document.getElementById('fn-next').classList.toggle('fn-hidden',idx>=PAGES.length-1);
-  if(id==='consulting')window.__renderMermaid&&window.__renderMermaid();
+  if(id==='consulting'||id==='roadmap')window.__renderMermaid&&window.__renderMermaid();
   if(isMob)closeMob();
   window.scrollTo({top:0,behavior:'smooth'});
 }
