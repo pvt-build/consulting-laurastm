@@ -357,40 +357,70 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="alert-box warn">
     <span class="alert-icon">🎯</span>
     <div>
-      <div class="alert-title">La pregunta que manda: ¿qué genera venta hoy, y qué se puede acortar?</div>
-      <div class="alert-text">No sumamos todo lo que existe — solo lo que rompe la barrera actual: Notion/CRM abierto y centralizando, para que empiecen a salir métricas reales. Todo lo demás se construye encima de eso, un pedazo a la vez.</div>
+      <div class="alert-title">Foco: Sistema Comercial + Sistema de Contenido. Operativo se diagnostica en paralelo.</div>
+      <div class="alert-text">Lectura real, no optimista: casi nada está tan hecho como parecía. Avatar está definido pero no enriquecido, la oferta irresistible <strong>no existe todavía</strong> (hay que armarla sobre Avatar B), y el chat/setting no es la prioridad — antes hay que resolver qué necesita <strong>ver</strong> el cliente (casos de éxito, números, imágenes que le hablen a él, no a cualquiera).</div>
     </div>
   </div>
   <div class="mermaid-wrap">
     <pre class="mermaid">
-flowchart TD
-    C0["🎯 SISTEMA COMERCIAL"]:::header --> C1["👤 Avatar<br/>✓ hecho"]:::done
-    C1 --> C2["💎 Oferta irresistible<br/>✓ hecho"]:::done
-    C2 --> C3["🔍 Discovery / Q1-5<br/>✓ hecho"]:::done
-    C3 --> C4["📞 Setting<br/>falta armar"]:::pending
-    C4 --> C5["🤝 Closing<br/>✓ ya opera"]:::done
+flowchart LR
+    subgraph COM["🎯 Sistema Comercial"]
+    direction TB
+    CA["👤 Avatar<br/>🟡 definido, no enriquecido"]:::warn
+    CB["💎 Oferta irresistible<br/>🔴 no existe — armar<br/>sobre Avatar B"]:::bad
+    CC["🔍 Discovery<br/>🟡 flujo ✓ / registro ✗<br/>sin CRM ni command center"]:::warn
+    CD["📞 Setting<br/>🟡 flujo de mensajes armado<br/>falta auditarlo"]:::warn
+    CE["🤝 Closing<br/>🟡 opera, faltan skills<br/>(Closing Coach GPT por avatar)"]:::warn
+    CA-->CB-->CC-->CD-->CE
+    end
 
-    D0["📡 SISTEMA DE ADQUISICIÓN"]:::header --> D1["✍️ Contenido<br/>falta armar"]:::pending
-    D1 --> D2["📤 Outbound<br/>manual, sin sistema"]:::pending
-    D2 --> D3["🖼️ Carruseles<br/>falta armar"]:::pending
-    D3 --> D4["🌐 Funnel web<br/>falta armar"]:::pending
+    subgraph CNT["✍️ Sistema de Contenido"]
+    direction TB
+    K1["📸 Instagram"]:::bad
+    K2["💼 LinkedIn orgánico"]:::bad
+    K3["📤 Outbound<br/>cold email + cold DM LinkedIn"]:::bad
+    K4["🌐 Funnel web<br/>🔴 falta lo que el cliente<br/>necesita VER (Avatar B):<br/>casos de éxito, números, imágenes"]:::bad
+    K1-->K4
+    K2-->K4
+    K3-->K4
+    end
 
-    C5 --> N["🗂️ NOTION / CRM<br/>centralizar + métricas<br/>⚡ rompe la barrera hoy"]:::lever
-    D4 --> N
-    N --> L["💰 LIQUIDEZ<br/>ventas hoy"]:::goal
+    subgraph OPE["⚙️ Sistema Operativo — a diagnosticar"]
+    direction TB
+    O1["❓ ¿Está centralizado?"]:::unknown
+    O2["❓ ¿Dónde caen las ventas?"]:::unknown
+    O3["❓ ¿Cómo se ejecutan los pagos?"]:::unknown
+    O4["❓ ¿Qué pasa post-pago?"]:::unknown
+    O1-->O2-->O3-->O4
+    end
 
-    classDef header fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A,font-weight:bold
-    classDef done fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
-    classDef pending fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    COM ~~~ CNT ~~~ OPE
+
+    CE-->N["🗂️ Notion / CRM<br/>centralizar + métricas<br/>⚡ rompe la barrera hoy"]:::lever
+    K4-->N
+    O4-->N
+    N-->L["💰 Liquidez<br/>ventas hoy"]:::goal
+
+    classDef warn fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef bad fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef unknown fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A,stroke-dasharray: 4 3
     classDef lever fill:#FDF4E3,stroke:#E8A237,stroke-width:3px,color:#1A1A1A
     classDef goal fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
     </pre>
   </div>
-  <div class="bdg-row" style="margin:-6px 0 22px">
-    <span class="bdg green">✓ Resuelto</span>
-    <span class="bdg red">✗ Falta armar</span>
-    <span class="bdg amber">⚡ Palanca — se abre hoy</span>
-    <span class="bdg grey">💰 Meta</span>
+  <div class="bdg-row" style="margin:-6px 0 14px">
+    <span class="bdg amber">🟡 Parcial — hay algo, no es suficiente</span>
+    <span class="bdg red">🔴 No existe — construir</span>
+    <span class="bdg violet">❓ Sin diagnosticar</span>
+    <span class="bdg grey">⚡ Palanca · 💰 Meta</span>
+  </div>
+
+  <div class="alert-box red-bg">
+    <span class="alert-icon">🚫</span>
+    <div>
+      <div class="alert-title">El chat es la cola, no la cabeza</div>
+      <div class="alert-text">No tiene sentido pulir el setting/chat antes de resolver qué necesita ver el cliente para confiar: casos de éxito que le hablen a él (Avatar B) y no a cualquiera, números de operación reales, experiencia, imágenes. Eso va primero en el Funnel web — el chat solo recibe a alguien que ya llegó semi-convencido.</div>
+    </div>
   </div>
 
   <div class="slbl">Métricas clave · Diagnóstico julio 2026</div>
