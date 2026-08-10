@@ -332,7 +332,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ PANEL ════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — Sesión 2/12 completada 01/08 · Cadencia: sábados</div>
+  <div class="slbl">Progreso — Sesión 3/12 hoy · Cadencia: sábados (esta semana en lunes)</div>
   <div class="chips-row">
     <div class="sch done">D</div>
     <div class="sch done">1</div>
@@ -344,13 +344,53 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sch todo">12</div>
   </div>
 
-  <div class="slbl">Resumen semanal · Semana del 1 ago</div>
+  <div class="slbl">Resumen semanal · Semana del 10 ago</div>
   <div class="alert-box info">
     <span class="alert-icon">📈</span>
     <div>
-      <div class="alert-title">Avance esta semana: matriz A/B/C + reframe de venta instalados</div>
-      <div class="alert-text">Sesión 2 completada con Jairo y Laura, en dos partes (76 min) — variables A/B/C desglosadas por estructura, prioridades y precio, más el reframe central: STM vende <strong>eficiencia</strong> (el resultado que busca el cliente), no confianza. Confianza, calidad y velocidad quedan reclasificadas como características del sistema, no como lo que se vende. Entre sesiones, Jairo mandó el flujo de preguntas completo (13 preguntas + flujo técnico por línea de producto) — superó lo pedido. Sesión 3: lunes 10 ago · 18:00.</div>
+      <div class="alert-title">Hoy: Sesión 3 — de fundaciones a sistemas</div>
+      <div class="alert-text">Jairo mandó el flujo de preguntas completo entre sesiones (13 preguntas + flujo técnico por producto) — superó lo pedido, detalle en Hoja de ruta. Con Avatar + Oferta + Discovery + Closing ya resueltos, hoy el foco cambia: empezar a montar Sistema de Adquisición y Sistema Comercial — ver el diagrama de abajo.</div>
     </div>
+  </div>
+
+  <div class="slbl">Diagrama de negocio — hacia dónde abrimos terreno</div>
+  <div class="alert-box warn">
+    <span class="alert-icon">🎯</span>
+    <div>
+      <div class="alert-title">La pregunta que manda: ¿qué genera venta hoy, y qué se puede acortar?</div>
+      <div class="alert-text">No sumamos todo lo que existe — solo lo que rompe la barrera actual: Notion/CRM abierto y centralizando, para que empiecen a salir métricas reales. Todo lo demás se construye encima de eso, un pedazo a la vez.</div>
+    </div>
+  </div>
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+flowchart TD
+    C0["🎯 SISTEMA COMERCIAL"]:::header --> C1["👤 Avatar<br/>✓ hecho"]:::done
+    C1 --> C2["💎 Oferta irresistible<br/>✓ hecho"]:::done
+    C2 --> C3["🔍 Discovery / Q1-5<br/>✓ hecho"]:::done
+    C3 --> C4["📞 Setting<br/>falta armar"]:::pending
+    C4 --> C5["🤝 Closing<br/>✓ ya opera"]:::done
+
+    D0["📡 SISTEMA DE ADQUISICIÓN"]:::header --> D1["✍️ Contenido<br/>falta armar"]:::pending
+    D1 --> D2["📤 Outbound<br/>manual, sin sistema"]:::pending
+    D2 --> D3["🖼️ Carruseles<br/>falta armar"]:::pending
+    D3 --> D4["🌐 Funnel web<br/>falta armar"]:::pending
+
+    C5 --> N["🗂️ NOTION / CRM<br/>centralizar + métricas<br/>⚡ rompe la barrera hoy"]:::lever
+    D4 --> N
+    N --> L["💰 LIQUIDEZ<br/>ventas hoy"]:::goal
+
+    classDef header fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A,font-weight:bold
+    classDef done fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    classDef pending fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef lever fill:#FDF4E3,stroke:#E8A237,stroke-width:3px,color:#1A1A1A
+    classDef goal fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
+    </pre>
+  </div>
+  <div class="bdg-row" style="margin:-6px 0 22px">
+    <span class="bdg green">✓ Resuelto</span>
+    <span class="bdg red">✗ Falta armar</span>
+    <span class="bdg amber">⚡ Palanca — se abre hoy</span>
+    <span class="bdg grey">💰 Meta</span>
   </div>
 
   <div class="slbl">Métricas clave · Diagnóstico julio 2026</div>
@@ -637,16 +677,6 @@ flowchart LR
 
   <div class="hist-card done">
     <div class="hist-hd">
-      <div class="hist-title">Sesión 0 — Descubrimiento</div>
-      <span class="bdg teal">✓ 13 jul</span>
-    </div>
-    <div class="hist-text">Se mapeó el modelo de negocio de STM (comisión 5% sobre maquinaria de $200k–500k USD), el cuello de botella central (equipo comercial de una sola persona) y el estado financiero post-quiebra 2024. Laura confirmó compromiso 8/10.</div>
-    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Diagnóstico previo</span></div>
-    <div class="hist-money">💰 Hacia dónde acerca: sin este diagnóstico no hay roadmap — es la condición para que arranque el programa.</div>
-  </div>
-
-  <div class="hist-card done">
-    <div class="hist-hd">
       <div class="hist-title">Sesión 1 — Foundations: ICP A/B/C</div>
       <span class="bdg teal">✓ 25 jul</span>
     </div>
@@ -667,7 +697,7 @@ flowchart LR
 
   <div class="hist-card now">
     <div class="hist-hd">
-      <div class="hist-title">Sesión 3 — próxima</div>
+      <div class="hist-title">Sesión 3 — hoy</div>
       <span class="bdg amber">→ 10 ago · 18:00</span>
     </div>
     <div class="hist-text">Laura y Jairo llegan con el flujo de preguntas ya resuelto (13 preguntas de segmentación + flujo técnico completo por línea de producto) — se cierra en vivo la matriz A/B/C con recurrencia y Patricio transfiere el diagrama de mensajes ya montado en este panel. Foco pasa a Validación: probar el mensaje con un cliente real.</div>
@@ -1071,7 +1101,7 @@ mermaid.initialize({
   }
 });
 window.__renderMermaid=()=>mermaid.run();
-if(document.getElementById('pg-consulting')?.classList.contains('on'))window.__renderMermaid();
+if(document.querySelector('.page.on .mermaid'))window.__renderMermaid();
 </script>
 </body>
 </html>
