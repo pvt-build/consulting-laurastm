@@ -367,10 +367,10 @@ flowchart LR
     subgraph COM["🎯 Sistema Comercial"]
     direction TB
     CA["👤 Avatar<br/>🟡 definido, no enriquecido"]:::warn
-    CB["💎 Oferta irresistible<br/>🔴 no existe — armar<br/>sobre Avatar B"]:::bad
-    CC["🔍 Discovery<br/>🟡 flujo ✓ / registro ✗<br/>sin CRM ni command center"]:::warn
+    CB["💎 Oferta irresistible<br/>🔴 no existe — 2 capas<br/>(Producto/Servicio), 12<br/>sub-servicios, sobre Avatar B"]:::bad
+    CC["🔍 Discovery<br/>🟡 flujo ✓ + señales C→B<br/>arrancó — sin CRM ni<br/>command center"]:::warn
     CD["📞 Setting<br/>🟡 flujo de mensajes armado<br/>falta auditarlo"]:::warn
-    CE["🤝 Closing<br/>🟡 opera, faltan skills<br/>(Closing Coach GPT por avatar)"]:::warn
+    CE["🤝 Closing<br/>🟡 opera, faltan skills<br/>(Closing Coach GPT ↗)"]:::warn
     CA-->CB-->CC-->CD-->CE
     end
 
@@ -385,21 +385,24 @@ flowchart LR
     K3-->K4
     end
 
-    subgraph OPE["⚙️ Sistema Operativo — a diagnosticar"]
+    subgraph OPE["⚙️ Sistema Operativo"]
     direction TB
-    O1["❓ ¿Está centralizado?"]:::unknown
-    O2["❓ ¿Dónde caen las ventas?"]:::unknown
+    O1["🔴 ¿Centralizado?<br/>No — vive en Excel,<br/>no en CRM/Notion"]:::bad
+    O2["🟡 ¿Dónde caen las ventas?<br/>Excel: 84+ leads A/B/C<br/>(solo en Termoformado)"]:::warn
     O3["❓ ¿Cómo se ejecutan los pagos?"]:::unknown
     O4["❓ ¿Qué pasa post-pago?"]:::unknown
     O1-->O2-->O3-->O4
     end
 
     COM ~~~ CNT ~~~ OPE
+    CA-.->|"señales informan"|K3
 
     CE-->N["🗂️ Notion / CRM<br/>centralizar + métricas<br/>⚡ rompe la barrera hoy"]:::lever
     K4-->N
     O4-->N
     N-->L["💰 Liquidez<br/>ventas hoy"]:::goal
+
+    click CE "https://chatgpt.com/g/g-6a0faf3c80f4819199c5782fa39dad23-sales-closing-coach-gpt/c/6a17a966-4cfc-83e9-aa28-cf73c987fc82" "Closing Coach GPT — entrenar objeciones" _blank
 
     classDef warn fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
     classDef bad fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
@@ -423,13 +426,21 @@ flowchart LR
     </div>
   </div>
 
+  <div class="alert-box info">
+    <span class="alert-icon">📈</span>
+    <div>
+      <div class="alert-title">La secuencia de madurez — en ese orden, no al revés</div>
+      <div class="alert-text"><strong>Volumen → Datos → Optimización → Rentabilidad → Sistema → Automatización.</strong> Más volumen de llamadas es más datos de cierre. Más datos es mejor optimización. Optimizar es lo que mejora la rentabilidad. Rentabilidad sostenida es lo que justifica un sistema. Y un sistema ya validado es lo único que vale la pena automatizar. El primer cierre no es la meta — es lo que trae volumen hasta el punto en que Laura tenga cartera y pueda delegar.</div>
+    </div>
+  </div>
+
   <div class="slbl">Métricas clave · Diagnóstico julio 2026</div>
   <div class="ov-grid">
     <div class="ov-card">
       <div class="ov-lbl">Comisión por máquina</div>
-      <div class="ov-num teal">5%</div>
-      <div class="ov-sub">Sobre venta de $200k–500k USD</div>
-      <div class="ov-trend warn"><span class="ov-trend-icon">●</span> Estándar del sector, sin cambios previstos</div>
+      <div class="ov-num teal">3–5%</div>
+      <div class="ov-sub">Por marca: INPAK 5%/3%, JWEL 3%/2%, SBI 5%/3% (1ª/repetida)</div>
+      <div class="ov-trend warn"><span class="ov-trend-icon">●</span> Servicio técnico: 30% táctico / 50% estratégico</div>
     </div>
     <div class="ov-card">
       <div class="ov-lbl">Máquinas vendidas</div>
@@ -794,15 +805,6 @@ flowchart LR
 
   <div class="task">
     <div class="task-body">
-      <div class="task-title">Cerrar la matriz A/B/C con recurrencia y ciclo de venta</div>
-      <div class="task-desc">Sumar a la matriz del Google Sheet (su fuente de verdad hasta migrar a Notion) cuánto se demora cada tier en volver a comprar (A ~6 meses, B ~2 años, C varios años) — sigue pendiente de la Sesión 2.</div>
-      <div class="task-goal">→ Para: saber no solo quién es cliente A/B/C, sino cuándo volver a contactarlo.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-body">
       <div class="task-title">Cuadrar horario fijo de los sábados</div>
       <div class="task-desc">El día ya quedó definido en el cierre — falta fijar la hora exacta (esta semana se corrió a lunes por viaje de Laura).</div>
       <div class="task-goal">→ Para: que la cadencia semanal no dependa de coordinar cada vez.</div>
@@ -865,7 +867,7 @@ flowchart LR
       <span class="bdg violet">🔗 Mes 1 · Avatar + Oferta irresistible</span>
       <span class="flow-when">Mes 1 · en curso</span>
     </div>
-    <div class="flow-summary">Clientes segmentados A/B/C (Sesión 1), variables desglosadas por estructura/prioridades/precio (Sesión 2) y reframe de mensaje de venta instalado. Falta consolidar la matriz final con recurrencia y ciclo de venta, y documentar oferta y clientes antiguos por escrito.</div>
+    <div class="flow-summary">Clientes segmentados A/B/C (Sesión 1), variables + recurrencia por tier ya en el Sheet (Sesión 2), reframe de mensaje de venta instalado (Sesión 2), y modelo de oferta corregido a 2 capas (Sesión 3). Falta documentar oferta y clientes antiguos por escrito, y armar el módulo de Oferta irresistible.</div>
     <div class="flow-qa">
       <div class="flow-q">¿En qué tiers se divide el cliente de STM?</div>
       <div class="flow-a ok">✓ A/B/C, con foco en B (Sesión 1)</div>
@@ -876,7 +878,7 @@ flowchart LR
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Cuáles son las variables exactas que definen a un cliente A/B/C?</div>
-      <div class="flow-a ok">✓ Estructura, prioridades, sensibilidad al precio, proceso de compra y estrategia comercial por tier — con "conciencia técnica" como eje transversal (Sesión 2). Falta cerrar recurrencia y ciclo de venta numérico por tier</div>
+      <div class="flow-a ok">✓ Estructura, prioridades, sensibilidad al precio, proceso de compra, estrategia comercial y recurrencia por tier (6 meses A / 1 año B / 2 años C) — todo cerrado en el Sheet, con "conciencia técnica" como eje transversal</div>
     </div>
     <div class="flow-qa">
       <div class="flow-q">¿Cómo se escribe ese criterio para que otra persona lo pueda aplicar sin depender de la memoria de Laura?</div>
