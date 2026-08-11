@@ -298,6 +298,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="tab" onclick="sw('roadmap',this)">🗺️ Hoja de ruta</div>
     <div class="tab" onclick="sw('tasks',this)">✅ Pendientes</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
+    <div class="tab" onclick="sw('backend',this)">🗄️ Backend</div>
     <div class="tab" onclick="sw('consulting',this)">🧭 Consultoría</div>
   </nav>
   <div class="topbar-right">
@@ -324,6 +325,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Hoja de ruta</div>
     <div class="mob-row" onclick="sw('tasks',this,true)"><span class="mob-em">✅</span> Pendientes</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
+    <div class="mob-row" onclick="sw('backend',this,true)"><span class="mob-em">🗄️</span> Backend</div>
     <div class="mob-row" onclick="sw('consulting',this,true)"><span class="mob-em">🧭</span> Consultoría</div>
   </div>
 </header>
@@ -357,7 +359,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="alert-box warn">
     <span class="alert-icon">🎯</span>
     <div>
-      <div class="alert-title">Foco: Sistema Comercial + Sistema de Contenido. Operativo se diagnostica en paralelo.</div>
+      <div class="alert-title">Foco: Sistema Comercial + Sistema de Contenido (adquisición). No operamos al cliente.</div>
       <div class="alert-text">Lectura real, no optimista: casi nada está tan hecho como parecía. Avatar está definido pero no enriquecido, la oferta irresistible <strong>no existe todavía</strong> (hay que armarla sobre Avatar B), y el chat/setting no es la prioridad — antes hay que resolver qué necesita <strong>ver</strong> el cliente (casos de éxito, números, imágenes que le hablen a él, no a cualquiera).</div>
     </div>
   </div>
@@ -385,28 +387,17 @@ flowchart LR
     K3-->K4
     end
 
-    subgraph OPE["⚙️ Sistema Operativo"]
-    direction TB
-    O1["🔴 ¿Centralizado?<br/>No — vive en Excel,<br/>no en CRM/Notion"]:::bad
-    O2["🟡 ¿Dónde caen las ventas?<br/>Excel: 84+ leads A/B/C<br/>(solo en Termoformado)"]:::warn
-    O3["❓ ¿Cómo se ejecutan los pagos?"]:::unknown
-    O4["❓ ¿Qué pasa post-pago?"]:::unknown
-    O1-->O2-->O3-->O4
-    end
-
-    COM ~~~ CNT ~~~ OPE
+    COM ~~~ CNT
     CA-.->|"señales informan"|K3
 
     CE-->N["🗂️ Notion / CRM<br/>centralizar + métricas<br/>⚡ rompe la barrera hoy"]:::lever
     K4-->N
-    O4-->N
     N-->L["💰 Liquidez<br/>ventas hoy"]:::goal
 
     click CE "https://chatgpt.com/g/g-6a0faf3c80f4819199c5782fa39dad23-sales-closing-coach-gpt/c/6a17a966-4cfc-83e9-aa28-cf73c987fc82" "Closing Coach GPT — entrenar objeciones" _blank
 
     classDef warn fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
     classDef bad fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
-    classDef unknown fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A,stroke-dasharray: 4 3
     classDef lever fill:#FDF4E3,stroke:#E8A237,stroke-width:3px,color:#1A1A1A
     classDef goal fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
     </pre>
@@ -414,7 +405,6 @@ flowchart LR
   <div class="bdg-row" style="margin:-6px 0 14px">
     <span class="bdg amber">🟡 Parcial — hay algo, no es suficiente</span>
     <span class="bdg red">🔴 No existe — construir</span>
-    <span class="bdg violet">❓ Sin diagnosticar</span>
     <span class="bdg grey">⚡ Palanca · 💰 Meta</span>
   </div>
 
@@ -432,6 +422,58 @@ flowchart LR
       <div class="alert-title">La secuencia de madurez — en ese orden, no al revés</div>
       <div class="alert-text"><strong>Volumen → Datos → Optimización → Rentabilidad → Sistema → Automatización.</strong> Más volumen de llamadas es más datos de cierre. Más datos es mejor optimización. Optimizar es lo que mejora la rentabilidad. Rentabilidad sostenida es lo que justifica un sistema. Y un sistema ya validado es lo único que vale la pena automatizar. El primer cierre no es la meta — es lo que trae volumen hasta el punto en que Laura tenga cartera y pueda delegar.</div>
     </div>
+  </div>
+
+  <div class="slbl">Diagrama de mensajes — de reclamo a prospección</div>
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+flowchart LR
+    A["😤 Reclamo o feedback<br/>de un cliente pasado"]:::signal --> B["🔍 Señal / dolor real<br/>detectado (no lo que dijo,<br/>lo que necesitaba)"]:::signal
+    B --> C["✍️ Se traduce a un<br/>mensaje de marketing"]:::message
+    C --> D["🎯 Prospección de un<br/>cliente con el mismo tier"]:::action
+    D --> E["🤝 Cierre"]:::close
+    E -. "el cierre deja una señal nueva — el loop nunca termina" .-> A
+
+    classDef signal fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef message fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef action fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef close fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    </pre>
+  </div>
+
+  <div class="alert-box warn">
+    <span class="alert-icon">⚡</span>
+    <div>
+      <div class="alert-title">Por qué queda declarado acá y no solo en Notion</div>
+      <div class="alert-text">Esto se arma con ejemplos reales de las Sesiones 1 y 2 para que Laura y Jairo tengan el patrón ya aplicado — no una plantilla en blanco que hay que "construir" antes de poder usarla. Cada fila nueva que agreguen sigue esta misma lógica.</div>
+    </div>
+  </div>
+
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso Briceño — objeción de edad/género (cliente C)</div>
+      <div class="task-desc">Reclamo real: "¿por qué me viene a vender una niña?" — el cliente C descalifica por falta de experiencia percibida, no por el producto.</div>
+      <div class="task-goal">→ Mensaje: para el perfil C (dueño único, conservador, decide solo) — anclar el mensaje en años de trayectoria y respaldo técnico (Jairo), no en el producto. Reencuadrar: "¿seguir siendo cliente C o pasar a ser B?"</div>
+    </div>
+    <span class="bdg violet">Tier C</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso máquina china — precio vs. dolor futuro (cliente C→B)</div>
+      <div class="task-desc">Reclamo real: cliente compró una máquina china más barata pese a la advertencia, y volvió por soporte técnico recurrente semanas después.</div>
+      <div class="task-goal">→ Mensaje: "¿ya te pasó que la opción barata terminó costando más en soporte técnico?" — apunta al dolor futuro no verbalizado, no al precio. Sirve para prospectar clientes C que están por comprar por precio.</div>
+    </div>
+    <span class="bdg violet">Tier C→B</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Próxima fila — la completan Laura/Jairo</div>
+      <div class="task-desc">Cualquier reclamo o feedback nuevo de esta semana entra acá con la misma estructura: reclamo real → señal detectada → mensaje por tier.</div>
+      <div class="task-goal">→ Para: que el diagrama crezca con cada cliente, no se quede en dos ejemplos de Patricio.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
   </div>
 
   <div class="slbl">Métricas clave · Diagnóstico julio 2026</div>
@@ -660,58 +702,6 @@ flowchart LR
       <div class="alert-title">Cómo conecta esto con el Flywheel</div>
       <div class="alert-text">Avatar y Oferta irresistible (Mes 1) son la fase <strong>Foundations</strong> del Flywheel — sin eso, Adquisición (Mes 2) dispara con el mensaje equivocado. Recompra y Referidos (Mes 2–3) son la fase <strong>Post-venta</strong> — el cliente gestionado que refiere vuelve a alimentar Captación, cerrando el ciclo. Ver la pestaña Flywheel para el detalle etapa por etapa.</div>
     </div>
-  </div>
-
-  <div class="slbl">Diagrama de mensajes — de reclamo a prospección</div>
-  <div class="mermaid-wrap">
-    <pre class="mermaid">
-flowchart LR
-    A["😤 Reclamo o feedback<br/>de un cliente pasado"]:::signal --> B["🔍 Señal / dolor real<br/>detectado (no lo que dijo,<br/>lo que necesitaba)"]:::signal
-    B --> C["✍️ Se traduce a un<br/>mensaje de marketing"]:::message
-    C --> D["🎯 Prospección de un<br/>cliente con el mismo tier"]:::action
-    D --> E["🤝 Cierre"]:::close
-    E -. "el cierre deja una señal nueva — el loop nunca termina" .-> A
-
-    classDef signal fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
-    classDef message fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
-    classDef action fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
-    classDef close fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
-    </pre>
-  </div>
-
-  <div class="alert-box warn">
-    <span class="alert-icon">⚡</span>
-    <div>
-      <div class="alert-title">Por qué queda declarado acá y no solo en Notion</div>
-      <div class="alert-text">Esto se arma con ejemplos reales de las Sesiones 1 y 2 para que Laura y Jairo tengan el patrón ya aplicado — no una plantilla en blanco que hay que "construir" antes de poder usarla. Cada fila nueva que agreguen sigue esta misma lógica.</div>
-    </div>
-  </div>
-
-  <div class="task" style="border-color:rgba(123,97,255,.3)">
-    <div class="task-body">
-      <div class="task-title">Caso Briceño — objeción de edad/género (cliente C)</div>
-      <div class="task-desc">Reclamo real: "¿por qué me viene a vender una niña?" — el cliente C descalifica por falta de experiencia percibida, no por el producto.</div>
-      <div class="task-goal">→ Mensaje: para el perfil C (dueño único, conservador, decide solo) — anclar el mensaje en años de trayectoria y respaldo técnico (Jairo), no en el producto. Reencuadrar: "¿seguir siendo cliente C o pasar a ser B?"</div>
-    </div>
-    <span class="bdg violet">Tier C</span>
-  </div>
-
-  <div class="task" style="border-color:rgba(123,97,255,.3)">
-    <div class="task-body">
-      <div class="task-title">Caso máquina china — precio vs. dolor futuro (cliente C→B)</div>
-      <div class="task-desc">Reclamo real: cliente compró una máquina china más barata pese a la advertencia, y volvió por soporte técnico recurrente semanas después.</div>
-      <div class="task-goal">→ Mensaje: "¿ya te pasó que la opción barata terminó costando más en soporte técnico?" — apunta al dolor futuro no verbalizado, no al precio. Sirve para prospectar clientes C que están por comprar por precio.</div>
-    </div>
-    <span class="bdg violet">Tier C→B</span>
-  </div>
-
-  <div class="task">
-    <div class="task-body">
-      <div class="task-title">Próxima fila — la completan Laura/Jairo</div>
-      <div class="task-desc">Cualquier reclamo o feedback nuevo de esta semana entra acá con la misma estructura: reclamo real → señal detectada → mensaje por tier.</div>
-      <div class="task-goal">→ Para: que el diagrama crezca con cada cliente, no se quede en dos ejemplos de Patricio.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
   </div>
 
   <div class="slbl">Histórico — qué se construyó, qué se cierra y hacia dónde acerca</div>
@@ -1041,6 +1031,54 @@ flowchart LR
 </div>
 
 
+<!-- ════════ BACKEND ════════ -->
+<div class="page" id="pg-backend">
+
+  <div class="alert-box warn" style="margin-top:0">
+    <span class="alert-icon">🗄️</span>
+    <div>
+      <div class="alert-title">Por qué existe esta pestaña</div>
+      <div class="alert-text">Con 2 personas, la velocidad de STM no depende de trabajar más horas — depende de que cada pieza tenga <strong>un solo lugar donde vive</strong>, para que se pueda consultar, iterar con IA y delegar sin tener que preguntarle a Laura o Jairo dónde quedó algo. Esta pestaña es ese mapa: qué vive dónde, hoy — no la versión ideal.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Dónde vive cada cosa — hoy</div>
+
+  <a class="res-item" href="#">
+    <span class="res-ico">👤</span>
+    <div class="res-body"><div class="res-title">Avatar y segmentación A/B/C</div><div class="res-desc">Notion — ficha del cliente + páginas de cada sesión. Se enriquece semana a semana.</div></div>
+  </a>
+  <a class="res-item" href="#">
+    <span class="res-ico">📊</span>
+    <div class="res-body"><div class="res-title">Datos comerciales / pipeline (84+ leads)</div><div class="res-desc">Excel ("Base modelo chile 2026") — matriz A/B/C, comisiones, base de clientes por línea de producto. Notion en paralelo para lo que ya se sincronizó.</div></div>
+  </a>
+  <a class="res-item" href="#">
+    <span class="res-ico">🔍</span>
+    <div class="res-body"><div class="res-title">Flujo de preguntas (Discovery, Q1-5)</div><div class="res-desc">Notion — las 13 preguntas generales + el flujo técnico por línea de producto, con las señales C→B documentadas.</div></div>
+  </a>
+  <a class="res-item locked" href="#">
+    <span class="res-ico">📣</span>
+    <div class="res-body"><div class="res-title">Grilla de marketing / contenido</div><div class="res-desc">Notion — por construir junto con el Sistema de Contenido.</div></div>
+  </a>
+  <a class="res-item" href="#">
+    <span class="res-ico">🎙️</span>
+    <div class="res-body"><div class="res-title">Transcripts y resúmenes de cada sesión</div><div class="res-desc">Notion — sub-página por sesión, verbatim intacto + resumen ejecutivo.</div></div>
+  </a>
+  <a class="res-item" href="#">
+    <span class="res-ico">🌐</span>
+    <div class="res-body"><div class="res-title">Este panel de seguimiento</div><div class="res-desc">GitHub Pages — lo actualiza Patricio dentro de las 24h después de cada sesión. No es un pendiente, es parte del programa.</div></div>
+  </a>
+
+  <div class="alert-box info">
+    <span class="alert-icon">🔁</span>
+    <div>
+      <div class="alert-title">La meta: un solo lugar por pieza, no una copia en cada chat</div>
+      <div class="alert-text">Hoy varias cosas todavía viven repartidas entre WhatsApp, Excel y Notion. Cada sesión mueve una pieza más hacia su lugar único — cuando todo esté acá, Laura y Jairo dejan de depender de acordarse dónde quedó algo, y pueden iterar con IA directamente sobre la fuente.</div>
+    </div>
+  </div>
+</div>
+
+
 <!-- ════════ CÓMO AVANZAR ════════ -->
 <div class="page" id="pg-consulting">
 
@@ -1096,7 +1134,7 @@ flowchart TD
 </footer>
 
 <script>
-const PAGES=['overview','roadmap','tasks','engine','consulting'];
+const PAGES=['overview','roadmap','tasks','engine','backend','consulting'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
