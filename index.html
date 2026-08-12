@@ -245,6 +245,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .res-title{font-size:14px;font-weight:500;color:var(--ink)}
 .res-desc{font-size:12px;color:var(--grey);margin-top:1px}
 
+/* LIBRARY */
+.lib-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:20px}
+.lib-card{background:var(--surf);border:0.5px solid var(--border);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:11px}
+.lib-ico{font-size:30px;line-height:1}
+.lib-title{font-size:16.5px;font-weight:600;color:var(--dark)}
+.lib-desc{font-size:13px;color:var(--grey);line-height:1.6}
+.lib-tip{font-size:12px;color:var(--teal-dk);background:var(--teal-lt);border-radius:8px;padding:9px 11px;line-height:1.55}
+.lib-tip strong{color:var(--teal-dk)}
+.lib-btn{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#fff;background:var(--dark);border-radius:9px;padding:10px 15px;text-decoration:none;width:fit-content;transition:background .15s}
+.lib-btn:hover{background:var(--brown)}
+
 /* MERMAID */
 .mermaid-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px;overflow-x:auto}
 .mermaid-wrap .mermaid{display:flex;justify-content:center;min-width:280px}
@@ -299,6 +310,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="tab" onclick="sw('tasks',this)">✅ Pendientes</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
     <div class="tab" onclick="sw('backend',this)">🗄️ Backend</div>
+    <div class="tab" onclick="sw('resources',this)">📚 Recursos</div>
     <div class="tab" onclick="sw('consulting',this)">🧭 Consultoría</div>
   </nav>
   <div class="topbar-right">
@@ -326,6 +338,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="mob-row" onclick="sw('tasks',this,true)"><span class="mob-em">✅</span> Pendientes</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
     <div class="mob-row" onclick="sw('backend',this,true)"><span class="mob-em">🗄️</span> Backend</div>
+    <div class="mob-row" onclick="sw('resources',this,true)"><span class="mob-em">📚</span> Recursos</div>
     <div class="mob-row" onclick="sw('consulting',this,true)"><span class="mob-em">🧭</span> Consultoría</div>
   </div>
 </header>
@@ -1079,6 +1092,36 @@ flowchart LR
 </div>
 
 
+<!-- ════════ RECURSOS ════════ -->
+<div class="page" id="pg-resources">
+
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">📚</span>
+    <div>
+      <div class="alert-title">Biblioteca de recursos</div>
+      <div class="alert-text">Herramientas listas para usar, no material de lectura. Cada una tiene un link y cómo aplicarla hoy mismo.</div>
+    </div>
+  </div>
+
+  <div class="lib-grid">
+    <div class="lib-card">
+      <div class="lib-ico">🤖</div>
+      <div class="lib-title">Closing Coach GPT</div>
+      <div class="lib-desc">GPT entrenado en venta consultiva, manejo de objeciones y roleplay de cierre — el mismo framework de Discovery trabajado en las sesiones, adaptado a este tipo de avatar.</div>
+      <div class="lib-tip"><strong>Cómo usarlo:</strong> antes de una llamada real, pégale el perfil del cliente (tier A/B/C, señales, dolor detectado) y pídele que haga roleplay de la objeción que más esperas. Practica la respuesta antes de decirla en vivo.</div>
+      <a class="lib-btn" href="https://chatgpt.com/g/g-6a0faf3c80f4819199c5782fa39dad23-sales-closing-coach-gpt/c/6a17a966-4cfc-83e9-aa28-cf73c987fc82" target="_blank" rel="noopener">Abrir GPT →</a>
+    </div>
+    <div class="lib-card">
+      <div class="lib-ico">🗂️</div>
+      <div class="lib-title">Notion — Módulos Private Build</div>
+      <div class="lib-desc">Biblioteca de módulos y recursos del programa en Notion — el mismo espacio donde viven el avatar, el flujo de preguntas y el registro de cada sesión (ver pestaña Backend).</div>
+      <div class="lib-tip"><strong>Cómo usarlo:</strong> es la fuente que se va a ir enriqueciendo semana a semana — vuelve acá cuando quieras revisar o iterar algo con IA en vez de buscarlo en WhatsApp.</div>
+      <a class="lib-btn" href="https://app.notion.com/p/private-build/M-dulos-3ba1b21db3ba805680c4e62c62648525?source=copy_link" target="_blank" rel="noopener">Abrir Notion →</a>
+    </div>
+  </div>
+</div>
+
+
 <!-- ════════ CÓMO AVANZAR ════════ -->
 <div class="page" id="pg-consulting">
 
@@ -1134,7 +1177,7 @@ flowchart TD
 </footer>
 
 <script>
-const PAGES=['overview','roadmap','tasks','engine','backend','consulting'];
+const PAGES=['overview','roadmap','tasks','engine','backend','resources','consulting'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
