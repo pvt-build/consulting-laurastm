@@ -309,6 +309,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="tab" onclick="sw('roadmap',this)">🗺️ Hoja de ruta</div>
     <div class="tab" onclick="sw('tasks',this)">✅ Pendientes</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
+    <div class="tab" onclick="sw('avatar',this)">🎯 Avatar</div>
     <div class="tab" onclick="sw('backend',this)">🗄️ Backend</div>
     <div class="tab" onclick="sw('resources',this)">📚 Recursos</div>
     <div class="tab" onclick="sw('consulting',this)">🧭 Consultoría</div>
@@ -337,6 +338,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Hoja de ruta</div>
     <div class="mob-row" onclick="sw('tasks',this,true)"><span class="mob-em">✅</span> Pendientes</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
+    <div class="mob-row" onclick="sw('avatar',this,true)"><span class="mob-em">🎯</span> Avatar</div>
     <div class="mob-row" onclick="sw('backend',this,true)"><span class="mob-em">🗄️</span> Backend</div>
     <div class="mob-row" onclick="sw('resources',this,true)"><span class="mob-em">📚</span> Recursos</div>
     <div class="mob-row" onclick="sw('consulting',this,true)"><span class="mob-em">🧭</span> Consultoría</div>
@@ -1044,6 +1046,142 @@ flowchart LR
 </div>
 
 
+<!-- ════════ AVATAR ════════ -->
+<div class="page" id="pg-avatar">
+
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">🎯</span>
+    <div>
+      <div class="alert-title">Para qué sirve esta claridad</div>
+      <div class="alert-text">No es para leer — es para <strong>salir a closear</strong>. Con las características de cada tier al máximo detalle, Laura y Jairo pueden producir contenido y carruseles sin inventar el ángulo cada vez, reconocer el pitch correcto según con quién hablan, y detectar las señales que generan una oportunidad antes de que el lead se enfríe (ghosting).</div>
+    </div>
+  </div>
+
+  <div class="slbl">Los tres tiers — características completas</div>
+  <div class="phase-grid">
+    <div class="ch-card" style="border-top:3px solid var(--violet)">
+      <div class="ch-head">Cliente A · Corporativo ⭐⭐⭐⭐⭐</div>
+      <div class="ch-row"><span class="ch-k">Tamaño</span><span class="ch-v" style="text-align:right">Multinacional, varios países, múltiples plantas</span></div>
+      <div class="ch-row"><span class="ch-k">Estructura</span><span class="ch-v" style="text-align:right">Compleja — compras, ingeniería, operaciones, dirección</span></div>
+      <div class="ch-row"><span class="ch-k">Prioridades</span><span class="ch-v" style="text-align:right">Calidad, soporte técnico, postventa, estandarización</span></div>
+      <div class="ch-row"><span class="ch-k">Precio</span><span class="ch-v">Sensibilidad media</span></div>
+      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v">Medio · aprobaciones múltiples</span></div>
+      <div class="ch-row"><span class="ch-k">Recurrencia</span><span class="ch-v">Cada 6 meses</span></div>
+      <div class="ch-row"><span class="ch-k">Estrategia</span><span class="ch-v" style="text-align:right">Consultiva, proyecto piloto, crece planta por planta</span></div>
+      <div class="lib-tip" style="margin-top:10px"><strong>Mensaje clave:</strong> Calidad + Servicio + Expansión Global</div>
+    </div>
+    <div class="ch-card" style="border-top:3px solid var(--teal)">
+      <div class="ch-head">Cliente B · Mediano ⭐⭐⭐ <span class="bdg teal">🎯 Foco</span></div>
+      <div class="ch-row"><span class="ch-k">Tamaño</span><span class="ch-v" style="text-align:right">Varias plantas o 1 grande, operación nacional</span></div>
+      <div class="ch-row"><span class="ch-k">Estructura</span><span class="ch-v" style="text-align:right">Moderada — menos niveles de aprobación</span></div>
+      <div class="ch-row"><span class="ch-k">Prioridades</span><span class="ch-v" style="text-align:right">Productividad, soporte, capacitación, financiamiento</span></div>
+      <div class="ch-row"><span class="ch-k">Precio</span><span class="ch-v">Sensibilidad alta</span></div>
+      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v">Largo · decisión más ágil</span></div>
+      <div class="ch-row"><span class="ch-k">Recurrencia</span><span class="ch-v">Cada año</span></div>
+      <div class="ch-row"><span class="ch-k">Estrategia</span><span class="ch-v" style="text-align:right">Consultoría, traducción técnica, demo de ROI</span></div>
+      <div class="lib-tip" style="margin-top:10px"><strong>Mensaje clave:</strong> Consultoría + Entrenamiento + Soporte + Traducción</div>
+    </div>
+    <div class="ch-card" style="border-top:3px solid var(--sand)">
+      <div class="ch-head">Cliente C · Pequeño ⭐⭐</div>
+      <div class="ch-row"><span class="ch-k">Tamaño</span><span class="ch-v" style="text-align:right">Una planta, un propietario principal</span></div>
+      <div class="ch-row"><span class="ch-k">Estructura</span><span class="ch-v" style="text-align:right">Muy simple — decisión centralizada</span></div>
+      <div class="ch-row"><span class="ch-k">Prioridades</span><span class="ch-v" style="text-align:right">Precio competitivo, rapidez, eficiencia inmediata</span></div>
+      <div class="ch-row"><span class="ch-k">Precio</span><span class="ch-v red">Sensibilidad muy alta</span></div>
+      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v">Muy largo · 1 persona decide</span></div>
+      <div class="ch-row"><span class="ch-k">Recurrencia</span><span class="ch-v">Cada 2 años</span></div>
+      <div class="ch-row"><span class="ch-k">Estrategia</span><span class="ch-v" style="text-align:right">Oferta simple, implementación rápida, ROI veloz</span></div>
+      <div class="lib-tip" style="margin-top:10px"><strong>Mensaje clave:</strong> Precio bajo + Volumen + Servicio + Traducción</div>
+    </div>
+  </div>
+
+  <div class="slbl">Señales de transición — cuándo un C se mueve a B (o un B a A)</div>
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso real: Conacevri (C → B)</div>
+      <div class="task-desc">Señales detectadas: renovó maquinaria, aumentó/implementó personal (contrató director en vez de que el dueño hiciera todo), empezó a exportar. Ninguna sola confirma el salto — juntas, sí.</div>
+      <div class="task-goal">→ Estas señales se buscan en el sitio web, LinkedIn o en la primera pregunta de Discovery — no hay que esperar a que el cliente las diga solo.</div>
+    </div>
+    <span class="bdg violet">C→B</span>
+  </div>
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso real: ACEBRI (C → B, en curso)</div>
+      <div class="task-desc">Señales: dueño se retira por salud → contrató Director de Operaciones nuevo, con experiencia en multinacional clase A. Ese perfil nuevo trae el estándar de un A a una empresa C — eleva la exigencia y el presupuesto disponible.</div>
+      <div class="task-goal">→ Un cambio de liderazgo con background superior es una de las señales más fuertes de transición — vale la pena preguntarlo siempre en Discovery.</div>
+    </div>
+    <span class="bdg violet">C→B</span>
+  </div>
+
+  <div class="slbl">Cómo evitar el ghosting</div>
+  <div class="ov-grid">
+    <div class="ov-card">
+      <div class="ov-lbl">Cliente A</div>
+      <div class="ov-num teal">6 meses</div>
+      <div class="ov-sub">Recontacto antes de que evalúe expandir otra planta</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">Cliente B</div>
+      <div class="ov-num teal">12 meses</div>
+      <div class="ov-sub">O apenas aparezca una señal de transición (ver arriba)</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">Cliente C</div>
+      <div class="ov-num teal">24 meses</div>
+      <div class="ov-sub">O apenas reporte una falla — ahí el dolor está más caliente</div>
+    </div>
+  </div>
+  <div class="alert-box warn">
+    <span class="alert-icon">📵</span>
+    <div>
+      <div class="alert-title">El ghosting no se resuelve insistiendo — se resuelve con el dato correcto</div>
+      <div class="alert-text">Si un lead no responde, no es que "se enfrió" al azar — algo de la oferta no calzó con su señal real. Antes de reintentar, revisar: ¿le hablamos con el mensaje clave de su tier, o con uno genérico?</div>
+    </div>
+  </div>
+
+  <div class="slbl">Flujo comercial completo — con la visita de Discovery ya validada</div>
+  <div class="mermaid-wrap">
+    <pre class="mermaid">
+flowchart TD
+    L["📥 Lead entra<br/>contenido / outbound / referido"] --> Q["✅ Calificación<br/>13 preguntas A/B/C"]
+    Q --> D["🔍 Discovery — Jairo<br/>llamada o visita presencial"]
+    D --> S["📋 Señales entregadas<br/>Dolor · Dolor futuro · Vehículo · Resultado"]
+    S --> F{"¿La oferta calza<br/>con su tier?"}
+    F -->|No| X["Se descarta o deriva<br/>no forzar un tier que no es"]
+    F -->|Sí| T["🤝 Traspaso Jairo → Laura<br/>síntesis escrita, no en vivo"]
+    T --> C["🎯 Cierre — Laura sola<br/>con el respaldo técnico de Jairo"]
+    C --> P["📝 Llamada: confirma fecha de pago<br/>Presencial: cliente sentado, firma o anticipo/wire"]
+    P --> G["⚙️ Gestión — ya opera"]
+
+    classDef proc fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef dec fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef bad fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef good fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    class L,Q,D,S,T proc
+    class F dec
+    class X bad
+    class C,P,G good
+    </pre>
+  </div>
+  <div class="hist-money" style="margin-bottom:20px">💰 ACEBRI aplicado: Jairo hizo Discovery en visita → señales fuertes (jefe reconoce falencias, dueño se retira, director nuevo exige estándar de multinacional) → la oferta calza (servicio técnico estratégico) → sigue: Jairo entrega la síntesis a Laura → Laura cierra la cotización formal.</div>
+
+  <div class="alert-box red-bg">
+    <span class="alert-icon">🙅</span>
+    <div>
+      <div class="alert-title">Regla dura: no cierran los dos juntos</div>
+      <div class="alert-text">Jairo hace Discovery técnico y da respaldo — pero cerrar es una capa comercial distinta. Dos personas en la misma instancia de cierre diluye autoridad, no la suma. El traspaso de señales de Jairo a Laura va <strong>por escrito, antes</strong> de la llamada o visita de cierre — nunca en vivo, nunca improvisado.</div>
+    </div>
+  </div>
+
+  <div class="alert-box warn">
+    <span class="alert-icon">🔜</span>
+    <div>
+      <div class="alert-title">Próximo: el Closing Pitch</div>
+      <div class="alert-text">Esta es la capa que falta afinar mientras empiezan a validar y traer oportunidades reales — cómo Laura convierte el respaldo técnico de Jairo en un cierre, con o sin él en la sala. Se trabaja en una próxima sesión, sobre casos reales como ACEBRI.</div>
+    </div>
+  </div>
+</div>
+
+
 <!-- ════════ BACKEND ════════ -->
 <div class="page" id="pg-backend">
 
@@ -1177,7 +1315,7 @@ flowchart TD
 </footer>
 
 <script>
-const PAGES=['overview','roadmap','tasks','engine','backend','resources','consulting'];
+const PAGES=['overview','roadmap','tasks','engine','avatar','backend','resources','consulting'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
@@ -1187,7 +1325,7 @@ function sw(id,el,isMob){
   document.querySelectorAll('.mob-row')[idx]?.classList.add('on');
   document.getElementById('fn-prev').classList.toggle('fn-hidden',idx<=0);
   document.getElementById('fn-next').classList.toggle('fn-hidden',idx>=PAGES.length-1);
-  if(id==='consulting'||id==='roadmap')window.__renderMermaid&&window.__renderMermaid();
+  if(id==='consulting'||id==='roadmap'||id==='avatar')window.__renderMermaid&&window.__renderMermaid();
   if(isMob)closeMob();
   window.scrollTo({top:0,behavior:'smooth'});
 }
