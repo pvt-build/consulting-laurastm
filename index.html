@@ -257,8 +257,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .lib-btn:hover{background:var(--brown)}
 
 /* MERMAID */
-.mermaid-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px;overflow-x:auto}
-.mermaid-wrap .mermaid{display:flex;justify-content:center;min-width:280px}
+.mermaid-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px;position:relative}
+.mermaid-scroll{overflow:auto;max-height:min(78vh,640px);touch-action:pan-x pan-y pinch-zoom}
+.mermaid-wrap .mermaid{display:flex;justify-content:flex-start;min-width:280px;width:fit-content}
+.mermaid-wrap .mermaid svg{transition:transform .12s ease}
+.zoom-ctl{position:sticky;top:8px;z-index:5;display:flex;justify-content:flex-end;gap:5px;margin:-6px -6px 6px 0}
+.zoom-btn{width:30px;height:30px;border-radius:8px;background:var(--dark);color:#fff;border:none;cursor:pointer;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.12);flex-shrink:0}
+.zoom-btn:hover{background:var(--brown)}
+.zoom-hint{font-size:10.5px;color:var(--grey);position:absolute;bottom:8px;right:14px;background:var(--surf);padding:2px 7px;border-radius:20px;border:0.5px solid var(--border);pointer-events:none}
 
 /* FOOTER NAV */
 .footer-nav{position:fixed;bottom:0;left:0;right:0;z-index:400;background:var(--dark);border-top:1px solid rgba(255,255,255,.08);box-shadow:0 -4px 20px rgba(0,0,0,.18);display:flex;align-items:stretch;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));width:100%;max-width:900px;margin:0 auto;box-sizing:border-box}
@@ -379,35 +385,41 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
   <div class="mermaid-wrap">
+    <div class="zoom-ctl">
+      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+    </div>
+    <div class="mermaid-scroll">
     <pre class="mermaid">
 flowchart LR
     subgraph COM["🎯 Sistema Comercial"]
     direction TB
-    CA["👤 Avatar<br/>🟡 definido, no enriquecido"]:::warn
-    CB["💎 Oferta irresistible<br/>🔴 no existe — 2 capas<br/>(Producto/Servicio), 12<br/>sub-servicios, sobre Avatar B"]:::bad
-    CC["🔍 Discovery<br/>🟡 flujo ✓ + señales C→B<br/>arrancó — sin CRM ni<br/>command center"]:::warn
-    CD["📞 Setting<br/>🟡 flujo de mensajes armado<br/>falta auditarlo"]:::warn
-    CE["🤝 Closing<br/>🟡 opera, faltan skills<br/>(Closing Coach GPT ↗)"]:::warn
+    CA["👤 Avatar<br/>🟡 no enriquecido"]:::warn
+    CB["💎 Oferta irresistible<br/>🔴 no existe"]:::bad
+    CC["🔍 Discovery<br/>🟡 sin CRM"]:::warn
+    CD["📞 Setting<br/>🟡 falta auditar"]:::warn
+    CE["🤝 Closing<br/>🟡 faltan skills ↗"]:::warn
     CA-->CB-->CC-->CD-->CE
     end
 
     subgraph CNT["✍️ Sistema de Contenido"]
     direction TB
     K1["📸 Instagram"]:::bad
-    K2["💼 LinkedIn orgánico"]:::bad
-    K3["📤 Outbound<br/>cold email + cold DM LinkedIn"]:::bad
-    K4["🌐 Funnel web<br/>🔴 falta lo que el cliente<br/>necesita VER (Avatar B):<br/>casos de éxito, números, imágenes"]:::bad
+    K2["💼 LinkedIn"]:::bad
+    K3["📤 Outbound"]:::bad
+    K4["🌐 Funnel web<br/>🔴 falta prueba social"]:::bad
     K1-->K4
     K2-->K4
     K3-->K4
     end
 
     COM ~~~ CNT
-    CA-.->|"señales informan"|K3
+    CA-.->|"señales"|K3
 
-    CE-->N["🗂️ Notion / CRM<br/>centralizar + métricas<br/>⚡ rompe la barrera hoy"]:::lever
+    CE-->N["🗂️ Notion/CRM<br/>⚡ palanca hoy"]:::lever
     K4-->N
-    N-->L["💰 Liquidez<br/>ventas hoy"]:::goal
+    N-->L["💰 Liquidez"]:::goal
 
     click CE "https://chatgpt.com/g/g-6a0faf3c80f4819199c5782fa39dad23-sales-closing-coach-gpt/c/6a17a966-4cfc-83e9-aa28-cf73c987fc82" "Closing Coach GPT — entrenar objeciones" _blank
 
@@ -416,6 +428,8 @@ flowchart LR
     classDef lever fill:#FDF4E3,stroke:#E8A237,stroke-width:3px,color:#1A1A1A
     classDef goal fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
     </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
   </div>
   <div class="bdg-row" style="margin:-6px 0 14px">
     <span class="bdg amber">🟡 Parcial — hay algo, no es suficiente</span>
@@ -441,19 +455,27 @@ flowchart LR
 
   <div class="slbl">Diagrama de mensajes — de reclamo a prospección</div>
   <div class="mermaid-wrap">
+    <div class="zoom-ctl">
+      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+    </div>
+    <div class="mermaid-scroll">
     <pre class="mermaid">
 flowchart LR
-    A["😤 Reclamo o feedback<br/>de un cliente pasado"]:::signal --> B["🔍 Señal / dolor real<br/>detectado (no lo que dijo,<br/>lo que necesitaba)"]:::signal
-    B --> C["✍️ Se traduce a un<br/>mensaje de marketing"]:::message
-    C --> D["🎯 Prospección de un<br/>cliente con el mismo tier"]:::action
+    A["😤 Reclamo<br/>cliente pasado"]:::signal --> B["🔍 Señal real<br/>no lo que dijo"]:::signal
+    B --> C["✍️ Mensaje<br/>de marketing"]:::message
+    C --> D["🎯 Prospección<br/>mismo tier"]:::action
     D --> E["🤝 Cierre"]:::close
-    E -. "el cierre deja una señal nueva — el loop nunca termina" .-> A
+    E -. "el loop nunca termina" .-> A
 
     classDef signal fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
     classDef message fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
     classDef action fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
     classDef close fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
     </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
   </div>
 
   <div class="alert-box warn">
@@ -1158,17 +1180,23 @@ flowchart LR
 
   <div class="slbl">Flujo comercial completo — desde el primer contacto</div>
   <div class="mermaid-wrap">
+    <div class="zoom-ctl">
+      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+    </div>
+    <div class="mermaid-scroll">
     <pre class="mermaid">
 flowchart TD
-    L["💬 Cold Outreach (chat)<br/>junta info, no es Discovery"] --> Q["✅ Calificación<br/>13 preguntas A/B/C"]
-    Q --> D["🔍 Discovery — llamada<br/>identifica el dolor"]
-    D --> S["📋 Señales entregadas<br/>Dolor · Dolor futuro · Vehículo · Resultado"]
-    S --> F{"¿La oferta calza<br/>con su tier?"}
-    F -->|No| X["Se descarta o deriva<br/>no forzar un tier que no es"]
-    F -->|Sí| T["🤝 Traspaso Jairo → Laura<br/>síntesis escrita, no en vivo"]
-    T --> C["🎯 Cierre — Laura sola<br/>con el respaldo técnico de Jairo"]
-    C --> P["📝 Llamada: confirma fecha de pago<br/>Presencial: cliente sentado, firma o anticipo/wire"]
-    P --> G["⚙️ Gestión — ya opera"]
+    L["💬 Cold Outreach<br/>chat previo"] --> Q["✅ Calificación<br/>13 preguntas"]
+    Q --> D["🔍 Discovery<br/>identifica dolor"]
+    D --> S["📋 Señales<br/>dolor · vehículo · resultado"]
+    S --> F{"¿Oferta calza<br/>con su tier?"}
+    F -->|No| X["Se descarta"]
+    F -->|Sí| T["🤝 Traspaso<br/>Jairo → Laura"]
+    T --> C["🎯 Cierre<br/>Laura sola"]
+    C --> P["📝 Pago: fecha<br/>o firma/anticipo"]
+    P --> G["⚙️ Gestión"]
 
     classDef avproc fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
     classDef avdec fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
@@ -1179,6 +1207,8 @@ flowchart TD
     class X avbad
     class C,P,G avgood
     </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
   </div>
   <div class="hist-money" style="margin-bottom:20px">💰 ACEBRI confirmado: tier B (recién escaló de C). El jefe que autoriza no estuvo en el Discovery — delegó 100% en Omar, así que la propuesta tiene que sostener la venta sola. Jairo ya sumó el párrafo de "única vía" a la cotización. Pendiente: confirmar si el pago queda 40/60 (como dice el PDF) o 30/70 con orden de compra (como propuso Jairo) — no puede quedar ambiguo.</div>
 
@@ -1298,14 +1328,20 @@ flowchart TD
   </div>
 
   <div class="mermaid-wrap">
+    <div class="zoom-ctl">
+      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+    </div>
+    <div class="mermaid-scroll">
     <pre class="mermaid">
 flowchart TD
-    A["⚙️ Flywheel — visualiza el sistema"]:::flywheel --> B["📊 Panel — revisa las métricas"]:::panel
-    B --> C["🚨 Panel — cuellos de botella por prioridad"]:::bottleneck
-    C --> D["🗺️ Hoja de ruta — qué toca esta semana"]:::roadmap
-    D --> E["✅ Pendientes — ciérralos antes de la próxima llamada"]:::tasks
-    E --> F["📞 Llamada semanal · 1h — desbloquea y revisa avance"]:::session
-    F -. se repite cada semana .-> A
+    A["⚙️ Flywheel"]:::flywheel --> B["📊 Panel"]:::panel
+    B --> C["🚨 Cuellos de botella"]:::bottleneck
+    C --> D["🗺️ Hoja de ruta"]:::roadmap
+    D --> E["✅ Pendientes"]:::tasks
+    E --> F["📞 Llamada · 1h"]:::session
+    F -. cada semana .-> A
 
     classDef flywheel fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
     classDef panel fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
@@ -1314,6 +1350,8 @@ flowchart TD
     classDef tasks fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
     classDef session fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
     </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
   </div>
 
   <div class="disc-box">
@@ -1386,17 +1424,29 @@ mermaid.initialize({
   startOnLoad:false,
   theme:'base',
   fontFamily:"'DM Sans',sans-serif",
-  flowchart:{useMaxWidth:true,htmlLabels:true},
+  flowchart:{useMaxWidth:false,htmlLabels:true},
   themeVariables:{
     primaryColor:'#F7F5F2',
     primaryTextColor:'#1A1A1A',
     primaryBorderColor:'#E4DDD4',
     lineColor:'#8A8076',
-    fontSize:'12px'
+    fontSize:'14px'
   }
 });
 window.__renderMermaid=(scope)=>mermaid.run({querySelector:(scope||'.page.on')+' .mermaid'});
 if(document.querySelector('.page.on .mermaid'))window.__renderMermaid();
+
+const zoomLevels=new WeakMap();
+window.zoomDiagram=function(btn,delta){
+  const wrap=btn.closest('.mermaid-wrap');
+  const svg=wrap.querySelector('.mermaid svg');
+  if(!svg)return;
+  let z=zoomLevels.get(svg)||1;
+  z=delta===0?1:Math.min(3,Math.max(0.4,+(z+delta).toFixed(2)));
+  zoomLevels.set(svg,z);
+  svg.style.transformOrigin='top left';
+  svg.style.transform='scale('+z+')';
+};
 </script>
 </body>
 </html>
