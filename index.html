@@ -102,6 +102,22 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ch-v{font-weight:600;color:var(--dark)}
 .ch-v.red{color:var(--red)}.ch-v.green{color:var(--teal)}.ch-v.amber{color:var(--gold)}
 
+/* TIER TABLE — SLIDER */
+.tier-tbl-wrap{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;border:0.5px solid var(--border);border-radius:12px;background:var(--surf);margin-bottom:18px}
+.tier-tbl{border-collapse:collapse;width:100%;min-width:620px}
+.tier-tbl th,.tier-tbl td{padding:10px 14px;font-size:13px;border-bottom:0.5px solid var(--border);vertical-align:top;text-align:left}
+.tier-tbl thead th{padding-top:14px;padding-bottom:12px;background:var(--surf)}
+.tier-lbl-col{position:sticky;left:0;z-index:2;background:var(--beige);color:var(--grey);font-weight:600;white-space:nowrap;min-width:118px}
+.tier-tbl thead .tier-lbl-col{z-index:3}
+.tier-col{min-width:180px;scroll-snap-align:start;font-weight:600;color:var(--dark)}
+.tier-col.a{border-top:3px solid var(--violet)}
+.tier-col.b{border-top:3px solid var(--teal)}
+.tier-col.c{border-top:3px solid var(--sand)}
+.tier-tbl tbody td{font-weight:600;color:var(--dark)}
+.tier-tbl tbody tr:last-child td{border-bottom:none}
+.tier-msg-row td{background:var(--teal-lt);color:var(--teal-dk)}
+.tier-tbl .ch-head{margin-bottom:0}
+
 /* PROBLEM */
 .problem-card{background:var(--dark);border-radius:12px;padding:18px 20px;margin-bottom:20px;display:flex;align-items:flex-start;gap:14px}
 .prob-icon{font-size:28.5px;flex-shrink:0;margin-top:2px}
@@ -212,6 +228,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .tg-hd::after{content:'';flex:1;height:0.5px;background:var(--border)}
 .task{display:flex;align-items:flex-start;gap:10px;background:var(--surf);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;margin-bottom:6px;transition:box-shadow .15s}
 .task:hover{box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.task-check{width:19px;height:19px;flex-shrink:0;margin-top:1px;border-radius:6px;border:2px solid var(--sand);background:var(--surf)}
+.task[style*="226,80,58"] .task-check{border-color:rgba(226,80,58,.5)}
 .task-body{flex:1;min-width:0}
 .task-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:2px;line-height:1.35}
 .task-desc{font-size:12px;color:var(--grey);line-height:1.5}
@@ -804,6 +822,7 @@ flowchart LR
   <div class="tg-hd">Laura y Jairo (padre) — acción esta semana <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Resolver el pago de ACEBRI: ¿40/60 o 30/70?</div>
       <div class="task-desc">La cotización escrita dice 40% anticipo / 60% contra entrega. Jairo propuso por WhatsApp dejarlo en 30/70 con orden de compra. No puede quedar ambiguo antes de que el jefe de Omar la revise.</div>
@@ -813,6 +832,7 @@ flowchart LR
   </div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Laura: documentar el cold outreach con Valdecir (Brasil)</div>
       <div class="task-desc">Bajar toda la info de ese chat — es cold outreach, no Discovery (el chat junta info técnica, la llamada es donde se identifica el dolor). Patricio ya dio feedback en vivo: falta pedir 3 horarios, sostener silencio, no usar emojis.</div>
@@ -822,6 +842,7 @@ flowchart LR
   </div>
 
   <div class="task">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Transcribir y archivar los audios de WhatsApp (16/08)</div>
       <div class="task-desc">2 notas de voz enviadas por el grupo — usar Voice Memos (transcribe automático en Mac/iPhone) u otro transcriptor, y guardarla en su propio Notion/repo.</div>
@@ -831,6 +852,7 @@ flowchart LR
   </div>
 
   <div class="task">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Documentar el caso México/Litai como aprendizaje de Discovery</div>
       <div class="task-desc">Venta perdida: cliente compró 2 máquinas de la competencia por el precio de 1. Diagnóstico en vivo: nunca se preguntó qué era más primordial ni se expuso el dolor futuro del mantenimiento.</div>
@@ -840,6 +862,7 @@ flowchart LR
   </div>
 
   <div class="task">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Cuadrar horario fijo de los sábados</div>
       <div class="task-desc">El día ya quedó definido en el cierre — falta fijar la hora exacta (esta semana se corrió a lunes por viaje de Laura).</div>
@@ -851,6 +874,7 @@ flowchart LR
   <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">3</span></div>
 
   <div class="task">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Armar el módulo de Oferta irresistible</div>
       <div class="task-desc">Sobre Avatar B: 2 capas (Producto/Servicio) con 12 sub-servicios que se revelan según señal — no un menú fijo. Comprometido en vivo para la próxima semana.</div>
@@ -860,6 +884,7 @@ flowchart LR
   </div>
 
   <div class="task">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Cerrar el módulo de Closing Pitch con casos reales (ACEBRI + Valdecir)</div>
       <div class="task-desc">La auditoría de ACEBRI ya está respondida y las reglas de oro de Discovery/Closing quedaron declaradas en Avatar — falta convertirlo en el módulo formal de la próxima sesión, con el caso Valdecir como segundo ejemplo.</div>
@@ -869,6 +894,7 @@ flowchart LR
   </div>
 
   <div class="task">
+    <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Enviar por WhatsApp: libro "Vendes o Vendes"</div>
       <div class="task-desc">Recomendación de Grant Cardone que salió en la Sesión 2 — sigue sin enviarse.</div>
@@ -1097,41 +1123,71 @@ flowchart LR
     </div>
   </div>
 
-  <div class="slbl">Los tres tiers — características completas</div>
-  <div class="phase-grid">
-    <div class="ch-card" style="border-top:3px solid var(--violet)">
-      <div class="ch-head">Cliente A · Corporativo ⭐⭐⭐⭐⭐</div>
-      <div class="ch-row"><span class="ch-k">Tamaño</span><span class="ch-v" style="text-align:right">Multinacional, varios países, múltiples plantas</span></div>
-      <div class="ch-row"><span class="ch-k">Estructura</span><span class="ch-v" style="text-align:right">Compleja — compras, ingeniería, operaciones, dirección</span></div>
-      <div class="ch-row"><span class="ch-k">Prioridades</span><span class="ch-v" style="text-align:right">Calidad, soporte técnico, postventa, estandarización</span></div>
-      <div class="ch-row"><span class="ch-k">Precio</span><span class="ch-v">Sensibilidad media</span></div>
-      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v">Medio · aprobaciones múltiples</span></div>
-      <div class="ch-row"><span class="ch-k">Recurrencia</span><span class="ch-v">Cada 6 meses</span></div>
-      <div class="ch-row"><span class="ch-k">Estrategia</span><span class="ch-v" style="text-align:right">Consultiva, proyecto piloto, crece planta por planta</span></div>
-      <div class="lib-tip" style="margin-top:10px"><strong>Mensaje clave:</strong> Calidad + Servicio + Expansión Global</div>
-    </div>
-    <div class="ch-card" style="border-top:3px solid var(--teal)">
-      <div class="ch-head">Cliente B · Mediano ⭐⭐⭐ <span class="bdg teal">🎯 Foco</span></div>
-      <div class="ch-row"><span class="ch-k">Tamaño</span><span class="ch-v" style="text-align:right">Varias plantas o 1 grande, operación nacional</span></div>
-      <div class="ch-row"><span class="ch-k">Estructura</span><span class="ch-v" style="text-align:right">Moderada — menos niveles de aprobación</span></div>
-      <div class="ch-row"><span class="ch-k">Prioridades</span><span class="ch-v" style="text-align:right">Productividad, soporte, capacitación, financiamiento</span></div>
-      <div class="ch-row"><span class="ch-k">Precio</span><span class="ch-v">Sensibilidad alta</span></div>
-      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v">Largo · decisión más ágil</span></div>
-      <div class="ch-row"><span class="ch-k">Recurrencia</span><span class="ch-v">Cada año</span></div>
-      <div class="ch-row"><span class="ch-k">Estrategia</span><span class="ch-v" style="text-align:right">Consultoría, traducción técnica, demo de ROI</span></div>
-      <div class="lib-tip" style="margin-top:10px"><strong>Mensaje clave:</strong> Consultoría + Entrenamiento + Soporte + Traducción</div>
-    </div>
-    <div class="ch-card" style="border-top:3px solid var(--sand)">
-      <div class="ch-head">Cliente C · Pequeño ⭐⭐</div>
-      <div class="ch-row"><span class="ch-k">Tamaño</span><span class="ch-v" style="text-align:right">Una planta, un propietario principal</span></div>
-      <div class="ch-row"><span class="ch-k">Estructura</span><span class="ch-v" style="text-align:right">Muy simple — decisión centralizada</span></div>
-      <div class="ch-row"><span class="ch-k">Prioridades</span><span class="ch-v" style="text-align:right">Precio competitivo, rapidez, eficiencia inmediata</span></div>
-      <div class="ch-row"><span class="ch-k">Precio</span><span class="ch-v red">Sensibilidad muy alta</span></div>
-      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v">Muy largo · 1 persona decide</span></div>
-      <div class="ch-row"><span class="ch-k">Recurrencia</span><span class="ch-v">Cada 2 años</span></div>
-      <div class="ch-row"><span class="ch-k">Estrategia</span><span class="ch-v" style="text-align:right">Oferta simple, implementación rápida, ROI veloz</span></div>
-      <div class="lib-tip" style="margin-top:10px"><strong>Mensaje clave:</strong> Precio bajo + Volumen + Servicio + Traducción</div>
-    </div>
+  <div class="slbl" style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+    <span>Los tres tiers — características completas</span>
+    <span style="font-size:10.5px;color:var(--grey);font-weight:500;letter-spacing:0;text-transform:none">desliza para comparar →</span>
+  </div>
+  <div class="tier-tbl-wrap">
+    <table class="tier-tbl">
+      <thead>
+        <tr>
+          <th class="tier-lbl-col"></th>
+          <th class="tier-col a"><div class="ch-head">Cliente A · Corporativo ⭐⭐⭐⭐⭐</div></th>
+          <th class="tier-col b"><div class="ch-head">Cliente B · Mediano ⭐⭐⭐ <span class="bdg teal">🎯 Foco</span></div></th>
+          <th class="tier-col c"><div class="ch-head">Cliente C · Pequeño ⭐⭐</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tier-lbl-col">Tamaño</td>
+          <td>Multinacional, varios países, múltiples plantas</td>
+          <td>Varias plantas o 1 grande, operación nacional</td>
+          <td>Una planta, un propietario principal</td>
+        </tr>
+        <tr>
+          <td class="tier-lbl-col">Estructura</td>
+          <td>Compleja — compras, ingeniería, operaciones, dirección</td>
+          <td>Moderada — menos niveles de aprobación</td>
+          <td>Muy simple — decisión centralizada</td>
+        </tr>
+        <tr>
+          <td class="tier-lbl-col">Prioridades</td>
+          <td>Calidad, soporte técnico, postventa, estandarización</td>
+          <td>Productividad, soporte, capacitación, financiamiento</td>
+          <td>Precio competitivo, rapidez, eficiencia inmediata</td>
+        </tr>
+        <tr>
+          <td class="tier-lbl-col">Precio</td>
+          <td>Sensibilidad media</td>
+          <td>Sensibilidad alta</td>
+          <td class="ch-v red">Sensibilidad muy alta</td>
+        </tr>
+        <tr>
+          <td class="tier-lbl-col">Ciclo de venta</td>
+          <td>Medio · aprobaciones múltiples</td>
+          <td>Largo · decisión más ágil</td>
+          <td>Muy largo · 1 persona decide</td>
+        </tr>
+        <tr>
+          <td class="tier-lbl-col">Recurrencia</td>
+          <td>Cada 6 meses</td>
+          <td>Cada año</td>
+          <td>Cada 2 años</td>
+        </tr>
+        <tr>
+          <td class="tier-lbl-col">Estrategia</td>
+          <td>Consultiva, proyecto piloto, crece planta por planta</td>
+          <td>Consultoría, traducción técnica, demo de ROI</td>
+          <td>Oferta simple, implementación rápida, ROI veloz</td>
+        </tr>
+        <tr class="tier-msg-row">
+          <td class="tier-lbl-col">Mensaje clave</td>
+          <td>Calidad + Servicio + Expansión Global</td>
+          <td>Consultoría + Entrenamiento + Soporte + Traducción</td>
+          <td>Precio bajo + Volumen + Servicio + Traducción</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="slbl">Señales de transición — cuándo un C se mueve a B (o un B a A)</div>
