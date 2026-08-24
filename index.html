@@ -72,6 +72,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .bdg.orange{background:var(--orange-lt);color:var(--orange-dk)}
 .bdg.violet{background:var(--violet-lt);color:var(--violet)}
 .bdg-row{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+.bdg-link{cursor:pointer;transition:filter .15s}
+.bdg-link:hover{filter:brightness(0.92)}
 
 /* OV CARDS */
 .ov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
@@ -380,7 +382,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <span class="alert-icon">📈</span>
     <div>
       <div class="alert-title">Se cerró el caso Álvarez: perdió contra Litai por financiamiento de $180k, no por precio ni producto</div>
-      <div class="alert-text">La entrevista de mercado comprometida en Sesión 4 confirmó la causa real — Litai ofrece financiamiento directo vía su socio StarTech, algo que STM no tiene todavía. De ahí salió marco nuevo de discovery: preguntas cerradas (A/B/C) en vez de abiertas para establecer autoridad, tasa de ocupación de máquina (&gt;100% / &lt;50%) como métrica de urgencia, y reencuadre de tono — servicio, no ego ("esto me ayudaría a servirte mejor" en vez de "quiero saber por qué"). Nuevo prospecto de partnership: Giguel (fabricante chino), cotización en camino a revisión de Patricio.</div>
+      <div class="alert-text">
+        <ul style="margin:6px 0 0 16px;padding:0;line-height:1.6">
+          <li>La entrevista de mercado (comprometida en Sesión 4) confirmó la causa real: <strong>Litai ofrece financiamiento directo</strong> vía su socio StarTech, algo que STM no tiene todavía.</li>
+          <li><strong>Marco nuevo de discovery:</strong> preguntas cerradas (A/B/C) en vez de abiertas, y tasa de ocupación de máquina (&gt;100% / &lt;50%) como métrica de urgencia.</li>
+          <li><strong>Reencuadre de tono:</strong> servicio, no ego — "esto me ayudaría a servirte mejor" en vez de "quiero saber por qué".</li>
+          <li><strong>Nuevo prospecto:</strong> Giguel (fabricante chino) — cotización en camino a revisión de Patricio.</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -766,7 +775,13 @@ flowchart LR
       <div class="hist-title">Sesión 2 — Perfil A/B/C + Eficiencia vs. Confianza</div>
       <span class="bdg teal">✓ 1 ago · 76 min</span>
     </div>
-    <div class="hist-text">Con Jairo (padre) y Laura, en dos partes el mismo día. <strong>Parte 1:</strong> desglose completo de las variables que definen a un cliente A/B/C por estructura, prioridades, sensibilidad al precio y proceso de compra — Laura y Jairo llegaron con el trabajo ya adelantado por su cuenta. Se acuñó "conciencia técnica" como eje de segmentación y se instaló el marco de descubrimiento consultivo (90% de la venta es un buen descubrimiento, nunca vender desde el producto). <strong>Parte 2:</strong> reframe del mensaje de venta — STM vende eficiencia, no confianza; confianza y calidad son características del sistema, no lo que se vende. Cierra con tareas: terminar la matriz A/B/C con recurrencia y ciclo de venta, flujo de preguntas Q1-5 para diagnosticar antes de vender, y diagrama de mensajes reutilizando feedback de clientes pasados.</div>
+    <div class="hist-text">
+      <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
+        <li><strong>Parte 1 — Variables A/B/C:</strong> estructura, prioridades, sensibilidad al precio y proceso de compra. Se acuñó "conciencia técnica" como eje de segmentación (90% de la venta es un buen descubrimiento, nunca vender desde el producto).</li>
+        <li><strong>Parte 2 — Reframe del mensaje:</strong> STM vende eficiencia, no confianza — confianza y calidad son características del sistema, no lo que se vende.</li>
+        <li><strong>Tareas cerradas:</strong> matriz A/B/C con recurrencia y ciclo de venta, flujo de preguntas Q1-5, diagrama de mensajes con feedback real.</li>
+      </ul>
+    </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Avatar (pt.1)</span><span class="bdg violet">🔗 Mes 1 · Oferta irresistible (pt.2)</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: con las variables A/B/C escritas y el mensaje de venta anclado en lo que el cliente realmente compra, calificar y cerrar deja de vivir solo en la cabeza de Laura — y la conversación de cierre se acorta.</div>
   </div>
@@ -776,7 +791,14 @@ flowchart LR
       <div class="hist-title">Sesión 3 — El Discovery gana la venta</div>
       <span class="bdg teal">✓ 10 ago</span>
     </div>
-    <div class="hist-text">Laura y Jairo repasan las 13 preguntas ya construidas, con lógica de negocio propia (presupuesto, financiamiento, timeline). Se corrige un supuesto: STM no tiene 5 líneas sueltas de oferta — tiene 2 capas (Producto/Servicio) con 12 sub-servicios que se revelan según señal, no un menú fijo. Entrenamiento profundo de venta consultiva con 2 casos reales: el prospecto activo de Jairo (reunión de venta mañana) y una venta perdida de Laura (cliente México, compró a la competencia) diagnosticada en vivo como falla de Discovery — nunca se preguntó qué era más primordial ni se expuso el dolor futuro. Patricio recibe acceso Editor al Sheet.</div>
+    <div class="hist-text">
+      <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
+        <li>Repaso de las 13 preguntas de discovery (presupuesto, financiamiento, timeline).</li>
+        <li><strong>Corrección de supuesto:</strong> STM no tiene 5 líneas sueltas — tiene 2 capas (Producto/Servicio) con 12 sub-servicios que se revelan según señal.</li>
+        <li><strong>2 casos reales entrenados:</strong> prospecto activo de Jairo, y venta perdida de Laura (México) diagnosticada como falla de Discovery — nunca se expuso el dolor futuro.</li>
+        <li>Patricio recibe acceso Editor al Sheet.</li>
+      </ul>
+    </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Oferta irresistible</span><span class="bdg violet">🔗 Mes 1 · Validación (2 casos reales)</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada venta perdida diagnosticada en vivo se vuelve criterio escrito — la próxima vez esa señal no se pasa por alto. Módulo de Oferta irresistible la próxima semana, sobre Avatar B.</div>
   </div>
@@ -786,7 +808,14 @@ flowchart LR
       <div class="hist-title">Sesión 4 — Vender el dolor futuro, no el producto</div>
       <span class="bdg teal">✓ 17 ago · 58 min</span>
     </div>
-    <div class="hist-text">Con Laura y Jairo, se cruzaron 3 casos abiertos en simultáneo: <strong>Cervi</strong> (Omar necesita validar activos ante Briceño, que resiste por precio), <strong>Valdecir en Brasil</strong> (estancado en características técnicas, señal perdida: pregunta sobre la feria China Plus de octubre) y <strong>Carlos Álvarez</strong> (cliente perdido ante la competencia Litai). Marco nuevo entregado: enmarcar el diagnóstico como "seguro" contra una catástrofe futura, no como servicio técnico — cambia la conversación de precio a valor. Y preguntas estratégicas para que el prospecto se autoconvenza (preguntar el problema, no declarar la solución). División de roles declarada: Jairo cierra con autoridad técnica, Laura prospecta y convierte los insights en contenido.</div>
+    <div class="hist-text">
+      <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
+        <li><strong>3 casos cruzados:</strong> Cervi (Briceño resiste por precio), Valdecir/Brasil (estancado en características), Carlos Álvarez (perdido ante Litai).</li>
+        <li><strong>Marco nuevo:</strong> el diagnóstico se enmarca como "seguro" contra una catástrofe futura, no como servicio técnico — cambia la conversación de precio a valor.</li>
+        <li><strong>Preguntas estratégicas</strong> para que el prospecto se autoconvenza (preguntar el problema, no declarar la solución).</li>
+        <li><strong>Roles:</strong> Jairo cierra con autoridad técnica, Laura prospecta y convierte insights en contenido.</li>
+      </ul>
+    </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Oferta irresistible</span><span class="bdg violet">🔗 Avatar · Tipos de objeción</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada objeción real queda categorizada y con su reframe — Laura y Jairo dejan de improvisar la respuesta cada vez que aparece la misma resistencia.</div>
   </div>
@@ -796,7 +825,14 @@ flowchart LR
       <div class="hist-title">Sesión 5 — El financiamiento, no el precio, pierde ventas</div>
       <span class="bdg teal">✓ 23 ago · 60 min</span>
     </div>
-    <div class="hist-text">Se cerró el loop de la entrevista de mercado comprometida en Sesión 4: <strong>Carlos Álvarez</strong> compró la Litai china porque su socio StarTech ofrece financiamiento directo de $180k — capacidad que STM no tiene todavía. De ahí salió un marco nuevo de discovery: preguntas cerradas (A/B/C, no abiertas) para establecer autoridad, y tasa de ocupación de máquina (&gt;100% / &lt;50%) como métrica de urgencia. Reencuadre de tono: servicio en vez de ego. Nuevo prospecto de partnership: Giguel (fabricante chino), cotización en camino a revisión de Patricio — mismo patrón que JWELL.</div>
+    <div class="hist-text">
+      <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
+        <li><strong>Loop cerrado:</strong> Álvarez compró la Litai china porque su socio StarTech ofrece financiamiento directo de $180k — capacidad que STM no tiene todavía.</li>
+        <li><strong>Marco nuevo:</strong> preguntas cerradas (A/B/C) para establecer autoridad, tasa de ocupación de máquina (&gt;100% / &lt;50%) como métrica de urgencia.</li>
+        <li><strong>Reencuadre de tono:</strong> servicio en vez de ego.</li>
+        <li><strong>Nuevo prospecto:</strong> Giguel (fabricante chino) — cotización en camino a revisión de Patricio, mismo patrón que JWELL.</li>
+      </ul>
+    </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Avatar · Tipos de objeción</span><span class="bdg red">⚠ Oferta irresistible sigue sin armarse — 3 sesiones seguidas</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada venta perdida deja de ser "fue el precio" — el diagnóstico real (financiamiento) abre una palanca nueva (buscar aliados) en vez de resignarse.</div>
   </div>
@@ -829,14 +865,22 @@ flowchart LR
     </div>
   </div>
 
-  <div class="tg-hd">Laura y Jairo (padre) — acción esta semana <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
+  <div class="tg-hd">🎯 Comercial — Discovery, Cierre, CRM <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
 
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
+  <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">✓ Hecho — ACEBRI quedó en 30/70 con orden de compra</div>
-      <div class="task-desc">Jairo confirmó por WhatsApp (21/08) que el pago quedó firme en 30% anticipo / 70% contra entrega del diagnóstico — sin ambigüedad para el decisor final.</div>
-      <div class="task-goal">→ Cerrado.</div>
+      <div class="task-title">✓ Hecho — ACEBRI quedó en <strong>30/70</strong> con orden de compra</div>
+      <div class="task-desc">Jairo lo confirmó por WhatsApp el 21/08. Sin ambigüedad para el decisor final.</div>
+    </div>
+    <span class="bdg teal">✓ Hecho</span>
+  </div>
+
+  <div class="task">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">✓ Hecho — Álvarez perdió por <strong>financiamiento</strong> ($180k vía StarTech), no por precio</div>
+      <div class="task-desc">Sesión 5 confirmó la causa real. Ya está cargado en el banco de dolores.</div>
     </div>
     <span class="bdg teal">✓ Hecho</span>
   </div>
@@ -845,38 +889,21 @@ flowchart LR
     <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Laura: documentar el cold outreach con Valdecir (Brasil)</div>
-      <div class="task-desc">Bajar toda la info de ese chat — es cold outreach, no Discovery (el chat junta info técnica, la llamada es donde se identifica el dolor). Patricio ya dio feedback en vivo: falta pedir 3 horarios, sostener silencio, no usar emojis.</div>
-      <div class="task-goal">→ Para: aplicar las reglas de oro de Discovery/Closing (ver Avatar) al siguiente approach, no repetir lo mismo.</div>
+      <ul class="task-desc" style="margin:4px 0 0 16px;padding:0">
+        <li>Bajar toda la info de ese chat — es <strong>cold outreach</strong>, no Discovery</li>
+        <li>Feedback ya dado en vivo: pedir <strong>3 horarios</strong>, sostener silencio, sin emojis</li>
+      </ul>
+      <div class="task-goal">→ Aplicar las reglas de oro de Discovery/Closing (ver Avatar) al siguiente approach.</div>
     </div>
     <span class="bdg red">Urgente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Transcribir y archivar los audios de WhatsApp (16/08)</div>
-      <div class="task-desc">2 notas de voz enviadas por el grupo — usar Voice Memos (transcribe automático en Mac/iPhone) u otro transcriptor, y guardarla en su propio Notion/repo.</div>
-      <div class="task-goal">→ Para: seguir armando el hábito de archivar sus propias sesiones, sin depender de que alguien más lo haga.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">✓ Hecho — Álvarez eligió Litai por financiamiento ($180k vía StarTech), no por precio</div>
-      <div class="task-desc">Sesión 5 (23/08) cerró el loop: la entrevista de mercado confirmó que STM perdió por no tener capacidad de financiamiento directo — no por producto ni precio.</div>
-      <div class="task-goal">→ Ya cargado como hallazgo real en el banco de dolores. Próximo paso: buscar aliado de financiamiento (ver pendiente nuevo abajo).</div>
-    </div>
-    <span class="bdg teal">✓ Hecho</span>
   </div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Investigar aliados de financiamiento para STM</div>
-      <div class="task-desc">Sesión 5 (23/08). Sin capacidad de financiar directo, STM sigue perdiendo ventas sanas contra competidores que sí la tienen (caso Litai/StarTech).</div>
-      <div class="task-goal">→ Para: tener al menos una opción de financiamiento propia antes de la próxima negociación por precio.</div>
+      <div class="task-title">Investigar aliados de <strong>financiamiento</strong> para STM</div>
+      <div class="task-desc">Sesión 5. Sin capacidad de financiar directo, STM sigue perdiendo ventas sanas contra quien sí la tiene (caso Litai/StarTech).</div>
+      <div class="task-goal">→ Al menos 1 opción propia antes de la próxima negociación por precio.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -884,9 +911,8 @@ flowchart LR
   <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Adoptar preguntas cerradas (A/B/C) en vez de abiertas en discovery</div>
-      <div class="task-desc">Sesión 5 (23/08). "¿Cuál es tu presupuesto?" genera respuestas vagas — "¿está más cerca de A, B o C?" establece autoridad y guía al lead.</div>
-      <div class="task-goal">→ Para: dejar de recibir respuestas vagas que no llevan a ningún diagnóstico.</div>
+      <div class="task-title">Adoptar <strong>preguntas cerradas</strong> (A/B/C) en vez de abiertas</div>
+      <div class="task-desc">Sesión 5. "¿Cuál es tu presupuesto?" → "¿está más cerca de A, B o C?" — establece autoridad, guía al lead.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -894,9 +920,8 @@ flowchart LR
   <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Usar tasa de ocupación de máquina como pregunta de urgencia</div>
-      <div class="task-desc">Sesión 5 (23/08). "¿Tu máquina está sobre 100% de ocupación o bajo 50%?" — separa a quien necesita máquina nueva ya de quien no.</div>
-      <div class="task-goal">→ Para: diagnosticar urgencia real en vez de asumirla.</div>
+      <div class="task-title">Usar la <strong>tasa de ocupación de máquina</strong> como pregunta de urgencia</div>
+      <div class="task-desc">Sesión 5. "¿Tu máquina está sobre 100% o bajo 50%?" — separa a quien necesita máquina nueva ya de quien no.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -904,19 +929,8 @@ flowchart LR
   <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Cuadrar horario fijo de los sábados</div>
-      <div class="task-desc">El día ya quedó definido en el cierre — falta fijar la hora exacta (esta semana se corrió a lunes por viaje de Laura).</div>
-      <div class="task-goal">→ Para: que la cadencia semanal no dependa de coordinar cada vez.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Jairo: revisar propuesta Cervi con el frame de dolor futuro</div>
-      <div class="task-desc">Sesión 4 (17/08). Omar necesita validar activos ante Briceño, que resiste por precio — la propuesta hoy se lee como servicio técnico, no como seguro contra una falla de producción futura.</div>
-      <div class="task-goal">→ Para: que Briceño deje de comparar precio contra precio y empiece a comparar precio contra el costo de no diagnosticar.</div>
+      <div class="task-title">Jairo: revisar propuesta Cervi con el frame de <strong>dolor futuro</strong></div>
+      <div class="task-desc">Sesión 4. Briceño resiste por precio — la propuesta hoy se lee como servicio técnico, no como seguro contra una falla futura.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -925,8 +939,18 @@ flowchart LR
     <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Jairo y Laura: usar preguntas estratégicas en cada interacción</div>
-      <div class="task-desc">Sesión 4 (17/08). En vez de decir "necesitas una taxonomía de máquinas", preguntar "¿cómo haces seguimiento a tus activos y repuestos?" — el prospecto se autoconvence y vende la solución puertas adentro.</div>
-      <div class="task-goal">→ Para: dejar de estancarse en características técnicas y volver a llevar la conversación al dolor de fondo.</div>
+      <div class="task-desc">Sesión 4. En vez de "necesitas X", preguntar "¿cómo haces seguimiento a tus activos?" — el prospecto se autoconvence.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
+  </div>
+
+  <div class="tg-hd">✍️ Marketing — Contenido y atracción <span class="bdg amber" style="margin-left:4px">2</span></div>
+
+  <div class="task">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">Laura: reabrir a Valdecir con la <strong>feria China Plus</strong> de octubre</div>
+      <div class="task-desc">Sesión 4. Su pregunta sobre esa feria fue una señal perdida — es la puerta de reentrada.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -934,9 +958,19 @@ flowchart LR
   <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Laura: reabrir a Valdecir con la feria China Plus de octubre</div>
-      <div class="task-desc">Sesión 4 (17/08). La pregunta de Valdecir sobre esa feria fue una señal perdida de su cronograma de decisión — es el punto de entrada natural para retomar la conversación estancada en precio.</div>
-      <div class="task-goal">→ Para: convertir una señal que se dejó pasar en la puerta de reentrada.</div>
+      <div class="task-title">Laura: crear contenido sobre el <strong>costo de mantenimiento</strong> de máquinas chinas</div>
+      <div class="task-desc">Sesión 4. Primera pieza de la serie de dolores comunes — prevalida al prospecto antes de la llamada.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
+  </div>
+
+  <div class="tg-hd">🗄️ Operación — administración y documentación <span class="bdg grey" style="margin-left:4px">2</span></div>
+
+  <div class="task">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">Transcribir y archivar los audios de WhatsApp (16/08)</div>
+      <div class="task-desc">2 notas de voz del grupo — Voice Memos u otro transcriptor, guardar en Notion/repo propio.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
@@ -944,31 +978,28 @@ flowchart LR
   <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Laura: crear contenido sobre el costo de mantenimiento de máquinas chinas</div>
-      <div class="task-desc">Sesión 4 (17/08). Primera pieza de la serie de dolores comunes de clientes — prevalida a los prospectos que investigan STM en línea antes de la llamada.</div>
-      <div class="task-goal">→ Para: que el contenido construya autoridad de marca en vez de nacer de cero en cada conversación.</div>
+      <div class="task-title">Cuadrar horario fijo de los sábados</div>
+      <div class="task-desc">El día ya quedó definido — falta fijar la hora exacta.</div>
     </div>
     <span class="bdg grey">Cliente</span>
   </div>
 
-  <div class="tg-hd">Pendientes Private Build <span class="bdg amber" style="margin-left:4px">3</span></div>
+  <div class="tg-hd">🏗️ Private Build — lo que le toca a Patricio <span class="bdg amber" style="margin-left:4px">3</span></div>
 
   <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Armar el módulo de Oferta irresistible</div>
-      <div class="task-desc">Sobre Avatar B: 2 capas (Producto/Servicio) con 12 sub-servicios que se revelan según señal — no un menú fijo. Comprometido en vivo para la próxima semana.</div>
-      <div class="task-goal">→ Para: que Laura y Jairo dejen de intentar vender características y tengan la oferta escrita por capas.</div>
+      <div class="task-title">Armar el módulo de <strong>Oferta irresistible</strong></div>
+      <div class="task-desc">Sobre Avatar B: 2 capas (Producto/Servicio), 12 sub-servicios por señal. <strong>Atrasado 3 sesiones.</strong></div>
     </div>
-    <span class="bdg amber">Pato</span>
+    <span class="bdg red">Atrasado</span>
   </div>
 
   <div class="task">
     <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Cerrar el módulo de Closing Pitch con casos reales (ACEBRI + Valdecir)</div>
-      <div class="task-desc">La auditoría de ACEBRI ya está respondida y las reglas de oro de Discovery/Closing quedaron declaradas en Avatar — falta convertirlo en el módulo formal de la próxima sesión, con el caso Valdecir como segundo ejemplo.</div>
-      <div class="task-goal">→ Para: que Laura tenga un protocolo escrito, no solo el feedback puntual de una corrección en vivo.</div>
+      <div class="task-desc">Las reglas de oro ya están declaradas en Avatar — falta el módulo formal.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -977,8 +1008,7 @@ flowchart LR
     <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">Enviar por WhatsApp: libro "Vendes o Vendes"</div>
-      <div class="task-desc">Recomendación de Grant Cardone que salió en la Sesión 2 — sigue sin enviarse.</div>
-      <div class="task-goal">→ Para: que quede un recurso de referencia, no solo lo hablado en la llamada.</div>
+      <div class="task-desc">Recomendación de Grant Cardone (Sesión 2) — sigue sin enviarse.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
@@ -1015,10 +1045,18 @@ flowchart LR
       <div class="sdot" style="background:#7B61FF">1</div>
       <div class="flow-title">Foundations</div>
       <span class="bdg amber">🔄 En curso</span>
-      <span class="bdg violet">🔗 Mes 1 · Avatar + Oferta irresistible</span>
+      <span class="bdg violet bdg-link" onclick="sw('avatar')">🔗 Avatar + Oferta irresistible</span>
       <span class="flow-when">Mes 1 · en curso</span>
     </div>
-    <div class="flow-summary">Clientes segmentados A/B/C (Sesión 1), variables + recurrencia por tier ya en el Sheet (Sesión 2), reframe de mensaje de venta instalado (Sesión 2), y modelo de oferta corregido a 2 capas (Sesión 3). Falta documentar oferta y clientes antiguos por escrito, y armar el módulo de Oferta irresistible.</div>
+    <div class="flow-summary">
+      <ul style="margin:0 0 0 16px;padding:0;line-height:1.6">
+        <li>Clientes segmentados A/B/C (Sesión 1)</li>
+        <li>Variables + recurrencia por tier en el Sheet (Sesión 2)</li>
+        <li>Reframe de mensaje de venta instalado (Sesión 2)</li>
+        <li>Modelo de oferta corregido a 2 capas (Sesión 3)</li>
+        <li><strong>Falta:</strong> documentar oferta y clientes antiguos, armar el módulo de Oferta irresistible</li>
+      </ul>
+    </div>
     <div class="flow-qa">
       <div class="flow-q">¿En qué tiers se divide el cliente de STM?</div>
       <div class="flow-a ok">✓ A/B/C, con foco en B (Sesión 1)</div>
@@ -1042,7 +1080,7 @@ flowchart LR
       <div class="sdot" style="background:#3B9EE8">2</div>
       <div class="flow-title">Atracción</div>
       <span class="bdg amber">🔄 Activa, 100% manual</span>
-      <span class="bdg violet">🔗 Mes 2 · Adquisición</span>
+      <span class="bdg violet bdg-link" onclick="sw('roadmap')">🔗 Hoja de ruta · Mes 2</span>
       <span class="flow-when">Mes 1–2</span>
     </div>
     <div class="flow-summary">LinkedIn outbound (Laura) y secuencias de email (Jairo, padre) ya generan leads, pero sin ICP formal, sin métricas y sin CRM — todo manual y sin registro.</div>
@@ -1065,7 +1103,7 @@ flowchart LR
       <div class="sdot" style="background:#E2503A">3</div>
       <div class="flow-title">Calificación</div>
       <span class="bdg amber">🔄 Construido, falta validar en vivo</span>
-      <span class="bdg violet">🔗 Mes 1 · Oferta irresistible (Q1-5)</span>
+      <span class="bdg violet bdg-link" onclick="sw('backend')">🔗 Backend · Flujo Q1-5</span>
       <span class="flow-when">Mes 1</span>
     </div>
     <div class="flow-summary">Jairo entregó el filtro escrito: 13 preguntas de segmentación A/B/C con opciones mapeadas a tier, más un flujo técnico de descubrimiento completo por línea de producto (Termoformadora, Extrusora, Equipos complementarios, Servicio técnico táctico/estratégico). Superó lo pedido — falta probarlo con un lead real.</div>
@@ -1088,7 +1126,7 @@ flowchart LR
       <div class="sdot" style="background:#E8A237">4</div>
       <div class="flow-title">Nutrición</div>
       <span class="bdg red">✗ Por construir</span>
-      <span class="bdg violet">🔗 Mes 2 · Adquisición</span>
+      <span class="bdg violet bdg-link" onclick="sw('roadmap')">🔗 Hoja de ruta · Mes 2</span>
       <span class="flow-when">Mes 2</span>
     </div>
     <div class="flow-summary">Sin secuencia de información, catálogos y videos. Un ciclo de 1 a 2 años necesita nutrición estructurada, no solo contacto inicial.</div>
@@ -1111,7 +1149,7 @@ flowchart LR
       <div class="sdot" style="background:#E05599">5</div>
       <div class="flow-title">Conversión</div>
       <span class="bdg red">✗ Por construir</span>
-      <span class="bdg violet">🔗 Mes 2 · Adquisición</span>
+      <span class="bdg violet bdg-link" onclick="sw('roadmap')">🔗 Hoja de ruta · Mes 2</span>
       <span class="flow-when">Mes 2</span>
     </div>
     <div class="flow-summary">Sin proceso definido para que el lead pida reunión virtual o visita industrial de forma consistente.</div>
@@ -1130,6 +1168,7 @@ flowchart LR
       <div class="sdot" style="background:#3EB489">6</div>
       <div class="flow-title">Cierre + Gestión</div>
       <span class="bdg teal">✓ Ya existe</span>
+      <span class="bdg violet bdg-link" onclick="sw('avatar')">🔗 Avatar · Reglas de oro</span>
       <span class="bdg grey">Fuera del roadmap de 3 meses — ya opera</span>
       <span class="flow-when">Operativo ✓</span>
     </div>
@@ -1149,7 +1188,7 @@ flowchart LR
       <div class="sdot" style="background:#AA6E28">7</div>
       <div class="flow-title">Post-venta / Referidos</div>
       <span class="bdg red">✗ Por construir</span>
-      <span class="bdg violet">🔗 Mes 2 · Recompra + Mes 3 · Referidos</span>
+      <span class="bdg violet bdg-link" onclick="sw('roadmap')">🔗 Hoja de ruta · Mes 2–3</span>
       <span class="flow-when">Mes 3</span>
     </div>
     <div class="flow-summary">Hay seguimiento post-venta para revisar si el equipo funciona y evaluar recompra, pero no está sistematizado — no retroalimenta el pipeline como referidos.</div>
@@ -1168,7 +1207,7 @@ flowchart LR
       <div class="sdot" style="background:#aaa">8</div>
       <div class="flow-title">Systems</div>
       <span class="bdg grey">Post 90d · sin automatizar aún</span>
-      <span class="bdg violet">🔗 Mes 3 · Sistemas</span>
+      <span class="bdg violet bdg-link" onclick="sw('roadmap')">🔗 Hoja de ruta · Mes 3</span>
       <span class="flow-when">—</span>
     </div>
     <div class="flow-summary">Notion como cerebro: CRM, pipeline y métricas en una sola fuente de verdad. No se automatiza nada — incluyendo LARIA — hasta validar 1–7 con el negocio estructurado.</div>
@@ -1243,6 +1282,18 @@ flowchart LR
           <td class="ch-v red">Sensibilidad muy alta</td>
         </tr>
         <tr>
+          <td class="tier-lbl-col">Rango de inversión</td>
+          <td>Sin dato confirmado — multiplanta, se estima &gt;$300k por proyecto</td>
+          <td>Sin dato confirmado por tier — único caso real: $180k (Litai a Álvarez)</td>
+          <td>Sin dato confirmado — equipo puntual, se estima &lt;$150k</td>
+        </tr>
+        <tr>
+          <td class="tier-lbl-col">Financiamiento</td>
+          <td>Presupuesto corporativo propio — menos crítico</td>
+          <td class="ch-v red">Diferenciador clave — caso Álvarez: se perdió por no tenerlo</td>
+          <td>Paga de contado o no compra</td>
+        </tr>
+        <tr>
           <td class="tier-lbl-col">Ciclo de venta</td>
           <td>Medio · aprobaciones múltiples</td>
           <td>Largo · decisión más ágil</td>
@@ -1306,6 +1357,21 @@ flowchart LR
       <div class="task-goal">→ Se resuelve investigando por qué (no vendiendo de nuevo). Cuando la causa es financiamiento, la palanca es buscar un aliado propio — no bajar precio.</div>
     </div>
     <span class="bdg grey">Perdido</span>
+  </div>
+
+  <div class="alert-box red-bg">
+    <span class="alert-icon">💳</span>
+    <div>
+      <div class="alert-title">Financiamiento: el filtro que hoy decide la venta en tier B</div>
+      <div class="alert-text">
+        <ul style="margin:6px 0 0 16px;padding:0;line-height:1.6">
+          <li><strong>Único dato real:</strong> caso Álvarez — STM perdió $180k contra Litai, que ofrecía financiamiento directo vía su socio StarTech.</li>
+          <li><strong>No fue precio ni producto</strong> — fue la única variable que STM no podía igualar.</li>
+          <li><strong>Pendiente activo:</strong> Laura busca un aliado de financiamiento propio (ver Pendientes → Comercial).</li>
+          <li><strong>Todavía sin segmentar por tier</strong> — falta confirmar si A y C tienen la misma sensibilidad o es solo B.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="slbl">Señales de transición — cuándo un C se mueve a B (o un B a A)</div>
@@ -1398,14 +1464,14 @@ flowchart TD
   <div class="disc-box">
     <div class="disc-title">De la corrección en vivo al Discovery de Laura con Valdecir (Brasil)</div>
     <ul class="disc-list">
-      <li><strong>Validar antes de resolver.</strong> Nunca dar la solución directo. Patrón: "Gracias [nombre], nuestros clientes (validas experiencia) han necesitado X para solicitudes como la tuya. Para ayudarte a encontrar (compromiso) la correcta, ¿cuál es...? (siguiente pregunta de Discovery)".</li>
-      <li><strong>Dar siempre 3 horarios,</strong> nunca preguntar abierto. "Me quedan los últimos 3 espacios: 13, 15 o 17h, ¿cuál te acomoda?" — quien controla los espacios abiertos controla el timing de la venta.</li>
-      <li><strong>Adaptarse al horario del lead, no al propio.</strong> Si menciona que termina su jornada, es señal de que es un trabajador, no un emprendedor — hay que ser aliado dentro de su horario.</li>
-      <li><strong>El silencio es aliado.</strong> Después de una pregunta o de dar un precio, quedarse callado — le da la responsabilidad de responder al lead.</li>
-      <li><strong>Nunca decir "no" en la venta.</strong> Sostener la duda con una salida en vez de cerrar la puerta: en lugar de "no creo", decir "es probable, aún estamos coordinando ya que tenemos otra visita en X" — deja espacio abierto hasta el cierre.</li>
-      <li><strong>Sin emojis ni charla casual con leads.</strong> Son clientes potenciales, no amigos — no extender la interacción social más allá de lo necesario para cerrar el trato.</li>
-      <li><strong>Los 3 sí del Discovery y la propuesta:</strong> ¿Cumple el requerimiento? ¿Cumple el tiempo de la solicitud? ¿Cumple el vehículo y la necesidad del cliente? Si los tres son sí, el cierre debería tener éxito casi seguro. <strong>Si falla, fue un mal Discovery — nunca una mala propuesta.</strong></li>
-      <li><strong>Buscar siempre al decisor final.</strong> Con un co-decisor (como Omar), preguntar directo si necesita algún dato extra para "vender su propia decisión" frente a su jefe — nunca asumir que lo va a defender solo.</li>
+      <li><strong>Validar antes de resolver.</strong> Nunca dar la solución directo. Patrón: "nuestros clientes también han necesitado X para casos como el tuyo — para ayudarte a encontrar la correcta, ¿cuál es...?"</li>
+      <li><strong>Dar 3 horarios,</strong> nunca preguntar abierto. "Me quedan 13, 15 o 17h, ¿cuál te acomoda?" — quien controla los espacios controla el timing.</li>
+      <li><strong>Adaptarse a su horario,</strong> no al propio. Si termina su jornada tarde, es trabajador, no emprendedor — ser aliado dentro de su horario.</li>
+      <li><strong>El silencio es aliado.</strong> Después de preguntar o dar un precio, quedarse callado — la responsabilidad de responder es del lead.</li>
+      <li><strong>Nunca decir "no".</strong> En vez de "no creo", decir "es probable, aún estamos coordinando" — deja espacio abierto hasta el cierre.</li>
+      <li><strong>Sin emojis ni charla casual.</strong> Son clientes potenciales, no amigos.</li>
+      <li><strong>Los 3 sí del Discovery:</strong> ¿cumple el requerimiento? ¿cumple el tiempo? ¿cumple lo que el cliente necesita? Si los tres son sí, el cierre casi está asegurado — si falla, fue mal Discovery, nunca mala propuesta.</li>
+      <li><strong>Buscar al decisor final.</strong> Con un co-decisor (como Omar), preguntarle directo qué dato le sirve para defender la decisión frente a su jefe.</li>
     </ul>
   </div>
 </div>
@@ -1497,7 +1563,7 @@ flowchart TD
     <span class="alert-icon">🧭</span>
     <div>
       <div class="alert-title">Cómo usar este panel sin quemarse</div>
-      <div class="alert-text">No hay que revisar todo, todos los días. Es un ciclo de 5 pasos que se repite cada semana, cerrado por una llamada de 1 hora. Si seguís el orden, nunca hay más de lo que cabe en una semana.</div>
+      <div class="alert-text">No hay que revisar todo, todos los días. Es un ciclo de 6 pasos que se repite cada semana, arranca y cierra en la llamada. Si seguís el orden, nunca hay más de lo que cabe en una semana.</div>
     </div>
   </div>
 
@@ -1510,22 +1576,27 @@ flowchart TD
     <div class="mermaid-scroll">
     <pre class="mermaid">
 flowchart TD
-    A["⚙️ Flywheel"]:::flywheel --> B["📊 Panel"]:::panel
-    B --> C["🚨 Cuellos de botella"]:::bottleneck
-    C --> D["🗺️ Hoja de ruta"]:::roadmap
-    D --> E["✅ Pendientes"]:::tasks
-    E --> F["📞 Llamada · 1h"]:::session
-    F -. cada semana .-> A
+    F["📞 Llamada · 1h"]:::session --> C["🚨 Cuellos de botella"]:::bottleneck
+    C --> P["✅ Pendientes / 🏆 Wins semanales"]:::tasks
+    P --> DOC["📝 Documentación"]:::docs
+    DOC --> D["🗺️ Revisar hoja de ruta"]:::roadmap
+    D -. próxima semana .-> F
 
-    classDef flywheel fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
-    classDef panel fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
-    classDef bottleneck fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
-    classDef roadmap fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
-    classDef tasks fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
     classDef session fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
+    classDef bottleneck fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef tasks fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    classDef docs fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef roadmap fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
     </pre>
     </div>
     <span class="zoom-hint">arrastra para mover</span>
+  </div>
+
+  <div class="bdg-row" style="margin:-10px 0 20px">
+    <span class="bdg red bdg-link" onclick="sw('overview')">🔗 Ver cuellos de botella</span>
+    <span class="bdg teal bdg-link" onclick="sw('tasks')">🔗 Ver pendientes / wins</span>
+    <span class="bdg violet bdg-link" onclick="sw('backend')">🔗 Ver documentación</span>
+    <span class="bdg amber bdg-link" onclick="sw('roadmap')">🔗 Ver hoja de ruta</span>
   </div>
 
   <div class="disc-box">
