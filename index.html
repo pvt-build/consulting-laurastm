@@ -228,6 +228,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 /* TASKS */
 .tg-hd{font-size:13px;font-weight:600;color:var(--ink);margin:18px 0 9px;display:flex;align-items:center;gap:8px}
 .tg-hd::after{content:'';flex:1;height:0.5px;background:var(--border)}
+.wk-block{border:0.5px solid var(--border);border-radius:12px;background:var(--surf);margin-bottom:10px;overflow:hidden}
+.wk-hd{font-family:'DM Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--dark);padding:12px 15px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;background:var(--beige)}
+.wk-hd::-webkit-details-marker{display:none}
+.wk-hd::after{content:'▾';font-family:'DM Sans',sans-serif;color:var(--grey);transition:transform .15s}
+.wk-block:not([open]) .wk-hd::after{transform:rotate(-90deg)}
+.wk-body{padding:14px 15px 4px}
+.etp-hd{font-size:11px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.05em;margin:0 0 8px}
+.etp-hd:not(:first-child){margin-top:16px}
 .task{display:flex;align-items:flex-start;gap:10px;background:var(--surf);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;margin-bottom:6px;transition:box-shadow .15s}
 .task:hover{box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .task-check{width:19px;height:19px;flex-shrink:0;margin-top:1px;border-radius:6px;border:2px solid var(--sand);background:var(--surf)}
@@ -367,7 +375,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Progreso — Sesión 5/12 completada 23/08 · Cadencia: sábados (próxima 29/08, si no se vuelve a mover)</div>
   <div class="chips-row">
-    <div class="sch done">D</div>
     <div class="sch done">1</div>
     <div class="sch done">2</div><div class="sch done">3</div>
     <div class="sch done">4</div><div class="sch done">5</div>
@@ -865,126 +872,138 @@ flowchart LR
     </div>
   </div>
 
-  <div class="tg-hd">🎯 Comercial — Discovery, Cierre, CRM <span class="bdg red" style="margin-left:4px">2 urgentes</span></div>
+  <details class="wk-block" open>
+    <summary class="wk-hd">📅 SEMANA ACTUAL — SESIÓN 6 · desde 30/08 <span class="bdg amber">en curso</span></summary>
+    <div class="wk-body">
+      <div class="etp-hd">🎯 Comercial</div>
 
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">✓ Hecho — ACEBRI quedó en <strong>30/70</strong> con orden de compra</div>
-      <div class="task-desc">Jairo lo confirmó por WhatsApp el 21/08. Sin ambigüedad para el decisor final.</div>
+      <div class="task" style="border-color:rgba(226,80,58,.3)">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Laura: documentar el cold outreach con Valdecir (Brasil)</div>
+          <ul class="task-desc" style="margin:4px 0 0 16px;padding:0">
+            <li>Bajar toda la info de ese chat — es <strong>cold outreach</strong>, no Discovery</li>
+            <li>Feedback ya dado en vivo: pedir <strong>3 horarios</strong>, sostener silencio, sin emojis</li>
+          </ul>
+          <div class="task-goal">→ Aplicar las reglas de oro de Discovery/Closing (ver Avatar) al siguiente approach.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+
+      <div class="task" style="border-color:rgba(226,80,58,.3)">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Investigar aliados de <strong>financiamiento</strong> para STM</div>
+          <div class="task-desc">Sesión 5, sigue abierto. Sin capacidad de financiar directo, STM sigue perdiendo ventas sanas contra quien sí la tiene (caso Litai/StarTech).</div>
+          <div class="task-goal">→ Al menos 1 opción propia antes de la próxima negociación por precio.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Adoptar <strong>preguntas cerradas</strong> (A/B/C) en vez de abiertas</div>
+          <div class="task-desc">Sesión 5. "¿Cuál es tu presupuesto?" → "¿está más cerca de A, B o C?" — establece autoridad, guía al lead.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Usar la <strong>tasa de ocupación de máquina</strong> como pregunta de urgencia</div>
+          <div class="task-desc">Sesión 5. "¿Tu máquina está sobre 100% o bajo 50%?" — separa a quien necesita máquina nueva ya de quien no.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Jairo: revisar propuesta Cervi con el frame de <strong>dolor futuro</strong></div>
+          <div class="task-desc">Sesión 4, sigue abierto. Briceño resiste por precio — la propuesta hoy se lee como servicio técnico, no como seguro contra una falla futura.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Jairo y Laura: usar preguntas estratégicas en cada interacción</div>
+          <div class="task-desc">Sesión 4. En vez de "necesitas X", preguntar "¿cómo haces seguimiento a tus activos?" — el prospecto se autoconvence.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="etp-hd">✍️ Marketing</div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Laura: reabrir a Valdecir con la <strong>feria China Plus</strong> de octubre</div>
+          <div class="task-desc">Sesión 4, sigue abierto. Su pregunta sobre esa feria fue una señal perdida — es la puerta de reentrada.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Laura: crear contenido sobre el <strong>costo de mantenimiento</strong> de máquinas chinas</div>
+          <div class="task-desc">Sesión 4. Primera pieza de la serie de dolores comunes — prevalida al prospecto antes de la llamada.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="etp-hd">🗄️ Operación</div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Transcribir y archivar los audios de WhatsApp (16/08)</div>
+          <div class="task-desc">2 notas de voz del grupo — Voice Memos u otro transcriptor, guardar en Notion/repo propio.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Cuadrar horario fijo de los sábados</div>
+          <div class="task-desc">El día ya quedó definido — falta fijar la hora exacta (esta vez cayó domingo).</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
     </div>
-    <span class="bdg teal">✓ Hecho</span>
-  </div>
+  </details>
 
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">✓ Hecho — Álvarez perdió por <strong>financiamiento</strong> ($180k vía StarTech), no por precio</div>
-      <div class="task-desc">Sesión 5 confirmó la causa real. Ya está cargado en el banco de dolores.</div>
+  <details class="wk-block">
+    <summary class="wk-hd">📁 SEMANA 23/08 — SESIÓN 5 <span class="bdg teal">resuelto</span></summary>
+    <div class="wk-body">
+      <div class="etp-hd">🎯 Comercial</div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">✓ Hecho — ACEBRI quedó en <strong>30/70</strong> con orden de compra</div>
+          <div class="task-desc">Jairo lo confirmó por WhatsApp el 21/08. Sin ambigüedad para el decisor final.</div>
+        </div>
+        <span class="bdg teal">✓ Hecho</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">✓ Hecho — Álvarez perdió por <strong>financiamiento</strong> ($180k vía StarTech), no por precio</div>
+          <div class="task-desc">Sesión 5 confirmó la causa real. Ya está cargado en el banco de dolores.</div>
+        </div>
+        <span class="bdg teal">✓ Hecho</span>
+      </div>
     </div>
-    <span class="bdg teal">✓ Hecho</span>
-  </div>
+  </details>
 
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Laura: documentar el cold outreach con Valdecir (Brasil)</div>
-      <ul class="task-desc" style="margin:4px 0 0 16px;padding:0">
-        <li>Bajar toda la info de ese chat — es <strong>cold outreach</strong>, no Discovery</li>
-        <li>Feedback ya dado en vivo: pedir <strong>3 horarios</strong>, sostener silencio, sin emojis</li>
-      </ul>
-      <div class="task-goal">→ Aplicar las reglas de oro de Discovery/Closing (ver Avatar) al siguiente approach.</div>
-    </div>
-    <span class="bdg red">Urgente</span>
-  </div>
-
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Investigar aliados de <strong>financiamiento</strong> para STM</div>
-      <div class="task-desc">Sesión 5. Sin capacidad de financiar directo, STM sigue perdiendo ventas sanas contra quien sí la tiene (caso Litai/StarTech).</div>
-      <div class="task-goal">→ Al menos 1 opción propia antes de la próxima negociación por precio.</div>
-    </div>
-    <span class="bdg red">Urgente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Adoptar <strong>preguntas cerradas</strong> (A/B/C) en vez de abiertas</div>
-      <div class="task-desc">Sesión 5. "¿Cuál es tu presupuesto?" → "¿está más cerca de A, B o C?" — establece autoridad, guía al lead.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Usar la <strong>tasa de ocupación de máquina</strong> como pregunta de urgencia</div>
-      <div class="task-desc">Sesión 5. "¿Tu máquina está sobre 100% o bajo 50%?" — separa a quien necesita máquina nueva ya de quien no.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Jairo: revisar propuesta Cervi con el frame de <strong>dolor futuro</strong></div>
-      <div class="task-desc">Sesión 4. Briceño resiste por precio — la propuesta hoy se lee como servicio técnico, no como seguro contra una falla futura.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Jairo y Laura: usar preguntas estratégicas en cada interacción</div>
-      <div class="task-desc">Sesión 4. En vez de "necesitas X", preguntar "¿cómo haces seguimiento a tus activos?" — el prospecto se autoconvence.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="tg-hd">✍️ Marketing — Contenido y atracción <span class="bdg amber" style="margin-left:4px">2</span></div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Laura: reabrir a Valdecir con la <strong>feria China Plus</strong> de octubre</div>
-      <div class="task-desc">Sesión 4. Su pregunta sobre esa feria fue una señal perdida — es la puerta de reentrada.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Laura: crear contenido sobre el <strong>costo de mantenimiento</strong> de máquinas chinas</div>
-      <div class="task-desc">Sesión 4. Primera pieza de la serie de dolores comunes — prevalida al prospecto antes de la llamada.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="tg-hd">🗄️ Operación — administración y documentación <span class="bdg grey" style="margin-left:4px">2</span></div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Transcribir y archivar los audios de WhatsApp (16/08)</div>
-      <div class="task-desc">2 notas de voz del grupo — Voice Memos u otro transcriptor, guardar en Notion/repo propio.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Cuadrar horario fijo de los sábados</div>
-      <div class="task-desc">El día ya quedó definido — falta fijar la hora exacta.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
-  </div>
-
-  <div class="tg-hd">🏗️ Private Build — lo que le toca a Patricio <span class="bdg amber" style="margin-left:4px">3</span></div>
+  <div class="tg-hd">🏗️ Private Build — lo que le toca a Patricio, no es semanal <span class="bdg amber" style="margin-left:4px">3</span></div>
 
   <div class="task">
     <div class="task-check"></div>
