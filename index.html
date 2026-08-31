@@ -330,13 +330,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="brand"><div class="brand-dot"></div>STM · Laura Sandoval</div>
   <nav class="tabs-desktop">
     <div class="tab on" onclick="sw('overview',this)">📊 Panel</div>
-    <div class="tab" onclick="sw('roadmap',this)">🗺️ Hoja de ruta</div>
-    <div class="tab" onclick="sw('tasks',this)">✅ Pendientes</div>
+    <div class="tab" onclick="sw('roadmap',this)">🗺️ Roadmap</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
     <div class="tab" onclick="sw('avatar',this)">🎯 Avatar</div>
-    <div class="tab" onclick="sw('backend',this)">🗄️ Backend</div>
-    <div class="tab" onclick="sw('resources',this)">📚 Recursos</div>
-    <div class="tab" onclick="sw('consulting',this)">🧭 Consultoría</div>
+    <div class="tab" onclick="sw('backend',this)">🗄️ Backend & Recursos</div>
   </nav>
   <div class="topbar-right">
     <div class="ext-bar">
@@ -348,10 +345,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
         <span class="ext-lbl">Matriz</span>
       </div>
-      <div class="ext-btn locked" title="Módulos">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        <span class="ext-lbl">Módulos</span>
-      </div>
     </div>
     <div class="mob-btn" id="mob-btn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -359,13 +352,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
   <div class="mob-drop" id="mob-drop">
     <div class="mob-row on" onclick="sw('overview',this,true)"><span class="mob-em">📊</span> Panel</div>
-    <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Hoja de ruta</div>
-    <div class="mob-row" onclick="sw('tasks',this,true)"><span class="mob-em">✅</span> Pendientes</div>
+    <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Roadmap</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
     <div class="mob-row" onclick="sw('avatar',this,true)"><span class="mob-em">🎯</span> Avatar</div>
-    <div class="mob-row" onclick="sw('backend',this,true)"><span class="mob-em">🗄️</span> Backend</div>
-    <div class="mob-row" onclick="sw('resources',this,true)"><span class="mob-em">📚</span> Recursos</div>
-    <div class="mob-row" onclick="sw('consulting',this,true)"><span class="mob-em">🧭</span> Consultoría</div>
+    <div class="mob-row" onclick="sw('backend',this,true)"><span class="mob-em">🗄️</span> Backend & Recursos</div>
   </div>
 </header>
 
@@ -732,6 +722,35 @@ flowchart LR
       <div class="alert-text">Con 1 máquina cerrada en 2025 y 1 en lo que va de 2026, Laura no necesita contratar gente para vender más. Necesita infraestructura y sistema — lo mismo que falló al comprar manos (freelancers, agencia) en vez de construir criterio propio.</div>
     </div>
   </div>
+
+  <details class="wk-block">
+    <summary class="wk-hd">🧭 Cómo funciona la consultoría — el ritmo de cada semana</summary>
+    <div class="wk-body">
+      <div class="mermaid-wrap" style="margin-bottom:14px">
+        <div class="mermaid-scroll">
+        <pre class="mermaid">
+flowchart LR
+    F["📞 Llamada"]:::session --> C["🚨 Cuellos"]:::bottleneck
+    C --> P["✅ Pendientes / 🏆 Wins"]:::tasks
+    P --> DOC["📝 Documentación"]:::docs
+    DOC --> D["🗺️ Roadmap"]:::roadmap
+    D -. próxima semana .-> F
+
+    classDef session fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
+    classDef bottleneck fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef tasks fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    classDef docs fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef roadmap fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    </pre>
+        </div>
+      </div>
+      <ul class="disc-list">
+        <li>Cada sesión queda <strong>documentada</strong> y el roadmap <strong>actualizado</strong> dentro de 24 horas — no es un pendiente, es parte del programa.</li>
+        <li>Private Build <strong>co-diseña</strong>, no ejecuta el sistema — quien opera es el founder.</li>
+        <li>Entrega <strong>claridad</strong>, no implementa. No revisa ni audita documentos fuera de las llamadas.</li>
+      </ul>
+    </div>
+  </details>
 </div>
 
 
@@ -906,17 +925,8 @@ flowchart LR
     <div class="hist-money">💰 Hacia dónde acerca: pasar de la claridad conceptual a una oferta escrita que Laura y Jairo puedan repetir sin reinventarla en cada conversación.</div>
   </div>
 
-  <div class="slbl">Material de apoyo</div>
-  <a class="res-item locked" href="#"><span class="res-ico">📘</span><div class="res-body"><div class="res-title">Guía: cómo usar Notion</div><div class="res-desc">Se agrega cuando el Notion de STM esté creado</div></div></a>
-  <a class="res-item locked" href="#"><span class="res-ico">🎯</span><div class="res-body"><div class="res-title">Framework ICP / Avatar — Private Build</div><div class="res-desc">Plantilla ya documentada, se aplica en la Sesión 1</div></div></a>
-  <a class="res-item locked" href="#"><span class="res-ico">🗂️</span><div class="res-body"><div class="res-title">Plantilla CRM STM</div><div class="res-desc">Se activa junto con el Notion en Fase 1</div></div></a>
-</div>
-
-
-<!-- ════════ PENDIENTES ════════ -->
-<div class="page" id="pg-tasks">
-
-  <div class="alert-box info" style="margin-top:0">
+  <div class="slbl">Pendientes — por semana, se acumulan hasta que se cierran (todos de Laura/Jairo)</div>
+  <div class="alert-box info">
     <span class="alert-icon">💬</span>
     <div>
       <div class="alert-title">Cualquier duda → WhatsApp con Patricio al tiro</div>
@@ -1086,43 +1096,10 @@ flowchart LR
     </div>
   </details>
 
-  <div class="tg-hd">🏗️ Private Build — lo que le toca a Patricio, no es semanal <span class="bdg amber" style="margin-left:4px">4</span></div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Montar diagrama del <strong>ciclo del lead por tipo de avatar</strong></div>
-      <div class="task-desc">Pedido explícito 30/08: entender el ciclo completo (no solo el síntoma puntual) según tipo — Cliente de servicio vs Socio proveedor — y qué busca cada uno.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Armar el módulo de <strong>Oferta irresistible</strong></div>
-      <div class="task-desc">Sobre Avatar B: 2 capas (Producto/Servicio), 12 sub-servicios por señal. <strong>Atrasado 3 sesiones.</strong></div>
-    </div>
-    <span class="bdg red">Atrasado</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Cerrar el módulo de Closing Pitch con casos reales (ACEBRI + Valdecir)</div>
-      <div class="task-desc">Las reglas de oro ya están declaradas en Avatar — falta el módulo formal.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Enviar por WhatsApp: libro "Vendes o Vendes"</div>
-      <div class="task-desc">Recomendación de Grant Cardone (Sesión 2) — sigue sin enviarse.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
-  </div>
+  <div class="slbl">Material de apoyo</div>
+  <a class="res-item locked" href="#"><span class="res-ico">📘</span><div class="res-body"><div class="res-title">Guía: cómo usar Notion</div><div class="res-desc">Se agrega cuando el Notion de STM esté creado</div></div></a>
+  <a class="res-item locked" href="#"><span class="res-ico">🎯</span><div class="res-body"><div class="res-title">Framework ICP / Avatar — Private Build</div><div class="res-desc">Plantilla ya documentada, se aplica en la Sesión 1</div></div></a>
+  <a class="res-item locked" href="#"><span class="res-ico">🗂️</span><div class="res-body"><div class="res-title">Plantilla CRM STM</div><div class="res-desc">Se activa junto con el Notion en Fase 1</div></div></a>
 </div>
 
 
@@ -1661,20 +1638,8 @@ flowchart TD
       <div class="alert-text">Hoy varias cosas todavía viven repartidas entre WhatsApp, Excel y Notion. Cada sesión mueve una pieza más hacia su lugar único — cuando todo esté acá, Laura y Jairo dejan de depender de acordarse dónde quedó algo, y pueden iterar con IA directamente sobre la fuente.</div>
     </div>
   </div>
-</div>
 
-
-<!-- ════════ RECURSOS ════════ -->
-<div class="page" id="pg-resources">
-
-  <div class="alert-box info" style="margin-top:0">
-    <span class="alert-icon">📚</span>
-    <div>
-      <div class="alert-title">Biblioteca de recursos</div>
-      <div class="alert-text">Herramientas listas para usar, no material de lectura. Cada una tiene un link y cómo aplicarla hoy mismo.</div>
-    </div>
-  </div>
-
+  <div class="slbl">Biblioteca de recursos</div>
   <div class="lib-grid">
     <div class="lib-card">
       <div class="lib-ico">🤖</div>
@@ -1691,72 +1656,49 @@ flowchart TD
       <a class="lib-btn" href="https://app.notion.com/p/private-build/M-dulos-3ba1b21db3ba805680c4e62c62648525?source=copy_link" target="_blank" rel="noopener">Abrir Notion →</a>
     </div>
   </div>
-</div>
 
+  <div class="tg-hd">🏗️ Private Build — lo que le toca a Patricio, no es semanal <span class="bdg amber" style="margin-left:4px">4</span></div>
 
-<!-- ════════ CÓMO AVANZAR ════════ -->
-<div class="page" id="pg-consulting">
-
-  <div class="slbl" style="margin-top:0">El mismo ritmo cada semana — no una lista que crece</div>
-  <div class="alert-box info">
-    <span class="alert-icon">🧭</span>
-    <div>
-      <div class="alert-title">Cómo usar este panel sin quemarse</div>
-      <div class="alert-text">No hay que revisar todo, todos los días. Es un ciclo de 6 pasos que se repite cada semana, arranca y cierra en la llamada. Si seguís el orden, nunca hay más de lo que cabe en una semana.</div>
+  <div class="task">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">Montar diagrama del <strong>ciclo del lead por tipo de avatar</strong></div>
+      <div class="task-desc">Pedido explícito 30/08: entender el ciclo completo (no solo el síntoma puntual) según tipo — Cliente de servicio vs Socio proveedor — y qué busca cada uno.</div>
     </div>
+    <span class="bdg amber">Pato</span>
   </div>
 
-  <div class="mermaid-wrap">
-    <div class="zoom-ctl">
-      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
-      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
-      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+  <div class="task">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">Armar el módulo de <strong>Oferta irresistible</strong></div>
+      <div class="task-desc">Sobre Avatar B: 2 capas (Producto/Servicio), 12 sub-servicios por señal. <strong>Atrasado 3 sesiones.</strong></div>
     </div>
-    <div class="mermaid-scroll">
-    <pre class="mermaid">
-flowchart TD
-    F["📞 Llamada · 1h"]:::session --> C["🚨 Cuellos de botella"]:::bottleneck
-    C --> P["✅ Pendientes / 🏆 Wins semanales"]:::tasks
-    P --> DOC["📝 Documentación"]:::docs
-    DOC --> D["🗺️ Revisar hoja de ruta"]:::roadmap
-    D -. próxima semana .-> F
+    <span class="bdg red">Atrasado</span>
+  </div>
 
-    classDef session fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
-    classDef bottleneck fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
-    classDef tasks fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
-    classDef docs fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
-    classDef roadmap fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
-    </pre>
+  <div class="task">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">Cerrar el módulo de Closing Pitch con casos reales (ACEBRI + Valdecir)</div>
+      <div class="task-desc">Las reglas de oro ya están declaradas en Avatar — falta el módulo formal.</div>
     </div>
-    <span class="zoom-hint">arrastra para mover</span>
+    <span class="bdg amber">Pato</span>
   </div>
 
-  <div class="bdg-row" style="margin:-10px 0 20px">
-    <span class="bdg red bdg-link" onclick="sw('overview')">🔗 Ver cuellos de botella</span>
-    <span class="bdg teal bdg-link" onclick="sw('tasks')">🔗 Ver pendientes / wins</span>
-    <span class="bdg violet bdg-link" onclick="sw('backend')">🔗 Ver documentación</span>
-    <span class="bdg amber bdg-link" onclick="sw('roadmap')">🔗 Ver hoja de ruta</span>
+  <div class="task">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">Enviar por WhatsApp: libro "Vendes o Vendes"</div>
+      <div class="task-desc">Recomendación de Grant Cardone (Sesión 2) — sigue sin enviarse.</div>
+    </div>
+    <span class="bdg amber">Pato</span>
   </div>
-
-  <div class="disc-box">
-    <div class="disc-title">Cómo funciona este programa</div>
-    <ul class="disc-list">
-      <li>Cada semana el founder cuenta con actualizaciones de tareas, dudas o bloqueos técnicos, e información clara y procesada.</li>
-      <li>Cada sesión queda <strong>documentada</strong> y el roadmap <strong>actualizado</strong> dentro de las 24 horas siguientes — no es un pendiente, es parte del programa.</li>
-      <li>Private Build no ejecuta el sistema, lo <strong>co-diseña</strong>: aporta el ejemplo para que el founder lo adapte a su negocio. Quien opera es el founder.</li>
-      <li>Entrega <strong>claridad</strong>, no implementa — la implementación es responsabilidad del founder.</li>
-      <li><strong>No revisa ni audita</strong> documentos fuera de las llamadas — la revisión ocurre en la sesión de trabajo, no como trabajo posterior de Private Build.</li>
-      <li>El programa busca que el founder entienda cómo escalar con sistemas — es su responsabilidad comprender cada sistema y levantar sus dudas en la llamada semanal.</li>
-      <li>Cada llamada es una <strong>sesión de trabajo</strong>, de hasta 1 hora según la necesidad del cliente para cerrar un cuello de botella o resolver una duda puntual.</li>
-      <li>Los horarios se ajustan si alguna de las partes avisa con anticipación un retraso o la necesidad de reprogramar.</li>
-    </ul>
-  </div>
-
 </div>
 
 
 <script>
-const PAGES=['overview','roadmap','tasks','engine','avatar','backend','resources','consulting'];
+const PAGES=['overview','roadmap','engine','avatar','backend'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
