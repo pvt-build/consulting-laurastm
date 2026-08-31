@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light">
 <title>STM · Panel Consultoría</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
 :root{
+  color-scheme:light;
   --bg:#F7F5F2;--surf:#FFFFFF;
   --beige:#F0EDE8;--sand:#E0D8CE;
   --warm:#7B61FF;--brown:#5A46CC;
@@ -374,19 +376,36 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sch todo">12</div>
   </div>
 
-  <div class="slbl">Foco de la semana — cómo enfrentarla, cómo acercarse al cierre, cómo romper el miedo</div>
-  <div class="alert-box red-bg">
-    <span class="alert-icon">🧭</span>
-    <div>
-      <div class="alert-title">3 frentes esta semana, no 10 — cada uno con su próximo paso concreto</div>
-      <div class="alert-text">
-        <ul style="margin:6px 0 0 16px;padding:0;line-height:1.7">
-          <li><strong>① Enfrentar la semana:</strong> 2 tipos de comprador — <strong>Cliente de servicio</strong> (Omar) y <strong>Socio proveedor</strong> (Way). No se les habla igual, ver Avatar.</li>
-          <li><strong>② Acercarse al cierre:</strong> Omar → 30/70, valida gerencia (Carlos Briceño) el <strong>15/09</strong>. Way → se juega en el <strong>brief para su junta</strong>, antes del 01/09.</li>
-          <li><strong>③ Romper el miedo:</strong> Way cuestionó la ejecución de STM — el patrón de analizar en vez de moverse. Patricio a Jairo: <em>"hablar en presente y en acción, no en futuro..."</em></li>
-        </ul>
-      </div>
+  <div class="slbl">Foco de la semana — 3 frentes, no 10</div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">① Enfrentar la semana: 2 tipos de comprador</div>
+      <div class="task-desc"><strong>Cliente de servicio</strong> (Omar) vs <strong>Socio proveedor</strong> (Way) — no se les habla igual.</div>
+      <div class="task-goal">→ Ver Avatar → nueva sección.</div>
     </div>
+    <span class="bdg red">Frente 1</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">② Acercarse al cierre</div>
+      <div class="task-desc">Omar → 30/70, valida gerencia (Carlos Briceño) el <strong>15/09</strong>.</div>
+      <div class="task-goal">→ Way se juega en el <strong>brief para su junta</strong>, antes del 01/09.</div>
+    </div>
+    <span class="bdg red">Frente 2</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">③ Romper el miedo</div>
+      <div class="task-desc">Way cuestionó la ejecución de STM — el patrón de analizar en vez de moverse.</div>
+      <div class="task-goal">→ Patricio a Jairo: <em>"hablar en presente y en acción, no en futuro..."</em></div>
+    </div>
+    <span class="bdg red">Frente 3</span>
   </div>
 
   <div class="slbl">Esta semana en 1 vista — trabajen desde acá, sin quedarse pegados</div>
@@ -425,141 +444,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Diagrama de negocio — hacia dónde abrimos terreno</div>
-  <div class="alert-box warn">
-    <span class="alert-icon">🎯</span>
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">🗺️</span>
     <div>
-      <div class="alert-title">Foco: Sistema Comercial + Sistema de Contenido (adquisición). No operamos al cliente.</div>
-      <div class="alert-text">Avatar definido, no enriquecido. Oferta irresistible <strong>no existe</strong> (va sobre Avatar B). Chat/setting espera — antes hay que resolver qué necesita <strong>ver</strong> el cliente.</div>
+      <div class="alert-title">Los diagramas de negocio ahora viven en Flywheel</div>
+      <div class="alert-text">Sistema Comercial/Contenido y el diagrama de mensajes se movieron ahí — es donde tienen contexto. Este panel se queda con el estado de hoy.</div>
     </div>
-  </div>
-  <div class="mermaid-wrap">
-    <div class="zoom-ctl">
-      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
-      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
-      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
-    </div>
-    <div class="mermaid-scroll">
-    <pre class="mermaid">
-flowchart LR
-    subgraph COM["🎯 Sistema Comercial"]
-    direction TB
-    CA["👤 Avatar<br/>🟡 no enriquecido"]:::warn
-    CB["💎 Oferta irresistible<br/>🔴 no existe"]:::bad
-    CC["🔍 Discovery<br/>🟡 sin CRM"]:::warn
-    CD["📞 Setting<br/>🟡 falta auditar"]:::warn
-    CE["🤝 Closing<br/>🟡 faltan skills ↗"]:::warn
-    CA-->CB-->CC-->CD-->CE
-    end
-
-    subgraph CNT["✍️ Sistema de Contenido"]
-    direction TB
-    K1["📸 Instagram"]:::bad
-    K2["💼 LinkedIn"]:::bad
-    K3["📤 Outbound"]:::bad
-    K4["🌐 Funnel web<br/>🔴 falta prueba social"]:::bad
-    K1-->K4
-    K2-->K4
-    K3-->K4
-    end
-
-    COM ~~~ CNT
-    CA-.->|"señales"|K3
-
-    CE-->N["🗂️ Notion/CRM<br/>⚡ palanca hoy"]:::lever
-    K4-->N
-    N-->L["💰 Liquidez"]:::goal
-
-    click CE "https://chatgpt.com/g/g-6a0faf3c80f4819199c5782fa39dad23-sales-closing-coach-gpt/c/6a17a966-4cfc-83e9-aa28-cf73c987fc82" "Closing Coach GPT — entrenar objeciones" _blank
-
-    classDef warn fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
-    classDef bad fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
-    classDef lever fill:#FDF4E3,stroke:#E8A237,stroke-width:3px,color:#1A1A1A
-    classDef goal fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
-    </pre>
-    </div>
-    <span class="zoom-hint">arrastra para mover</span>
-  </div>
-  <div class="bdg-row" style="margin:-6px 0 14px">
-    <span class="bdg amber">🟡 Parcial — hay algo, no es suficiente</span>
-    <span class="bdg red">🔴 No existe — construir</span>
-    <span class="bdg grey">⚡ Palanca · 💰 Meta</span>
-  </div>
-
-  <div class="alert-box red-bg">
-    <span class="alert-icon">🚫</span>
-    <div>
-      <div class="alert-title">El chat es la cola, no la cabeza</div>
-      <div class="alert-text">Pulir el chat antes de resolver qué necesita <strong>ver</strong> el cliente (casos, números, imágenes) no sirve — eso va primero en el Funnel web. El chat solo recibe a quien ya llegó convencido.</div>
-    </div>
-  </div>
-
-  <div class="alert-box info">
-    <span class="alert-icon">📈</span>
-    <div>
-      <div class="alert-title">La secuencia de madurez — en ese orden, no al revés</div>
-      <div class="alert-text"><strong>Volumen → Datos → Optimización → Rentabilidad → Sistema → Automatización.</strong> El primer cierre no es la meta — es lo que trae el volumen que después permite delegar.</div>
-    </div>
-  </div>
-
-  <div class="slbl">Diagrama de mensajes — de reclamo a prospección</div>
-  <div class="mermaid-wrap">
-    <div class="zoom-ctl">
-      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
-      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
-      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
-    </div>
-    <div class="mermaid-scroll">
-    <pre class="mermaid">
-flowchart LR
-    A["😤 Reclamo<br/>cliente pasado"]:::signal --> B["🔍 Señal real<br/>no lo que dijo"]:::signal
-    B --> C["✍️ Mensaje<br/>de marketing"]:::message
-    C --> D["🎯 Prospección<br/>mismo tier"]:::action
-    D --> E["🤝 Cierre"]:::close
-    E -. "el loop nunca termina" .-> A
-
-    classDef signal fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
-    classDef message fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
-    classDef action fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
-    classDef close fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
-    </pre>
-    </div>
-    <span class="zoom-hint">arrastra para mover</span>
-  </div>
-
-  <div class="alert-box warn">
-    <span class="alert-icon">⚡</span>
-    <div>
-      <div class="alert-title">Por qué queda declarado acá y no solo en Notion</div>
-      <div class="alert-text">Se arma con ejemplos reales de Sesiones 1-2 — no una plantilla en blanco. Cada fila nueva sigue la misma lógica.</div>
-    </div>
-  </div>
-
-  <div class="task" style="border-color:rgba(123,97,255,.3)">
-    <div class="task-body">
-      <div class="task-title">Caso Briceño — objeción de edad/género (cliente C)</div>
-      <div class="task-desc">Reclamo real: "¿por qué me viene a vender una niña?" — el cliente C descalifica por falta de experiencia percibida, no por el producto.</div>
-      <div class="task-goal">→ Mensaje: para el perfil C (dueño único, conservador, decide solo) — anclar el mensaje en años de trayectoria y respaldo técnico (Jairo), no en el producto. Reencuadrar: "¿seguir siendo cliente C o pasar a ser B?"</div>
-    </div>
-    <span class="bdg violet">Tier C</span>
-  </div>
-
-  <div class="task" style="border-color:rgba(123,97,255,.3)">
-    <div class="task-body">
-      <div class="task-title">Caso máquina china — precio vs. dolor futuro (cliente C→B)</div>
-      <div class="task-desc">Reclamo real: cliente compró una máquina china más barata pese a la advertencia, y volvió por soporte técnico recurrente semanas después.</div>
-      <div class="task-goal">→ Mensaje: "¿ya te pasó que la opción barata terminó costando más en soporte técnico?" — apunta al dolor futuro no verbalizado, no al precio. Sirve para prospectar clientes C que están por comprar por precio.</div>
-    </div>
-    <span class="bdg violet">Tier C→B</span>
-  </div>
-
-  <div class="task">
-    <div class="task-body">
-      <div class="task-title">Próxima fila — la completan Laura/Jairo</div>
-      <div class="task-desc">Cualquier reclamo o feedback nuevo de esta semana entra acá con la misma estructura: reclamo real → señal detectada → mensaje por tier.</div>
-      <div class="task-goal">→ Para: que el diagrama crezca con cada cliente, no se quede en dos ejemplos de Patricio.</div>
-    </div>
-    <span class="bdg grey">Cliente</span>
   </div>
 
   <div class="slbl">Métricas clave · Diagnóstico julio 2026</div>
@@ -1124,6 +1014,143 @@ flowchart LR
       <div class="alert-title">El loop: Post-venta/Referidos vuelve a alimentar Captación</div>
       <div class="alert-text">Cliente gestionado (6) que refiere (7) = lead nuevo en Captación (1), sin pasar por LinkedIn ni email. La etapa 7 es lo que hace girar el sistema solo.</div>
     </div>
+  </div>
+
+  <div class="slbl">Diagrama de negocio — hacia dónde abrimos terreno</div>
+  <div class="alert-box warn">
+    <span class="alert-icon">🎯</span>
+    <div>
+      <div class="alert-title">Foco: Sistema Comercial + Sistema de Contenido (adquisición). No operamos al cliente.</div>
+      <div class="alert-text">Avatar definido, no enriquecido. Oferta irresistible <strong>no existe</strong> (va sobre Avatar B). Chat/setting espera — antes hay que resolver qué necesita <strong>ver</strong> el cliente.</div>
+    </div>
+  </div>
+  <div class="mermaid-wrap">
+    <div class="zoom-ctl">
+      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+    </div>
+    <div class="mermaid-scroll">
+    <pre class="mermaid">
+flowchart LR
+    subgraph COM["🎯 Sistema Comercial"]
+    direction TB
+    CA["👤 Avatar<br/>🟡 no enriquecido"]:::warn
+    CB["💎 Oferta irresistible<br/>🔴 no existe"]:::bad
+    CC["🔍 Discovery<br/>🟡 sin CRM"]:::warn
+    CD["📞 Setting<br/>🟡 falta auditar"]:::warn
+    CE["🤝 Closing<br/>🟡 faltan skills ↗"]:::warn
+    CA-->CB-->CC-->CD-->CE
+    end
+
+    subgraph CNT["✍️ Sistema de Contenido"]
+    direction TB
+    K1["📸 Instagram"]:::bad
+    K2["💼 LinkedIn"]:::bad
+    K3["📤 Outbound"]:::bad
+    K4["🌐 Funnel web<br/>🔴 falta prueba social"]:::bad
+    K1-->K4
+    K2-->K4
+    K3-->K4
+    end
+
+    COM ~~~ CNT
+    CA-.->|"señales"|K3
+
+    CE-->N["🗂️ Notion/CRM<br/>⚡ palanca hoy"]:::lever
+    K4-->N
+    N-->L["💰 Liquidez"]:::goal
+
+    click CE "https://chatgpt.com/g/g-6a0faf3c80f4819199c5782fa39dad23-sales-closing-coach-gpt/c/6a17a966-4cfc-83e9-aa28-cf73c987fc82" "Closing Coach GPT — entrenar objeciones" _blank
+
+    classDef warn fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef bad fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef lever fill:#FDF4E3,stroke:#E8A237,stroke-width:3px,color:#1A1A1A
+    classDef goal fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
+    </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
+  </div>
+  <div class="bdg-row" style="margin:-6px 0 14px">
+    <span class="bdg amber">🟡 Parcial — hay algo, no es suficiente</span>
+    <span class="bdg red">🔴 No existe — construir</span>
+    <span class="bdg grey">⚡ Palanca · 💰 Meta</span>
+  </div>
+
+  <div class="alert-box red-bg">
+    <span class="alert-icon">🚫</span>
+    <div>
+      <div class="alert-title">El chat es la cola, no la cabeza</div>
+      <div class="alert-text">Pulir el chat antes de resolver qué necesita <strong>ver</strong> el cliente (casos, números, imágenes) no sirve — eso va primero en el Funnel web. El chat solo recibe a quien ya llegó convencido.</div>
+    </div>
+  </div>
+
+  <div class="alert-box info">
+    <span class="alert-icon">📈</span>
+    <div>
+      <div class="alert-title">La secuencia de madurez — en ese orden, no al revés</div>
+      <div class="alert-text"><strong>Volumen → Datos → Optimización → Rentabilidad → Sistema → Automatización.</strong> El primer cierre no es la meta — es lo que trae el volumen que después permite delegar.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Diagrama de mensajes — de reclamo a prospección</div>
+  <div class="mermaid-wrap">
+    <div class="zoom-ctl">
+      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+    </div>
+    <div class="mermaid-scroll">
+    <pre class="mermaid">
+flowchart LR
+    A["😤 Reclamo<br/>cliente pasado"]:::signal --> B["🔍 Señal real<br/>no lo que dijo"]:::signal
+    B --> C["✍️ Mensaje<br/>de marketing"]:::message
+    C --> D["🎯 Prospección<br/>mismo tier"]:::action
+    D --> E["🤝 Cierre"]:::close
+    E -. "el loop nunca termina" .-> A
+
+    classDef signal fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    classDef message fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef action fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef close fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
+  </div>
+
+  <div class="alert-box warn">
+    <span class="alert-icon">⚡</span>
+    <div>
+      <div class="alert-title">Por qué queda declarado acá y no solo en Notion</div>
+      <div class="alert-text">Se arma con ejemplos reales de Sesiones 1-2 — no una plantilla en blanco. Cada fila nueva sigue la misma lógica.</div>
+    </div>
+  </div>
+
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso Briceño — objeción de edad/género (cliente C)</div>
+      <div class="task-desc">Reclamo real: "¿por qué me viene a vender una niña?" — el cliente C descalifica por falta de experiencia percibida, no por el producto.</div>
+      <div class="task-goal">→ Mensaje: para el perfil C (dueño único, conservador, decide solo) — anclar el mensaje en años de trayectoria y respaldo técnico (Jairo), no en el producto. Reencuadrar: "¿seguir siendo cliente C o pasar a ser B?"</div>
+    </div>
+    <span class="bdg violet">Tier C</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">Caso máquina china — precio vs. dolor futuro (cliente C→B)</div>
+      <div class="task-desc">Reclamo real: cliente compró una máquina china más barata pese a la advertencia, y volvió por soporte técnico recurrente semanas después.</div>
+      <div class="task-goal">→ Mensaje: "¿ya te pasó que la opción barata terminó costando más en soporte técnico?" — apunta al dolor futuro no verbalizado, no al precio. Sirve para prospectar clientes C que están por comprar por precio.</div>
+    </div>
+    <span class="bdg violet">Tier C→B</span>
+  </div>
+
+  <div class="task">
+    <div class="task-body">
+      <div class="task-title">Próxima fila — la completan Laura/Jairo</div>
+      <div class="task-desc">Cualquier reclamo o feedback nuevo de esta semana entra acá con la misma estructura: reclamo real → señal detectada → mensaje por tier.</div>
+      <div class="task-goal">→ Para: que el diagrama crezca con cada cliente, no se quede en dos ejemplos de Patricio.</div>
+    </div>
+    <span class="bdg grey">Cliente</span>
   </div>
 
   <div class="slbl">Estado, preguntas y respuestas por etapa</div>
