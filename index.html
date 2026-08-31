@@ -207,7 +207,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .hist-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:8px;border-left:3px solid var(--border)}
 .hist-card.done{border-left-color:var(--teal)}
 .hist-card.now{border-left-color:var(--gold);background:var(--gold-lt)}
-.hist-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.hist-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px;cursor:pointer;list-style:none}
+.hist-hd::-webkit-details-marker{display:none}
+.hist-hd::after{content:'▾';font-family:'DM Sans',sans-serif;color:var(--grey);transition:transform .15s;margin-left:auto;order:99}
+.hist-card:not([open]) .hist-hd::after{transform:rotate(-90deg)}
+.hist-card:not([open]) .hist-text,.hist-card:not([open]) .bdg-row,.hist-card:not([open]) .hist-money{display:none}
 .hist-title{font-size:14px;font-weight:600;color:var(--dark)}
 .hist-text{font-size:12.5px;color:var(--grey);line-height:1.6;margin-bottom:8px}
 .hist-money{font-size:11.5px;color:var(--teal-dk);font-weight:500;line-height:1.5;padding-top:8px;border-top:0.5px dashed var(--border)}
@@ -382,7 +386,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">① Enfrentar la semana: 2 tipos de comprador</div>
-      <div class="task-desc"><strong>Cliente de servicio</strong> (Omar) vs <strong>Socio proveedor</strong> (Way) — no se les habla igual.</div>
+      <div class="task-desc"><strong>Cliente de servicio</strong> (Omar) vs <strong>Socio proveedor</strong> (Wei) — no se les habla igual.</div>
       <div class="task-goal">→ Ver Avatar → nueva sección.</div>
     </div>
     <span class="bdg red">Frente 1</span>
@@ -393,7 +397,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body">
       <div class="task-title">② Acercarse al cierre</div>
       <div class="task-desc">Omar → 30/70, valida gerencia (Carlos Briceño) el <strong>15/09</strong>.</div>
-      <div class="task-goal">→ Way se juega en el <strong>brief para su junta</strong>, antes del 01/09.</div>
+      <div class="task-goal">→ Wei se juega en el <strong>brief para su junta</strong>, antes del 01/09.</div>
     </div>
     <span class="bdg red">Frente 2</span>
   </div>
@@ -402,7 +406,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-check"></div>
     <div class="task-body">
       <div class="task-title">③ Romper el miedo</div>
-      <div class="task-desc">Way cuestionó la ejecución de STM — el patrón de analizar en vez de moverse.</div>
+      <div class="task-desc">Wei cuestionó la ejecución de STM — el patrón de analizar en vez de moverse.</div>
       <div class="task-goal">→ Patricio a Jairo: <em>"hablar en presente y en acción, no en futuro..."</em></div>
     </div>
     <span class="bdg red">Frente 3</span>
@@ -429,7 +433,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="bn-card w">
       <div class="alert-title" style="font-size:12.5px">✅ Compromisos de la semana</div>
       <ul style="margin:6px 0 0 14px;padding:0;font-size:12px;line-height:1.55">
-        <li>Laura: brief para junta de Way — <strong>vence 01/09</strong></li>
+        <li>Laura: brief para junta de Wei — <strong>vence 01/09</strong></li>
         <li>Jairo y Laura: lenguaje proactivo desde ya</li>
         <li>Ambos: seguimiento a Omar/ACEBRI — vence 15/09</li>
       </ul>
@@ -634,10 +638,10 @@ flowchart LR
     </pre>
         </div>
       </div>
-      <ul class="disc-list">
-        <li>Cada sesión queda <strong>documentada</strong> y el roadmap <strong>actualizado</strong> dentro de 24 horas — no es un pendiente, es parte del programa.</li>
+      <ul style="margin:0;padding-left:18px;line-height:1.6;font-size:12.5px;color:var(--ink)">
+        <li>Cada sesión queda <strong>documentada</strong> y el roadmap <strong>actualizado</strong> dentro de 24 horas.</li>
         <li>Private Build <strong>co-diseña</strong>, no ejecuta el sistema — quien opera es el founder.</li>
-        <li>Entrega <strong>claridad</strong>, no implementa. No revisa ni audita documentos fuera de las llamadas.</li>
+        <li>Entrega <strong>claridad</strong>, no implementa.</li>
       </ul>
     </div>
   </details>
@@ -711,21 +715,21 @@ flowchart LR
 
   <div class="slbl">Histórico — qué se construyó, qué se cierra y hacia dónde acerca</div>
 
-  <div class="hist-card done">
-    <div class="hist-hd">
+  <details class="hist-card done">
+    <summary class="hist-hd">
       <div class="hist-title">Sesión 1 — Foundations: ICP A/B/C</div>
       <span class="bdg teal">✓ 25 jul</span>
-    </div>
+    </summary>
     <div class="hist-text">Kickoff con Laura y Jairo. 3 tiers (A multinacionales, B foco ~50% de cierres, C volumen) + inventario de toda la documentación dispersa.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Avatar</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: dejar de perseguir leads A/C que tardan años o no cierran — cada hora de Laura va al cliente que paga en el ciclo más corto.</div>
-  </div>
+  </details>
 
-  <div class="hist-card done">
-    <div class="hist-hd">
+  <details class="hist-card done">
+    <summary class="hist-hd">
       <div class="hist-title">Sesión 2 — Perfil A/B/C + Eficiencia vs. Confianza</div>
       <span class="bdg teal">✓ 1 ago · 76 min</span>
-    </div>
+    </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
         <li><strong>Parte 1 — Variables A/B/C:</strong> estructura, prioridades, sensibilidad al precio. Eje nuevo: "conciencia técnica" (90% de la venta es buen descubrimiento).</li>
@@ -735,13 +739,13 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Avatar (pt.1)</span><span class="bdg violet">🔗 Mes 1 · Oferta irresistible (pt.2)</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: con A/B/C escritas y el mensaje anclado en lo que el cliente compra, calificar deja de vivir solo en la cabeza de Laura.</div>
-  </div>
+  </details>
 
-  <div class="hist-card done">
-    <div class="hist-hd">
+  <details class="hist-card done">
+    <summary class="hist-hd">
       <div class="hist-title">Sesión 3 — El Discovery gana la venta</div>
       <span class="bdg teal">✓ 10 ago</span>
-    </div>
+    </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
         <li>Repaso de las 13 preguntas de discovery (presupuesto, financiamiento, timeline).</li>
@@ -752,13 +756,13 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Oferta irresistible</span><span class="bdg violet">🔗 Mes 1 · Validación (2 casos reales)</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada venta perdida diagnosticada en vivo se vuelve criterio escrito — la próxima vez esa señal no se pasa por alto. Módulo de Oferta irresistible la próxima semana, sobre Avatar B.</div>
-  </div>
+  </details>
 
-  <div class="hist-card done">
-    <div class="hist-hd">
+  <details class="hist-card done">
+    <summary class="hist-hd">
       <div class="hist-title">Sesión 4 — Vender el dolor futuro, no el producto</div>
       <span class="bdg teal">✓ 17 ago · 58 min</span>
-    </div>
+    </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
         <li><strong>3 casos cruzados:</strong> Cervi (Briceño resiste por precio), Valdecir/Brasil (estancado en características), Carlos Álvarez (perdido ante Litai).</li>
@@ -769,13 +773,13 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Oferta irresistible</span><span class="bdg violet">🔗 Avatar · Tipos de objeción</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada objeción real queda categorizada y con su reframe — Laura y Jairo dejan de improvisar la respuesta cada vez que aparece la misma resistencia.</div>
-  </div>
+  </details>
 
-  <div class="hist-card done">
-    <div class="hist-hd">
+  <details class="hist-card done">
+    <summary class="hist-hd">
       <div class="hist-title">Sesión 5 — El financiamiento, no el precio, pierde ventas</div>
       <span class="bdg teal">✓ 23 ago · 60 min</span>
-    </div>
+    </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
         <li><strong>Loop cerrado:</strong> Álvarez compró la Litai china porque su socio StarTech ofrece financiamiento directo de $180k — capacidad que STM no tiene todavía.</li>
@@ -786,34 +790,34 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Avatar · Tipos de objeción</span><span class="bdg red">⚠ Oferta irresistible sigue sin armarse — 3 sesiones seguidas</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada venta perdida deja de ser "fue el precio" — el diagnóstico real (financiamiento) abre una palanca nueva (buscar aliados) en vez de resignarse.</div>
-  </div>
+  </details>
 
-  <div class="hist-card done">
-    <div class="hist-hd">
+  <details class="hist-card done" open>
+    <summary class="hist-hd">
       <div class="hist-title">Sesión 6 — Dos compradores, un solo lenguaje: dejar de "tratar" y empezar a "hacer"</div>
       <span class="bdg teal">✓ 30 ago · 56 min</span>
-    </div>
+    </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
-        <li><strong>Segmentación nueva:</strong> STM tiene 2 tipos de comprador — <strong>Cliente de servicio</strong> (Omar/ACEBRI, compra operación) y <strong>Socio proveedor</strong> (Way, compra certeza) — no se les vende igual.</li>
+        <li><strong>Segmentación nueva:</strong> STM tiene 2 tipos de comprador — <strong>Cliente de servicio</strong> (Omar/ACEBRI, compra operación) y <strong>Socio proveedor</strong> (Wei, compra certeza) — no se les vende igual.</li>
         <li><strong>Omar/ACEBRI:</strong> formato acordado 30/70, presenta a gerencia (Carlos Briceño) el <strong>15/09</strong> — patrón nombrado: "Cliente de servicio — aprobación en fases".</li>
-        <li><strong>Way:</strong> cuestionó la ejecución de STM (3 leads sin convertir) — se reformula como brief de 4 bloques para su junta, antes del 01/09. Es tipo partner/broker.</li>
+        <li><strong>Wei:</strong> cuestionó la ejecución de STM (3 leads sin convertir) — se reformula como brief de 4 bloques para su junta, antes del 01/09. Es tipo partner/broker.</li>
         <li><strong>Reencuadre real:</strong> "Jairo, con mucho amor: hablemos en presente y en acción, no en futuro ('lo que tenemos que hacer')."</li>
       </ul>
     </div>
-    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Avatar · Cliente de servicio vs Socio proveedor</span><span class="bdg amber">Way = Wei Deng/JWELL sigue sin confirmar</span></div>
+    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Avatar · Cliente de servicio vs Socio proveedor</span><span class="bdg amber">¿Wei es Wei Deng/JWELL? sigue sin confirmar</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: Laura y Jairo dejan de tratar cada prospecto igual — cada tipo de comprador tiene su propio camino de cierre, ya trazado.</div>
-  </div>
+  </details>
 
-  <div class="hist-card now">
-    <div class="hist-hd">
+  <details class="hist-card now" open>
+    <summary class="hist-hd">
       <div class="hist-title">Sesión 7 — próxima</div>
       <span class="bdg amber">→ Fecha por confirmar (cadencia sábados)</span>
-    </div>
-    <div class="hist-text">Seguimiento: ¿brief a Way enviado? ¿avanzó Omar? Pendiente arrastrado 4 sesiones: Oferta irresistible sobre Avatar B.</div>
+    </summary>
+    <div class="hist-text">Seguimiento: ¿brief a Wei enviado? ¿avanzó Omar? Pendiente arrastrado 4 sesiones: Oferta irresistible sobre Avatar B.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Mes 1 · Oferta irresistible</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: pasar de la claridad conceptual a una oferta escrita que Laura y Jairo puedan repetir sin reinventarla en cada conversación.</div>
-  </div>
+  </details>
 
   <div class="slbl">Pendientes — por semana, se acumulan hasta que se cierran (todos de Laura/Jairo)</div>
   <div class="alert-box info">
@@ -832,10 +836,10 @@ flowchart LR
       <div class="task" style="border-color:rgba(226,80,58,.3)">
         <div class="task-check"></div>
         <div class="task-body">
-          <div class="task-title">Laura: reformular la propuesta de Way como brief para su junta directiva</div>
+          <div class="task-title">Laura: reformular la propuesta de Wei como brief para su junta directiva</div>
           <ul class="task-desc" style="margin:4px 0 0 16px;padding:0">
             <li>4 bloques: problema de mercado → dolor futuro → solución → vehículo</li>
-            <li>Responde directo al cuestionamiento de Way sobre la ejecución de STM (3 leads de prueba sin convertir)</li>
+            <li>Responde directo al cuestionamiento de Wei sobre la ejecución de STM (3 leads de prueba sin convertir)</li>
           </ul>
           <div class="task-goal">→ Enviado antes del martes 01/09.</div>
         </div>
@@ -999,13 +1003,14 @@ flowchart LR
   <div class="slbl" style="margin-top:0">Recorrido por el sistema comercial STM — y cómo se retroalimenta</div>
   <div class="rm-track-wrap">
     <div class="rm-track">
-      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-info"><div class="rm-lbl">Captación</div><div class="rm-sub">manual</div></div></div>
-      <div class="rm-node"><div class="rm-dot now">2</div><div class="rm-info"><div class="rm-lbl mt">Calificación</div><div class="rm-sub">por validar</div></div></div>
-      <div class="rm-node"><div class="rm-dot future">3</div><div class="rm-info"><div class="rm-lbl mt">Nutrición</div><div class="rm-sub">se construye</div></div></div>
-      <div class="rm-node"><div class="rm-dot future">4</div><div class="rm-info"><div class="rm-lbl mt">Conversión</div><div class="rm-sub">se construye</div></div></div>
-      <div class="rm-node"><div class="rm-dot done">5</div><div class="rm-info"><div class="rm-lbl">Cierre</div><div class="rm-sub">ya existe</div></div></div>
-      <div class="rm-node"><div class="rm-dot done">6</div><div class="rm-info"><div class="rm-lbl">Gestión</div><div class="rm-sub">ya existe</div></div></div>
+      <div class="rm-node"><div class="rm-dot now">1</div><div class="rm-info"><div class="rm-lbl mt">Foundations</div><div class="rm-sub">en curso</div></div></div>
+      <div class="rm-node"><div class="rm-dot now">2</div><div class="rm-info"><div class="rm-lbl mt">Atracción</div><div class="rm-sub">manual</div></div></div>
+      <div class="rm-node"><div class="rm-dot now">3</div><div class="rm-info"><div class="rm-lbl mt">Calificación</div><div class="rm-sub">por validar</div></div></div>
+      <div class="rm-node"><div class="rm-dot future">4</div><div class="rm-info"><div class="rm-lbl mt">Nutrición</div><div class="rm-sub">se construye</div></div></div>
+      <div class="rm-node"><div class="rm-dot future">5</div><div class="rm-info"><div class="rm-lbl mt">Conversión</div><div class="rm-sub">se construye</div></div></div>
+      <div class="rm-node"><div class="rm-dot done">6</div><div class="rm-info"><div class="rm-lbl">Cierre + Gestión</div><div class="rm-sub">ya existe</div></div></div>
       <div class="rm-node"><div class="rm-dot future">7</div><div class="rm-info"><div class="rm-lbl mt">Post-venta / Referidos</div><div class="rm-sub">se construye</div></div></div>
+      <div class="rm-node"><div class="rm-dot future">8</div><div class="rm-info"><div class="rm-lbl mt">Systems</div><div class="rm-sub">post 90d</div></div></div>
     </div>
   </div>
   <div class="alert-box info">
@@ -1367,23 +1372,84 @@ flowchart LR
   </div>
   <div class="ch-split">
     <div class="problem-card">
-      <div class="alert-title">🔧 Cliente de servicio</div>
-      <ul style="margin:6px 0 0 16px;padding:0;line-height:1.6;font-size:12.5px">
-        <li><strong>Compra:</strong> operación — que la máquina funcione, que el problema técnico se resuelva.</li>
-        <li><strong>Caso real:</strong> Omar/ACEBRI — formato 30/70, diagnóstico $195 anticipo, presenta a gerencia (Carlos Briceño) el 15/09.</li>
-        <li><strong>Camino de cierre:</strong> pasos chicos y reversibles primero, aprobación formal después.</li>
-        <li><strong>Patrón nombrado:</strong> "Aprobación en fases" — el jefe que decide no estuvo en el Discovery, delegó 100% en el interlocutor. La propuesta tiene que sostener la venta sola.</li>
-      </ul>
+      <div class="prob-icon">🔧</div>
+      <div>
+        <div class="prob-title">Cliente de servicio</div>
+        <div class="prob-text">
+          Compra <strong>operación</strong> — que la máquina funcione.<br>
+          Caso real: Omar/ACEBRI — 30/70, $195 anticipo, gerencia (Carlos Briceño) el 15/09.<br>
+          Cierre: pasos chicos y reversibles, aprobación formal después.<br>
+          Patrón <strong>"Aprobación en fases"</strong> — el jefe no estuvo en el Discovery, delegó 100%.
+        </div>
+      </div>
     </div>
     <div class="problem-card">
-      <div class="alert-title">🤝 Socio proveedor</div>
-      <ul style="margin:6px 0 0 16px;padding:0;line-height:1.6;font-size:12.5px">
-        <li><strong>Compra:</strong> certeza — que STM ejecute sin supervisión, con resultados demostrables.</li>
-        <li><strong>Caso real:</strong> Way — cuestionó la ejecución de STM (3 leads de prueba sin convertir); pide evidencia, no promesas.</li>
-        <li><strong>Camino de cierre:</strong> brief formal de 4 bloques (problema de mercado → dolor futuro → solución → vehículo) para su junta directiva.</li>
-      </ul>
+      <div class="prob-icon">🤝</div>
+      <div>
+        <div class="prob-title">Socio proveedor</div>
+        <div class="prob-text">
+          Compra <strong>certeza</strong> — que STM ejecute sin supervisión.<br>
+          Caso real: Wei — cuestionó la ejecución de STM (3 leads sin convertir); pide evidencia.<br>
+          Cierre: brief formal de 4 bloques para su junta directiva.
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="slbl">Diagrama del ciclo — mismo lead, camino distinto</div>
+  <div class="mermaid-wrap">
+    <div class="zoom-ctl">
+      <button class="zoom-btn" onclick="zoomDiagram(this,-0.2)" aria-label="Alejar">−</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0)" aria-label="Restablecer">⟲</button>
+      <button class="zoom-btn" onclick="zoomDiagram(this,0.2)" aria-label="Acercar">+</button>
+    </div>
+    <div class="mermaid-scroll">
+    <pre class="mermaid">
+flowchart LR
+    L["📞 Mismo primer contacto"]:::start --> Q{"¿Quién decide<br/>y qué busca?"}:::decision
+
+    Q -->|"Compra operación"| S1["🔧 Cliente de servicio"]:::servicio
+    S1 --> S2["Diagnóstico bajo riesgo<br/>$195 anticipo"]:::servicio
+    S2 --> S3["Gerencia valida<br/>en fases"]:::servicio
+    S3 --> S4["Aprobación<br/>por fases"]:::servicio
+
+    Q -->|"Compra certeza"| P1["🤝 Socio proveedor"]:::partner
+    P1 --> P2["Brief 4 bloques<br/>para su junta"]:::partner
+    P2 --> P3["Reunión formal<br/>con directiva"]:::partner
+    P3 --> P4["Piloto o contrato<br/>de partnership"]:::partner
+
+    classDef start fill:#1A1A1A,stroke:#1A1A1A,stroke-width:2px,color:#ffffff
+    classDef decision fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef servicio fill:#F0EEFF,stroke:#7B61FF,stroke-width:2px,color:#1A1A1A
+    classDef partner fill:#EAF7F2,stroke:#3EB489,stroke-width:2px,color:#1A1A1A
+    </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
+  </div>
+  <div class="alert-box info">
+    <span class="alert-icon">💡</span>
+    <div>
+      <div class="alert-title">La pregunta que separa los dos caminos</div>
+      <div class="alert-text">En la primera conversación: "¿quién más tiene que aprobar esto?" Si es un jefe que <strong>delegó</strong> (no participó del Discovery) → Cliente de servicio. Si es una junta que <strong>pide evidencia</strong> de ejecución → Socio proveedor.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Diagnóstico rápido — 2 preguntas para saber con quién hablas</div>
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">① ¿Quién toma la decisión final?</div>
+      <div class="task-desc">Un solo dueño que no participó del Discovery → tier a confirmar por tamaño (A/B/C). Una junta o comité → probable Socio proveedor, sin importar el tier.</div>
+    </div>
+    <span class="bdg violet">Discovery</span>
+  </div>
+  <div class="task" style="border-color:rgba(123,97,255,.3)">
+    <div class="task-body">
+      <div class="task-title">② ¿Qué palabra usa para describir el problema?</div>
+      <div class="task-desc">"Se me rompió/necesito que funcione" → Cliente de servicio (compra operación). "No confío en que esto se repita/necesito ver resultados" → Socio proveedor (compra certeza).</div>
+    </div>
+    <span class="bdg violet">Discovery</span>
+  </div>
+  <div class="hist-money" style="margin-bottom:20px">💰 Con estas 2 respuestas alcanza para elegir el camino de cierre correcto — sin adivinar a mitad de la negociación.</div>
 
   <div class="slbl" style="display:flex;align-items:center;justify-content:space-between;gap:8px">
     <span>Los tres tiers — características completas</span>
@@ -1781,6 +1847,24 @@ window.zoomDiagram=function(btn,delta){
   svg.style.transformOrigin='top left';
   svg.style.transform='scale('+z+')';
 };
+
+document.querySelectorAll('.mermaid-scroll').forEach(el=>{
+  let isDown=false,startX=0,startY=0,scrollLeft=0,scrollTop=0;
+  el.style.cursor='grab';
+  el.addEventListener('mousedown',e=>{
+    isDown=true;el.style.cursor='grabbing';
+    startX=e.pageX;startY=e.pageY;
+    scrollLeft=el.scrollLeft;scrollTop=el.scrollTop;
+  });
+  window.addEventListener('mouseup',()=>{isDown=false;el.style.cursor='grab';});
+  el.addEventListener('mouseleave',()=>{isDown=false;el.style.cursor='grab';});
+  el.addEventListener('mousemove',e=>{
+    if(!isDown)return;
+    e.preventDefault();
+    el.scrollLeft=scrollLeft-(e.pageX-startX);
+    el.scrollTop=scrollTop-(e.pageY-startY);
+  });
+});
 </script>
 </body>
 </html>
