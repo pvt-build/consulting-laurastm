@@ -369,15 +369,52 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ PANEL ════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — Sesión 8/12 completada 07/09 · quedan 4 sesiones</div>
+  <div class="slbl">Progreso — Sesión 7/12 completada 07/09 · quedan 5 sesiones</div>
   <div class="chips-row">
     <div class="sch done">1</div>
     <div class="sch done">2</div><div class="sch done">3</div>
     <div class="sch done">4</div><div class="sch done">5</div>
     <div class="sch done">6</div><div class="sch done">7</div>
-    <div class="sch done">8</div><div class="sch now">9</div>
+    <div class="sch now">8</div><div class="sch todo">9</div>
     <div class="sch todo">10</div><div class="sch todo">11</div>
     <div class="sch todo">12</div>
+  </div>
+
+  <div class="slbl">Dónde está el negocio hoy vs. dónde tiene que estar</div>
+  <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:20px">
+    <svg viewBox="0 0 440 400" style="width:100%;max-width:440px;display:block;margin:0 auto" role="img" aria-label="Radar de 6 áreas comerciales: hoy vs meta">
+      <polygon points="220,70 341,140 341,280 220,350 99,280 99,140" fill="none" stroke="var(--border)" stroke-width="1"/>
+      <polygon points="220,140 281,175 281,245 220,280 159,245 159,175" fill="none" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="220" y2="70" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="341" y2="140" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="341" y2="280" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="220" y2="350" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="99" y2="280" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="99" y2="140" stroke="var(--border)" stroke-width="1"/>
+      <polygon points="220,50 317,154 341,280 220,350 123,266 123,154" fill="var(--teal)" fill-opacity="0.12" stroke="var(--teal)" stroke-width="2"/>
+      <polygon points="220,182 244,196 293,252 220,322 123,266 172,182" fill="var(--red)" fill-opacity="0.22" stroke="var(--red)" stroke-width="2"/>
+      <text x="220" y="42" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Prospección</text>
+      <text x="352" y="130" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Marketing /</text>
+      <text x="352" y="144" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Demanda</text>
+      <text x="352" y="284" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Setting /</text>
+      <text x="352" y="298" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Calificación</text>
+      <text x="220" y="372" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Cierre / Ventas</text>
+      <text x="88" y="284" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Entrega /</text>
+      <text x="88" y="298" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Gestión</text>
+      <text x="88" y="130" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Sistema</text>
+      <text x="88" y="144" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">(Notion/CRM)</text>
+    </svg>
+    <div style="display:flex;justify-content:center;gap:20px;margin-top:8px;font-size:12px;color:var(--grey)">
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--red);margin-right:5px"></span>Hoy</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--teal);margin-right:5px"></span>Meta</span>
+    </div>
+  </div>
+  <div class="alert-box red-bg">
+    <span class="alert-icon">🎯</span>
+    <div>
+      <div class="alert-title">Están enfrascados en la venta — no en buscarla</div>
+      <div class="alert-text">Todo el tiempo va a cerrar lo que llega. Falta prospectar y calificar activamente. Meta: <strong>2-3 oportunidades comerciales nuevas por semana</strong>, generadas por ellos, no recibidas.</div>
+    </div>
   </div>
 
   <div class="slbl">Foco de la semana — 3 frentes, no 10</div>
@@ -811,8 +848,8 @@ flowchart LR
 
   <details class="hist-card done" open>
     <summary class="hist-hd">
-      <div class="hist-title">Sesión 7 — El miedo, no el precio, mueve a Omar</div>
-      <span class="bdg teal">✓ 07/09 · 60 min</span>
+      <div class="hist-title">Sesión 7 (parte 1) — El miedo, no el precio, mueve a Omar</div>
+      <span class="bdg teal">✓ 07/09 · sesión doble, 2h</span>
     </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
@@ -828,20 +865,20 @@ flowchart LR
 
   <details class="hist-card done">
     <summary class="hist-hd">
-      <div class="hist-title">Sesión 8 — Extensión con Laura, pitch de Wei</div>
-      <span class="bdg teal">✓ 07/09 · 60 min</span>
+      <div class="hist-title">Sesión 7 (parte 2) — Pitch de Wei con Laura</div>
+      <span class="bdg teal">✓ 07/09 · misma sesión, mismo día</span>
     </summary>
-    <div class="hist-text">Extensión el mismo día, foco en el pitch comercial de Wei para su junta directiva. Sin grabación disponible — contenido a la espera de que Patricio confirme el detalle trabajado.</div>
+    <div class="hist-text">Segundo bloque, mismo día, foco en el pitch comercial de Wei para su junta directiva. Sin grabación disponible — contenido a la espera de que Patricio confirme el detalle trabajado.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Avatar · Socio proveedor</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: mismo brief de 4 bloques para Wei, ahora trabajado directamente con Laura.</div>
   </details>
 
   <details class="hist-card now" open>
     <summary class="hist-hd">
-      <div class="hist-title">Sesión 9 — próxima</div>
+      <div class="hist-title">Sesión 8 — próxima</div>
       <span class="bdg amber">→ Fecha por confirmar (cadencia sábados)</span>
     </summary>
-    <div class="hist-text">Quedan 4 sesiones — el cuello real ya no es claridad, es <strong>generar demanda</strong>: hoy dependen 100% de leads que les llegan solos, sin marketing, prospección ni ads propios.</div>
+    <div class="hist-text">Quedan 5 sesiones — el cuello real ya no es claridad, es <strong>generar demanda</strong>: hoy dependen 100% de leads que les llegan solos, sin marketing, prospección ni ads propios.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg red">⚠ Adquisición sigue 100% manual</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: pasar de recibir leads a generarlos — sin esto, el sistema de cierre que ya tienen no tiene con qué alimentarse.</div>
   </details>
@@ -856,7 +893,7 @@ flowchart LR
   </div>
 
   <details class="wk-block" open>
-    <summary class="wk-hd">📅 SEMANA ACTUAL — SESIONES 7-8 · desde 07/09 <span class="bdg amber">en curso</span></summary>
+    <summary class="wk-hd">📅 SEMANA ACTUAL — SESIÓN 7 · desde 07/09 <span class="bdg amber">en curso</span></summary>
     <div class="wk-body">
       <div class="etp-hd">🚀 Generar demanda — el cuello real ahora</div>
 
@@ -874,7 +911,7 @@ flowchart LR
         <div class="task-check"></div>
         <div class="task-body">
           <div class="task-title">Jairo: contactar a Omar/ACEBRI ~16/09 apuntando al dolor personal</div>
-          <div class="task-desc">Sesión 7. Enfocar en el miedo real (perder el empleo), no en precio ni en ROI.</div>
+          <div class="task-desc">Sesión 7 (parte 1). Enfocar en el miedo real (perder el empleo), no en precio ni en ROI.</div>
         </div>
         <span class="bdg amber">P1 · 16/09</span>
       </div>
@@ -883,7 +920,7 @@ flowchart LR
         <div class="task-check"></div>
         <div class="task-body">
           <div class="task-title">Laura: seguir afinando el pitch de Wei para su junta directiva</div>
-          <div class="task-desc">Sesión 8. Mismo brief de 4 bloques, ahora con más detalle trabajado.</div>
+          <div class="task-desc">Sesión 7 (parte 2). Mismo brief de 4 bloques, ahora con más detalle trabajado.</div>
         </div>
         <span class="bdg grey">Cliente</span>
       </div>
