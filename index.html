@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>STM · Panel Consultoría</title>
+<title>Founder OS by Private Build · STM</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
@@ -333,7 +333,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 <!-- ════════ TOPBAR ════════ -->
 <header class="topbar">
-  <div class="brand"><div class="brand-dot"></div>STM · Laura Sandoval</div>
+  <div class="brand"><div class="brand-dot"></div>Founder OS by Private Build · STM</div>
   <nav class="tabs-desktop">
     <div class="tab on" onclick="sw('overview',this)">📊 Panel</div>
     <div class="tab" onclick="sw('roadmap',this)">🗺️ Roadmap</div>
@@ -369,151 +369,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ PANEL ════════ -->
 <div class="page on" id="pg-overview">
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
-    <div style="background:var(--dark);border-radius:14px;padding:18px 20px;color:#fff">
-      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:4px">Próxima sesión</div>
-      <div style="font-size:26px;font-weight:700;line-height:1.1">Sesión 9 — hoy</div>
-      <div style="font-size:12.5px;color:rgba(255,255,255,.7);margin-top:4px">22/09 · ~7pm COL</div>
-    </div>
-    <div style="background:var(--gold-lt);border:1px solid var(--gold);border-radius:14px;padding:18px 20px">
-      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:4px">Sesiones restantes</div>
-      <div style="font-size:26px;font-weight:700;line-height:1.1;color:var(--ink)">4 — Sesiones 9, 10, 11, 12</div>
-      <div style="font-size:12.5px;color:var(--gold-dk);margin-top:4px">8/12 completadas · ~9h33min de consultoría</div>
-    </div>
-  </div>
-
-  <div class="slbl">Progreso — 8 sesiones completadas (S1-S8) · quedan 9-10-11-12</div>
   <div class="chips-row">
     <div class="sch done">1</div>
     <div class="sch done">2</div><div class="sch done">3</div>
     <div class="sch done">4</div><div class="sch done">5</div>
     <div class="sch done">6</div><div class="sch done">7</div>
-    <div class="sch done">8</div><div class="sch now">9</div>
-    <div class="sch todo">10</div><div class="sch todo">11</div>
+    <div class="sch done">8</div><div class="sch done">9</div>
+    <div class="sch now">10</div><div class="sch todo">11</div>
     <div class="sch todo">12</div>
   </div>
-  <div class="alert-box info" style="margin-top:-6px">
-    <span class="alert-icon">📊</span>
-    <div>
-      <div class="alert-title">Corrección 23/09 (verificado con Fathom, no solo WhatsApp)</div>
-      <div class="alert-text">Iban 8 sesiones, no 10 (dobles del mismo día cuentan como 1 — S2 y S7 lo fueron; S8 del 14/09 fue 1 sola reunión de 60min, no doble como se registró ayer). Total real 9h33min (573min: 513 S1-S7 + 60 S8).</div>
-    </div>
-  </div>
 
-  <div class="slbl">Dónde está el negocio hoy vs. dónde tiene que estar</div>
-  <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:20px">
-    <svg viewBox="0 0 440 400" style="width:100%;max-width:440px;display:block;margin:0 auto" role="img" aria-label="Radar de 6 áreas comerciales: hoy vs meta">
-      <polygon points="220,70 341,140 341,280 220,350 99,280 99,140" fill="none" stroke="var(--border)" stroke-width="1"/>
-      <polygon points="220,140 281,175 281,245 220,280 159,245 159,175" fill="none" stroke="var(--border)" stroke-width="1"/>
-      <line x1="220" y1="210" x2="220" y2="70" stroke="var(--border)" stroke-width="1"/>
-      <line x1="220" y1="210" x2="341" y2="140" stroke="var(--border)" stroke-width="1"/>
-      <line x1="220" y1="210" x2="341" y2="280" stroke="var(--border)" stroke-width="1"/>
-      <line x1="220" y1="210" x2="220" y2="350" stroke="var(--border)" stroke-width="1"/>
-      <line x1="220" y1="210" x2="99" y2="280" stroke="var(--border)" stroke-width="1"/>
-      <line x1="220" y1="210" x2="99" y2="140" stroke="var(--border)" stroke-width="1"/>
-      <polygon points="220,50 317,154 341,280 220,350 123,266 123,154" fill="var(--teal)" fill-opacity="0.12" stroke="var(--teal)" stroke-width="2"/>
-      <polygon points="220,182 244,196 293,252 220,322 123,266 172,182" fill="var(--red)" fill-opacity="0.22" stroke="var(--red)" stroke-width="2"/>
-      <text x="220" y="42" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Prospección</text>
-      <text x="352" y="130" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Marketing /</text>
-      <text x="352" y="144" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Demanda</text>
-      <text x="352" y="284" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Setting /</text>
-      <text x="352" y="298" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Calificación</text>
-      <text x="220" y="372" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Cierre / Ventas</text>
-      <text x="88" y="284" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Entrega /</text>
-      <text x="88" y="298" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Gestión</text>
-      <text x="88" y="130" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Sistema</text>
-      <text x="88" y="144" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">(Notion/CRM)</text>
-    </svg>
-    <div style="display:flex;justify-content:center;gap:20px;margin-top:8px;font-size:12px;color:var(--grey)">
-      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--red);margin-right:5px"></span>Hoy</span>
-      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--teal);margin-right:5px"></span>Meta</span>
-    </div>
-  </div>
-  <div class="alert-box red-bg">
-    <span class="alert-icon">🎯</span>
-    <div>
-      <div class="alert-title">Están enfrascados en la venta — no en buscarla</div>
-      <div class="alert-text">Todo el tiempo va a cerrar lo que llega. Falta prospectar y calificar activamente. Meta: <strong>2-3 oportunidades comerciales nuevas por semana</strong>, generadas por ellos, no recibidas.</div>
-    </div>
-  </div>
-
-  <div class="slbl">Foco de la semana — 3 frentes, no 10</div>
-
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">① Enfrentar la semana: 2 tipos de comprador</div>
-      <div class="task-desc"><strong>Cliente de servicio</strong> (Omar) vs <strong>Socio proveedor</strong> (Wei) — no se les habla igual.</div>
-      <div class="task-goal">→ Ver Avatar → nueva sección.</div>
-    </div>
-    <span class="bdg red">Frente 1</span>
-  </div>
-
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">② Acercarse al cierre</div>
-      <div class="task-desc">Omar → 30/70, valida gerencia (Carlos Briceño) el <strong>15/09</strong>.</div>
-      <div class="task-goal">→ Wei se juega en el <strong>brief para su junta</strong>, antes del 01/09.</div>
-    </div>
-    <span class="bdg red">Frente 2</span>
-  </div>
-
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">③ Romper el miedo</div>
-      <div class="task-desc">Wei cuestionó la ejecución de STM — el patrón de analizar en vez de moverse.</div>
-      <div class="task-goal">→ Patricio a Jairo: <em>"hablar en presente y en acción, no en futuro..."</em></div>
-    </div>
-    <span class="bdg red">Frente 3</span>
-  </div>
-
-  <div class="slbl">Esta semana en 1 vista — trabajen desde acá, sin quedarse pegados</div>
-  <div class="bn-grid">
-    <div class="bn-card i">
-      <div class="alert-title" style="font-size:12.5px">📦 Outputs de la sesión</div>
-      <ul style="margin:6px 0 0 14px;padding:0;font-size:12px;line-height:1.55">
-        <li>Segmentación <strong>Cliente de servicio vs Socio proveedor</strong> — queda en Avatar</li>
-        <li>Brief de 4 bloques para juntas directivas (reusable con cualquier socio)</li>
-        <li>Reencuadre de lenguaje founder: "haciendo", no "tratando"</li>
-      </ul>
-    </div>
-    <div class="bn-card i">
-      <div class="alert-title" style="font-size:12.5px">🏆 Microwins — avances de proceso (ningún cliente cerrado todavía)</div>
-      <ul style="margin:6px 0 0 14px;padding:0;font-size:12px;line-height:1.55">
-        <li>Marco de preguntas cerradas (A/B/C) ya en uso en discovery</li>
-        <li>Causa real de la venta perdida con Álvarez quedó identificada — no fue "el precio" (según relato del cliente)</li>
-        <li>Omar acordó camino de diagnóstico de bajo riesgo ($195) — sin decisión de dirección todavía</li>
-      </ul>
-    </div>
-    <div class="bn-card w">
-      <div class="alert-title" style="font-size:12.5px">✅ Compromisos de la semana</div>
-      <ul style="margin:6px 0 0 14px;padding:0;font-size:12px;line-height:1.55">
-        <li>Laura: brief para junta de Wei — <strong>vence 01/09</strong></li>
-        <li>Jairo y Laura: lenguaje proactivo desde ya</li>
-        <li>Ambos: seguimiento a Omar/ACEBRI — vence 15/09</li>
-      </ul>
-      <div style="margin-top:6px"><span class="bdg violet bdg-link" onclick="sw('roadmap')" style="font-size:10px">🔗 Ver detalle completo en Roadmap</span></div>
-    </div>
-  </div>
-  <div class="alert-box info" style="margin-top:-4px">
-    <span class="alert-icon">📚</span>
-    <div>
-      <div class="alert-title">¿Necesitan más profundidad en algún tema?</div>
-      <div class="alert-text">Foco y avance acá, no lectura larga. Más detalle (framework, plantillas, <strong>videos por módulo</strong>) → Notion, pestaña Backend & Recursos. Duda puntual → WhatsApp directo.</div>
-    </div>
-  </div>
-
-  <div class="alert-box info" style="margin-top:0">
-    <span class="alert-icon">🗺️</span>
-    <div>
-      <div class="alert-title">Los diagramas de negocio ahora viven en Flywheel</div>
-      <div class="alert-text">Sistema Comercial/Contenido y el diagrama de mensajes se movieron ahí — es donde tienen contexto. Este panel se queda con el estado de hoy.</div>
-    </div>
-  </div>
-
-  <div class="slbl">Métricas clave · Diagnóstico julio 2026</div>
+  <div class="slbl" style="margin-top:0">Métricas clave · Diagnóstico julio 2026</div>
   <div class="ov-grid">
     <div class="ov-card">
       <div class="ov-lbl">Comisión por máquina</div>
@@ -547,9 +413,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="ov-card">
       <div class="ov-lbl">Equipo comercial</div>
-      <div class="ov-num red">1</div>
-      <div class="ov-sub">Laura — cuello de botella</div>
-      <div class="ov-trend down"><span class="ov-trend-icon">▼</span> Muy por debajo de lo necesario para escalar</div>
+      <div class="ov-num amber">2</div>
+      <div class="ov-sub">Jairo + Laura — roles ya divididos</div>
+      <div class="ov-trend up"><span class="ov-trend-icon">●</span> Dejó de ser 1 sola persona — ver diagrama de roles abajo</div>
     </div>
     <div class="ov-card">
       <div class="ov-lbl">Mercados activos</div>
@@ -565,104 +431,230 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Modelo de negocio · Intermediario de maquinaria industrial en LATAM</div>
-  <div class="ch-split">
-    <div class="ch-card canal-a">
-      <div class="ch-head">⚠️ Modo actual: todo depende de Laura <span class="bdg red">⚠ No documentado</span></div>
-      <div class="ch-row"><span class="ch-k">Ciclo de venta</span><span class="ch-v red">1–2a</span></div>
-      <div class="ch-row"><span class="ch-k">Equipo comercial</span><span class="ch-v red">1 (Laura)</span></div>
-      <div class="ch-row"><span class="ch-k">Al cerrar un trato</span><span class="ch-v">Nadie más sabe seguir el lead-gen</span></div>
-      <div class="ch-row"><span class="ch-k">Consecuencia</span><span class="ch-v red">Pipeline vacío → sin adquisición 2027</span></div>
-      <div class="ch-row"><span class="ch-k">Palanca</span><span class="ch-v amber">Documentar para que sea repetible</span></div>
+  <div class="slbl">Dónde está el negocio hoy vs. dónde tiene que estar</div>
+  <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:20px">
+    <svg viewBox="0 0 440 400" style="width:100%;max-width:440px;display:block;margin:0 auto" role="img" aria-label="Radar de 6 áreas comerciales: hoy vs meta">
+      <polygon points="220,70 341,140 341,280 220,350 99,280 99,140" fill="none" stroke="var(--border)" stroke-width="1"/>
+      <polygon points="220,140 281,175 281,245 220,280 159,245 159,175" fill="none" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="220" y2="70" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="341" y2="140" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="341" y2="280" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="220" y2="350" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="99" y2="280" stroke="var(--border)" stroke-width="1"/>
+      <line x1="220" y1="210" x2="99" y2="140" stroke="var(--border)" stroke-width="1"/>
+      <polygon points="220,50 317,154 341,280 220,350 123,266 123,154" fill="var(--teal)" fill-opacity="0.12" stroke="var(--teal)" stroke-width="2"/>
+      <polygon points="220,182 244,196 293,252 220,322 123,266 172,182" fill="var(--red)" fill-opacity="0.22" stroke="var(--red)" stroke-width="2"/>
+      <text x="220" y="42" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Prospección</text>
+      <text x="352" y="130" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Marketing /</text>
+      <text x="352" y="144" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Demanda</text>
+      <text x="352" y="284" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Setting /</text>
+      <text x="352" y="298" text-anchor="start" font-size="12.5" font-weight="600" fill="var(--ink)">Calificación</text>
+      <text x="220" y="372" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Cierre / Ventas</text>
+      <text x="88" y="284" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Entrega /</text>
+      <text x="88" y="298" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Gestión</text>
+      <text x="88" y="130" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">Sistema</text>
+      <text x="88" y="144" text-anchor="end" font-size="12.5" font-weight="600" fill="var(--ink)">(Notion/CRM)</text>
+    </svg>
+    <div style="display:flex;justify-content:center;gap:20px;margin-top:8px;font-size:12px;color:var(--grey)">
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--red);margin-right:5px"></span>Hoy</span>
+      <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--teal);margin-right:5px"></span>Meta (verde = objetivo)</span>
     </div>
-    <div class="ch-card canal-b">
-      <div class="ch-head">🌐 Canales de captación <span class="bdg teal">Activos sin sistema</span></div>
-      <div class="ch-row"><span class="ch-k">LinkedIn outbound</span><span class="ch-v green">Activo · Manual</span></div>
-      <div class="ch-row"><span class="ch-k">Secuencias de email</span><span class="ch-v green">Activo · Manual (Jairo, padre)</span></div>
-      <div class="ch-row"><span class="ch-k">Web / IG</span><span class="ch-v amber">Pasivo</span></div>
-      <div class="ch-row"><span class="ch-k">Criterios de calificación</span><span class="ch-v red">No documentados</span></div>
-      <div class="ch-row stack"><span class="ch-k">Brecha</span><span class="ch-v red">Cliente sin avatar bajado (dolores, promesa) — framework ICP de Private Build ya listo</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;padding-top:14px;border-top:0.5px dashed var(--border)">
+      <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--ink)">2<span style="font-size:12px;color:var(--grey)">/10</span></div><div style="font-size:10.5px;color:var(--grey)">Prospección</div></div>
+      <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--ink)">1<span style="font-size:12px;color:var(--grey)">/10</span></div><div style="font-size:10.5px;color:var(--grey)">Marketing/Demanda</div></div>
+      <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--ink)">8<span style="font-size:12px;color:var(--grey)">/10</span></div><div style="font-size:10.5px;color:var(--grey)">Setting/Calificación</div></div>
+      <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--ink)">7<span style="font-size:12px;color:var(--grey)">/10</span></div><div style="font-size:10.5px;color:var(--grey)">Cierre/Ventas</div></div>
+      <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--ink)">6<span style="font-size:12px;color:var(--grey)">/10</span></div><div style="font-size:10.5px;color:var(--grey)">Entrega/Gestión</div></div>
+      <div style="text-align:center"><div style="font-size:18px;font-weight:700;color:var(--ink)">3<span style="font-size:12px;color:var(--grey)">/10</span></div><div style="font-size:10.5px;color:var(--grey)">Sistema (Notion/CRM)</div></div>
     </div>
   </div>
 
-  <div class="slbl">Principal problema</div>
-  <div class="problem-card">
-    <div class="prob-icon">⚡</div>
+  <div class="slbl">Embudo de las 8 áreas del negocio — Foundations a Success</div>
+  <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px 16px;margin-bottom:20px">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+      <div style="width:100%;max-width:640px;background:var(--teal);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>1 · Foundations</span><span>10/10</span></div>
+      <div style="width:92%;max-width:590px;background:var(--gold);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>2 · Oferta — 3 ofertas abiertas, sin decidir cuál avanza</span><span>5/10</span></div>
+      <div style="width:84%;max-width:540px;background:var(--teal);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>3 · Avatar — 3 tiers A/B/C declarados</span><span>8/10</span></div>
+      <div style="width:76%;max-width:490px;background:var(--red);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>4 · Contenido — 0 piezas, foco 100% esta semana</span><span>0/10</span></div>
+      <div style="width:68%;max-width:440px;background:var(--gold);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>5 · Captura — sitio recién abriendo, setting sí fuerte</span><span>3/10</span></div>
+      <div style="width:60%;max-width:390px;background:var(--teal);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>6 · Ventas — Closing con manejo de objeción</span><span>7/10</span></div>
+      <div style="width:52%;max-width:340px;background:var(--gold);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>7 · Entrega — Jairo/Laura ya en paralelo</span><span>6/10</span></div>
+      <div style="width:44%;max-width:290px;background:var(--red);color:#fff;border-radius:8px;padding:9px 16px;display:flex;justify-content:space-between;font-size:12.5px;font-weight:600"><span>8 · Success</span><span>0/10</span></div>
+    </div>
+    <div style="text-align:center;font-size:11px;color:var(--grey);margin-top:10px">Detalle completo de cada área → pestaña Flywheel</div>
+  </div>
+  <div class="alert-box red-bg">
+    <span class="alert-icon">🎯</span>
     <div>
-      <div class="prob-title">Si Laura no está, nadie sabe cómo seguir</div>
-      <div class="prob-text">El proceso vive solo en la cabeza de Laura, sin documentar. Por eso el lead-gen se frena cuando ella gestiona un proyecto — <strong>nadie más sabe ejecutarlo</strong>.</div>
-      <div class="flow-diagram">
-        <div class="flow-node">Laura vende</div>
-        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
-        <div class="flow-node">Cierra el trato</div>
-        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
-        <div class="flow-node">Gestiona el proyecto</div>
-        <div class="flow-arrow cut"><span class="ar-h">🔒</span><span class="ar-v">🔒</span></div>
-        <div class="flow-node bad">Nadie más sabe ejecutarlo</div>
-        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
-        <div class="flow-node bad">Pipeline vacío</div>
-        <div class="flow-arrow"><span class="ar-h">→</span><span class="ar-v">↓</span></div>
-        <div class="flow-node bad">Sin adquisición 2027–28</div>
-      </div>
-      <div style="font-size:10.5px;color:rgba(255,255,255,.38);margin-top:10px;text-align:center">El corte no es por falta de tiempo — es porque nada de esto está escrito en ningún lado.</div>
+      <div class="alert-title">Están enfrascados en la venta — no en buscarla</div>
+      <div class="alert-text">Todo el tiempo va a cerrar lo que llega. Falta prospectar y calificar activamente. Meta: <strong>2-3 oportunidades comerciales nuevas por semana</strong>, generadas por ellos, no recibidas.</div>
     </div>
   </div>
 
-  <div class="slbl">Cuellos de botella detectados</div>
+  <div class="slbl" style="display:flex;align-items:center;gap:6px">Foco de la semana — 3 frentes, no 10 <span class="bdg violet" style="font-size:9px">🧩 1 · Foundations (coaching founder)</span></div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">① Enfrentar la semana como pro</div>
+      <div class="task-desc">Ambos ya salen sólidos comercialmente (Discovery, objeciones, cierre) — la tarea ahora es ejecución, no seguir puliendo.</div>
+      <div class="task-goal">→ Contenido: publicar esta semana, ajustar con datos reales, no en la cabeza.</div>
+    </div>
+    <span class="bdg red">Frente 1</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">② Acercarse al cierre</div>
+      <div class="task-desc">JWELL (Wei Deng): infografía ya reencuadrada, falta sacar "costos" del correo antes de enviar.</div>
+      <div class="task-goal">→ Definir el "micro win" (piloto pagado) en el seguimiento de 20 min.</div>
+    </div>
+    <span class="bdg red">Frente 2</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">③ Romper el miedo — ahora es el miedo a publicar</div>
+      <div class="task-desc">El mismo patrón de sobre-analizar que frenaba el pitch de JWELL hoy frena Contenido. El perfeccionismo no es gratis: sin publicar no hay nada que ajustar.</div>
+      <div class="task-goal">→ Salir a publicar esta semana, aunque no esté perfecto.</div>
+    </div>
+    <span class="bdg red">Frente 3</span>
+  </div>
+
+  <div class="slbl">Esta semana en 1 vista — Sesión 9 (23/09), 2 bloques</div>
   <div class="bn-grid">
-    <div class="bn-card c">
-      <div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">No existe un sistema comercial</div></div>
-      <div class="bn-text">El proceso no está documentado. Si Laura no está, nadie sabe ejecutarlo — ese es el problema real.</div>
-      <div class="bn-imp c">→ Documentar y estructurar antes de separar roles</div>
-    </div>
-    <div class="bn-card c">
-      <div class="bn-head"><div class="bn-n c">2</div><div class="bn-title">Sin criterio de calificación documentado</div></div>
-      <div class="bn-text">Existe un avatar en papel, pero disperso y nunca aplicado como filtro. Freelancers pasados igual trajeron leads irrelevantes.</div>
-      <div class="bn-imp c">→ Codificar el criterio de Laura en un filtro escrito</div>
-    </div>
-    <div class="bn-card w">
-      <div class="bn-head"><div class="bn-n w">3</div><div class="bn-title">Presupuesto: foundations primero, no automatización</div></div>
-      <div class="bn-text">La agencia evaluada quedó fuera de presupuesto. Lo disponible va a Foundations, no a automatizar todavía.</div>
-      <div class="bn-imp w">→ Invertir en estructura primero, automatizar después</div>
-    </div>
-    <div class="bn-card w">
-      <div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">LARIA no puede construirse todavía</div></div>
-      <div class="bn-text">Sin proceso documentado no hay qué cargarle a la IA. Construirla antes que la infraestructura nunca funciona.</div>
-      <div class="bn-imp w">→ Documentar el sistema primero. LARIA se alimenta de eso, no al revés</div>
+    <div class="bn-card i">
+      <div class="alert-title" style="font-size:12.5px">📦 Outputs de la sesión</div>
+      <ul style="margin:6px 0 0 14px;padding:0;font-size:12px;line-height:1.55">
+        <li>Jairo y Laura confirmados <strong>sólidos a nivel comercial</strong> — Discovery, objeciones, cierre ya internalizados</li>
+        <li>Único gap para escalar: <strong>Contenido</strong> — no falta claridad, falta ejecutar</li>
+        <li>Detalle exacto de la call a la espera del recap de Fathom (no se reconstruye de memoria)</li>
+      </ul>
     </div>
     <div class="bn-card i">
-      <div class="bn-head"><div class="bn-n i">5</div><div class="bn-title">Expansión sin estructura que la sostenga</div></div>
-      <div class="bn-text">Colombia y Bolivia activos; Perú y México sin datos. Más mercados con la misma estructura multiplica el caos.</div>
-      <div class="bn-imp i">→ La estructura tiene que preceder a la expansión</div>
+      <div class="alert-title" style="font-size:12.5px">🏆 Microwins</div>
+      <ul style="margin:6px 0 0 14px;padding:0;font-size:12px;line-height:1.55">
+        <li>Infografía de JWELL ya reencuadrada a reputación (no "recuperar clientes")</li>
+        <li>Roleplay de cierre y Sales Closer IA ya en uso activo — "impresionados" con el entrenamiento</li>
+        <li>Jairo y Laura llevan avatares distintos en paralelo — dejó de ser 1 sola persona haciéndolo todo</li>
+      </ul>
+    </div>
+    <div class="bn-card w">
+      <div class="alert-title" style="font-size:12.5px">✅ Compromisos de la semana</div>
+      <ul style="margin:6px 0 0 14px;padding:0;font-size:12px;line-height:1.55">
+        <li>Laura: sacar "costos" del correo a JWELL antes de enviar</li>
+        <li>Ambos: publicar Contenido esta semana — sin perfeccionismo</li>
+        <li>Ambos: 20 min de seguimiento para definir el micro win con JWELL</li>
+      </ul>
+      <div style="margin-top:6px"><span class="bdg violet bdg-link" onclick="sw('roadmap')" style="font-size:10px">🔗 Ver histórico completo en Roadmap</span></div>
     </div>
   </div>
 
-  <div class="slbl">Stack actual</div>
+  <div class="slbl">Modelo de negocio · quién hace qué hoy</div>
+  <div class="mermaid-wrap">
+    <div class="mermaid-scroll">
+    <pre class="mermaid">
+flowchart LR
+    subgraph J["🔧 Jairo — estratega técnico"]
+    direction TB
+    J1["Lleva Omar/ACEBRI<br/>y leads técnicos"] --> J2["Discovery técnico<br/>+ diagnóstico"]
+    J2 --> J3["Sales Closer IA<br/>para practicar"]
+    end
+    subgraph L["💼 Laura — comercial/junta"]
+    direction TB
+    L1["Lleva JWELL/Wei Deng<br/>y leads de junta"] --> L2["Brief ejecutivo<br/>+ venta consultiva"]
+    L2 --> L3["Roleplay de cierre<br/>con su papá"]
+    end
+    J3 --> N["🗂️ Notion/CRM<br/>por construir"]:::lever
+    L3 --> N
+    N --> G["📣 Contenido<br/>🔴 en cero"]:::bad
 
-  <div class="stack-group">
-    <div class="stack-group-lbl">Captación</div>
-    <div class="stack-wrap">
-      <div class="sp"><div class="sd on"></div>LinkedIn outbound<span class="bdg grey" style="margin-left:3px">manual</span></div>
-      <div class="sp"><div class="sd on"></div>Secuencias de email (Jairo, padre)<span class="bdg grey" style="margin-left:3px">manual</span></div>
+    classDef lever fill:#FDF4E3,stroke:#E8A237,stroke-width:2px,color:#1A1A1A
+    classDef bad fill:#FDF0ED,stroke:#E2503A,stroke-width:2px,color:#1A1A1A
+    </pre>
+    </div>
+    <span class="zoom-hint">arrastra para mover</span>
+  </div>
+  <div class="alert-box info">
+    <span class="alert-icon">✅</span>
+    <div>
+      <div class="alert-title">Ya no es "si Laura no está, nadie sigue"</div>
+      <div class="alert-text">Hoy Jairo y Laura llevan avatares distintos en paralelo (Cliente de servicio / Socio proveedor) — el riesgo real ya no es depender de una sola persona, es que ninguno de los dos está generando contenido ni prospección propia.</div>
     </div>
   </div>
 
-  <div class="stack-group">
-    <div class="stack-group-lbl">Backend / CRM</div>
-    <div class="stack-wrap">
-      <div class="sp"><div class="sd off"></div>Notion — CRM y pipeline<span class="bdg grey" style="margin-left:3px">por construir, por máquina</span></div>
-      <div class="sp"><div class="sd off"></div>Criterios de calificación<span class="bdg grey" style="margin-left:3px">por construir</span></div>
-      <div class="sp"><div class="sd off"></div>Clay — enriquecimiento de leads<span class="bdg grey" style="margin-left:3px">por construir, Mes 2</span></div>
-      <div class="sp"><div class="sd off"></div>Dashboard de pipeline<span class="bdg grey" style="margin-left:3px">por construir</span></div>
+  <div class="slbl">Cuellos de botella detectados — espejo del embudo de 8 áreas</div>
+  <div class="bn-grid">
+    <div class="bn-card c">
+      <div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">Contenido en cero (0/10)</div></div>
+      <div class="bn-text">Ni piezas propias, ni outbound frío, ni ads. Es la única de las 8 áreas sin tocar en 9 sesiones.</div>
+      <div class="bn-imp c">→ Publicar esta semana, ajustar con datos reales</div>
+    </div>
+    <div class="bn-card c">
+      <div class="bn-head"><div class="bn-n c">2</div><div class="bn-title">Oferta indecisa (5/10)</div></div>
+      <div class="bn-text">3 ofertas abiertas en paralelo (servicio directo/Omar, broker/JWELL, subcontratado/Jairo) sin decidir cuál avanza estos 3 meses.</div>
+      <div class="bn-imp c">→ Elegir 1 vehículo antes de seguir refinando mensaje</div>
+    </div>
+    <div class="bn-card w">
+      <div class="bn-head"><div class="bn-n w">3</div><div class="bn-title">Captura débil (3/10)</div></div>
+      <div class="bn-text">Sitio recién abriendo, sin canal maduro de generación propia — aunque el setting/calificación de lo que sí llega está fuerte.</div>
+      <div class="bn-imp w">→ 1 canal de prospección propia, no esperar a que el sitio madure solo</div>
+    </div>
+    <div class="bn-card w">
+      <div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">Sin Notion/CRM propio</div></div>
+      <div class="bn-text">Todo vive repartido entre WhatsApp, Excel y la cabeza de cada uno — sin un solo lugar consultable.</div>
+      <div class="bn-imp w">→ Documentar primero, automatizar después</div>
+    </div>
+    <div class="bn-card i">
+      <div class="bn-head"><div class="bn-n i">5</div><div class="bn-title">Success en cero (0/10)</div></div>
+      <div class="bn-text">$0 de retorno a la fecha — JWELL y Omar siguen abiertos desde el día 1, ninguno cerrado todavía.</div>
+      <div class="bn-imp i">→ El micro win con JWELL es la prioridad de cierre más cercana</div>
     </div>
   </div>
 
-  <div class="stack-group">
-    <div class="stack-group-lbl">IA</div>
-    <div class="stack-wrap">
-      <div class="sp"><div class="sd on"></div>WhatsApp Business con IA (Laura)<span class="bdg grey" style="margin-left:3px">activo, ES/EN</span></div>
-      <div class="sp"><div class="sd warn"></div>Claude + Notion (documentar)<span class="bdg amber" style="margin-left:3px">Fase 1</span></div>
-      <div class="sp"><div class="sd off"></div>LARIA (IA propia)<span class="bdg grey" style="margin-left:3px">en pausa — falta base documentada</span></div>
+  <div class="slbl">Stack actual — dónde están vs. dónde deberían estar</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-bottom:20px">
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center">
+      <div style="font-size:28px">💼</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">LinkedIn</div>
+      <span class="bdg teal" style="font-size:9.5px">Activo · manual</span>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center">
+      <div style="font-size:28px">📧</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">Email (Jairo)</div>
+      <span class="bdg teal" style="font-size:9.5px">Activo · manual</span>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center;opacity:.6">
+      <div style="font-size:28px">🗂️</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">Notion CRM</div>
+      <span class="bdg grey" style="font-size:9.5px">Por construir</span>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center;opacity:.6">
+      <div style="font-size:28px">🔗</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">Clay</div>
+      <span class="bdg grey" style="font-size:9.5px">Mes 2</span>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center">
+      <div style="font-size:28px">💬</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">WhatsApp + IA</div>
+      <span class="bdg teal" style="font-size:9.5px">Activo ES/EN</span>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center">
+      <div style="font-size:28px">🤖</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">Sales Closer IA</div>
+      <span class="bdg teal" style="font-size:9.5px">Usado y valorado</span>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:14px 10px;text-align:center;opacity:.5">
+      <div style="font-size:28px">🧠</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">LARIA (propia)</div>
+      <span class="bdg grey" style="font-size:9.5px">En pausa</span>
+    </div>
+    <div style="background:var(--red-lt);border:1px solid var(--red);border-radius:12px;padding:14px 10px;text-align:center">
+      <div style="font-size:28px">📣</div>
+      <div style="font-size:11.5px;font-weight:600;color:var(--ink);margin:6px 0 4px">Contenido propio</div>
+      <span class="bdg red" style="font-size:9.5px">0 — foco esta semana</span>
     </div>
   </div>
 
@@ -673,6 +665,84 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="alert-text">Con 1 máquina cerrada en 2025 y 1 en 2026, Laura no necesita más gente. Necesita infraestructura y sistema — comprar manos ya falló antes.</div>
     </div>
   </div>
+
+  <div class="slbl">Nivel de iteración — score sobre las 4 palancas del roadmap</div>
+  <div style="background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px 16px;margin-bottom:20px;display:flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:center">
+    <svg viewBox="0 0 140 140" style="width:140px;height:140px;flex-shrink:0">
+      <circle cx="70" cy="70" r="54" fill="none" stroke="var(--border)" stroke-width="16"/>
+      <circle cx="70" cy="70" r="54" fill="none" stroke="var(--gold)" stroke-width="16" stroke-dasharray="339.3" stroke-dashoffset="180" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+      <text x="70" y="65" text-anchor="middle" font-size="28" font-weight="700" fill="var(--ink)">47</text>
+      <text x="70" y="84" text-anchor="middle" font-size="11" fill="var(--grey)">/100</text>
+    </svg>
+    <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;justify-content:space-between;font-size:12.5px"><span>📘 Guía (8 Sistemas)</span><span class="bdg red" style="font-size:10px">0% — sin señal de uso</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12.5px"><span>🤖 Closing GPT</span><span class="bdg teal" style="font-size:10px">100% — usado y valorado</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12.5px"><span>🗺️ Roadmap/panel</span><span class="bdg amber" style="font-size:10px">Sin dato de apertura aún</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:12.5px"><span>💬 Consultas por semana</span><span class="bdg amber" style="font-size:10px">10 de 21 días activos</span></div>
+    </div>
+  </div>
+  <div class="alert-box warn" style="margin-top:-6px">
+    <span class="alert-icon">📆</span>
+    <div>
+      <div class="alert-title">Aún no hay semana-contra-semana</div>
+      <div class="alert-text">Esto es el snapshot de los últimos 21 días — falta una segunda ventana para comparar semana contra semana. Se actualiza cada corte.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Pendientes activos — solo lo que sigue abierto hoy</div>
+  <details class="wk-block" open>
+    <summary class="wk-hd">📅 SEMANA ACTUAL — SESIÓN 9 <span class="bdg amber">en curso</span></summary>
+    <div class="wk-body">
+      <div class="etp-hd">📋 Next steps — Fathom real</div>
+
+      <div class="task" style="border-color:rgba(226,80,58,.3)">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Laura: sacar "review the associated costs" del correo a JWELL</div>
+          <div class="task-desc">El draft real (revisado 23/09) todavía la tiene — es la objeción prematura que Fathom pidió eliminar antes de enviar.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+
+      <div class="task" style="border-color:rgba(226,80,58,.3)">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Ambos: 20 min de seguimiento para definir el "micro win" con JWELL</div>
+          <div class="task-desc">Un piloto pagado, concreto — no seguir puliendo mensaje sin una prueba real en curso.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Laura: roleplay de cierre con su papá · Jairo: Sales Closer IA</div>
+          <div class="task-desc">Seguir el entrenamiento activo — ya está dando resultado (ambos "súper pulidos" a nivel comercial en S9).</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="etp-hd">🎯 Arrastrado, aún abierto</div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Jairo: resultado de Omar/ACEBRI con gerencia — sin confirmar</div>
+          <div class="task-desc">Presentación era ~15-16/09. No hay confirmación en el chat de cómo salió.</div>
+        </div>
+        <span class="bdg amber">P1 · sin confirmar</span>
+      </div>
+
+      <div class="task" style="border-color:rgba(226,80,58,.3)">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Investigar aliados de <strong>financiamiento</strong> para STM</div>
+          <div class="task-desc">Sigue abierto desde Sesión 5. STM ya perdió una venta sana (Álvarez/Litai) contra quien sí tenía financiamiento.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+    </div>
+  </details>
 
   <details class="wk-block">
     <summary class="wk-hd">🧭 Cómo funciona la consultoría — el ritmo de cada semana</summary>
@@ -730,35 +800,35 @@ flowchart LR
   <div class="slbl">Estructura · 3 meses · 12 sesiones · Sistema de Growth con IA</div>
   <div class="phase-grid">
     <div class="phase-card m1">
-      <div class="phase-hd"><span class="phase-tag">Mes 1 · Sem 1–4</span><span class="bdg amber">En curso</span></div>
+      <div class="phase-hd"><span class="phase-tag">Mes 1 · Sem 1–4</span><span class="bdg teal">✓ Completado</span></div>
       <div class="phase-title">Fundaciones</div>
-      <div class="phase-text">Clientes segmentados A/B/C. Foco quirúrgico en B (~50% de los cierres históricos) — sniper, no escopeta. Backend documentado por máquina.</div>
+      <div class="phase-text">Clientes segmentados A/B/C. Foco quirúrgico en B (~50% de los cierres históricos) — sniper, no escopeta. Venta consultiva ya internalizada.</div>
       <div class="stack-wrap" style="margin-bottom:10px">
         <div class="sp"><div class="sd on"></div>Avatar<span class="bdg teal" style="margin-left:5px">✓ Hecho</span></div>
-        <div class="sp"><div class="sd warn"></div>Oferta irresistible<span class="bdg amber" style="margin-left:5px">En curso</span></div>
-        <div class="sp"><div class="sd off"></div>Validación<span class="bdg grey" style="margin-left:5px">Pendiente</span></div>
+        <div class="sp"><div class="sd on"></div>Discovery/Closing<span class="bdg teal" style="margin-left:5px">✓ Hecho</span></div>
+        <div class="sp"><div class="sd warn"></div>Oferta (vehículo)<span class="bdg amber" style="margin-left:5px">Indecisa</span></div>
       </div>
-      <div class="phase-tags"><span class="bdg grey">ICP A/B/C</span><span class="bdg grey">Foco en B</span><span class="bdg grey">Por máquina</span><span class="bdg grey">Micro-win: calificación operativa</span></div>
+      <div class="phase-tags"><span class="bdg grey">ICP A/B/C</span><span class="bdg grey">Foco en B</span><span class="bdg grey">Venta consultiva</span></div>
     </div>
     <div class="phase-card m2">
-      <div class="phase-hd"><span class="phase-tag">Mes 2 · Sem 5–8</span><span class="bdg grey">Próximo</span></div>
+      <div class="phase-hd"><span class="phase-tag">Mes 2 · Sem 5–8</span><span class="bdg red">Atrasado</span></div>
       <div class="phase-title">El motor</div>
-      <div class="phase-text">LinkedIn como motor, con métricas por primera vez. CRM conectado a Clay, estructurado por máquina — no por lead genérico.</div>
+      <div class="phase-text">Debía traer Adquisición con métricas. Llegamos a Sesión 9 y Contenido/Captura siguen en cero — es el foco forzado de esta semana.</div>
       <div class="stack-wrap" style="margin-bottom:10px">
-        <div class="sp"><div class="sd off"></div>Adquisición<span class="bdg grey" style="margin-left:5px">Próximo</span></div>
-        <div class="sp"><div class="sd off"></div>Recompra<span class="bdg grey" style="margin-left:5px">Pendiente</span></div>
+        <div class="sp"><div class="sd off"></div>Contenido<span class="bdg red" style="margin-left:5px">0/10</span></div>
+        <div class="sp"><div class="sd off"></div>Captura propia<span class="bdg amber" style="margin-left:5px">3/10</span></div>
       </div>
-      <div class="phase-tags"><span class="bdg grey">LinkedIn</span><span class="bdg grey">CRM + Clay</span><span class="bdg grey">Nutrición</span><span class="bdg grey">Micro-win: reuniones agendadas</span></div>
+      <div class="phase-tags"><span class="bdg grey">LinkedIn</span><span class="bdg grey">CRM + Clay</span><span class="bdg red">Micro-win pendiente</span></div>
     </div>
     <div class="phase-card m3">
-      <div class="phase-hd"><span class="phase-tag">Mes 3 · Sem 9–12</span><span class="bdg grey">Futuro</span></div>
+      <div class="phase-hd"><span class="phase-tag">Mes 3 · Sem 9–12</span><span class="bdg amber">En curso</span></div>
       <div class="phase-title">Sistemas y referidos</div>
-      <div class="phase-text">No hay transferencia — Laura ya opera. Es escalar lo construido: automatización, dashboard, y el loop de referidos activo — con su padre en el sistema.</div>
+      <div class="phase-text">Jairo y Laura ya operan en paralelo, cada uno con su avatar. Falta el primer cierre (Success en 0) para activar el loop de referidos.</div>
       <div class="stack-wrap" style="margin-bottom:10px">
-        <div class="sp"><div class="sd off"></div>Sistemas<span class="bdg grey" style="margin-left:5px">Futuro</span></div>
-        <div class="sp"><div class="sd off"></div>Referidos<span class="bdg grey" style="margin-left:5px">Futuro</span></div>
+        <div class="sp"><div class="sd off"></div>Success<span class="bdg red" style="margin-left:5px">0/10</span></div>
+        <div class="sp"><div class="sd off"></div>Referidos<span class="bdg grey" style="margin-left:5px">Depende del 1er cierre</span></div>
       </div>
-      <div class="phase-tags"><span class="bdg grey">Dashboard</span><span class="bdg grey">Activación</span><span class="bdg grey">Padre opera</span><span class="bdg grey">Micro-win: pipeline vivo</span></div>
+      <div class="phase-tags"><span class="bdg grey">Dashboard</span><span class="bdg amber">Micro-win: JWELL</span></div>
     </div>
   </div>
 
@@ -780,6 +850,7 @@ flowchart LR
     <div class="hist-text">Kickoff con Laura y Jairo. 3 tiers (A multinacionales, B foco ~50% de cierres, C volumen) + inventario de toda la documentación dispersa.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 1 · Foundations</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: dejar de perseguir leads A/C que tardan años o no cierran — cada hora de Laura va al cliente que paga en el ciclo más corto.</div>
+    <div style="text-align:right;margin-top:6px"><a href="https://fathom.video/share/UMa-fK1E3zEV4V9B_EdRiyzEu6ZtkkTP" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Ir a la grabación</a></div>
   </details>
 
   <details class="hist-card done">
@@ -796,6 +867,10 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 1 · Foundations (pt.1)</span><span class="bdg violet">🧩 2 · Oferta (pt.2)</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: con A/B/C escritas y el mensaje anclado en lo que el cliente compra, calificar deja de vivir solo en la cabeza de Laura.</div>
+    <div style="text-align:right;margin-top:6px;display:flex;gap:6px;justify-content:flex-end">
+      <a href="https://fathom.video/share/ZyoEor2kyxCRJxrjx1yNMxpRfqy99QDA" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Grabación pt.1</a>
+      <a href="https://fathom.video/share/6r_8B-FziFophsMazDKpWxGcmyw8NhEU" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Grabación pt.2</a>
+    </div>
   </details>
 
   <details class="hist-card done">
@@ -813,6 +888,7 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 6 · Ventas</span><span class="bdg violet">🧩 2 · Oferta</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada venta perdida diagnosticada en vivo se vuelve criterio escrito — la próxima vez esa señal no se pasa por alto. Módulo de Oferta irresistible la próxima semana, sobre Avatar B.</div>
+    <div style="text-align:right;margin-top:6px"><a href="https://fathom.video/share/-GuYJ1tVjBKoscq1omicevJPM93FdB1D" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Ir a la grabación</a></div>
   </details>
 
   <details class="hist-card done">
@@ -830,6 +906,7 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 6 · Ventas</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada objeción real queda categorizada y con su reframe — Laura y Jairo dejan de improvisar la respuesta cada vez que aparece la misma resistencia.</div>
+    <div style="text-align:right;margin-top:6px"><a href="https://fathom.video/share/p-BpJLUWjTLz27XNeXzyVbWLH1KCNo9c" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Ir a la grabación</a></div>
   </details>
 
   <details class="hist-card done">
@@ -847,6 +924,7 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 6 · Ventas</span><span class="bdg red">⚠ 2 · Oferta sigue sin cerrarse — 3 sesiones seguidas</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: cada venta perdida deja de ser "fue el precio" — el diagnóstico real (financiamiento) abre una palanca nueva (buscar aliados) en vez de resignarse.</div>
+    <div style="text-align:right;margin-top:6px"><a href="https://fathom.video/share/qJ6AcN227Rs5FAPQUyS-57tGxndx-Jsz" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Ir a la grabación</a></div>
   </details>
 
   <details class="hist-card done" open>
@@ -864,6 +942,7 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 3 · Avatar</span><span class="bdg teal">✓ Confirmado: Wei = Wei Deng, JWELL</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: Laura y Jairo dejan de tratar cada prospecto igual — cada tipo de comprador tiene su propio camino de cierre, ya trazado.</div>
+    <div style="text-align:right;margin-top:6px"><a href="https://fathom.video/share/i3aLJqjywZox16gAwHLpuyu_bc9aQZP7" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Ir a la grabación</a></div>
   </details>
 
   <details class="hist-card done" open>
@@ -881,6 +960,7 @@ flowchart LR
     </div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 6 · Ventas</span><span class="bdg violet">🧩 7 · Entrega</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: vender por miedo real en vez de ROI abstracto acorta el ciclo con decisores bajo presión personal — no solo técnica.</div>
+    <div style="text-align:right;margin-top:6px"><a href="https://fathom.video/share/FfTxTxaLPsni18BHC-R8Nu9B7hY_zhgG" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Ir a la grabación</a></div>
   </details>
 
   <details class="hist-card done">
@@ -891,6 +971,7 @@ flowchart LR
     <div class="hist-text">Segundo bloque, mismo día, foco en el pitch comercial de Wei para su junta directiva. Sin grabación disponible — contenido a la espera de que Patricio confirme el detalle trabajado.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 3 · Avatar</span><span class="bdg violet">🧩 2 · Oferta</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: mismo brief de 4 bloques para Wei, ahora trabajado directamente con Laura.</div>
+    <div style="text-align:right;margin-top:6px"><span class="bdg grey">Sin grabación disponible</span></div>
   </details>
 
   <details class="hist-card done">
@@ -901,268 +982,32 @@ flowchart LR
     <div class="hist-text">Reencuadre central: STM vende <strong>servicios de consultoría y técnicos</strong>, no un "equipo de ingenieros" (metáfora: venden el corte de pelo, no al peluquero). Caso nuevo: <strong>Plásticos del Carmen</strong> (máquina china cerrada e incompatible — "no pones una pieza de Audi en un Kia"). Propuesta a JWELL refinada: infografía de "recuperar clientes" → "sistema de fidelización", fuera la palabra "costos" del correo.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 2 · Oferta</span><span class="bdg violet">🧩 6 · Ventas</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: que dejen de venderse como mano de obra y empiecen a cobrar como el servicio profesional que son.</div>
+    <div style="text-align:right;margin-top:6px"><a href="https://fathom.video/share/VyheeUHsPqnaX3CUy1arZcXpT-yL1cvD" target="_blank" rel="noopener" class="bdg violet" style="text-decoration:none">▶ Ir a la grabación</a></div>
+  </details>
+
+  <details class="hist-card done" open>
+    <summary class="hist-hd">
+      <div class="hist-title">Sesión 9 — Jairo y Laura sólidos comercialmente, gap = Contenido</div>
+      <span class="bdg teal">✓ 23/09 · 2 bloques</span>
+    </summary>
+    <div class="hist-text">Confirmado por Patricio: Jairo y Laura salen de esta sesión <strong>súper pulidos a nivel comercial</strong> (Discovery, objeciones, cierre). El único gap para escalar ya no es claridad ni skills — es <strong>Contenido</strong>: necesitan ejecutar y publicar, no seguir perfeccionando. Detalle línea por línea a la espera del recap de Fathom (no se reconstruye de memoria).</div>
+    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 4 · Contenido</span><span class="bdg violet">🧩 6 · Ventas</span></div>
+    <div class="hist-money">💰 Hacia dónde acerca: pasar de recibir leads a generarlos — sin esto, el sistema de cierre que ya tienen no tiene con qué alimentarse.</div>
+    <div style="text-align:right;margin-top:6px"><span class="bdg amber">⏳ Grabación pendiente de sincronizar</span></div>
   </details>
 
   <details class="hist-card now" open>
     <summary class="hist-hd">
-      <div class="hist-title">Sesión 9 — realizada 22-23/09, foco Contenido esta semana</div>
-      <span class="bdg amber">⏳ Fathom aún sin sincronizar el recap</span>
+      <div class="hist-title">Sesión 10 — próxima</div>
+      <span class="bdg amber">→ Semana próxima</span>
     </summary>
-    <div class="hist-text">Confirmado por Patricio: la sesión ya ocurrió (2 bloques). Contenido queda como el <strong>foco 100% de esta semana</strong> — es la única de las 8 áreas que ninguna sesión anterior había tocado. Detalle exacto de la call (pendientes/aprendizajes) a la espera del recap de Fathom para no repetir el error de reconstruir desde WhatsApp.</div>
-    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🧩 4 · Contenido</span><span class="bdg red">⚠ Adquisición sigue 100% manual</span></div>
-    <div class="hist-money">💰 Hacia dónde acerca: pasar de recibir leads a generarlos — sin esto, el sistema de cierre que ya tienen no tiene con qué alimentarse.</div>
+    <div class="hist-text">Al cerrar esta sesión: enviar <strong>formulario de satisfacción</strong> — están en un punto de awareness alto que vale la pena capturar mientras está fresco.</div>
+    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg amber">📋 Backlog: encuesta de satisfacción post-S10</span></div>
+    <div class="hist-money">💰 Hacia dónde acerca: medir cómo perciben el programa a esta altura — insumo real para ajustar las 3 sesiones que quedan después.</div>
   </details>
 
-  <div class="slbl">Pendientes — por semana, se acumulan hasta que se cierran (todos de Laura/Jairo)</div>
-  <div class="alert-box info">
-    <span class="alert-icon">📚</span>
-    <div>
-      <div class="alert-title">14/09 — Se comparten los 8 Sistemas de Private Build</div>
-      <div class="alert-text">Material de coaching/skills (Foundations, Oferta, Avatar, Contenido, Captura, Ventas, Entrega, Success) — apunta directo a lo que le falta a STM hoy, más allá de lo legal. Queda anclado en Backend &amp; Recursos.</div>
-    </div>
-  </div>
-  <div class="alert-box info">
-    <span class="alert-icon">💬</span>
-    <div>
-      <div class="alert-title">Cualquier duda → WhatsApp con Patricio al tiro</div>
-      <div class="alert-text">No esperar a la próxima sesión. Un mensaje resuelto en el día vale más que una hora de llamada.</div>
-    </div>
-  </div>
 
-  <details class="wk-block" open>
-    <summary class="wk-hd">📅 SEMANA ACTUAL — SESIÓN 9 · desde 14/09 <span class="bdg amber">en curso</span></summary>
-    <div class="wk-body">
-      <div class="etp-hd">📋 Next steps — Sesión 8 (14/09, Fathom real)</div>
-
-      <div class="task" style="border-color:rgba(62,180,137,.4)">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: replantear la infografía de JWELL</div>
-          <div class="task-desc">✓ Hecho — título ya dice "An unshakeable reputation in LATAM" (no "recuperar clientes"), infografía embebida directo en el cuerpo del correo, no como adjunto. Draft real revisado 23/09.</div>
-        </div>
-        <span class="bdg teal">Hecho</span>
-      </div>
-
-      <div class="task" style="border-color:rgba(226,80,58,.3)">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: sacar "review the associated costs" del correo a JWELL</div>
-          <div class="task-desc">⚠ El draft real (revisado 23/09) todavía dice "we would like to walk you through how the partnership would work, review the associated costs, and agree on the terms..." — es exactamente la objeción prematura que Fathom pidió eliminar. Falta solo esta frase antes de enviar.</div>
-        </div>
-        <span class="bdg red">Urgente · antes de enviar</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: roleplay de cierre con su papá</div>
-          <div class="task-desc">Practicar venta consultiva — metáforas + preguntas de descubrimiento, evitar "no" y "pero".</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Jairo: practicar descubrimiento con "Sales Closer" (IA)</div>
-          <div class="task-desc">Descubrimiento basado en preguntas, aplicado al caso Plásticos del Carmen y similares.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="task" style="border-color:rgba(226,80,58,.3)">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Ambos: 20 min de seguimiento para definir el "micro win" con JWELL</div>
-          <div class="task-desc">Un piloto pagado, concreto — no seguir puliendo mensaje sin una prueba real en curso.</div>
-        </div>
-        <span class="bdg red">Urgente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura y Jairo: revisar los 8 Sistemas de Private Build</div>
-          <div class="task-desc">Compartidos 14/09. No es lectura de fondo — es la base de skills/coaching que hoy le falta a STM fuera del área legal.</div>
-          <div class="task-goal">→ Acceso directo en Backend &amp; Recursos → Biblioteca de recursos.</div>
-        </div>
-        <span class="bdg violet">Material nuevo</span>
-      </div>
-
-      <div class="etp-hd">🎯 Comercial (arrastrado)</div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Jairo: contactar a Omar/ACEBRI ~16/09 apuntando al dolor personal</div>
-          <div class="task-desc">Sesión 7 (parte 1). Enfocar en el miedo real (perder el empleo), no en precio ni en ROI. Sin confirmación en el chat de cómo salió.</div>
-        </div>
-        <span class="bdg amber">P1 · sin confirmar resultado</span>
-      </div>
-
-      <div class="task" style="border-color:rgba(226,80,58,.3)">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: reformular la propuesta de Wei Deng (JWELL) como brief para su junta directiva</div>
-          <ul class="task-desc" style="margin:4px 0 0 16px;padding:0">
-            <li>4 bloques: problema de mercado → dolor futuro → solución → vehículo</li>
-            <li>Responde directo al cuestionamiento sobre la ejecución de STM (3 leads de prueba sin convertir)</li>
-            <li>✓ Confirmado 23/09 (correo real revisado): es Wei Deng de JWELL — mismo lead de Sesión 6</li>
-          </ul>
-          <div class="task-goal">→ Enviado antes del martes 01/09.</div>
-        </div>
-        <span class="bdg red">P0 · fecha límite 01/09</span>
-      </div>
-
-      <div class="task" style="border-color:rgba(226,80,58,.3)">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Jairo y Laura: adoptar lenguaje proactivo — "estamos haciendo", no "estamos tratando"</div>
-          <div class="task-desc">Sesión 6. El lenguaje pasivo es la señal externa de la parálisis por análisis — cambiarlo primero rompe el miedo antes de que crezca.</div>
-        </div>
-        <span class="bdg red">P0</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Dar seguimiento al diagnóstico de bajo riesgo con Omar/ACEBRI ($195 anticipo)</div>
-          <div class="task-desc">Sesión 6. Camino ya abierto — presenta a dirección a mediados de septiembre.</div>
-        </div>
-        <span class="bdg amber">P1 · fecha límite 15/09</span>
-      </div>
-
-      <div class="task" style="border-color:rgba(226,80,58,.3)">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: documentar el cold outreach con Valdecir (Brasil)</div>
-          <ul class="task-desc" style="margin:4px 0 0 16px;padding:0">
-            <li>Bajar toda la info de ese chat — es <strong>cold outreach</strong>, no Discovery</li>
-            <li>Feedback ya dado en vivo: pedir <strong>3 horarios</strong>, sostener silencio, sin emojis</li>
-          </ul>
-          <div class="task-goal">→ Aplicar las reglas de oro de Discovery/Closing (ver Avatar) al siguiente approach.</div>
-        </div>
-        <span class="bdg red">Urgente</span>
-      </div>
-
-      <div class="task" style="border-color:rgba(226,80,58,.3)">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Investigar aliados de <strong>financiamiento</strong> para STM</div>
-          <div class="task-desc">Sesión 5, sigue abierto. Sin capacidad de financiar directo, STM sigue perdiendo ventas sanas contra quien sí la tiene (caso Litai/StarTech).</div>
-          <div class="task-goal">→ Al menos 1 opción propia antes de la próxima negociación por precio.</div>
-        </div>
-        <span class="bdg red">Urgente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Adoptar <strong>preguntas cerradas</strong> (A/B/C) en vez de abiertas</div>
-          <div class="task-desc">Sesión 5. "¿Cuál es tu presupuesto?" → "¿está más cerca de A, B o C?" — establece autoridad, guía al lead.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Usar la <strong>tasa de ocupación de máquina</strong> como pregunta de urgencia</div>
-          <div class="task-desc">Sesión 5. "¿Tu máquina está sobre 100% o bajo 50%?" — separa a quien necesita máquina nueva ya de quien no.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Jairo: revisar propuesta Cervi con el frame de <strong>dolor futuro</strong></div>
-          <div class="task-desc">Sesión 4, sigue abierto. Briceño resiste por precio — la propuesta hoy se lee como servicio técnico, no como seguro contra una falla futura.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Jairo y Laura: usar preguntas estratégicas en cada interacción</div>
-          <div class="task-desc">Sesión 4. En vez de "necesitas X", preguntar "¿cómo haces seguimiento a tus activos?" — el prospecto se autoconvence.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="etp-hd">✍️ Marketing</div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: reabrir a Valdecir con la <strong>feria China Plus</strong> de octubre</div>
-          <div class="task-desc">Sesión 4, sigue abierto. Su pregunta sobre esa feria fue una señal perdida — es la puerta de reentrada.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: crear contenido sobre el <strong>costo de mantenimiento</strong> de máquinas chinas</div>
-          <div class="task-desc">Sesión 4. Primera pieza de la serie de dolores comunes — prevalida al prospecto antes de la llamada.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="etp-hd">🗄️ Operación</div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Transcribir y archivar los audios de WhatsApp (16/08)</div>
-          <div class="task-desc">2 notas de voz del grupo — Voice Memos u otro transcriptor, guardar en Notion/repo propio.</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Cuadrar horario fijo de los sábados</div>
-          <div class="task-desc">El día ya quedó definido — falta fijar la hora exacta (esta vez cayó domingo).</div>
-        </div>
-        <span class="bdg grey">Cliente</span>
-      </div>
-    </div>
-  </details>
-
-  <details class="wk-block">
-    <summary class="wk-hd">📁 SEMANA 23/08 — SESIÓN 5 <span class="bdg teal">resuelto</span></summary>
-    <div class="wk-body">
-      <div class="etp-hd">🎯 Comercial</div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Formato ACEBRI acordado: 30/70 con orden de compra — falta validación de gerencia</div>
-          <div class="task-desc">Corregido 30/08 (venía marcado "Hecho" por error). Omar lo presenta a gerencia (<strong>Carlos Briceño</strong>) el <strong>15/09</strong> — no es cierre todavía.</div>
-        </div>
-        <span class="bdg amber">Pendiente 15/09</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Álvarez perdió por <strong>financiamiento</strong> ($180k vía StarTech), no por precio — según relato del cliente en Sesión 5</div>
-          <div class="task-desc">Queda como lo reportó Laura en la sesión, no como hecho verificado por Private Build de forma independiente.</div>
-        </div>
-        <span class="bdg grey">Reportado por cliente</span>
-      </div>
-    </div>
-  </details>
-
-  <div class="slbl">Material de apoyo</div>
-  <a class="res-item" href="https://privatebuild-os.vercel.app/sistemas" target="_blank" rel="noopener"><span class="res-ico">🧩</span><div class="res-body"><div class="res-title">Los 8 Sistemas — Private Build</div><div class="res-desc">Compartido 14/09 — coaching/skills de fondo, empezar por Oferta y Ventas</div></div></a>
-  <a class="res-item locked" href="#"><span class="res-ico">📘</span><div class="res-body"><div class="res-title">Guía: cómo usar Notion</div><div class="res-desc">Se agrega cuando el Notion de STM esté creado</div></div></a>
-  <a class="res-item locked" href="#"><span class="res-ico">🎯</span><div class="res-body"><div class="res-title">Framework ICP / Avatar — Private Build</div><div class="res-desc">Plantilla ya documentada, se aplica en la Sesión 1</div></div></a>
-  <a class="res-item locked" href="#"><span class="res-ico">🗂️</span><div class="res-body"><div class="res-title">Plantilla CRM STM</div><div class="res-desc">Se activa junto con el Notion en Fase 1</div></div></a>
+  <a class="res-item" href="https://privatebuild-os.vercel.app/sistemas" target="_blank" rel="noopener"><span class="res-ico">🔒</span><div class="res-body"><div class="res-title">Los 8 Sistemas — Private Build</div><div class="res-desc">Compartido 14/09 — coaching/skills de fondo, empezar por Oferta y Ventas</div></div></a>
 </div>
 
 
@@ -1774,6 +1619,14 @@ flowchart LR
   </div>
 
   <div class="slbl">Tipos de objeción — STM, con caso real y cómo se resuelve</div>
+  <div class="alert-box info">
+    <span class="alert-icon">🤖</span>
+    <div>
+      <div class="alert-title">Manejo de objeción por chat vs. en llamada — no es lo mismo</div>
+      <div class="alert-text">Por chat se pierde tono y silencio (las 2 armas más fuertes de Discovery) — hay que compensar con preguntas más cortas y nunca sobrevender por escrito. Practicar ambos modos con el Closing GPT antes de la llamada real.</div>
+    </div>
+  </div>
+  <a class="lib-btn" href="https://chatgpt.com/g/g-6a0faf3c80f4819199c5782fa39dad23-sales-closing-coach-gpt/c/6a17a966-4cfc-83e9-aa28-cf73c987fc82" target="_blank" rel="noopener" style="margin-bottom:20px">🤖 Abrir Closing Coach GPT →</a>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-body">
@@ -1941,44 +1794,43 @@ flowchart TD
   </div>
 
   <div class="slbl">Dónde vive cada cosa — hoy</div>
-
-  <a class="res-item" href="#">
-    <span class="res-ico">👤</span>
-    <div class="res-body"><div class="res-title">Avatar y segmentación A/B/C</div><div class="res-desc">Notion — ficha del cliente + páginas de cada sesión. Se enriquece semana a semana.</div></div>
-  </a>
-  <a class="res-item" href="#">
-    <span class="res-ico">📊</span>
-    <div class="res-body"><div class="res-title">Datos comerciales / pipeline (84+ leads)</div><div class="res-desc">Excel ("Base modelo chile 2026") — matriz A/B/C y comisiones. Notion en paralelo para lo ya sincronizado.</div></div>
-  </a>
-  <a class="res-item" href="#">
-    <span class="res-ico">🔍</span>
-    <div class="res-body"><div class="res-title">Flujo de preguntas (Discovery, Q1-5)</div><div class="res-desc">Notion — las 13 preguntas generales + el flujo técnico por línea de producto, con las señales C→B documentadas.</div></div>
-  </a>
-  <a class="res-item locked" href="#">
-    <span class="res-ico">📣</span>
-    <div class="res-body"><div class="res-title">Grilla de marketing / contenido</div><div class="res-desc">Notion — por construir junto con el Sistema de Contenido.</div></div>
-  </a>
-  <a class="res-item" href="#">
-    <span class="res-ico">🎙️</span>
-    <div class="res-body"><div class="res-title">Transcripts y resúmenes de cada sesión</div><div class="res-desc">Notion — sub-página por sesión, verbatim intacto + resumen ejecutivo.</div></div>
-  </a>
-  <a class="res-item" href="#">
-    <span class="res-ico">🌐</span>
-    <div class="res-body"><div class="res-title">Este panel de seguimiento</div><div class="res-desc">GitHub Pages — lo actualiza Patricio dentro de las 24h después de cada sesión. No es un pendiente, es parte del programa.</div></div>
-  </a>
-
-  <div class="alert-box info">
-    <span class="alert-icon">🔁</span>
-    <div>
-      <div class="alert-title">La meta: un solo lugar por pieza, no una copia en cada chat</div>
-      <div class="alert-text">Hoy varias cosas viven repartidas entre WhatsApp, Excel y Notion. Cada sesión mueve una pieza más a su lugar único.</div>
+  <div class="lib-grid">
+    <div class="lib-card">
+      <div class="lib-ico">👤</div>
+      <div class="lib-title">Avatar y segmentación A/B/C</div>
+      <div class="lib-desc">Notion — ficha del cliente + páginas de cada sesión. Se enriquece semana a semana.</div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-ico">📊</div>
+      <div class="lib-title">Datos comerciales / pipeline</div>
+      <div class="lib-desc">Excel ("Base modelo chile 2026") — matriz A/B/C y comisiones, 84+ leads. Notion en paralelo para lo ya sincronizado.</div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-ico">🔍</div>
+      <div class="lib-title">Flujo de preguntas (Discovery)</div>
+      <div class="lib-desc">Notion — las 13 preguntas generales + el flujo técnico por línea de producto, con las señales C→B documentadas.</div>
+    </div>
+    <div class="lib-card" style="opacity:.6">
+      <div class="lib-ico">📣</div>
+      <div class="lib-title">Grilla de marketing / contenido</div>
+      <div class="lib-desc">Por construir esta semana — es el foco 100% actual.</div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-ico">🎙️</div>
+      <div class="lib-title">Transcripts de cada sesión</div>
+      <div class="lib-desc">Notion — sub-página por sesión, verbatim intacto + resumen ejecutivo.</div>
+    </div>
+    <div class="lib-card">
+      <div class="lib-ico">🌐</div>
+      <div class="lib-title">Este panel de seguimiento</div>
+      <div class="lib-desc">GitHub Pages — actualizado dentro de las 24h después de cada sesión.</div>
     </div>
   </div>
 
   <div class="slbl">Biblioteca de recursos</div>
   <div class="lib-grid">
     <div class="lib-card">
-      <div class="lib-ico">🧩</div>
+      <div class="lib-ico">🔒</div>
       <div class="lib-title">Los 8 Sistemas — Private Build <span class="bdg violet" style="font-size:9px">nuevo · 14/09</span></div>
       <div class="lib-desc">Foundations, Oferta, Avatar, Contenido, Captura, Ventas, Entrega, Success — el material de skills/coaching de fondo, más allá de lo legal (lo único ya fuerte en STM hoy).</div>
       <div class="lib-tip"><strong>Cómo usarlo:</strong> antes de Sesión 8, revisar sobre todo Oferta y Ventas — ahí está la decisión de vehículo comercial que STM tiene abierta.</div>
@@ -2000,70 +1852,41 @@ flowchart TD
     </div>
   </div>
 
-  <div class="slbl">Nivel de iteración — últimos 21 días de WhatsApp (revisado 22/09)</div>
-  <div class="ov-grid">
-    <div class="ov-card">
-      <div class="ov-lbl">Mensajes reales</div>
-      <div class="ov-num teal">133</div>
-      <div class="ov-sub">10 de 21 días con actividad</div>
-      <div class="ov-trend warn"><span class="ov-trend-icon">●</span> Cliente actualiza sin que se le pregunte: solo 2 veces (06/09, 17/09)</div>
-    </div>
-    <div class="ov-card">
-      <div class="ov-lbl">Quién inicia el intercambio</div>
-      <div class="ov-num amber">60/40</div>
-      <div class="ov-sub">Patricio 80 msj · Cliente 53 msj</div>
-      <div class="ov-trend warn"><span class="ov-trend-icon">●</span> Mayormente reactivo, no proactivo</div>
-    </div>
-    <div class="ov-card">
-      <div class="ov-lbl">Closing Coach GPT</div>
-      <div class="ov-num teal">Usado</div>
-      <div class="ov-sub">Reenviado por ellos mismos (14/09)</div>
-      <div class="ov-trend up"><span class="ov-trend-icon">●</span> "Impresionados" — aportando valor real (17/09)</div>
-    </div>
-    <div class="ov-card">
-      <div class="ov-lbl">Los 8 Sistemas</div>
-      <div class="ov-num red">Sin señal</div>
-      <div class="ov-sub">Compartido 14/09</div>
-      <div class="ov-trend down"><span class="ov-trend-icon">▼</span> 0 menciones de uso en 3 semanas siguientes</div>
+  <div class="alert-box info">
+    <span class="alert-icon">📊</span>
+    <div>
+      <div class="alert-title">Nivel de iteración se movió al Panel</div>
+      <div class="alert-text">El score y el detalle de uso de recursos ya viven en la pestaña Panel — es donde va todo lo que resume el estado del programa.</div>
     </div>
   </div>
 
-  <div class="tg-hd">🏗️ Private Build — lo que le toca a Patricio, no es semanal <span class="bdg amber" style="margin-left:4px">4</span></div>
+  <div class="tg-hd">🏗️ Private Build — pendientes de Patricio</div>
 
-  <div class="task">
+  <div class="task" style="border-color:rgba(62,180,137,.4)">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Montar diagrama del <strong>ciclo del lead por tipo de avatar</strong></div>
-      <div class="task-desc">Pedido explícito 30/08: entender el ciclo completo (no solo el síntoma puntual) según tipo — Cliente de servicio vs Socio proveedor — y qué busca cada uno.</div>
+      <div class="task-title">Diagrama del ciclo del lead por tipo de avatar</div>
+      <div class="task-desc">✓ Hecho — ver Avatar → "Diagrama del ciclo, mismo lead, camino distinto".</div>
+    </div>
+    <span class="bdg teal">Hecho</span>
+  </div>
+
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-check"></div>
+    <div class="task-body">
+      <div class="task-title">Distribuir la guía de Oferta y Closing (ya existe en los 8 Sistemas)</div>
+      <div class="task-desc">No hay que construirla — ya está en la guía pública. Falta anclarla en Avatar/Oferta con el caso real de STM.</div>
     </div>
     <span class="bdg amber">Pato</span>
   </div>
 
-  <div class="task">
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-check"></div>
     <div class="task-body">
-      <div class="task-title">Armar el módulo de <strong>Oferta irresistible</strong></div>
-      <div class="task-desc">Sobre Avatar B: 2 capas (Producto/Servicio), 12 sub-servicios por señal. <strong>Atrasado 3 sesiones.</strong></div>
+      <div class="task-title">Enviar formulario de satisfacción al cerrar Sesión 10</div>
+      <div class="task-desc">Están en un punto de awareness alto — capturarlo mientras está fresco. Se puede enviar apenas cierre esa sesión.</div>
     </div>
-    <span class="bdg red">Atrasado</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Cerrar el módulo de Closing Pitch con casos reales (ACEBRI + Valdecir)</div>
-      <div class="task-desc">Las reglas de oro ya están declaradas en Avatar — falta el módulo formal.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
-  </div>
-
-  <div class="task">
-    <div class="task-check"></div>
-    <div class="task-body">
-      <div class="task-title">Enviar por WhatsApp: libro "Vendes o Vendes"</div>
-      <div class="task-desc">Recomendación de Grant Cardone (Sesión 2) — sigue sin enviarse.</div>
-    </div>
-    <span class="bdg amber">Pato</span>
+    <span class="bdg red">Backlog</span>
   </div>
 </div>
 
