@@ -207,12 +207,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .hist-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:8px;border-left:3px solid var(--border)}
 .hist-card.done{border-left-color:var(--teal)}
 .hist-card.now{border-left-color:var(--gold);background:var(--gold-lt)}
-.hist-hd{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px;cursor:pointer;list-style:none}
+.hist-hd{display:flex;align-items:center;justify-content:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:6px;cursor:pointer;list-style:none}
 .hist-hd::-webkit-details-marker{display:none}
-.hist-hd::after{content:'▾';font-family:'DM Sans',sans-serif;color:var(--grey);transition:transform .15s;margin-left:auto;order:99}
+.hist-hd::after{content:'▾';font-family:'DM Sans',sans-serif;color:var(--grey);transition:transform .15s;margin-left:6px;order:99;flex-shrink:0}
 .hist-card:not([open]) .hist-hd::after{transform:rotate(-90deg)}
 .hist-card:not([open]) .hist-text,.hist-card:not([open]) .bdg-row,.hist-card:not([open]) .hist-money{display:none}
-.hist-title{font-size:14px;font-weight:600;color:var(--dark)}
+.hist-title{font-size:14px;font-weight:600;color:var(--dark);flex:1 1 160px;min-width:0}
+.hist-badges{display:flex;align-items:center;gap:6px;margin-left:auto;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end}
 .hist-text{font-size:12.5px;color:var(--grey);line-height:1.6;margin-bottom:8px}
 .hist-money{font-size:11.5px;color:var(--teal-dk);font-weight:500;line-height:1.5;padding-top:8px;border-top:0.5px dashed var(--border)}
 
@@ -235,7 +236,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .tg-hd{font-size:13px;font-weight:600;color:var(--ink);margin:18px 0 9px;display:flex;align-items:center;gap:8px}
 .tg-hd::after{content:'';flex:1;height:0.5px;background:var(--border)}
 .wk-block{border:0.5px solid var(--border);border-radius:12px;background:var(--surf);margin-bottom:10px;overflow:hidden}
-.wk-hd{font-family:'DM Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--dark);padding:12px 15px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;background:var(--beige)}
+.wk-hd{font-family:'DM Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--dark);padding:12px 15px;cursor:pointer;display:flex;align-items:center;justify-content:flex-start;gap:8px;list-style:none;background:var(--beige)}
+.wk-hd>.bdg{margin-left:auto;flex-shrink:0}
 .wk-hd::-webkit-details-marker{display:none}
 .wk-hd::after{content:'▾';font-family:'DM Sans',sans-serif;color:var(--grey);transition:transform .15s}
 .wk-block:not([open]) .wk-hd::after{transform:rotate(-90deg)}
@@ -890,7 +892,7 @@ flowchart LR
   <details class="hist-card done">
     <summary class="hist-hd">
       <div class="hist-title">Sesión 1 — Foundations: ICP A/B/C</div>
-      <span class="bdg teal">✓ 25 jul</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">25 jul</span></div>
     </summary>
     <div class="hist-text">Kickoff con Laura y Jairo. 3 tiers (A multinacionales, B foco ~50% de cierres, C volumen) + inventario de toda la documentación dispersa.</div>
     <div style="font-size:11px;color:var(--grey);margin-bottom:5px">🏷️ Kickoff · ICP A/B/C · Foco en cliente B</div>
@@ -902,7 +904,7 @@ flowchart LR
   <details class="hist-card done">
     <summary class="hist-hd">
       <div class="hist-title">Sesión 2 — Perfil A/B/C + Eficiencia vs. Confianza</div>
-      <span class="bdg teal">✓ 1 ago · 76 min</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">1 ago · 76 min</span></div>
     </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
@@ -923,7 +925,7 @@ flowchart LR
   <details class="hist-card done">
     <summary class="hist-hd">
       <div class="hist-title">Sesión 3 — El Discovery gana la venta</div>
-      <span class="bdg teal">✓ 10 ago</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">10 ago</span></div>
     </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
@@ -942,7 +944,7 @@ flowchart LR
   <details class="hist-card done">
     <summary class="hist-hd">
       <div class="hist-title">Sesión 4 — Vender el dolor futuro, no el producto</div>
-      <span class="bdg teal">✓ 17 ago · 58 min</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">17 ago · 58 min</span></div>
     </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
@@ -961,7 +963,7 @@ flowchart LR
   <details class="hist-card done">
     <summary class="hist-hd">
       <div class="hist-title">Sesión 5 — El financiamiento, no el precio, pierde ventas</div>
-      <span class="bdg teal">✓ 23 ago · 60 min</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">23 ago · 60 min</span></div>
     </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
@@ -980,7 +982,7 @@ flowchart LR
   <details class="hist-card done" open>
     <summary class="hist-hd">
       <div class="hist-title">Sesión 6 — Dos compradores, un solo lenguaje: dejar de "tratar" y empezar a "hacer"</div>
-      <span class="bdg teal">✓ 30 ago · 56 min</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">30 ago · 56 min</span></div>
     </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
@@ -999,7 +1001,7 @@ flowchart LR
   <details class="hist-card done" open>
     <summary class="hist-hd">
       <div class="hist-title">Sesión 7 (parte 1) — El miedo, no el precio, mueve a Omar</div>
-      <span class="bdg teal">✓ 07/09 · sesión doble, 2h</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">07/09 · sesión doble, 2h</span></div>
     </summary>
     <div class="hist-text">
       <ul style="margin:2px 0 0 16px;padding:0;line-height:1.65">
@@ -1018,7 +1020,7 @@ flowchart LR
   <details class="hist-card done">
     <summary class="hist-hd">
       <div class="hist-title">Sesión 7 (parte 2) — Pitch de Wei con Laura</div>
-      <span class="bdg teal">✓ 07/09 · misma sesión, mismo día</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">07/09 · parte 2</span></div>
     </summary>
     <div class="hist-text">Segundo bloque, mismo día, foco en el pitch comercial de Wei para su junta directiva. Sin grabación disponible — contenido a la espera de que Patricio confirme el detalle trabajado.</div>
     <div style="font-size:11px;color:var(--grey);margin-bottom:5px">🏷️ Pitch junta directiva · Brief 4 bloques</div>
@@ -1030,7 +1032,7 @@ flowchart LR
   <details class="hist-card done">
     <summary class="hist-hd">
       <div class="hist-title">Sesión 8 — Replantear oferta STM + propuesta a JWELL</div>
-      <span class="bdg teal">✓ 14/09 · 60min (Fathom)</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">14/09 · 60 min</span></div>
     </summary>
     <div class="hist-text">Reencuadre central: STM vende <strong>servicios de consultoría y técnicos</strong>, no un "equipo de ingenieros" (metáfora: venden el corte de pelo, no al peluquero). Caso nuevo: <strong>Plásticos del Carmen</strong> (máquina china cerrada e incompatible — "no pones una pieza de Audi en un Kia"). Propuesta a JWELL refinada: infografía de "recuperar clientes" → "sistema de fidelización", fuera la palabra "costos" del correo.</div>
     <div style="font-size:11px;color:var(--grey);margin-bottom:5px">🏷️ Reencuadre de oferta · Venta consultiva · Caso Plásticos del Carmen</div>
@@ -1042,7 +1044,7 @@ flowchart LR
   <details class="hist-card done" open>
     <summary class="hist-hd">
       <div class="hist-title">Sesión 9 — Jairo y Laura sólidos comercialmente, gap = Contenido</div>
-      <span class="bdg teal">✓ 23/09 · 2 bloques</span>
+      <div class="hist-badges"><span class="bdg teal">✓ Realizada</span><span class="bdg grey">23/09 · 2 bloques</span></div>
     </summary>
     <div class="hist-text">Confirmado por Patricio: Jairo y Laura salen de esta sesión <strong>súper pulidos a nivel comercial</strong> (Discovery, objeciones, cierre). El único gap para escalar ya no es claridad ni skills — es <strong>Contenido</strong>: necesitan ejecutar y publicar, no seguir perfeccionando. Detalle línea por línea a la espera del recap de Fathom (no se reconstruye de memoria).</div>
     <div style="font-size:11px;color:var(--grey);margin-bottom:5px">🏷️ Consolidación comercial · Gap de Contenido</div>
@@ -1054,7 +1056,7 @@ flowchart LR
   <details class="hist-card now" open>
     <summary class="hist-hd">
       <div class="hist-title">Sesión 10 — próxima</div>
-      <span class="bdg amber">→ Semana próxima</span>
+      <div class="hist-badges"><span class="bdg amber">→ Próxima</span><span class="bdg grey">Semana próxima</span></div>
     </summary>
     <div class="hist-text">Al cerrar esta sesión: enviar <strong>formulario de satisfacción</strong> — están en un punto de awareness alto que vale la pena capturar mientras está fresco.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg amber">📋 Backlog: encuesta de satisfacción post-S10</span></div>
