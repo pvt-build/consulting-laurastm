@@ -369,7 +369,20 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════ PANEL ════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — Sesión 8/12 completada 14/09 · Sesión 9 hoy 22/09 · quedan 4 sesiones</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px">
+    <div style="background:var(--dark);border-radius:14px;padding:18px 20px;color:#fff">
+      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:4px">Próxima sesión</div>
+      <div style="font-size:26px;font-weight:700;line-height:1.1">Sesión 9 — hoy</div>
+      <div style="font-size:12.5px;color:rgba(255,255,255,.7);margin-top:4px">22/09 · ~7pm COL</div>
+    </div>
+    <div style="background:var(--gold-lt);border:1px solid var(--gold);border-radius:14px;padding:18px 20px">
+      <div style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:4px">Sesiones restantes</div>
+      <div style="font-size:26px;font-weight:700;line-height:1.1;color:var(--ink)">4 — Sesiones 9, 10, 11, 12</div>
+      <div style="font-size:12.5px;color:var(--gold-dk);margin-top:4px">8/12 completadas · ~9h33min de consultoría</div>
+    </div>
+  </div>
+
+  <div class="slbl">Progreso — 8 sesiones completadas (S1-S8) · quedan 9-10-11-12</div>
   <div class="chips-row">
     <div class="sch done">1</div>
     <div class="sch done">2</div><div class="sch done">3</div>
@@ -382,8 +395,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="alert-box info" style="margin-top:-6px">
     <span class="alert-icon">📊</span>
     <div>
-      <div class="alert-title">Corrección 22/09 — iban 8 sesiones, no 10</div>
-      <div class="alert-text">Sesiones dobles del mismo día cuentan como 1 (S2, S7 y S8 lo fueron). Total real ~10h de consultoría (513min S1-S7 + ~90min S8, estimado por WhatsApp — sin Fathom ese día).</div>
+      <div class="alert-title">Corrección 23/09 (verificado con Fathom, no solo WhatsApp)</div>
+      <div class="alert-text">Iban 8 sesiones, no 10 (dobles del mismo día cuentan como 1 — S2 y S7 lo fueron; S8 del 14/09 fue 1 sola reunión de 60min, no doble como se registró ayer). Total real 9h33min (573min: 513 S1-S7 + 60 S8).</div>
     </div>
   </div>
 
@@ -882,22 +895,12 @@ flowchart LR
 
   <details class="hist-card done">
     <summary class="hist-hd">
-      <div class="hist-title">Sesión 8 (parte 1) — Avance + recursos anclados</div>
-      <span class="bdg teal">✓ 14/09</span>
+      <div class="hist-title">Sesión 8 — Replantear oferta STM + propuesta a G-Way</div>
+      <span class="bdg teal">✓ 14/09 · 60min (Fathom)</span>
     </summary>
-    <div class="hist-text">Sesión con fallas de conexión (3 links de Meet hasta conectar), sin grabación de Fathom. Se ancló material real de apoyo: los 8 Sistemas de Private Build y el Closing Coach GPT, con foco explícito en Oferta y Ventas por la decisión de vehículo comercial pendiente.</div>
-    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Recursos · 8 Sistemas + Closing Coach GPT</span></div>
-    <div class="hist-money">💰 Hacia dónde acerca: darles el material de skills/coaching que hoy les falta fuera de lo legal, antes de seguir sin base en la decisión de oferta.</div>
-  </details>
-
-  <details class="hist-card done">
-    <summary class="hist-hd">
-      <div class="hist-title">Sesión 8 (parte 2) — Extensión con Laura, inglés/pitch chino</div>
-      <span class="bdg teal">✓ 14/09 · misma sesión, mismo día</span>
-    </summary>
-    <div class="hist-text">Segundo bloque, mismo día. Laura entrenando inglés con ChatGPT (~20 min/día) de cara a su presentación con la contraparte china (contexto Wei).</div>
-    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Avatar · Socio proveedor</span></div>
-    <div class="hist-money">💰 Hacia dónde acerca: que el pitch de Wei no se caiga por barrera de idioma frente a su junta directiva.</div>
+    <div class="hist-text">Reencuadre central: STM vende <strong>servicios de consultoría y técnicos</strong>, no un "equipo de ingenieros" (metáfora: venden el corte de pelo, no al peluquero). Caso nuevo: <strong>Plásticos del Carmen</strong> (máquina china cerrada e incompatible — "no pones una pieza de Audi en un Kia"). Propuesta a G-Way refinada: infografía de "recuperar clientes" → "sistema de fidelización", fuera la palabra "costos" del correo.</div>
+    <div class="bdg-row" style="margin:0 0 8px"><span class="bdg violet">🔗 Oferta · Venta consultiva</span></div>
+    <div class="hist-money">💰 Hacia dónde acerca: que dejen de venderse como mano de obra y empiecen a cobrar como el servicio profesional que son.</div>
   </details>
 
   <details class="hist-card now" open>
@@ -905,7 +908,7 @@ flowchart LR
       <div class="hist-title">Sesión 9 — hoy 22/09</div>
       <span class="bdg amber">→ Hoy, ~7pm COL</span>
     </summary>
-    <div class="hist-text">Quedan 4 sesiones — el cuello real sigue siendo <strong>generar demanda</strong>: 21 días de WhatsApp revisados y sin ninguna señal de canal de prospección definido. Dependen 100% de los mismos 2 leads abiertos desde el día 1 (Omar, Wei).</div>
+    <div class="hist-text">Validar si se definió el <strong>"micro win" (piloto pagado)</strong> con G-Way y si avanzó Plásticos del Carmen. Quedan 4 sesiones — el cuello real sigue siendo <strong>generar demanda</strong>: 21 días de WhatsApp revisados y sin ninguna señal de canal de prospección propio definido.</div>
     <div class="bdg-row" style="margin:0 0 8px"><span class="bdg red">⚠ Adquisición sigue 100% manual</span></div>
     <div class="hist-money">💰 Hacia dónde acerca: pasar de recibir leads a generarlos — sin esto, el sistema de cierre que ya tienen no tiene con qué alimentarse.</div>
   </details>
@@ -929,14 +932,22 @@ flowchart LR
   <details class="wk-block" open>
     <summary class="wk-hd">📅 SEMANA ACTUAL — SESIÓN 9 · desde 14/09 <span class="bdg amber">en curso</span></summary>
     <div class="wk-body">
-      <div class="etp-hd">🚀 Generar demanda — el cuello real ahora</div>
+      <div class="etp-hd">📋 Next steps — Sesión 8 (14/09, Fathom real)</div>
 
       <div class="task" style="border-color:rgba(226,80,58,.3)">
         <div class="task-check"></div>
         <div class="task-body">
-          <div class="task-title">Definir 1 canal de prospección activa (no esperar que lleguen solos)</div>
-          <div class="task-desc">Hoy STM depende 100% de leads inbound — sin marketing, sin prospección, sin ads propios.</div>
-          <div class="task-goal">→ Elegir 1 canal (LinkedIn, contenido, o cold outreach) y moverlo esta semana, no analizarlo más.</div>
+          <div class="task-title">Laura: replantear la infografía de G-Way</div>
+          <div class="task-desc">De "recuperar cada cliente" → "nuestro sistema de fidelización" (evita culpar a G-Way). Cambiar "normas internacionales" por experiencia relevante concreta.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+
+      <div class="task" style="border-color:rgba(226,80,58,.3)">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Laura: revisar el correo de presentación a G-Way</div>
+          <div class="task-desc">Sacar la frase "revisar los costos asociados" (objeción prematura) e incrustar la infografía directo en el correo, no como adjunto.</div>
         </div>
         <span class="bdg red">Urgente</span>
       </div>
@@ -944,17 +955,8 @@ flowchart LR
       <div class="task">
         <div class="task-check"></div>
         <div class="task-body">
-          <div class="task-title">Jairo: contactar a Omar/ACEBRI ~16/09 apuntando al dolor personal</div>
-          <div class="task-desc">Sesión 7 (parte 1). Enfocar en el miedo real (perder el empleo), no en precio ni en ROI.</div>
-        </div>
-        <span class="bdg amber">P1 · 16/09</span>
-      </div>
-
-      <div class="task">
-        <div class="task-check"></div>
-        <div class="task-body">
-          <div class="task-title">Laura: seguir afinando el pitch de Wei para su junta directiva</div>
-          <div class="task-desc">Sesión 7 (parte 2). Mismo brief de 4 bloques, ahora con más detalle trabajado.</div>
+          <div class="task-title">Laura: roleplay de cierre con su papá</div>
+          <div class="task-desc">Practicar venta consultiva — metáforas + preguntas de descubrimiento, evitar "no" y "pero".</div>
         </div>
         <span class="bdg grey">Cliente</span>
       </div>
@@ -962,7 +964,25 @@ flowchart LR
       <div class="task">
         <div class="task-check"></div>
         <div class="task-body">
-          <div class="task-title">Laura y Jairo: revisar los 8 Sistemas de Private Build antes de Sesión 8</div>
+          <div class="task-title">Jairo: practicar descubrimiento con "Sales Closer" (IA)</div>
+          <div class="task-desc">Descubrimiento basado en preguntas, aplicado al caso Plásticos del Carmen y similares.</div>
+        </div>
+        <span class="bdg grey">Cliente</span>
+      </div>
+
+      <div class="task" style="border-color:rgba(226,80,58,.3)">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Ambos: 20 min de seguimiento para definir el "micro win" con G-Way</div>
+          <div class="task-desc">Un piloto pagado, concreto — no seguir puliendo mensaje sin una prueba real en curso.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Laura y Jairo: revisar los 8 Sistemas de Private Build</div>
           <div class="task-desc">Compartidos 14/09. No es lectura de fondo — es la base de skills/coaching que hoy le falta a STM fuera del área legal.</div>
           <div class="task-goal">→ Acceso directo en Backend &amp; Recursos → Biblioteca de recursos.</div>
         </div>
@@ -971,13 +991,23 @@ flowchart LR
 
       <div class="etp-hd">🎯 Comercial (arrastrado)</div>
 
+      <div class="task">
+        <div class="task-check"></div>
+        <div class="task-body">
+          <div class="task-title">Jairo: contactar a Omar/ACEBRI ~16/09 apuntando al dolor personal</div>
+          <div class="task-desc">Sesión 7 (parte 1). Enfocar en el miedo real (perder el empleo), no en precio ni en ROI. Sin confirmación en el chat de cómo salió.</div>
+        </div>
+        <span class="bdg amber">P1 · sin confirmar resultado</span>
+      </div>
+
       <div class="task" style="border-color:rgba(226,80,58,.3)">
         <div class="task-check"></div>
         <div class="task-body">
-          <div class="task-title">Laura: reformular la propuesta de Wei como brief para su junta directiva</div>
+          <div class="task-title">Laura: reformular la propuesta de Wei/G-Way como brief para su junta directiva</div>
           <ul class="task-desc" style="margin:4px 0 0 16px;padding:0">
             <li>4 bloques: problema de mercado → dolor futuro → solución → vehículo</li>
-            <li>Responde directo al cuestionamiento de Wei sobre la ejecución de STM (3 leads de prueba sin convertir)</li>
+            <li>Responde directo al cuestionamiento sobre la ejecución de STM (3 leads de prueba sin convertir)</li>
+            <li>⚠ Nombre sin confirmar: Sesión 6 lo registró como "Wei", el Fathom de Sesión 8 lo transcribe como "G-Way" — mismo lead, posible error de transcripción de audio</li>
           </ul>
           <div class="task-goal">→ Enviado antes del martes 01/09.</div>
         </div>
@@ -1139,7 +1169,66 @@ flowchart LR
 <!-- ════════ FLYWHEEL ════════ -->
 <div class="page" id="pg-engine">
 
-  <div class="slbl" style="margin-top:0">Recorrido por el sistema comercial STM — y cómo se retroalimenta</div>
+  <div class="slbl" style="margin-top:0">Las 8 áreas del negocio — Private Build (privatebuild-os.vercel.app/sistemas)</div>
+  <div class="ov-grid">
+    <div class="ov-card">
+      <div class="ov-lbl">1 · Foundations</div>
+      <div class="ov-num teal">Cubierto</div>
+      <div class="ov-sub">Sesión 1, 2</div>
+      <div class="ov-trend up"><span class="ov-trend-icon">●</span> ICP A/B/C segmentado, foco quirúrgico en cliente B</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">2 · Oferta</div>
+      <div class="ov-num amber">En trabajo</div>
+      <div class="ov-sub">Sesión 3, 6, 8</div>
+      <div class="ov-trend warn"><span class="ov-trend-icon">●</span> Venta consultiva ya adoptada — falta cerrar vehículo comercial (broker/directo/compuesto)</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">3 · Avatar</div>
+      <div class="ov-num teal">Cubierto</div>
+      <div class="ov-sub">Sesión 6</div>
+      <div class="ov-trend up"><span class="ov-trend-icon">●</span> Cliente de servicio vs. Socio proveedor, segmentación clara</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">4 · Contenido</div>
+      <div class="ov-num red">Sin tocar</div>
+      <div class="ov-sub">0 sesiones dedicadas</div>
+      <div class="ov-trend down"><span class="ov-trend-icon">▼</span> 0 piezas de contenido propio en 21 días de chat revisados</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">5 · Captura</div>
+      <div class="ov-num red">Sin definir</div>
+      <div class="ov-sub">0 sesiones dedicadas</div>
+      <div class="ov-trend down"><span class="ov-trend-icon">▼</span> Ningún canal de prospección propio elegido — es el cuello de botella activo</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">6 · Ventas</div>
+      <div class="ov-num teal">El más fuerte</div>
+      <div class="ov-sub">Sesión 3, 4, 5, 7, 8</div>
+      <div class="ov-trend up"><span class="ov-trend-icon">●</span> Discovery, dolor futuro, objeciones, venta consultiva — bien internalizado</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">7 · Entrega</div>
+      <div class="ov-num amber">Diagnosticado</div>
+      <div class="ov-sub">Mencionado, sin sesión dedicada</div>
+      <div class="ov-trend warn"><span class="ov-trend-icon">●</span> "Si Laura no está, nadie sabe seguir" — riesgo identificado, no trabajado aún</div>
+    </div>
+    <div class="ov-card">
+      <div class="ov-lbl">8 · Success</div>
+      <div class="ov-num red">En cero</div>
+      <div class="ov-sub">$0 inversión de retorno a la fecha</div>
+      <div class="ov-trend down"><span class="ov-trend-icon">▼</span> Meta explícita: 1ª venta o alianza antes de Sesión 8 — G-Way/Omar siguen sin cerrar</div>
+    </div>
+  </div>
+  <div class="alert-box info" style="margin-top:-6px">
+    <span class="alert-icon">🧩</span>
+    <div>
+      <div class="alert-title">Cómo leer esto</div>
+      <div class="alert-text">Son las mismas 8 áreas de tus guías en <strong>/sistemas</strong> — acá cada una muestra qué sesión la trabajó y qué falta. El engine de abajo es el detalle operativo propio de STM dentro de esas áreas.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Recorrido por el sistema comercial STM — y cómo se retroalimenta</div>
   <div class="rm-track-wrap">
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot now">1</div><div class="rm-info"><div class="rm-lbl mt">Foundations</div><div class="rm-sub">en curso</div></div></div>
