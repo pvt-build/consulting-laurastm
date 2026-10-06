@@ -384,10 +384,54 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="alert-box warn" style="margin-top:4px">
     <span class="alert-icon">📋</span>
     <div>
-      <div class="alert-title">Les queda 1 sesión — completen la encuesta del programa</div>
-      <div class="alert-text">3 preguntas cortas (2 min) para cerrar el programa con lo que de verdad les sirvió. Háganlo antes de Sesión 12.</div>
+      <div class="alert-title">Les queda 1 sesión — antes de la última llamada van a completar el formulario de cierre del programa</div>
+      <div class="alert-text">Todavía en construcción de este lado. El botón se habilita apenas esté listo, antes de Sesión 12 — no hace falta que hagan nada por ahora.</div>
     </div>
-    <a class="lib-btn" href="https://claude.ai/artifact/UtYYDVJ2P9QzViCD6KnMkh" target="_blank" rel="noopener" style="flex-shrink:0;align-self:center">📋 Completar encuesta →</a>
+    <span class="lib-btn" aria-disabled="true" style="flex-shrink:0;align-self:center;opacity:.45;cursor:not-allowed;pointer-events:none;filter:grayscale(1)">🔒 Disponible pronto</span>
+  </div>
+
+  <div class="slbl" style="margin-top:0">Los 8 sistemas del negocio — hoy</div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px">
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-top:3px solid var(--teal);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">🧭</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">1 · Foundations</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">Segmentado A/B/C</div>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-top:3px solid var(--gold);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">📦</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">2 · Oferta</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">Vehículo sin decidir</div>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-top:3px solid var(--teal);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">🎯</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">3 · Avatar</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">2 tipos de comprador</div>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-top:3px solid var(--gold);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">📣</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">4 · Contenido</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">Validado en feria, falta sistematizar</div>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-top:3px solid var(--gold);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">🧲</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">5 · Captura</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">3 leads de feria (Técniclez A)</div>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-top:3px solid var(--teal);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">🤝</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">6 · Ventas</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">El más fuerte del equipo</div>
+    </div>
+    <div style="background:var(--surf);border:0.5px solid var(--border);border-top:3px solid var(--gold);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">🚚</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">7 · Entrega</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">Jairo/Laura en paralelo</div>
+    </div>
+    <div style="background:var(--red-lt);border:1px solid var(--red);border-radius:10px;padding:10px 8px;text-align:center">
+      <div style="font-size:20px">🔁</div>
+      <div style="font-size:10.5px;font-weight:700;color:var(--ink);margin:4px 0 2px">8 · Success</div>
+      <div style="font-size:10px;color:var(--grey);line-height:1.3">0 casos — Técniclez decide antes del 24/10</div>
+    </div>
   </div>
 
   <div class="slbl" style="margin-top:0">Semana a semana — el camino recorrido</div>
@@ -526,11 +570,11 @@ flowchart LR
     A1["1 · Foundations<br/>ICP A/B/C ya segmentado"]:::teal
     A2["2 · Oferta<br/>3 ofertas sin decidir cuál avanza"]:::gold
     A3["3 · Avatar<br/>Cliente servicio vs Socio proveedor"]:::teal
-    A4["4 · Contenido<br/>0 piezas publicadas"]:::red
-    A5["5 · Captura<br/>sitio recién abriendo"]:::gold
+    A4["4 · Contenido<br/>Validado en vivo en la feria, falta sistematizar"]:::gold
+    A5["5 · Captura<br/>3 leads de feria: Técniclez (A), Alico, RRP"]:::gold
     A6["6 · Ventas<br/>Discovery + Closing fuertes"]:::teal
     A7["7 · Entrega<br/>Jairo/Laura en paralelo"]:::gold
-    A8["8 · Success<br/>0 casos cerrados"]:::red
+    A8["8 · Success<br/>0 casos cerrados — Técniclez decide antes del 24/10"]:::red
 
     A1 -->|"el tier define QUÉ ofrecer"| A2
     A2 -->|"la oferta define A QUIÉN hablarle"| A3
@@ -1122,10 +1166,10 @@ flowchart LR
   <div class="alert-box warn" style="margin-top:0">
     <span class="alert-icon">📋</span>
     <div>
-      <div class="alert-title">Cerró Sesión 11 — queda 1 antes de terminar el programa</div>
-      <div class="alert-text">3 preguntas cortas para cerrar con lo que de verdad les sirvió. Complétenla antes de Sesión 12.</div>
+      <div class="alert-title">Cerró Sesión 11 — antes de la última llamada completan el formulario de cierre</div>
+      <div class="alert-text">Todavía en construcción. Se habilita acá apenas esté listo, antes de Sesión 12.</div>
     </div>
-    <a class="lib-btn" href="https://claude.ai/artifact/UtYYDVJ2P9QzViCD6KnMkh" target="_blank" rel="noopener" style="flex-shrink:0;align-self:center">📋 Abrir encuesta →</a>
+    <span class="lib-btn" aria-disabled="true" style="flex-shrink:0;align-self:center;opacity:.45;cursor:not-allowed;pointer-events:none;filter:grayscale(1)">🔒 Disponible pronto</span>
   </div>
 
   <details class="hist-card now" open>
